@@ -1,0 +1,94 @@
+{
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_gp_truth",
+    "output": "results/analysis/external_gp_control_catalog",
+    "proposal_batch_size": 512,
+    "sampling_order": "For each catalog, use its declared numpy default_rng seed. Draw intrinsic bins, then independent uniform positions within bins, then Bernoulli detection uniforms in batches of 512. Keep the first declared number of detections. Draw Gaussian measurement errors from the same generator after selection. The two catalog generators are independent of the truth generator.",
+    "covariance_jitter_convention": "Add the declared 1e-10 directly to the diagonal of the full sigma-squared covariance before its dense Cholesky decomposition.",
+    "training_event_seed": 847101,
+    "verification_training_event_seed": 847102,
+    "training_event_samples": 2048,
+    "verification_training_event_samples": 8192,
+    "test_event_samples": "Deferred until scientific evaluation; save measurements only now.",
+    "decision": "The first GP draw and first selected catalogs are retained. These procedural details are fixed before drawing the new population or inspecting any fit. Truth and held-out measurements are not inputs to pilot fitting."
+  },
+  "experiment": {
+    "name": "selected_gp_truth",
+    "role": "positive control within the external density family",
+    "truth_grid_per_axis": 6,
+    "truth_sigma": 1.2,
+    "truth_length_scales": [
+      0.25,
+      0.25,
+      0.25
+    ],
+    "truth_seed": 847001,
+    "truth_draw": "numpy default_rng standard_normal; dense covariance Cholesky; ij meshgrid flattened in C order",
+    "truth_covariance_jitter": 1e-10,
+    "catalog_seed": 847002,
+    "test_seed": 847003,
+    "train_count": 96,
+    "test_count": 192,
+    "measurement_standard_deviations": [
+      0.04,
+      0.05,
+      0.04
+    ],
+    "detection_probability": "0.05 + 0.95*x1^2"
+  },
+  "source_sha256": {
+    "configs/external_gp_control_catalog.json": "bcb1187572a3da253d33891aba55b684e517918d2c072d9b6a569e7a64875459",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "scripts/build_external_gp_control.py": "6dc91e4d26e01f6f1201e36058ff2b0b84090b36f0a780a1ec0bfe6e4e80a456",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "configs/model_comparisons.json": "30e41002ffbdfc293f1d7afbdef8a7cffdeca3c9fb9f4727f16c66b3c0237929",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d"
+  },
+  "product_sha256": {
+    "test_catalog.npz": "6e3687c8d68125ee90e29d9d5c025a89ff71559326d6baaf0115650cb8c4e4b4",
+    "train_catalog.npz": "1068a0ff4adc156751953147e80a744524849f48c4a728bd7c18e1d0c61a9cfd",
+    "train_verification.npz": "55031fcbc4e1df735d6e2b4a09b082039fe77abf5f85f4feb17296237467d066",
+    "truth.npz": "14ab0d2e4dedf2ef2d33d2dfaca1b3a3b053fa8a56af566c729f632e7887af5d"
+  },
+  "truth_covariance_reconstruction_error": 1.9984014443252818e-15,
+  "truth_probability_sum": 1.0,
+  "truth_alpha": 0.37080216304766844,
+  "truth_functionals": [
+    0.5080755120235988,
+    0.42950766467652296,
+    0.5100034238662711,
+    0.07954576150055609,
+    0.06843970173865171,
+    0.0772558888956566,
+    0.3708021630476684,
+    0.22185963152816218,
+    0.20834185103961173,
+    -0.012696575405991395,
+    -0.029112223976348883,
+    0.018533760348640516
+  ],
+  "fit_inputs": {
+    "copula": [
+      "train_catalog:data"
+    ],
+    "gp": [
+      "train_catalog:observed",
+      "train_catalog:sigma"
+    ]
+  },
+  "test_access": "Not used for initialization, model choice or pilot fitting.",
+  "generation_seconds": 3.428438900000401,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1060421632
+  },
+  "numpy_version": "1.26.4",
+  "eligible_for_scientific_comparisons": false
+}

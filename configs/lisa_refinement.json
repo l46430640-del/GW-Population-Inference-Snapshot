@@ -1,0 +1,34 @@
+{
+  "source": "results/analysis/lisa_production",
+  "output": "results/analysis/lisa_refinement",
+  "primary_event_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+  "primary_selection_points": 32768,
+  "primary_selection_seed": 927740,
+  "feature_transport_power": 14,
+  "verification_event_samples": 4096,
+  "verification_event_seed": 735010,
+  "verification_selection_points": 131072,
+  "verification_selection_seed": 1032469,
+  "verification_draws_per_chain": 64,
+  "verification_extremes_per_chain": 8,
+  "verification_largest_weights": 16,
+  "batch_lengths": [
+    25,
+    50
+  ],
+  "cdf_probabilities": [
+    0.05,
+    0.5,
+    0.95
+  ],
+  "maximum_pareto_k": 0.7,
+  "minimum_weight_ess_fraction": 0.9,
+  "maximum_weight": 0.01,
+  "maximum_influence_rhat": 1.01,
+  "minimum_precision_equivalent_draws": 400,
+  "maximum_verification_log_target_sd": 0.3,
+  "minimum_verification_weight_ess_fraction": 0.9,
+  "maximum_verification_mean_shift_in_sd": 0.1,
+  "maximum_verification_alpha_change_in_sd": 0.05,
+  "decision": "Use raw numerical density-ratio weights on all four converged NUTS chains. Require stable weights, serial-dependence-aware mean and CDF precision, and an independent higher-resolution event/selection check before accepting the refined posterior. Preserve the original target and failed tail check. No truth, held-out score, population prior, or model change enters this correction."
+}

@@ -1,0 +1,12 @@
+{
+  "base_config": "configs/external_lisa_comparison.json",
+  "parent_output": "results/analysis/external_lisa_comparison",
+  "output": "results/analysis/external_lisa_comparison_double",
+  "maximum_seconds": 1780,
+  "reuse_products": [
+    "training_primary",
+    "training_verification",
+    "training_changes"
+  ],
+  "reason": "The external target precision checks pass, but the NumPy/core equality check passed archived float32 event arrays to a helper that casts parameters to the event dtype. The accepted posterior was evaluated with float64 events. Repeat the core equality check with float64 events, matching the accepted inference and the NumPy evaluator. Preserve the failed float32 check and its full process cost. Reuse only the unchanged NumPy training integrals and their derived differences byte for byte. Keep the 1e-6 equality threshold and every scientific comparison requirement unchanged. No LISA scientific score has yet been evaluated. The 1780-second continuation plus the 311.95-second first attempt stays within the original 2100-second evaluation allocation."
+}

@@ -1,0 +1,28 @@
+{
+  "sources": [
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002"
+  ],
+  "fine_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+  "output": "results/analysis/lisa_correction",
+  "proposal": "Equal mixture of all three completed same-target flows and both label permutations",
+  "draws_per_repeat": 4096,
+  "repeat_seeds": [
+    732001,
+    732002
+  ],
+  "pilot_draws": 32,
+  "pilot_seed": 732000,
+  "precision_draws_per_start": 32,
+  "precision_log_density_tolerance": 0.02,
+  "fine_selection_points": 32768,
+  "check_uniform_draws": 64,
+  "check_weighted_draws": 64,
+  "check_largest_weights": 16,
+  "check_seed": 732100,
+  "maximum_pareto_k": 0.7,
+  "minimum_effective_samples": 400,
+  "maximum_refined_log_target_sd": 0.3,
+  "decision": "Require both repeats to pass weight stability, float precision, and refined event/selection integration checks before accepting corrected summaries. Retain failed outcomes. Use the existing bimodal LISA catalog and all completed same-target starts without tuning to injected truth. No population prior or likelihood model is changed."
+}

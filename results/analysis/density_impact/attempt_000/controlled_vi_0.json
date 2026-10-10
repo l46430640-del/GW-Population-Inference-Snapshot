@@ -1,0 +1,227 @@
+{
+  "label": "controlled_vi_0",
+  "category": "vi",
+  "draws": 32,
+  "chain_shape": [
+    1,
+    4000
+  ],
+  "historical_event_reconstruction_error": [
+    0.0
+  ],
+  "historical_event_cache_max_abs_error": null,
+  "data_shape": [
+    96,
+    256,
+    4
+  ],
+  "data_dtype": "torch.float64",
+  "weight_diagnostics": {
+    "delta_mean": 4.03008016736095e-06,
+    "delta_sd": 4.5466996132863174e-07,
+    "delta_min": 2.410480590242514e-06,
+    "delta_max": 4.584273710861453e-06,
+    "ratio_ess_fraction": 0.9999999999997993,
+    "combined_weight_ess": 31.999999999993577,
+    "maximum_combined_weight": 0.031250017318549914,
+    "pareto_k": 0.2334416839659819,
+    "pareto_k_finite": true,
+    "psis_reff": 1.0,
+    "interpretation": "Subset weight concentration only; neither MCMC ESS nor correction of VI error."
+  },
+  "density_only_weight_diagnostics": {
+    "delta_mean": -4.083097380203071e-07,
+    "delta_sd": 4.2180126152834517e-07,
+    "delta_min": -1.8921232083357609e-06,
+    "delta_max": 7.930700007818814e-08,
+    "ratio_ess_fraction": 0.9999999999998277,
+    "combined_weight_ess": 31.999999999994486,
+    "maximum_combined_weight": 0.031250015238024086,
+    "pareto_k": 0.28221710010598927,
+    "pareto_k_finite": true,
+    "psis_reff": 1.0,
+    "interpretation": "Subset weight concentration only; neither MCMC ESS nor correction of VI error."
+  },
+  "precision_delta_sd": 1.2595501233160134e-07,
+  "native_bounds_target_change": [
+    [
+      0,
+      0.0
+    ],
+    [
+      1290,
+      0.0
+    ],
+    [
+      2580,
+      0.0
+    ],
+    [
+      3999,
+      0.0
+    ]
+  ],
+  "features": {
+    "mean_unit_mass": {
+      "old_mean": 0.5123978490483065,
+      "new_mean": 0.5123978451952854,
+      "old_sd": 0.032637359493925155,
+      "shift_in_old_sd": -1.1805554077054855e-07,
+      "fixed_draw_mean_change": -1.734723475976807e-17,
+      "old_quantiles_05_50_95": [
+        0.4358073228278471,
+        0.5141172945837102,
+        0.5595776679884129
+      ],
+      "new_quantiles_05_50_95": [
+        0.4358073228278471,
+        0.5141172945837101,
+        0.5595776679884129
+      ]
+    },
+    "mean_unit_redshift": {
+      "old_mean": 0.5430214673652971,
+      "new_mean": 0.5430214673040794,
+      "old_sd": 0.022423450054612378,
+      "shift_in_old_sd": -2.7300748737921796e-09,
+      "fixed_draw_mean_change": -3.469446951953614e-18,
+      "old_quantiles_05_50_95": [
+        0.5130145875537907,
+        0.5366914016531129,
+        0.5823799907947047
+      ],
+      "new_quantiles_05_50_95": [
+        0.5130145875537906,
+        0.5366914016531129,
+        0.5823799907947047
+      ]
+    },
+    "mean_unit_ratio": {
+      "old_mean": 0.5032163568556646,
+      "new_mean": 0.5032163581464334,
+      "old_sd": 0.02869557224766939,
+      "shift_in_old_sd": 4.498146313364297e-08,
+      "fixed_draw_mean_change": -1.5612511283791264e-17,
+      "old_quantiles_05_50_95": [
+        0.4499468971569593,
+        0.5053671676616407,
+        0.5436097113594414
+      ],
+      "new_quantiles_05_50_95": [
+        0.4499468971569593,
+        0.5064803825471267,
+        0.5436097113594414
+      ]
+    },
+    "mass_below_quarter_support": {
+      "old_mean": 0.16446671541775038,
+      "new_mean": 0.16446672053401307,
+      "old_sd": 0.057720687533322955,
+      "shift_in_old_sd": 8.8638283948561e-08,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.06355889904133882,
+        0.16743445650160965,
+        0.25265438467454027
+      ],
+      "new_quantiles_05_50_95": [
+        0.06355889904133882,
+        0.16925754892360867,
+        0.25265438467454027
+      ]
+    },
+    "mass_above_0p8_support": {
+      "old_mean": 0.15795401720675578,
+      "new_mean": 0.15795401570806217,
+      "old_sd": 0.027878683277696333,
+      "shift_in_old_sd": -5.3757690014512677e-08,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.12105539484378472,
+        0.15399539534038514,
+        0.20067462890052737
+      ],
+      "new_quantiles_05_50_95": [
+        0.12105539484378472,
+        0.15793714970901743,
+        0.20067462890052737
+      ]
+    },
+    "alpha": {
+      "old_mean": 0.35509040759163096,
+      "new_mean": 0.3550904042148225,
+      "old_sd": 0.02790766668315463,
+      "shift_in_old_sd": -1.2099931113252423e-07,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.29466284561254547,
+        0.36132517987601237,
+        0.3921820628258883
+      ],
+      "new_quantiles_05_50_95": [
+        0.29466284561254547,
+        0.36132517987601237,
+        0.3921820628258883
+      ]
+    },
+    "conditional_rate_mean": {
+      "old_mean": 272.1908137466385,
+      "new_mean": 272.1908163181959,
+      "old_sd": 23.52482582955322,
+      "shift_in_old_sd": 1.0931249425591572e-07,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        244.78427011237332,
+        265.47002319805347,
+        325.7960799246172
+      ],
+      "new_quantiles_05_50_95": [
+        244.78427011237332,
+        265.6886520694243,
+        325.7960799246172
+      ]
+    },
+    "domain_probability": {
+      "old_mean": 1.0,
+      "new_mean": 1.0000000000000004,
+      "old_sd": 7.343435057440258e-17,
+      "shift_in_old_sd": null,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.9999999999999999,
+        1.0,
+        1.0000000000000002
+      ],
+      "new_quantiles_05_50_95": [
+        0.9999999999999999,
+        1.0,
+        1.0000000000000002
+      ]
+    }
+  },
+  "cells": {
+    "intrinsic": {
+      "fixed_draw_total_variation": 0.0,
+      "total_variation": 2.043753590463981e-08,
+      "js_distance": 2.4371204557277477e-08
+    },
+    "detected": {
+      "fixed_draw_total_variation": 2.565059286258357e-17,
+      "total_variation": 1.6975047553817792e-08,
+      "js_distance": 2.1410576991392295e-08
+    }
+  },
+  "lvk_detected_cells_available": true,
+  "posterior_certified": false,
+  "historical_results_superseded": false,
+  "screen_flagged": false,
+  "prediction": {
+    "events": 192,
+    "total_log_score_change": 1.9796486292689153e-05,
+    "fixed_draw_total_log_score_change": 2.0080548570389212e-05,
+    "event_change_sd": 1.5483319480811228e-06,
+    "largest_absolute_event_change": 2.1410016508127683e-05
+  },
+  "seconds": 9.687359999999899,
+  "product_sha256": "e9f73379628dc1b0532e20bc2fe9e65571b7f752123fbc5fd6abb3192073226f"
+}

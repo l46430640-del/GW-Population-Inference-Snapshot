@@ -1,0 +1,155 @@
+{
+  "source": "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k3_s91001",
+  "kind": "lisa",
+  "prior_draws": 512,
+  "posterior_draws": 192,
+  "points_per_component": 16384,
+  "seed": 20261009,
+  "summary": {
+    "prior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.3022559926601187,
+          0.7262558414569733,
+          0.9529979880521164
+        ],
+        "mean": 0.6851332480560623,
+        "sd": 0.20063753619090932
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.0431461992139213,
+          0.26473578797300257,
+          0.6907034130161053
+        ],
+        "mean": 0.3070533619967389,
+        "sd": 0.19919241569235902
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.054501388491267636,
+          0.32025699284190035,
+          0.7400883646888794
+        ],
+        "mean": 0.3513518417091998,
+        "sd": 0.20887636778909008
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 8.19553578544471e-17
+      }
+    },
+    "posterior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.35116524117108855,
+          0.565397550555415,
+          0.8193121911928678
+        ],
+        "mean": 0.5704053970257549,
+        "sd": 0.1320232036927432
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.1698534485128166,
+          0.4190105298984552,
+          0.6381020689791725
+        ],
+        "mean": 0.41666913943900896,
+        "sd": 0.13264517574836518
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.30191462673450925,
+          0.5187503048761708,
+          0.6998011106586672
+        ],
+        "mean": 0.508060950568153,
+        "sd": 0.11886828629421256
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0000000000000002
+        ],
+        "mean": 1.0,
+        "sd": 9.205483015737869e-17
+      }
+    }
+  },
+  "posterior_to_prior_90_interval_width": {
+    "alpha": 0.7194048537466438,
+    "weak_detection_fraction": 0.7230999987120779,
+    "mass_above_1e8": 0.5803588716502576,
+    "domain_probability": 3.0
+  },
+  "coarse_to_fine_absolute_change_50_90_99_max": {
+    "prior": {
+      "alpha": [
+        0.00016698457266850486,
+        0.0005086005721266913,
+        0.0008915133881789615,
+        0.0013940026926306803
+      ],
+      "weak_detection_fraction": [
+        0.00031043804010064124,
+        0.0008169063757593298,
+        0.0012118744577918463,
+        0.0018912445445652126
+      ],
+      "mass_above_1e8": [
+        4.586152158361778e-05,
+        0.00011286739209957209,
+        0.00015834731637320406,
+        0.00017743033011315135
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "posterior": {
+      "alpha": [
+        0.00014324978257837517,
+        0.000388659945148484,
+        0.0007031503682660027,
+        0.0009376784419838358
+      ],
+      "weak_detection_fraction": [
+        0.0003669044448741665,
+        0.0008397307160110057,
+        0.001330542084860504,
+        0.0016895638717782102
+      ],
+      "mass_above_1e8": [
+        4.1381828949887955e-05,
+        0.00010136091256486291,
+        0.00013204200464916104,
+        0.00013896510107203053
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "selection_note": "LISA sensitivity averaged over transported population points",
+  "interpretation": "Intervals describe prior and conditional posterior distributions, not repeated-catalog coverage.",
+  "sha256": {
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k3_s91001/summary.json": "e15991b3fa123358625cd0bf38ecf62653699e3f70bdeeeba1bbe3bfbd3f7835",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k3_s91001/posterior.npz": "aa3ba3099c8bb60c00ae7527ead1f1362ff12ad8779fbefd971b9c4a5ebbeb91",
+    "src/gwpopulation/core.py": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+    "scripts/population_prior_diagnostics.py": "09887a531d149f62b326702c0afb7bc1707bdd426df1b170e451efa24c214c19"
+  },
+  "seconds": 12.539177800001198
+}

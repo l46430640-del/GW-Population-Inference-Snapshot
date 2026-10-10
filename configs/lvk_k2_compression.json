@@ -1,0 +1,28 @@
+{
+  "output": "results/analysis/lvk_k2_compression",
+  "directory": "results/analysis/lvk_mixture/kumaraswamy_k2_uniform_m150_s812301",
+  "previous_assessment": "results/analysis/lvk_pe_uncertainty/attempt_000",
+  "previous_case": "kumaraswamy_k2_uniform_m150_s812301",
+  "expected_draws": 192,
+  "maximum_seconds": 1200,
+  "maximum_resident_gib": 2,
+  "maximum_output_mib": 16,
+  "point_block": 32768,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 1061011,
+  "reuse_check_events": [
+    "S190412m",
+    "S190521g"
+  ],
+  "reuse_tolerance": 1e-10,
+  "pe_input": "external_data/lvk/analysis_inputs/sampleDict_FAR_1_in_1_yr.pickle",
+  "pe_sha256": "2f1d408655465fd1d2a07efc505546bac23c1d668c75002466e550162e8e5479",
+  "feature_names": [
+    "P(m1<10)",
+    "P(m1>50)",
+    "P(z>1)",
+    "P(q<0.5)"
+  ],
+  "selection_held_fixed": true,
+  "posterior_certified": false
+}

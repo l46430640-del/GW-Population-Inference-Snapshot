@@ -1,0 +1,22 @@
+{
+  "posterior_correction": {
+    "source": "results/analysis/selected_mixture",
+    "output": "results/analysis/importance_correction",
+    "flow_starts": [
+      0,
+      1
+    ],
+    "proposal": "Equal mixture of the two completed flows and both component permutations",
+    "draws_per_repeat": 8192,
+    "repeat_seeds": [
+      731001,
+      731002
+    ],
+    "pilot_draws": 256,
+    "pilot_seed": 731000,
+    "feature_transport_power": 10,
+    "minimum_effective_samples": 400,
+    "maximum_pareto_k": 0.7,
+    "decision": "Require stable weights and lower average standardized Wasserstein and tail-probability errors than the unweighted proposal in both repeats. Retain raw and PSIS results and every feature. A successful benchmark is not validation on LISA or LVK."
+  }
+}

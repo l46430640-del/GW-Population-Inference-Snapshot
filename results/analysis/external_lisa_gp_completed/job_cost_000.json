@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "error": null,
+  "process_elapsed_seconds": 302.90473619999966,
+  "all_sparse_sampling_attempts_seconds": 302.90473619999966,
+  "total_study_charge_seconds": 41945.70558329999,
+  "remaining_study_seconds": 1254.294416700005,
+  "configuration_sha256": "5b946f020a01de7aec520331ede80e33ae33bba23dba7c1d4f55fa3c124ee256",
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1202102272
+  }
+}

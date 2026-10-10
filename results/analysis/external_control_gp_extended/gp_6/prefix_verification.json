@@ -1,0 +1,26 @@
+{
+  "chains": [
+    {
+      "seed": 847201,
+      "compared_retained_draws": 800,
+      "prefix_identical": true
+    },
+    {
+      "seed": 847202,
+      "compared_retained_draws": 800,
+      "prefix_identical": true
+    },
+    {
+      "seed": 847203,
+      "compared_retained_draws": 800,
+      "prefix_identical": true
+    },
+    {
+      "seed": 847204,
+      "compared_retained_draws": 800,
+      "prefix_identical": true
+    }
+  ],
+  "parent_output": "results/analysis/external_control_production",
+  "prefixes_are_duplicates_not_additional_posterior_draws": true
+}

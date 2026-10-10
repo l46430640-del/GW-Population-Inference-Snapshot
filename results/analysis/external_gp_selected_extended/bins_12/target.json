@@ -1,0 +1,84 @@
+{
+  "configuration": {
+    "protocol": "configs/external_gp_selected_extension_protocol.json",
+    "validated_pilot": "configs/external_gp_symmetric_pilot.json",
+    "experiment": "selected_copula_truth",
+    "output": "results/analysis/external_gp_selected_extended",
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2,
+        1,
+        0.15,
+        0.5
+      ]
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "joint_partition": "eight half-box octants in ij meshgrid C order",
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "amendment": {
+      "prior_attempt_summary": "results/analysis/external_gp_selected/bins_12/summary.json",
+      "prior_attempt_summary_sha256": "3fef662892a06c61fc977a76ba2cfa846d7d8a7a81106a9686e56290181f6430",
+      "reason": "Pyro's post-sampling cumulative minimum allocates quadratic storage in the number of lags. Replace it with an equivalent linear-storage calculation for finite diagnostic arrays. Retain every diagnostic, sampler setting, starting point, seed, target and prior.",
+      "authorization_scope": "One fresh high-resolution attempt under the unchanged two-hour and 2 GiB per-fit limits. Include the failed attempt's time and peak memory in the cost record and the twelve-hour study budget. No recovery or predictive scores have been examined."
+    },
+    "decision": "Complete the fixed 2400-draw extension using the unchanged target, priors, starts, seeds, adaptation and diagnostics.",
+    "sampling_extension": {
+      "scope": "selected_copula_truth at 12 bins per axis only",
+      "original_protocol": "configs/external_benchmark.json",
+      "previous_summary": "results/analysis/external_gp_selected_bounded/bins_12/summary.json",
+      "reason": "The 800-draw chains pass R-hat and numerical checks, but GP kernel tail ESS is 230--272, below 400. Extend the same four seeded trajectories to 2400 retained draws per chain, with the same 500-step adaptation.",
+      "decision": "One fixed extension before recovery or predictive evaluation. Retain the original 800 draws, verify their exact prefix reproduction, and count replayed sampling and every earlier attempt in computational cost. An unresolved extension remains inconclusive."
+    }
+  },
+  "bins_per_axis": 12,
+  "experiment": "selected_copula_truth",
+  "input_fields": [
+    "observed",
+    "sigma"
+  ],
+  "inputs_product_sha256": "a85261f96ab3eb180398ada44b683eedd7213ca9a1970937f154542362c0f938",
+  "quadrature_maximum_log_weight_change": 2.2737367544323206e-13,
+  "quadrature_total_log_likelihood_difference_bound": 4.3655745685100555e-11,
+  "source_sha256": {
+    "configs/external_gp_selected_extended.json": "70a04c0c8cd251e2dbb2c1a6ce8ff4a24f78843dd4f3222e9273221d1b1dafba",
+    "configs/external_gp_selected_extension_protocol.json": "4a18817e319c45e73faf5bdd891266e4edcc1ad9441bc7c5a27c18af6f13c09c",
+    "configs/external_gp_symmetric_pilot.json": "0239c0c7a07da3c2646c435b1de061433d7778990ffdc3cb7687c41de3b915dd",
+    "results/analysis/selected_mixture/train_catalog.npz": "150ee4e82fb596f86bff3e2156b49a25ac63fca0321c31ffa5324534acd43e9e",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "docs/analysis/external_benchmark_sources.json": "b590c3d25f06b8d82bb4cd299b18ca47bfc75dc889c86e63748b35e07e643942"
+  }
+}

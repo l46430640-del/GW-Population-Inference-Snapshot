@@ -1,0 +1,271 @@
+{
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "lisa_bimodal",
+    "training_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+    "accepted_copula_summary": "results/analysis/lisa_refinement/summary.json",
+    "previous_cost": "results/analysis/external_control_comparison/job_cost_000.json",
+    "output": "results/analysis/external_lisa_gp",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "verification_event_samples": 8192,
+    "verification_event_seed": 847602,
+    "selection_power": 12,
+    "selection_seed": 847611,
+    "verification_selection_power": 14,
+    "verification_selection_seed": 847612,
+    "selection_cell_block": 8,
+    "pilot_warmup": 100,
+    "pilot_retained": 100,
+    "pilot_maximum_seconds": 600,
+    "retained_per_chain": 2400,
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1.0,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2.0,
+        1.0,
+        0.15,
+        0.5
+      ]
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_resident_gib": 2,
+    "maximum_seconds": 4200,
+    "verification_reserve_seconds": 120,
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "sampling_amendment": "Before LISA GP sampling and scientific scores, retain 2400 draws per chain at both resolutions. The prior two cases needed GP chain extensions; start with their validated longer duration to avoid duplicate work. Preserve four seeds, 500 warmup, target acceptance 0.9, maximum depth 10, original kernel priors, coordinate basis and initial hyperparameters. All thresholds remain unchanged.",
+    "decision": "Use the fixed LISA training event posterior under its uniform event prior, retaining the observed SNR in each event likelihood exactly once. Integrate Phi(rho(x)-8) separately over every GP bin, including low-detectability bins. Check independent 8192 event samples and independent finer within-cell Sobol selection at every retained draw. Require event, selection and combined log-likelihood changes each to have SD at most 0.2, both per chain and pooled, as well as existing derivative, jitter, mixing, zero-divergence and resource checks. Use no injected truth or test observations. Preparation, pilots and both production fits share 4200 seconds inside the remaining twelve-hour study allowance. Incomplete fits remain inconclusive."
+  },
+  "effective_protocol": {
+    "protocol_version": 1,
+    "status": "protocol_fixed_before_external_fits",
+    "output": "results/analysis/external_benchmark",
+    "source_manifest": "docs/analysis/external_benchmark_sources.json",
+    "comparison": "Bounded copula mixture versus a binned Gaussian process under a common selected-catalog likelihood",
+    "copula": {
+      "family": "kumaraswamy",
+      "components": 2,
+      "priors": "unchanged from the accepted baseline",
+      "primary_posterior": "independently checked MCMC; reuse frozen draws only after numerical-target checks",
+      "flow_role": "secondary timing and approximation comparison, including correction or fallback cost"
+    },
+    "binned_gp": {
+      "method_paper": "10.3847/1538-4357/acf452",
+      "implementation_paper": "10.3847/1538-4357/adf22a",
+      "reference_archive": "gppop_spin_dev_ee5ffc421.tar.gz",
+      "reference_function": "Rates.make_significant_model_3d",
+      "coordinates": "three unit-interval analysis coordinates",
+      "kernel": "sigma^2 * exp(-0.5 * sum_j ((x_j-y_j)/length_j)^2)",
+      "sigma_prior": {
+        "distribution": "HalfNormal",
+        "scale": 10.0
+      },
+      "length_prior": {
+        "distribution": "LogNormal",
+        "median": 0.3,
+        "log_standard_deviation": 1.0,
+        "independent_axes": 3
+      },
+      "mean": "one common mean; cancels from normalized shape",
+      "zero_detection_bins": "retain in the common intrinsic support",
+      "primary_bins_per_axis": 12,
+      "sensitivity_bins_per_axis": 6,
+      "covariance_evaluation": "Kronecker factorization with noncentered standard-normal coefficients",
+      "rate_prior_adaptation": "independent p(R) proportional to 1/R, analytically marginalized",
+      "label": "Binned GP with common likelihood and rate prior"
+    },
+    "experiments": [
+      {
+        "name": "selected_copula_truth",
+        "role": "compact correlated population in the copula family",
+        "train": "results/analysis/selected_mixture/train_catalog.npz",
+        "test": "results/analysis/selected_mixture/test_catalog.npz",
+        "definition": "configs/model_comparisons.json:selected_mixture_benchmark",
+        "posterior": "results/analysis/selected_mixture/nuts_chain_{0,1,2,3}.npz",
+        "train_count": 96,
+        "test_count": 192
+      },
+      {
+        "name": "selected_gp_truth",
+        "role": "positive control within the external density family",
+        "truth_grid_per_axis": 6,
+        "truth_sigma": 1.2,
+        "truth_length_scales": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "truth_seed": 847001,
+        "truth_draw": "numpy default_rng standard_normal; dense covariance Cholesky; ij meshgrid flattened in C order",
+        "truth_covariance_jitter": 1e-10,
+        "catalog_seed": 847002,
+        "test_seed": 847003,
+        "train_count": 96,
+        "test_count": 192,
+        "measurement_standard_deviations": [
+          0.04,
+          0.05,
+          0.04
+        ],
+        "detection_probability": "0.05 + 0.95*x1^2"
+      },
+      {
+        "name": "lisa_bimodal",
+        "role": "existing off-family population with strongly varying detectability",
+        "train": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+        "test": "results/analysis/lisa_scientific_comparison/test_observations.npz",
+        "definition": "configs/lisa_scientific_comparison.json",
+        "posterior": "results/analysis/lisa_refinement/posterior.npz",
+        "weights": "results/analysis/lisa_refinement/weights.npz",
+        "train_count": 135,
+        "test_count": 192
+      }
+    ],
+    "evaluation": {
+      "primary": [
+        "detected_joint_js_distance",
+        "paired_test_log_predictive_density"
+      ],
+      "secondary": [
+        "intrinsic_joint_js_distance",
+        "population_functionals",
+        "interval_scores_90",
+        "selection_fraction",
+        "wall_time",
+        "peak_resident_memory"
+      ],
+      "joint_cells_per_axis": 24,
+      "verification_joint_cells_per_axis": 48,
+      "credible_probabilities": [
+        0.05,
+        0.5,
+        0.95
+      ],
+      "training_event_samples": 2048,
+      "verification_training_event_samples": 8192,
+      "test_event_samples": 2048,
+      "verification_test_event_samples": 8192,
+      "evaluation_seed": 847101,
+      "verification_seed": 847102,
+      "maximum_joint_distance_numerical_change": 0.005,
+      "maximum_paired_score_numerical_change": 0.25,
+      "maximum_log_likelihood_difference_sd": 0.2,
+      "report_all_experiments_and_resolutions": true,
+      "no_selection_from_test_scores_or_truth": true,
+      "coverage_claim": "No frequentist coverage claim from three different single catalogs"
+    },
+    "sampling": {
+      "chains": 4,
+      "warmup": 500,
+      "retained_per_chain": 2400,
+      "target_acceptance": 0.9,
+      "maximum_tree_depth": 10,
+      "chain_seeds": [
+        847201,
+        847202,
+        847203,
+        847204
+      ],
+      "maximum_functional_rhat": 1.01,
+      "minimum_functional_bulk_ess": 400,
+      "minimum_functional_tail_ess": 400,
+      "maximum_divergences": 0,
+      "maximum_pareto_k_for_reuse": 0.7,
+      "minimum_reuse_weight_ess_fraction": 0.9
+    },
+    "resources": {
+      "cpu_threads": 1,
+      "pilot_warmup": 100,
+      "pilot_retained": 100,
+      "pilot_seconds_per_model": 600,
+      "maximum_seconds_per_fit": 7200,
+      "maximum_total_cpu_hours": 12,
+      "maximum_resident_gib": 2,
+      "stop_rule": "A resource-limited or unconverged run is inconclusive, not a scored loss; amend the protocol explicitly before additional computation"
+    }
+  },
+  "source_sha256": {
+    "configs/external_lisa_gp.json": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+    "scripts/run_external_lisa_gp.py": "d989dc73be4685e142bea8ccbe24a8cd6bb3a33779f409cb516fcde6f4a2fc9d",
+    "results/analysis/lisa_refinement/summary.json": "4b86bffd2e280fb835c1e747c932aad23e172a50078393ff21e9fd81c74ba05c",
+    "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz": "62d52be1a6c7c96146519d2235e6d6df8323190870abb8007ab5d8d32eac65f5",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/external_control_comparison/job_cost_000.json": "bb758d75df833d47452e85ef6213aab4ef6ba029f234df727ab2f42184f64c6b",
+    "model_assets/lisa_analysis/phenom_d_grid.npz": "04d8cc32ff78edc6f622918c828e106d540e5fff2ea5aa2c27e353fe00fa4b2a",
+    "scripts/lisa_gp_inputs.py": "47f44b62aa903e995a9557ceb8603c7a40d2dfc3d13e52184541c2c74dc92f04",
+    "scripts/lisa_noisy_catalog.py": "f93b58ff375b05506410fe8ed5aba3eeb0c11d0e3407c6cf136f0e067255502e",
+    "scripts/build_lisa_analysis_assets.py": "6a3579329f486163964f982e6a0a21057aa62ca185476f724b7b99595e69d4da",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_control_production.py": "0b265d3aaa6d27af7fc115f42cf9197f0936a3b35cf36f811f3c9808cd80afb9",
+    "scripts/run_external_gp_bounded_diagnostics.py": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "configs/external_lisa_event_batches.json": "1ca8e259fcb25f8c49c771c670fe4834fbc900748bf2222f3e255a48472ac64d",
+    "scripts/run_external_lisa_gp_batched.py": "d613b9664779ca094360d8ae9f4625292d004b892a918c949a19ea72ce0ff562",
+    "results/analysis/external_lisa_gp/job_cost_000.json": "fe4196425111c9ef460d0c79936b6a107cd67c149207389276beb9ab8a7ffa65",
+    "results/analysis/external_lisa_gp/verification_catalog.npz": "c58b3e5fae6fb3727298510d06eb25d13ac1ddbeaf67ac72b4d4006f6dd36fc7",
+    "results/analysis/external_lisa_gp/verification_catalog.json": "878fdd3334680eb4166ae68973410609c779794cd020d6cea86e64dcea735483",
+    "results/analysis/external_lisa_gp/inputs_6.npz": "ce3a5d99632d9e12903321c6b02cc3d270f327acfb39bf281a3100341f3183f1",
+    "results/analysis/external_lisa_gp/inputs_6.json": "7d03a092cf406ffbe26fd37d52599e58e5a2848e4ffbfd3067e49ce9a03924d7",
+    "results/analysis/external_lisa_gp/inputs_12.npz": "3554573d408d5eeb0ca3dc4ef4a76ffe05f1dc1263cdac78b5f2fc1daa6f1b0e",
+    "results/analysis/external_lisa_gp/inputs_12.json": "d1c977dba4cf23b86c62083e40a323181786d4a5f5cead95a0054bd8415c3ae4"
+  },
+  "experiment": "lisa_bimodal",
+  "input_fields": [
+    "training event posterior samples",
+    "training measurement",
+    "training observed SNR",
+    "training detected mask",
+    "fixed SNR response grid"
+  ],
+  "event_generation_amendment": {
+    "base_config": "configs/external_lisa_gp.json",
+    "base_config_sha256": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+    "failed_job": "results/analysis/external_lisa_gp/job_cost_000.json",
+    "batch_samples": 2048,
+    "total_samples": 8192,
+    "reason": "Before any GP fit, single-pool event preparation stops at its existing proposal-count limit with importance ESS 19044.4 below 32768. Generate four independent 2048-sample batches with the unchanged event sampler instead. Each batch must pass the original ESS requirement of at least four times its retained count. Equal-sized, separately normalized proposal pools have aggregate weight ESS m^2/sum(1/ESS_j), so the combined requirement remains at least 32768. Retain every requested sample and every batch diagnostic. The same random generator advances across batches and events. Preserve the original failed job and charge its cost inside the unchanged 4200-second allocation. No likelihood, prior, population or test-based selection changes."
+  }
+}

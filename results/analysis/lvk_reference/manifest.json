@@ -1,0 +1,28 @@
+{
+  "model": "LVK PowerLaw+Peak with Default spin; mass and redshift separable",
+  "draws": 512,
+  "seed": 241200,
+  "source_sha256": "1c994baf68d78ac36de0cda5ecbcfc5eadfbedc637e5c9292f9b8af504ad3754",
+  "mass_support": [
+    3,
+    150
+  ],
+  "redshift_support": [
+    0,
+    2.3
+  ],
+  "density_measure": [
+    "log10(m1/Msun)",
+    "z",
+    "q"
+  ],
+  "redshift_density": "(1+z)^(lambda-1) dVc/dz, Planck15 cosmology",
+  "normalization": "normalize each hyperposterior draw before computing pointwise quantiles",
+  "joint_domain": "condition on m1 <= 100 Msun or m2 >= 10 Msun within the stated box",
+  "base_probability_in_domain_quantiles": [
+    0.9999999999999997,
+    1.0,
+    1.0000000000000002
+  ],
+  "source": "https://doi.org/10.5281/zenodo.8087858"
+}

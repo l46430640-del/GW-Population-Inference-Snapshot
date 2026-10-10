@@ -1,0 +1,36 @@
+{
+  "configuration": {
+    "grid": [
+      161,
+      97,
+      49
+    ],
+    "frequency_points": 768,
+    "smoke": false
+  },
+  "model": "IMRPhenomD, nonspinning, inclination averaged",
+  "frequency_bounds": "max(1e-5 Hz, Newtonian four-year start) to min(1 Hz, Mf=0.2)",
+  "amplitude_to_newtonian_ratio": 0.9999954512173896,
+  "validation_points": 500,
+  "threshold_validation_points": 200,
+  "relative_frequency_error_quantiles": [
+    9.490751129437314e-07,
+    5.699580586715491e-06,
+    8.5057110552067e-06,
+    9.728925312257886e-06
+  ],
+  "absolute_detection_error_quantiles": [
+    1.7693920888541154e-19,
+    0.0005291574469567894,
+    0.00894278214219561,
+    0.030439190975129038
+  ],
+  "relative_snr_interpolation_error_quantiles": [
+    0.00026228101171971163,
+    0.0020750846274724677,
+    0.013137106500671403,
+    0.0705455538284896
+  ],
+  "seconds": 193.98627810000016,
+  "waveform_source_sha256": "6f56579a62fe127bb57f2604d59d4e3b7ef012e61a254d38da4c22062e5a4239"
+}

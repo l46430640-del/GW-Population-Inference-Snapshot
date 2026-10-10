@@ -1,0 +1,29 @@
+{
+  "source_config": "configs/lisa_correction.json",
+  "output": "results/analysis/lisa_transport_pilot",
+  "flow_source_index": 1,
+  "initial_draws": [
+    "results/analysis/lisa_correction/repeat_732001.npz",
+    "results/analysis/lisa_correction/repeat_732002.npz"
+  ],
+  "initial_selection": "largest_raw_weight_then_labels_maximizing_selected_flow_density",
+  "methods": [
+    "raw",
+    "flow"
+  ],
+  "seeds": [
+    733001,
+    733002
+  ],
+  "warmup": 80,
+  "samples": 80,
+  "target_acceptance": 0.9,
+  "max_tree_depth": 5,
+  "full_mass": true,
+  "maximum_seconds_per_chain": 300,
+  "feature_transport_power": 10,
+  "jit_absolute_tolerance": 1e-08,
+  "precision_draws_per_start": 32,
+  "precision_log_density_tolerance": 0.001,
+  "pilot_only": true
+}

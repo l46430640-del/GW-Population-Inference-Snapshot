@@ -1,0 +1,191 @@
+{
+  "experiment": "lisa_bimodal",
+  "models": {
+    "6": {
+      "directory": "results/analysis/external_lisa_gp/bins_6",
+      "inputs": "results/analysis/external_lisa_gp/inputs_6.npz",
+      "decision": {
+        "complete": true,
+        "divergences_passed": true,
+        "mixing_passed": true,
+        "numerical_passed": true,
+        "resources_passed": true,
+        "posterior_accepted": true,
+        "pooled_integrals_passed": true
+      },
+      "chains": 4,
+      "retained_per_chain": [
+        2400,
+        2400,
+        2400,
+        2400
+      ],
+      "divergences_by_chain": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "mixing": {
+        "maximum_rhat": 1.0019415463074384,
+        "minimum_bulk_ess": 2033.9013495079141,
+        "minimum_tail_ess": 1534.7292818244932
+      },
+      "pooled_integrals": {
+        "standard_deviations": {
+          "event_log_likelihood_change": 0.050826292907772526,
+          "selection_log_likelihood_change": 0.0011746893396157795,
+          "combined_log_likelihood_change": 0.0511944009538412
+        },
+        "passed": true
+      },
+      "retained_full_tree_evaluation_count": 0
+    },
+    "12": {
+      "directory": "results/analysis/external_lisa_gp_completed/bins_12",
+      "inputs": "results/analysis/external_lisa_gp/inputs_12.npz",
+      "decision": {
+        "complete": true,
+        "divergences_passed": true,
+        "mixing_passed": true,
+        "numerical_passed": true,
+        "resources_passed": true,
+        "posterior_accepted": true,
+        "pooled_integrals_passed": true
+      },
+      "chains": 4,
+      "retained_per_chain": [
+        800,
+        800,
+        800,
+        800
+      ],
+      "divergences_by_chain": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "mixing": {
+        "maximum_rhat": 1.0082406387229748,
+        "minimum_bulk_ess": 919.8257108221194,
+        "minimum_tail_ess": 748.1863507825439
+      },
+      "pooled_integrals": {
+        "standard_deviations": {
+          "event_log_likelihood_change": 0.042562608614595515,
+          "selection_log_likelihood_change": 6.027454003161051e-05,
+          "combined_log_likelihood_change": 0.04257141102315662
+        },
+        "passed": true
+      },
+      "retained_full_tree_evaluation_count": 0
+    }
+  },
+  "source_sha256": {
+    "scripts/summarize_external_lisa_gp.py": "086435ced02dff9ed85033002ae241d9d84ac0a0f85e84ff25b29757eedac42a",
+    "results/analysis/external_lisa_gp_completed/bins_12/prefix_verification.json": "2fd16e8419fded813176625af9e3cab51c559ea5510c3a314e165993c6742d74",
+    "configs/external_lisa_gp.json": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+    "scripts/run_external_lisa_gp.py": "d989dc73be4685e142bea8ccbe24a8cd6bb3a33779f409cb516fcde6f4a2fc9d",
+    "results/analysis/lisa_refinement/summary.json": "4b86bffd2e280fb835c1e747c932aad23e172a50078393ff21e9fd81c74ba05c",
+    "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz": "62d52be1a6c7c96146519d2235e6d6df8323190870abb8007ab5d8d32eac65f5",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/external_control_comparison/job_cost_000.json": "bb758d75df833d47452e85ef6213aab4ef6ba029f234df727ab2f42184f64c6b",
+    "model_assets/lisa_analysis/phenom_d_grid.npz": "04d8cc32ff78edc6f622918c828e106d540e5fff2ea5aa2c27e353fe00fa4b2a",
+    "scripts/lisa_gp_inputs.py": "47f44b62aa903e995a9557ceb8603c7a40d2dfc3d13e52184541c2c74dc92f04",
+    "scripts/lisa_noisy_catalog.py": "f93b58ff375b05506410fe8ed5aba3eeb0c11d0e3407c6cf136f0e067255502e",
+    "scripts/build_lisa_analysis_assets.py": "6a3579329f486163964f982e6a0a21057aa62ca185476f724b7b99595e69d4da",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_control_production.py": "0b265d3aaa6d27af7fc115f42cf9197f0936a3b35cf36f811f3c9808cd80afb9",
+    "scripts/run_external_gp_bounded_diagnostics.py": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "configs/external_lisa_event_batches.json": "1ca8e259fcb25f8c49c771c670fe4834fbc900748bf2222f3e255a48472ac64d",
+    "scripts/run_external_lisa_gp_batched.py": "d613b9664779ca094360d8ae9f4625292d004b892a918c949a19ea72ce0ff562",
+    "results/analysis/external_lisa_gp/job_cost_000.json": "fe4196425111c9ef460d0c79936b6a107cd67c149207389276beb9ab8a7ffa65",
+    "results/analysis/external_lisa_gp/verification_catalog.npz": "c58b3e5fae6fb3727298510d06eb25d13ac1ddbeaf67ac72b4d4006f6dd36fc7",
+    "results/analysis/external_lisa_gp/verification_catalog.json": "878fdd3334680eb4166ae68973410609c779794cd020d6cea86e64dcea735483",
+    "results/analysis/external_lisa_gp/inputs_6.npz": "ce3a5d99632d9e12903321c6b02cc3d270f327acfb39bf281a3100341f3183f1",
+    "results/analysis/external_lisa_gp/inputs_6.json": "7d03a092cf406ffbe26fd37d52599e58e5a2848e4ffbfd3067e49ce9a03924d7",
+    "results/analysis/external_lisa_gp/inputs_12.npz": "3554573d408d5eeb0ca3dc4ef4a76ffe05f1dc1263cdac78b5f2fc1daa6f1b0e",
+    "results/analysis/external_lisa_gp/inputs_12.json": "d1c977dba4cf23b86c62083e40a323181786d4a5f5cead95a0054bd8415c3ae4",
+    "results/analysis/external_lisa_gp/pilot_bins_6.json": "f93c4070b7874f763acc90919f0b82b0b8ecdf92f8bd08ca83eabde29ab4b4a4",
+    "results/analysis/external_lisa_gp/bins_6/target.json": "f20e4a43931ea2d3155dda19f9bca15abb441e1944020aea01038174d0b9dbb2",
+    "results/analysis/external_lisa_gp/bins_6/summary.json": "55758ed513ffac868b49760a4c67a484ba4449683aae607b8004847a27a8af81",
+    "results/analysis/external_lisa_gp/bins_6/acceptance.json": "6e9998dda3c210ea14169190019a020faeb4af86d7773dbc2cf3e593b1e1642c",
+    "results/analysis/external_lisa_gp/bins_6/chain_847201.json": "e09a181f0f317e079ea4e9ee0823b3658d95e9977863f0229e2c5edb0dc97889",
+    "results/analysis/external_lisa_gp/bins_6/chain_847201.npz": "d31f4b5225db8f5b6d017164686507429bbfdf03e9da717e157bbbe767bcde8c",
+    "results/analysis/external_lisa_gp/bins_6/chain_847202.json": "faeb4d05d74d2a16fcf05d390883ef9c4f62a8729ba62bb3b0c07c66902cffea",
+    "results/analysis/external_lisa_gp/bins_6/chain_847202.npz": "dbdf8aaf87d4e009cee7c0911b655c05885f8a9d6c61889b44d7332b893c190a",
+    "results/analysis/external_lisa_gp/bins_6/chain_847203.json": "b808252f878a1fc1747f1605db81c1e3e9c1c5d843b3853336207072e3fa1a3c",
+    "results/analysis/external_lisa_gp/bins_6/chain_847203.npz": "6705eca855f9170dc227c3268e63c1e758175a0e0268eca7163613f449e021e1",
+    "results/analysis/external_lisa_gp/bins_6/chain_847204.json": "8aff461bd218c90fa7a1e17c0a329fe2536810653a05b3b60f58181729414ee4",
+    "results/analysis/external_lisa_gp/bins_6/chain_847204.npz": "4fec4622fd120e4d8a6081f117702cd7022179d1f1dff77313a54ad302e7171a",
+    "configs/external_lisa_sparse_check.json": "bbccf32e590d476ee2d034ad1ba8537063137cfc3034b67be4e11b105d328d4e",
+    "scripts/check_sparse_lisa_gp.py": "a017d4f1ec5a2f6a21e04f10970ed4c640e335195690388d92f73761608b0119",
+    "scripts/sparse_lisa_gp.py": "23aecbe986e18165ac35a9faee02b2e2c04819dc2a7c553d593a0f283c47b2fc",
+    "results/analysis/external_lisa_gp/target.json": "6ad136f94b172d3ce7fc76155d60271a22af51b88201ab2426842ebd1f598820",
+    "results/analysis/external_lisa_gp/job_cost_001.json": "ee5de9baa7a3314e28ce78b5b322a319b60e380b8323afbed5ce993b9a793d4e",
+    "results/analysis/external_lisa_gp/bins_12/chain_847201.npz": "7449b7b2b69a6f16bf321b731be7619a549bd6d7b7120a29c080e63e8ebe3883",
+    "results/analysis/external_lisa_gp/bins_12/chain_847201.json": "34e55c7f5f9ee81c1afb800638be6734e07f19f0558a9867c2ce827f52e28a14",
+    "results/analysis/external_lisa_sparse_check/bins_12.npz": "f3d379e89c4cff0f6113701aed74a0fbd1ce8fe78edf51592e38fddd18295a4a",
+    "results/analysis/external_lisa_sparse_check/bins_6.npz": "ea0403ec8490e8c009c6274f06a5a89fe866f2f7c225ad20d6b883023f2f22f6",
+    "configs/external_lisa_gp_completion.json": "5b946f020a01de7aec520331ede80e33ae33bba23dba7c1d4f55fa3c124ee256",
+    "scripts/run_external_lisa_gp_sparse.py": "4032ff41ca9498193bc937b82f88c849b5ffb1290c6fa4e9ddb5e2228976f9db",
+    "results/analysis/external_lisa_sparse_check/summary.json": "32f58c00f5975a132793b90a894cc2f4d3273c107b5a77e60ec5ebf292faa5f9",
+    "results/analysis/external_lisa_gp_sparse/job_cost_000.json": "ad860fc1e8ea1384950ec6b7e2c4e24aab3796858f5baf500988f2e39b5f0fd6",
+    "results/analysis/external_lisa_gp/bins_12/acceptance.json": "7992189e47ec2a0f390514ebef219e1faa9da6315dd7f895ffca1b099ea1cb58",
+    "scripts/complete_external_lisa_gp.py": "a6b11dbce82f0eecd8069aa23de8ac532337b11140034670b049c4ba23297082",
+    "results/analysis/external_lisa_gp_sparse/bins_12/target.json": "0dd5add82f22d2b53778d233cc10732c5de95d870c4420b128e1fac1b1ec8656",
+    "results/analysis/external_lisa_gp_sparse/bins_12/summary.json": "158aabb6e616b6d68ae54ee342404f391abfd71b18b6e9c506007f4e6f0aad30",
+    "results/analysis/external_lisa_gp_sparse/bins_12/acceptance.json": "9eac58fb5e9ae11deff2ef678d5ac7b7a4053b71a49c3735c12e8bb612f52a13",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847201.npz": "3b2ae545a702d6d2226f1b385161568fcfb30d239dbb2845420299d1055b38bf",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847201.json": "74dcb20cd68b3c6129be282a740aa747121887e03d539af2463f1013b59c40c8",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847202.npz": "20fb70d00a969571b6b8b38d494d9267a43bd135c69de936bef71c445414b189",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847202.json": "6efb19f136ed4060c8fb46201b8323ebe98daf4f9920c742805171bff8ef97cf",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847203.npz": "6dc67e238a9a359593682bd8b090d331bc27d3eda4140dd8d83230171fc07eeb",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847203.json": "1d4ada5800f7cdc5286169884d138d9db2af4a2ff4f983806c65dd772301e73c",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847204.npz": "f6dddc59a25c95b8b17b5e63120af67e82d1a812e8b5fc1e48d424bae721f5e6",
+    "results/analysis/external_lisa_gp_sparse/bins_12/chain_847204.json": "297559220f788f1d8149e1ce9485ad836eb7ce960cc7fdf895f97af48c324149",
+    "results/analysis/external_lisa_gp_completed/bins_12/target.json": "dc845d4711a9f2b141a5372fee9dcc8a83d0c55c76201dd1dda23a944e76c1c4",
+    "results/analysis/external_lisa_gp_completed/bins_12/summary.json": "5cb6afe325569740f65caf822b656ae27ff94cd55337f566962ca7e737a1e86a",
+    "results/analysis/external_lisa_gp_completed/bins_12/acceptance.json": "435b542184734800b0d87e61f8313799240b6e7b5ef7071618a62b738b1def90",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847201.json": "5cd898adf08a77deb9a09b265605e6f9d7961f6a48b666c465fa77f1361a8578",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847201.npz": "3b2ae545a702d6d2226f1b385161568fcfb30d239dbb2845420299d1055b38bf",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847202.json": "62bca39e169e9a5c4b574ed1330d8a551d83b4527de4cb685ba9cfb7975dd88b",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847202.npz": "20fb70d00a969571b6b8b38d494d9267a43bd135c69de936bef71c445414b189",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847203.json": "33d6f2f90f80b1c1d2a70b286371a49ac0cad163b1f15cb450891165a48d55fb",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847203.npz": "6dc67e238a9a359593682bd8b090d331bc27d3eda4140dd8d83230171fc07eeb",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847204.json": "57c1fa5f3bf1c196ab259addd279dd09e50e7ec9a920c1f86a9032d27e8bdb1e",
+    "results/analysis/external_lisa_gp_completed/bins_12/chain_847204.npz": "476d42f024dae415b56b1d4816bfd4f680e4f1e5cf730bd613f03eadc7f7b2c5",
+    "results/analysis/external_lisa_sparse_check/job_cost_000.json": "cc22ca9f7b2f5a0e7671255acb9f1dbd5f5d256ab49f8d89ef80c92b7f35b88f",
+    "results/analysis/external_lisa_gp_completed/job_cost_000.json": "12e3cd8623e3d1b416176e5f1566a900a560969d83311e03aa550d3244d52b37"
+  },
+  "cost": {
+    "original_preparation_and_attempts_seconds": 4090.546933999998,
+    "equivalence_check_seconds": 25.91410380000002,
+    "sparse_sampling_seconds": 1283.5995803,
+    "fourth_chain_completion_seconds": 302.90473619999966,
+    "all_lisa_gp_seconds": 5702.965354299999,
+    "total_study_charge_seconds": 41945.70558329999,
+    "remaining_study_seconds": 1254.2944167000096
+  },
+  "resources_passed": true,
+  "gp_posteriors_ready_for_comparison": true,
+  "scientific_scores_examined": false,
+  "fourth_chain_prefix_verification": {
+    "seed": 847204,
+    "compared_retained_draws": 444,
+    "prefix_identical": true,
+    "prefix_not_counted_as_additional_draws": true,
+    "parent_chain_sha256": "f6dddc59a25c95b8b17b5e63120af67e82d1a812e8b5fc1e48d424bae721f5e6"
+  },
+  "ensemble_rule": "Use the four accepted original six-bin chains and the final four sparse twelve-bin chains only when all acceptance checks pass. Three complete sparse chains are copied byte for byte, and only the fourth is replayed to its original 800-draw endpoint. Preserve both pilots and both time-limited trajectories, excluding them as additional scientific samples. Charge every original and replayed computation once. The accepted copula posterior is separate; external predictive and recovery checks remain required."
+}

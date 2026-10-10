@@ -1,0 +1,127 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_pilot",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847201,
+    "warmup": 100,
+    "retained": 100,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "maximum_seconds": 600,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Training-only implementation and cost pilot; neither convergence nor external performance is claimed. Retain all attempts."
+  },
+  "sampling_and_compilation_seconds": 55.876100399999814,
+  "compilation_seconds": 0.1207630999997491,
+  "potential_evaluations": 29065,
+  "warmup_completed": 100,
+  "samples_completed": 100,
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "step_size": 0.04994645259061756,
+  "peak_resident_bytes": 1021681664,
+  "retained_potential_evaluation_quantiles": [
+    127.0,
+    127.0,
+    127.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.7373436023149225e-11
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.4423751082404124e-10
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 78.76476012966803,
+      "cov_mass_ratio": 102.61100632025352,
+      "cov_mass_redshift": 100.2806840953972,
+      "cov_redshift_ratio": 107.04468004064137,
+      "length_x1": 12.96241468183886,
+      "length_x2": 27.51813246120865,
+      "length_x3": 27.17164799541477,
+      "log_posterior": 9.353494595792098,
+      "mass_above_0p8": 63.30365443190541,
+      "mass_below_quarter": 94.79228083972436,
+      "mean_mass": 92.35173874593144,
+      "mean_ratio": 150.6807645436839,
+      "mean_redshift": 104.36535645669233,
+      "sigma": 37.785696839129834,
+      "variance_mass": 123.99458734484712,
+      "variance_ratio": 72.1294289846009,
+      "variance_redshift": 87.58823311435495
+    },
+    "tail": {
+      "alpha": 73.56915500570537,
+      "cov_mass_ratio": 108.12752811242784,
+      "cov_mass_redshift": 113.43784166559665,
+      "cov_redshift_ratio": 58.93911612552384,
+      "length_x1": 21.024628850939607,
+      "length_x2": 65.776263691638,
+      "length_x3": 13.004108236642919,
+      "log_posterior": 45.418054461831616,
+      "mass_above_0p8": 68.64302385892111,
+      "mass_below_quarter": 98.40420145944042,
+      "mean_mass": 73.56915500570537,
+      "mean_ratio": 116.77741595670966,
+      "mean_redshift": 92.5821824972983,
+      "sigma": 54.856456899439,
+      "variance_mass": 92.58218249729835,
+      "variance_ratio": 92.58218249729853,
+      "variance_redshift": 56.84190988817223
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.5343987746982646,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1069948928
+  },
+  "source_sha256": {
+    "configs/external_gp_pilot.json": "254a38bf67e53eff0302144e2021b8b4734a5bef872385f37ad018998e066668",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/selected_mixture/train_catalog.npz": "150ee4e82fb596f86bff3e2156b49a25ac63fca0321c31ffa5324534acd43e9e",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "docs/analysis/external_benchmark_sources.json": "b590c3d25f06b8d82bb4cd299b18ca47bfc75dc889c86e63748b35e07e643942"
+  },
+  "draw_product_sha256": "74e6e56dbe130d6047d587b0eb25ea3945f7107d35ebb200dafb7e5b2ceaeeff",
+  "preparation_seconds": 0.017183299999942392,
+  "quadrature_maximum_log_weight_change": 2.2737367544323206e-13,
+  "process_elapsed_seconds": 81.87216669999998
+}

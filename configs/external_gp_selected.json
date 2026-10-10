@@ -1,0 +1,39 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "validated_pilot": "configs/external_gp_symmetric_pilot.json",
+  "experiment": "selected_copula_truth",
+  "output": "results/analysis/external_gp_selected",
+  "initial_amplitude_and_lengths": [
+    [
+      0.7,
+      0.12,
+      0.2,
+      0.4
+    ],
+    [
+      1.0,
+      0.3,
+      0.3,
+      0.3
+    ],
+    [
+      1.5,
+      0.6,
+      0.4,
+      0.2
+    ],
+    [
+      2.0,
+      1.0,
+      0.15,
+      0.5
+    ]
+  ],
+  "marginal_cdf_points": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "joint_partition": "eight half-box octants in ij meshgrid C order",
+  "decision": "Run the declared four-chain posterior at both resolutions, with dispersed kernel starts and all production diagnostics, using training observations only. Recovery and predictive comparisons follow separately."
+}

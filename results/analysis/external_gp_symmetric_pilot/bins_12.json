@@ -1,0 +1,162 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_symmetric_pilot",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847201,
+    "warmup": 100,
+    "retained": 100,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 600,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Validate derivatives and jitter stability of the same GP prior in symmetric coordinates using training data only. Neither convergence nor external performance is claimed."
+  },
+  "sampling_and_compilation_seconds": 34.12429029999976,
+  "compilation_seconds": 0.19434679999994842,
+  "potential_evaluations": 16961,
+  "warmup_completed": 100,
+  "samples_completed": 100,
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "step_size": 0.08452346368817364,
+  "peak_resident_bytes": 1028669440,
+  "retained_potential_evaluation_quantiles": [
+    63.0,
+    63.0,
+    63.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 4.98212582300539e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.210420652597577e-13
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 109.75964458719372,
+      "cov_mass_ratio": 97.6362548544587,
+      "cov_mass_redshift": 135.69134108423458,
+      "cov_redshift_ratio": 92.02152034521706,
+      "length_x1": 30.54353724271343,
+      "length_x2": 51.68021605569945,
+      "length_x3": 52.14752518912719,
+      "log_posterior": 40.349532383615134,
+      "mass_above_0p8": 103.00951236582794,
+      "mass_below_quarter": 111.87728447082323,
+      "mean_mass": 130.95275737716975,
+      "mean_ratio": 108.20745415983593,
+      "mean_redshift": 200.0,
+      "sigma": 28.760238547570072,
+      "variance_mass": 129.86509406244645,
+      "variance_ratio": 200.0,
+      "variance_redshift": 84.84799678967495
+    },
+    "tail": {
+      "alpha": 101.77046754026514,
+      "cov_mass_ratio": 96.8032193586519,
+      "cov_mass_redshift": 78.33932980978764,
+      "cov_redshift_ratio": 57.280463854858326,
+      "length_x1": 30.620406938959153,
+      "length_x2": 76.62840200895913,
+      "length_x3": 52.450274415164856,
+      "log_posterior": 58.1996870625698,
+      "mass_above_0p8": 49.00688526487188,
+      "mass_below_quarter": 76.62840200895916,
+      "mean_mass": 116.77741595670966,
+      "mean_ratio": 104.39593333028131,
+      "mean_redshift": 60.78444639916967,
+      "sigma": 44.23253676470576,
+      "variance_mass": 108.12752811242774,
+      "variance_ratio": 101.77046754026487,
+      "variance_redshift": 51.999466762088105
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.0005531869699393918,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1074995200
+  },
+  "source_sha256": {
+    "configs/external_gp_symmetric_pilot.json": "0239c0c7a07da3c2646c435b1de061433d7778990ffdc3cb7687c41de3b915dd",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/selected_mixture/train_catalog.npz": "150ee4e82fb596f86bff3e2156b49a25ac63fca0321c31ffa5324534acd43e9e",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "docs/analysis/external_benchmark_sources.json": "b590c3d25f06b8d82bb4cd299b18ca47bfc75dc889c86e63748b35e07e643942"
+  },
+  "preparation_seconds": 0.01784219999990455,
+  "quadrature_maximum_log_weight_change": 2.2737367544323206e-13,
+  "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      14,
+      21,
+      28,
+      29,
+      38,
+      42,
+      56,
+      57,
+      65,
+      69,
+      70,
+      75,
+      84,
+      91,
+      97,
+      99
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 5.488759952099187e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.0005531869699393918
+  },
+  "stability_check_passed": true,
+  "coordinate_verification_seconds": 0.4774652999999489,
+  "process_elapsed_seconds": 59.55944439999985,
+  "ready_for_production_sampling": true,
+  "draw_product_sha256": "507922fd7ff370694d4f909671fcda9da1f435977cf7c89efec619849f34d77d"
+}

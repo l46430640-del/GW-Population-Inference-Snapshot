@@ -1,0 +1,119 @@
+{
+  "n_intrinsic_realized": 153,
+  "n_detected": 135,
+  "injected_intrinsic_mean": 160.0,
+  "alpha_true": 0.8929032836913585,
+  "truth_integral": 0.9999579563533221,
+  "quadrature_points": 32768,
+  "posterior_density_integral_quantiles": [
+    0.9437843084335327,
+    0.9963471591472626,
+    1.7258733391761756
+  ],
+  "alpha_quantiles": [
+    0.35122196078300477,
+    0.5653484463691711,
+    0.8192786157131194
+  ],
+  "alpha_training_to_fine_absolute_difference_quantiles": [
+    0.00013230741024017334,
+    0.00031703114509582523,
+    0.0005553632974624634,
+    0.0006494820117950439
+  ],
+  "intrinsic_mean_quantiles": [
+    163.11606521606444,
+    237.78882598876953,
+    391.10850219726524
+  ],
+  "detected_mean_quantiles": [
+    116.15608215332031,
+    134.37677001953125,
+    154.550422668457
+  ],
+  "independent_detected_count": 135,
+  "predictive_detected_count_quantiles": [
+    109.0,
+    134.0,
+    163.0
+  ],
+  "joint_js_distance_predictive_to_truth": 0.46594911775102277,
+  "joint_js_distance_draw_to_truth_quantiles": [
+    0.3473656866118735,
+    0.4921093142785009,
+    0.6743470289861206
+  ],
+  "joint_js_distance_within_posterior_quantiles": [
+    0.3051861822605133,
+    0.4385750889778137,
+    0.7959094047546387
+  ],
+  "minimum_event_ess_quantiles": [
+    125.59194831848144,
+    163.35753631591797,
+    195.04903259277344
+  ],
+  "configuration": {
+    "output": "results/analysis/morphologies",
+    "morphology": "bimodal",
+    "family": "kumaraswamy",
+    "components": 3,
+    "steps": 5000,
+    "particles": 2,
+    "quadrature": 4096,
+    "posterior_samples": 256,
+    "catalog_seed": 823010,
+    "training_seed": 91001,
+    "resume": false,
+    "initial_state": null,
+    "learning_rate": 0.001,
+    "initialize_events": true,
+    "detector": "lisa",
+    "integration": "population_qmc"
+  },
+  "train_seconds": 871.5216535,
+  "negative_elbo_last_1000": -167.33234673011302,
+  "core_sha256": "f0d75a311e5014c4ab97bacf9f780a6adc764659395773382ae5df257fdaa81f",
+  "initialization": {
+    "method": "clustering observed posterior means; marginal maximum likelihood for initialization only",
+    "seed": 91001,
+    "component_event_counts": [
+      15,
+      39,
+      81
+    ],
+    "initial_latent_location": [
+      -0.8806368112564087,
+      0.074874646961689,
+      0.8057621717453003,
+      2.4048008918762207,
+      4.0,
+      1.5508464574813843,
+      4.0,
+      1.9702495336532593,
+      0.6930921673774719,
+      2.2460925579071045,
+      2.2867023944854736,
+      0.9502543210983276,
+      4.0,
+      1.8447967767715454,
+      1.5186316967010498,
+      1.0981080532073975,
+      3.4610188007354736,
+      1.5573768615722656,
+      1.6976624727249146,
+      0.7856372594833374,
+      2.7152628898620605,
+      -0.03368325158953667,
+      0.08630423247814178,
+      0.04027289152145386,
+      0.03402446210384369,
+      0.07841785252094269,
+      -0.08316759765148163,
+      0.09646224230527878,
+      0.013639080338180065,
+      0.0643022432923317
+    ],
+    "initial_latent_scale": 0.5
+  }
+}

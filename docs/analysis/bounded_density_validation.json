@@ -1,0 +1,31 @@
+{
+  "source_sha256": {
+    "src/gwpopulation/bounded_density.py": "8a12f8a3d9f609a33d928f17e25202132bb531dc285ab4cd33af33f2672456e0",
+    "scripts/check_bounded_density.py": "e48f15df0cf317ff8480edcb609ca6ba6a24dd51b0a47eb15de33071a3a4a7de",
+    "tests/test_bounded_density.py": "136af5ad9c7aa56d28887b4854676574eabd160a404070df47333893084aa23a",
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.16.3",
+    "torch": "2.5.1"
+  },
+  "threads": 1,
+  "inference_rerun": false,
+  "adopted_estimator_migrated": false,
+  "scope": "Kumaraswamy and Gaussian-copula kernels only; adopted estimator, other marginals and event/selection integration remain to be migrated and checked.",
+  "checks": {
+    "counterexample_shape": [
+      0.02,
+      1.0
+    ],
+    "normalization": 1.0000000000000075,
+    "quadrature_error_estimate": 1.1674650045217561e-08,
+    "density_at_1e_minus_10": 126191468.89603844,
+    "maximum_absolute_log_tail_roundtrip_error": 1.280568540096283e-09,
+    "maximum_normal_roundtrip_error": 1.2505552149377763e-12,
+    "correlated_numpy_torch_maximum_log_density_difference": 1.9717845134437084e-09,
+    "correlated_comparison_points": 64,
+    "seconds": 0.0921678000013344
+  }
+}

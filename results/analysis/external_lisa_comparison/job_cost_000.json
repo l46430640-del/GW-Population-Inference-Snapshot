@@ -1,0 +1,18 @@
+{
+  "status": "stopped",
+  "error": "Copula target does not meet the external numerical protocol",
+  "process_elapsed_seconds": 311.95373530000006,
+  "all_evaluation_attempts_seconds": 311.95373530000006,
+  "total_study_charge_seconds": 42257.65931859999,
+  "remaining_study_seconds": 2742.3406814000095,
+  "study_ceiling_seconds": 45000,
+  "configuration_sha256": "cd707c5090b90d34d41e8edcfd523ce5dee09166d1e30e86a8516e19657eff3d",
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1237123072
+  }
+}

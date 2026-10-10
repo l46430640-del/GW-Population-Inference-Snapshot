@@ -1,0 +1,5781 @@
+{
+  "label": "kumaraswamy_k2_uniform_m150_s812301",
+  "directory": "results/analysis/lvk_mixture/kumaraswamy_k2_uniform_m150_s812301",
+  "representative_draws": 16,
+  "evaluated_draws": 23,
+  "event_count": 69,
+  "configuration": {
+    "output": "results/analysis/lvk_mixture",
+    "smoke_only": false,
+    "family": "kumaraswamy",
+    "components": 2,
+    "spin": "uniform",
+    "mmax": 150.0,
+    "steps": 5000,
+    "particles": 2,
+    "posterior_samples": 1024,
+    "injections": 12000,
+    "seed": 812301,
+    "resume": false,
+    "initial_state": null,
+    "full_injections": true,
+    "learning_rate": 0.001,
+    "initialize_events": true
+  },
+  "full_check_stress_indices": [
+    17,
+    13,
+    20,
+    22
+  ],
+  "compressed_stress_indices": [
+    76,
+    40,
+    49,
+    180
+  ],
+  "feature_names": [
+    "P(m1<10)",
+    "P(m1>50)",
+    "P(z>1)",
+    "P(q<0.5)"
+  ],
+  "low_ess_diagnostic": 20,
+  "minimum_event_ess_representative_quantiles": [
+    5.150691763316411,
+    224.95934991172228,
+    2441.876483002546
+  ],
+  "minimum_event_ess_all_checked": 3.691832420632177,
+  "event_log_likelihood_conditional_sd_quantiles": [
+    0.050602934353322096,
+    0.10988344126040528,
+    0.4630253326358216
+  ],
+  "mean_pair_difference_variance_representative": 0.06970791933998628,
+  "pair_difference_sd_quantiles": [
+    0.050159389614520926,
+    0.22657064858375286,
+    0.5273305694210891
+  ],
+  "clustered_mean_pair_difference_variance": 0.06970948677261364,
+  "compression_delta_sd_representative": 0.4190720840421044,
+  "scientific_sensitivity": {
+    "mean": [
+      0.5074600856266763,
+      0.1351055416705435,
+      0.8763328463939808,
+      0.2328657460527035
+    ],
+    "vi_sd": [
+      0.27835732279044556,
+      0.15637419652657825,
+      0.1412098010604203,
+      0.171035331561763
+    ],
+    "conditional_mc_se": [
+      0.007427229361654757,
+      0.004090024590456303,
+      0.007798033818408945,
+      0.010978733797142171
+    ],
+    "conditional_mc_se_over_vi_sd": [
+      0.026682356645764134,
+      0.02615536758176813,
+      0.05522303522736607,
+      0.0641898588840845
+    ],
+    "reweighted_mean": [
+      0.4850319383512077,
+      0.15167058659005986,
+      0.8248204177221032,
+      0.25298995178370626
+    ],
+    "mean_change": [
+      -0.022428147275468602,
+      0.016565044919516353,
+      -0.05151242867187755,
+      0.020124205731002764
+    ],
+    "mean_change_over_vi_sd": [
+      -0.08057322527258634,
+      0.10593208654281312,
+      -0.36479357866835754,
+      0.1176611028098347
+    ],
+    "ratio_ess_fraction": 0.7953637991943578
+  },
+  "clustered_scientific_sensitivity": {
+    "mean": [
+      0.5074600856266763,
+      0.1351055416705435,
+      0.8763328463939808,
+      0.2328657460527035
+    ],
+    "vi_sd": [
+      0.27835732279044556,
+      0.15637419652657825,
+      0.1412098010604203,
+      0.171035331561763
+    ],
+    "conditional_mc_se": [
+      0.007427303960549944,
+      0.0040900814166348045,
+      0.007798155520832541,
+      0.010978818394772282
+    ],
+    "conditional_mc_se_over_vi_sd": [
+      0.026682624642648277,
+      0.026155730980460264,
+      0.05522389708272372,
+      0.06419035350487039
+    ]
+  },
+  "feature_associations_representative": {
+    "spearman_with_log_minimum_ess": [
+      0.09705882352941177,
+      -0.19705882352941176,
+      0.37058823529411766,
+      0.2647058823529412
+    ],
+    "low_ess_points": 5,
+    "other_points": 11,
+    "low_ess_feature_median": [
+      0.34419866901204554,
+      0.04129248582896396,
+      0.941878092532757,
+      0.15273620310816827
+    ],
+    "other_feature_median": [
+      0.5341987059120525,
+      0.03342914314734122,
+      0.9539395343691868,
+      0.28367088803619533
+    ]
+  },
+  "feature_associations_all_checked": {
+    "spearman_with_log_minimum_ess": [
+      0.13339920948616601,
+      -0.13636363636363635,
+      0.424901185770751,
+      0.17490118577075098
+    ],
+    "low_ess_points": 10,
+    "other_points": 13,
+    "low_ess_feature_median": [
+      0.3397637697544114,
+      0.04018028940499204,
+      0.8375362919180077,
+      0.22452494259116879
+    ],
+    "other_feature_median": [
+      0.5341987059120525,
+      0.03342914314734122,
+      0.9539395343691868,
+      0.28367088803619533
+    ]
+  },
+  "events_by_pair_variance": [
+    {
+      "event": "S190412m",
+      "pe_rows": 17018,
+      "unique_states": 16306,
+      "ess_quantiles_representative": [
+        5.150691763316411,
+        224.95934991172228,
+        8675.651547417416
+      ],
+      "minimum_ess_all_checked": 3.691832420632177,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 5,
+      "low_ess_all_checked_count": 10,
+      "mean_pair_difference_variance_representative": 0.053369259579228535,
+      "worst_maximum_normalized_weight": 0.34150189988328195,
+      "dominating_original_pe_row": 13311,
+      "dominating_m1_z_q": [
+        16.383094074286223,
+        0.14246947815739622,
+        0.8827457160328924
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.12154150197628459,
+          -0.12450592885375496,
+          0.41106719367588934,
+          0.1808300395256917
+        ],
+        "low_ess_points": 10,
+        "other_points": 13,
+        "low_ess_feature_median": [
+          0.3397637697544114,
+          0.04018028940499204,
+          0.8375362919180077,
+          0.22452494259116879
+        ],
+        "other_feature_median": [
+          0.5341987059120525,
+          0.03342914314734122,
+          0.9539395343691868,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170608",
+      "pe_rows": 6448,
+      "unique_states": 6448,
+      "ess_quantiles_representative": [
+        891.1410736970302,
+        3185.6794231954937,
+        4304.076166237709
+      ],
+      "minimum_ess_all_checked": 37.80778463657108,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.003338364982379314,
+      "worst_maximum_normalized_weight": 0.09922544483927379,
+      "dominating_original_pe_row": 6135,
+      "dominating_m1_z_q": [
+        9.242299571595527,
+        0.0553496279160549,
+        0.9999469222920664
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.34782608695652173,
+          -0.316205533596838,
+          0.5592885375494071,
+          -0.04150197628458498
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191216ap",
+      "pe_rows": 17792,
+      "unique_states": 17792,
+      "ess_quantiles_representative": [
+        1929.2803197076887,
+        8278.083681589324,
+        11449.079369423125
+      ],
+      "minimum_ess_all_checked": 121.87496680014699,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0010563378932951179,
+      "worst_maximum_normalized_weight": 0.040822531340471035,
+      "dominating_original_pe_row": 5670,
+      "dominating_m1_z_q": [
+        9.570716299079846,
+        0.06428629825125524,
+        0.9998286067288741
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.34782608695652173,
+          -0.30830039525691705,
+          0.5909090909090909,
+          -0.007905138339920948
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191103a",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        1358.8367861754286,
+        4593.433374238216,
+        6492.150551177838
+      ],
+      "minimum_ess_all_checked": 143.2286048662648,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0009549669561010714,
+      "worst_maximum_normalized_weight": 0.07005312675749231,
+      "dominating_original_pe_row": 860,
+      "dominating_m1_z_q": [
+        10.756808240902043,
+        0.0748784091913504,
+        0.999255825015359
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3488142292490119,
+          -0.28260869565217395,
+          0.541501976284585,
+          0.042490118577075096
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190929d",
+      "pe_rows": 14010,
+      "unique_states": 14010,
+      "ess_quantiles_representative": [
+        425.19160946284524,
+        1939.3274982338548,
+        6272.282155684366
+      ],
+      "minimum_ess_all_checked": 274.14314401783076,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0008170577376758743,
+      "worst_maximum_normalized_weight": 0.01154939488239193,
+      "dominating_original_pe_row": 2290,
+      "dominating_m1_z_q": [
+        37.43001121021702,
+        0.8710412777243183,
+        0.9226457445205622
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.4545454545454546,
+          0.3982213438735178,
+          -0.2075098814229249,
+          0.6235177865612649
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190519bj",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        681.3181881184787,
+        3041.958725311142,
+        6816.645453549319
+      ],
+      "minimum_ess_all_checked": 242.12302441500418,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0007117706150630257,
+      "worst_maximum_normalized_weight": 0.019507855179704485,
+      "dominating_original_pe_row": 5245,
+      "dominating_m1_z_q": [
+        40.46078316570582,
+        0.7719898724246382,
+        0.932164076767469
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3843873517786562,
+          0.3557312252964427,
+          -0.2658102766798419,
+          0.5355731225296443
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190828l",
+      "pe_rows": 12405,
+      "unique_states": 12405,
+      "ess_quantiles_representative": [
+        460.7495649515694,
+        2745.8101826722223,
+        5443.818839288651
+      ],
+      "minimum_ess_all_checked": 389.62135567849674,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0006197622694775984,
+      "worst_maximum_normalized_weight": 0.005548197140263345,
+      "dominating_original_pe_row": 4070,
+      "dominating_m1_z_q": [
+        13.799919077773856,
+        0.4977068983895889,
+        0.8822174647335618
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.03754940711462451,
+          -0.018774703557312256,
+          0.36462450592885376,
+          0.3794466403162055
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW151226",
+      "pe_rows": 52252,
+      "unique_states": 52252,
+      "ess_quantiles_representative": [
+        4212.7922426121495,
+        18394.68272670103,
+        27208.863196229304
+      ],
+      "minimum_ess_all_checked": 225.93423415794945,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0005600206529022155,
+      "worst_maximum_normalized_weight": 0.03167208489455415,
+      "dominating_original_pe_row": 24289,
+      "dominating_m1_z_q": [
+        10.351539269979595,
+        0.07302631606493888,
+        0.9999848627344912
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3092885375494071,
+          -0.2648221343873518,
+          0.5760869565217391,
+          0.03557312252964427
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170729",
+      "pe_rows": 5112,
+      "unique_states": 5112,
+      "ess_quantiles_representative": [
+        952.2531709737789,
+        1853.9531754467398,
+        3257.135718196087
+      ],
+      "minimum_ess_all_checked": 432.3450023003861,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00047236615609470834,
+      "worst_maximum_normalized_weight": 0.00831228160846339,
+      "dominating_original_pe_row": 1020,
+      "dominating_m1_z_q": [
+        35.12331011691216,
+        0.5961399687463598,
+        0.928710661669091
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3221343873517787,
+          0.2845849802371542,
+          -0.05533596837944664,
+          0.5503952569169961
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170823",
+      "pe_rows": 4278,
+      "unique_states": 4278,
+      "ess_quantiles_representative": [
+        912.9591907239011,
+        2083.1441611205946,
+        2930.5072818737676
+      ],
+      "minimum_ess_all_checked": 615.7991793485326,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00037137056714304194,
+      "worst_maximum_normalized_weight": 0.005308304936496967,
+      "dominating_original_pe_row": 487,
+      "dominating_m1_z_q": [
+        30.077587761070298,
+        0.33347040454815446,
+        0.9258730272518858
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.13339920948616601,
+          0.11758893280632411,
+          0.13043478260869565,
+          0.3735177865612649
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW150914",
+      "pe_rows": 8350,
+      "unique_states": 8350,
+      "ess_quantiles_representative": [
+        1891.875008176234,
+        5789.74143792338,
+        7094.144294442697
+      ],
+      "minimum_ess_all_checked": 400.8064713013652,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00036421805885353443,
+      "worst_maximum_normalized_weight": 0.027231933099866445,
+      "dominating_original_pe_row": 4633,
+      "dominating_m1_z_q": [
+        32.35248484777528,
+        0.07669598176736692,
+        0.9999825247378115
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.25,
+          -0.24505928853754944,
+          0.3656126482213439,
+          -0.10177865612648221
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170818",
+      "pe_rows": 5862,
+      "unique_states": 5862,
+      "ess_quantiles_representative": [
+        878.980035327868,
+        3375.4424981490533,
+        4251.821312429192
+      ],
+      "minimum_ess_all_checked": 570.1706941624742,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00034589784053950016,
+      "worst_maximum_normalized_weight": 0.013061710686854208,
+      "dominating_original_pe_row": 5160,
+      "dominating_m1_z_q": [
+        29.56210103718012,
+        0.1399279246331796,
+        0.999391311421261
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.12252964426877472,
+          -0.11067193675889328,
+          0.2618577075098814,
+          0.15019762845849804
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191109d",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        1008.7787491651593,
+        3920.8743148492867,
+        6923.796746410171
+      ],
+      "minimum_ess_all_checked": 505.41401122525883,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0003453120052476431,
+      "worst_maximum_normalized_weight": 0.007313341962079057,
+      "dominating_original_pe_row": 992,
+      "dominating_m1_z_q": [
+        44.77446819321288,
+        0.524242174463346,
+        0.9442232721452765
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.1847826086956522,
+          0.18577075098814227,
+          -0.03656126482213439,
+          0.39624505928853754
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200129m",
+      "pe_rows": 3194,
+      "unique_states": 3194,
+      "ess_quantiles_representative": [
+        916.2609792540534,
+        1998.2252746415681,
+        2441.876483002546
+      ],
+      "minimum_ess_all_checked": 685.6027781702675,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00034112528277680497,
+      "worst_maximum_normalized_weight": 0.008970837811139044,
+      "dominating_original_pe_row": 27,
+      "dominating_m1_z_q": [
+        30.672297340933998,
+        0.13653597599867368,
+        0.9979233198003297
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.16996047430830039,
+          -0.17786561264822134,
+          0.3221343873517787,
+          -0.04150197628458498
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190620e",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        1317.9016240147014,
+        3323.7451713756273,
+        5976.637344739105
+      ],
+      "minimum_ess_all_checked": 587.7120538769784,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00032610607968850514,
+      "worst_maximum_normalized_weight": 0.00884229064799664,
+      "dominating_original_pe_row": 6712,
+      "dominating_m1_z_q": [
+        34.386376885067804,
+        0.7573100301311624,
+        0.9118999826651843
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.37747035573122534,
+          0.3379446640316206,
+          -0.1314229249011858,
+          0.5701581027667983
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190725t",
+      "pe_rows": 39522,
+      "unique_states": 39522,
+      "ess_quantiles_representative": [
+        3479.234432943212,
+        14537.873180662138,
+        21852.437538820963
+      ],
+      "minimum_ess_all_checked": 435.5106895305793,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0003227857176254555,
+      "worst_maximum_normalized_weight": 0.03081410377109076,
+      "dominating_original_pe_row": 11106,
+      "dominating_m1_z_q": [
+        9.37105824466599,
+        0.07979159754092695,
+        0.9991192134863249
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.2865612648221344,
+          -0.24703557312252966,
+          0.5088932806324111,
+          0.12648221343873517
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190924h",
+      "pe_rows": 28881,
+      "unique_states": 28881,
+      "ess_quantiles_representative": [
+        1808.626329951591,
+        11843.277075425296,
+        19539.243713284755
+      ],
+      "minimum_ess_all_checked": 626.03769842834,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0002824966137100187,
+      "worst_maximum_normalized_weight": 0.013570839958998054,
+      "dominating_original_pe_row": 9665,
+      "dominating_m1_z_q": [
+        7.060925232956393,
+        0.051070172129923944,
+        0.993902684109023
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3636363636363636,
+          -0.3201581027667984,
+          0.5691699604743083,
+          0.04051383399209487
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190805bq",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        1796.2722664429268,
+        4544.400643798062,
+        6702.875079385455
+      ],
+      "minimum_ess_all_checked": 1189.2916269247996,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00027886181272045326,
+      "worst_maximum_normalized_weight": 0.0036277832552828234,
+      "dominating_original_pe_row": 793,
+      "dominating_m1_z_q": [
+        27.04029320087659,
+        1.5595475051193726,
+        0.9012421378911115
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.4011857707509882,
+          0.2717391304347826,
+          0.16403162055335968,
+          0.541501976284585
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190728q",
+      "pe_rows": 10000,
+      "unique_states": 10000,
+      "ess_quantiles_representative": [
+        1620.7344112984044,
+        5310.382421299002,
+        7198.00825896031
+      ],
+      "minimum_ess_all_checked": 702.9032903231185,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0002760974914702986,
+      "worst_maximum_normalized_weight": 0.012147794292658285,
+      "dominating_original_pe_row": 7686,
+      "dominating_m1_z_q": [
+        10.60385691267982,
+        0.09765890806031925,
+        0.9956813991902345
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3142292490118577,
+          -0.2717391304347826,
+          0.5345849802371541,
+          0.07312252964426878
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170104",
+      "pe_rows": 24972,
+      "unique_states": 24887,
+      "ess_quantiles_representative": [
+        2060.2555502603373,
+        11425.07085401189,
+        15969.037501443689
+      ],
+      "minimum_ess_all_checked": 602.4148178808364,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00024452502595932496,
+      "worst_maximum_normalized_weight": 0.03010719099715863,
+      "dominating_original_pe_row": 7718,
+      "dominating_m1_z_q": [
+        29.87544464040052,
+        0.11634515816515852,
+        0.9999999132129511
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.15513833992094864,
+          -0.13537549407114624,
+          0.3636363636363636,
+          0.23122529644268777
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW151012",
+      "pe_rows": 16096,
+      "unique_states": 16096,
+      "ess_quantiles_representative": [
+        1564.0164971133245,
+        6170.750495079445,
+        8502.486985050762
+      ],
+      "minimum_ess_all_checked": 764.7122016401144,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00023567198065743713,
+      "worst_maximum_normalized_weight": 0.0079491745243422,
+      "dominating_original_pe_row": 2430,
+      "dominating_m1_z_q": [
+        18.10205978661384,
+        0.12827000906533478,
+        0.9986317474356614
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.1798418972332016,
+          -0.15118577075098816,
+          0.47134387351778656,
+          0.19071146245059292
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191129u",
+      "pe_rows": 41494,
+      "unique_states": 41494,
+      "ess_quantiles_representative": [
+        4575.399653798675,
+        19159.022195666566,
+        27875.898652958513
+      ],
+      "minimum_ess_all_checked": 664.5279806722268,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00021743901322065628,
+      "worst_maximum_normalized_weight": 0.0260467439151333,
+      "dominating_original_pe_row": 17760,
+      "dominating_m1_z_q": [
+        9.155817869012457,
+        0.07160811569894565,
+        0.9994507641284661
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.34189723320158105,
+          -0.29545454545454547,
+          0.5622529644268774,
+          0.06521739130434782
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200202ac",
+      "pe_rows": 56226,
+      "unique_states": 56226,
+      "ess_quantiles_representative": [
+        8792.800412167038,
+        31118.77798831728,
+        42219.14813516623
+      ],
+      "minimum_ess_all_checked": 631.2475719233939,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00020936063311032826,
+      "worst_maximum_normalized_weight": 0.015512933745249353,
+      "dominating_original_pe_row": 12980,
+      "dominating_m1_z_q": [
+        8.816603709646053,
+        0.06068096764348726,
+        0.9999028203633267
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3092885375494071,
+          -0.2776679841897233,
+          0.5464426877470356,
+          0.03063241106719368
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191204r",
+      "pe_rows": 27704,
+      "unique_states": 27704,
+      "ess_quantiles_representative": [
+        4143.2664754912685,
+        15927.83296541377,
+        21192.538748775878
+      ],
+      "minimum_ess_all_checked": 732.3312912079128,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00020009177722215098,
+      "worst_maximum_normalized_weight": 0.021279467714103318,
+      "dominating_original_pe_row": 11205,
+      "dominating_m1_z_q": [
+        10.197731929221467,
+        0.08396685959013664,
+        0.9996640371824895
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.2885375494071146,
+          -0.2549407114624506,
+          0.5365612648221344,
+          0.0691699604743083
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191127p",
+      "pe_rows": 45432,
+      "unique_states": 45432,
+      "ess_quantiles_representative": [
+        2451.2461554111137,
+        6100.283268912277,
+        10519.487451930117
+      ],
+      "minimum_ess_all_checked": 1211.9330022533536,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0001684385357133159,
+      "worst_maximum_normalized_weight": 0.004587630592765462,
+      "dominating_original_pe_row": 9290,
+      "dominating_m1_z_q": [
+        22.178094133649125,
+        0.7242733198602357,
+        0.9015444536422283
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.37055335968379455,
+          0.24802371541501977,
+          0.07213438735177866,
+          0.6126482213438735
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170809",
+      "pe_rows": 14802,
+      "unique_states": 14802,
+      "ess_quantiles_representative": [
+        1658.3474836734188,
+        6986.0468443224345,
+        9523.886535630512
+      ],
+      "minimum_ess_all_checked": 1254.5391643288697,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0001667479562608115,
+      "worst_maximum_normalized_weight": 0.0062778792744514825,
+      "dominating_original_pe_row": 4976,
+      "dominating_m1_z_q": [
+        31.68450047367106,
+        0.09424675603484282,
+        0.999501541653825
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.13043478260869565,
+          -0.11067193675889328,
+          0.30632411067193677,
+          0.1926877470355731
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190706ai",
+      "pe_rows": 24775,
+      "unique_states": 24775,
+      "ess_quantiles_representative": [
+        2079.799456196502,
+        7964.559557010178,
+        15368.529770519153
+      ],
+      "minimum_ess_all_checked": 1550.3263018977996,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0001659441296067826,
+      "worst_maximum_normalized_weight": 0.0029320312663149027,
+      "dominating_original_pe_row": 8553,
+      "dominating_m1_z_q": [
+        42.82202512246596,
+        0.8683619415753754,
+        0.9342113160489047
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.5573122529644269,
+          0.4614624505928854,
+          -0.3073122529644269,
+          0.598814229249012
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190720a",
+      "pe_rows": 24658,
+      "unique_states": 24658,
+      "ess_quantiles_representative": [
+        2989.5288328805455,
+        10913.035090586996,
+        15499.33781378674
+      ],
+      "minimum_ess_all_checked": 1323.338319558728,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00014680553911742268,
+      "worst_maximum_normalized_weight": 0.00661655965638059,
+      "dominating_original_pe_row": 1608,
+      "dominating_m1_z_q": [
+        11.07800518632496,
+        0.08819781154112005,
+        0.9938756012931
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.2737154150197629,
+          -0.23122529644268777,
+          0.49604743083003955,
+          0.11462450592885376
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190513bm",
+      "pe_rows": 22753,
+      "unique_states": 22753,
+      "ess_quantiles_representative": [
+        2792.761026316143,
+        6187.933543308189,
+        11387.633492699066
+      ],
+      "minimum_ess_all_checked": 1438.7992354502162,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00013234845520229026,
+      "worst_maximum_normalized_weight": 0.0019938132568940803,
+      "dominating_original_pe_row": 22192,
+      "dominating_m1_z_q": [
+        21.333421867892113,
+        0.6109713300014419,
+        0.9175861367521571
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.05533596837944664,
+          0.06027667984189724,
+          0.17687747035573123,
+          0.48517786561264825
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190512at",
+      "pe_rows": 23460,
+      "unique_states": 23460,
+      "ess_quantiles_representative": [
+        2164.4106983586494,
+        8557.590637042636,
+        13383.482809180794
+      ],
+      "minimum_ess_all_checked": 1759.2777596692358,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.0001279535963596331,
+      "worst_maximum_normalized_weight": 0.001287195690537138,
+      "dominating_original_pe_row": 9891,
+      "dominating_m1_z_q": [
+        15.331503856049887,
+        0.39627652975169053,
+        0.898355861691906
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.04150197628458498,
+          -0.016798418972332016,
+          0.35474308300395263,
+          0.38241106719367585
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200112r",
+      "pe_rows": 9898,
+      "unique_states": 9898,
+      "ess_quantiles_representative": [
+        2183.544895759935,
+        6021.5750069043615,
+        7742.075982384389
+      ],
+      "minimum_ess_all_checked": 2091.202471186255,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00012567558628168212,
+      "worst_maximum_normalized_weight": 0.003984726892401589,
+      "dominating_original_pe_row": 942,
+      "dominating_m1_z_q": [
+        33.34074476675903,
+        0.1508905637542333,
+        0.9993528889556681
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.06620553359683795,
+          -0.07213438735177866,
+          0.2658102766798419,
+          0.16304347826086957
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190521g",
+      "pe_rows": 39529,
+      "unique_states": 39529,
+      "ess_quantiles_representative": [
+        4422.707050720815,
+        9792.126397690627,
+        21699.685502687316
+      ],
+      "minimum_ess_all_checked": 2958.380779016122,
+      "worst_saved_draw": 127,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00012281474871590303,
+      "worst_maximum_normalized_weight": 0.0019295249079368463,
+      "dominating_original_pe_row": 33616,
+      "dominating_m1_z_q": [
+        65.03349828503306,
+        0.8942303320816388,
+        0.9973993759964797
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.4940711462450593,
+          0.3942687747035573,
+          -0.2756916996047431,
+          0.45553359683794475
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.952833009065009,
+        0.00013543882875478058,
+        0.9720461621797667,
+        0.006883539823627905
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.05285398597540398,
+          0.947146014024596
+        ],
+        "z_shape_a": [
+          3.555925454412397,
+          3.884418928399801
+        ],
+        "z_shape_b": [
+          1.2358021421671666,
+          0.6547428859496489
+        ],
+        "u_shape_a": [
+          0.8553404116454214,
+          2.112732538221906
+        ],
+        "u_shape_b": [
+          2.2151119682994285,
+          1.3849657272203308
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            0.880832797553076,
+            -0.3183276741693485
+          ],
+          [
+            0.3906927603295603,
+            0.36998836090438114
+          ],
+          [
+            0.6509280678771335,
+            0.0755171394161774
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190930s",
+      "pe_rows": 27591,
+      "unique_states": 27591,
+      "ess_quantiles_representative": [
+        3913.869307213298,
+        13573.771081758478,
+        18332.81097097234
+      ],
+      "minimum_ess_all_checked": 1534.1104799294276,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00012188328932115675,
+      "worst_maximum_normalized_weight": 0.004974627589026486,
+      "dominating_original_pe_row": 26810,
+      "dominating_m1_z_q": [
+        10.40839623935979,
+        0.06853301356291233,
+        0.9933703569997971
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3073122529644269,
+          -0.25889328063241107,
+          0.5503952569169961,
+          0.06422924901185771
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190527w",
+      "pe_rows": 23398,
+      "unique_states": 23398,
+      "ess_quantiles_representative": [
+        3359.5856171772925,
+        7743.52893380627,
+        11666.448822189355
+      ],
+      "minimum_ess_all_checked": 1828.9793304082943,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00011547934566678196,
+      "worst_maximum_normalized_weight": 0.0022139891540711026,
+      "dominating_original_pe_row": 1272,
+      "dominating_m1_z_q": [
+        21.51551652991037,
+        0.7355876140871604,
+        0.9021655846339933
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.1798418972332016,
+          0.15217391304347824,
+          0.1442687747035573,
+          0.5474308300395258
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190719an",
+      "pe_rows": 25652,
+      "unique_states": 25652,
+      "ess_quantiles_representative": [
+        3745.5198679689697,
+        8759.321607523634,
+        13409.59921153521
+      ],
+      "minimum_ess_all_checked": 2113.8296258752566,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00011359158336211932,
+      "worst_maximum_normalized_weight": 0.002127145662111799,
+      "dominating_original_pe_row": 21275,
+      "dominating_m1_z_q": [
+        20.188524116884068,
+        0.8676783296142977,
+        0.9001071960823716
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.24901185770750991,
+          0.20256916996047433,
+          0.1274703557312253,
+          0.5909090909090909
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190602aq",
+      "pe_rows": 27851,
+      "unique_states": 27851,
+      "ess_quantiles_representative": [
+        3871.547107948004,
+        10113.08414005275,
+        17969.81233028116
+      ],
+      "minimum_ess_all_checked": 2001.2955350544632,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 0.00011217002208836971,
+      "worst_maximum_normalized_weight": 0.002867655017174341,
+      "dominating_original_pe_row": 21686,
+      "dominating_m1_z_q": [
+        45.450891967748554,
+        0.7393514973500761,
+        0.9321616118342407
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.42094861660079047,
+          0.37154150197628455,
+          -0.2519762845849803,
+          0.5276679841897233
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190413ac",
+      "pe_rows": 24239,
+      "unique_states": 24239,
+      "ess_quantiles_representative": [
+        4695.2742425144215,
+        10096.761376215669,
+        17169.64936813442
+      ],
+      "minimum_ess_all_checked": 2505.7782211761237,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 9.690805360488712e-05,
+      "worst_maximum_normalized_weight": 0.0020689632917963476,
+      "dominating_original_pe_row": 419,
+      "dominating_m1_z_q": [
+        28.585200842444802,
+        1.0802659854571854,
+        0.8988038827191626
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3942687747035573,
+          0.3053359683794466,
+          0.12845849802371542,
+          0.6264822134387352
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190630ag",
+      "pe_rows": 25049,
+      "unique_states": 25049,
+      "ess_quantiles_representative": [
+        2637.219404820856,
+        11643.789563027458,
+        16422.842715358045
+      ],
+      "minimum_ess_all_checked": 2526.5465126596023,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 9.096995949302989e-05,
+      "worst_maximum_normalized_weight": 0.0010725987151501146,
+      "dominating_original_pe_row": 6606,
+      "dominating_m1_z_q": [
+        26.108689261013183,
+        0.326970253222721,
+        0.9158587155475001
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.158102766798419,
+          -0.13438735177865613,
+          0.3191699604743083,
+          0.17490118577075098
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190707q",
+      "pe_rows": 22577,
+      "unique_states": 22577,
+      "ess_quantiles_representative": [
+        4649.718310559313,
+        13389.020265735919,
+        18455.981376862055
+      ],
+      "minimum_ess_all_checked": 2347.9932501127355,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 9.082983252182052e-05,
+      "worst_maximum_normalized_weight": 0.0049419301171040675,
+      "dominating_original_pe_row": 18997,
+      "dominating_m1_z_q": [
+        10.350525670915983,
+        0.09552184695915251,
+        0.9953944832394659
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3784584980237154,
+          -0.32608695652173914,
+          0.5345849802371541,
+          -0.003952569169960474
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191105e",
+      "pe_rows": 34458,
+      "unique_states": 34458,
+      "ess_quantiles_representative": [
+        5936.770675039859,
+        19544.458682611927,
+        25990.297573334272
+      ],
+      "minimum_ess_all_checked": 2139.2102635600095,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 8.929914937322296e-05,
+      "worst_maximum_normalized_weight": 0.006304802351609452,
+      "dominating_original_pe_row": 24615,
+      "dominating_m1_z_q": [
+        9.751175695896713,
+        0.1278855088582133,
+        0.9987186149013422
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.3132411067193676,
+          -0.2816205533596838,
+          0.5088932806324111,
+          0.05731225296442688
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200216br",
+      "pe_rows": 42716,
+      "unique_states": 42716,
+      "ess_quantiles_representative": [
+        4406.742084212958,
+        11450.01730122987,
+        21681.883128487054
+      ],
+      "minimum_ess_all_checked": 2714.8696323547856,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 8.691423201571732e-05,
+      "worst_maximum_normalized_weight": 0.0025442311646529593,
+      "dominating_original_pe_row": 13278,
+      "dominating_m1_z_q": [
+        24.6922730757332,
+        1.1870553526751995,
+        0.8699480002802789
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.4258893280632411,
+          0.3003952569169961,
+          0.08399209486166008,
+          0.5711462450592886
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190503bf",
+      "pe_rows": 25885,
+      "unique_states": 25885,
+      "ess_quantiles_representative": [
+        4326.837419691628,
+        10112.711520548442,
+        15975.541525126813
+      ],
+      "minimum_ess_all_checked": 2302.7424861841037,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 8.181436932138092e-05,
+      "worst_maximum_normalized_weight": 0.0016801239523751442,
+      "dominating_original_pe_row": 3976,
+      "dominating_m1_z_q": [
+        30.125224803139545,
+        0.33055836966974783,
+        0.9300338020480812
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.06324110671936758,
+          0.05335968379446641,
+          0.1492094861660079,
+          0.3695652173913044
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190731aa",
+      "pe_rows": 23235,
+      "unique_states": 23235,
+      "ess_quantiles_representative": [
+        6113.672453131227,
+        11151.664728161588,
+        17094.590150084885
+      ],
+      "minimum_ess_all_checked": 2946.636833512586,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 8.132506503814806e-05,
+      "worst_maximum_normalized_weight": 0.0015799116504251192,
+      "dominating_original_pe_row": 10578,
+      "dominating_m1_z_q": [
+        25.661604695449796,
+        0.9106420109687766,
+        0.9112728619579712
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.2885375494071146,
+          0.21343873517786563,
+          0.1847826086956522,
+          0.5009881422924901
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190517h",
+      "pe_rows": 24424,
+      "unique_states": 24424,
+      "ess_quantiles_representative": [
+        4746.8565625831925,
+        10491.191020091694,
+        15298.782039135136
+      ],
+      "minimum_ess_all_checked": 2798.4603949253046,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 7.597592181503803e-05,
+      "worst_maximum_normalized_weight": 0.0014203767047835127,
+      "dominating_original_pe_row": 8457,
+      "dominating_m1_z_q": [
+        22.907539138638672,
+        0.6677944657773667,
+        0.9221345692182662
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.10375494071146245,
+          0.08498023715415019,
+          0.1689723320158103,
+          0.42687747035573126
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200302c",
+      "pe_rows": 50872,
+      "unique_states": 50872,
+      "ess_quantiles_representative": [
+        4817.493656236769,
+        14269.071162464055,
+        27207.349615902178
+      ],
+      "minimum_ess_all_checked": 2481.117012290956,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 7.283778872635768e-05,
+      "worst_maximum_normalized_weight": 0.0017433368492718185,
+      "dominating_original_pe_row": 25502,
+      "dominating_m1_z_q": [
+        22.81428717268777,
+        0.3945551206214503,
+        0.9140792111939668
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.0029644268774703555,
+          0.001976284584980237,
+          0.21936758893280633,
+          0.38241106719367585
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191215w",
+      "pe_rows": 25436,
+      "unique_states": 25436,
+      "ess_quantiles_representative": [
+        4485.47945114241,
+        14888.772928622535,
+        18838.59631048035
+      ],
+      "minimum_ess_all_checked": 3650.8381102949584,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 6.469076600663431e-05,
+      "worst_maximum_normalized_weight": 0.004916989952262187,
+      "dominating_original_pe_row": 19123,
+      "dominating_m1_z_q": [
+        24.305137153399457,
+        0.20817924568935225,
+        0.9999650343582283
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.010869565217391304,
+          -0.003952569169960474,
+          0.274703557312253,
+          0.37055335968379455
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190701ah",
+      "pe_rows": 28410,
+      "unique_states": 28410,
+      "ess_quantiles_representative": [
+        6698.678541447416,
+        13498.309417909983,
+        20428.20769650054
+      ],
+      "minimum_ess_all_checked": 3504.6511362838196,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 6.30089038320059e-05,
+      "worst_maximum_normalized_weight": 0.001308455605890705,
+      "dominating_original_pe_row": 471,
+      "dominating_m1_z_q": [
+        40.96987488966152,
+        0.31308853504884243,
+        0.9326586411123149
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.25691699604743085,
+          0.21442687747035571,
+          -0.021739130434782608,
+          0.3725296442687747
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190803e",
+      "pe_rows": 25808,
+      "unique_states": 25808,
+      "ess_quantiles_representative": [
+        7795.580475602261,
+        13480.030378517087,
+        19411.22674006395
+      ],
+      "minimum_ess_all_checked": 4057.7252604578784,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 6.069819640671651e-05,
+      "worst_maximum_normalized_weight": 0.0011866918427678042,
+      "dominating_original_pe_row": 20156,
+      "dominating_m1_z_q": [
+        24.60533155372841,
+        0.6997545799647079,
+        0.9197626187967035
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.283596837944664,
+          0.2075098814229249,
+          0.18972332015810275,
+          0.4841897233201581
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190727h",
+      "pe_rows": 23408,
+      "unique_states": 23408,
+      "ess_quantiles_representative": [
+        8267.931767430282,
+        13534.466220143,
+        18503.934350334002
+      ],
+      "minimum_ess_all_checked": 4705.530525636589,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.6863826338019415e-05,
+      "worst_maximum_normalized_weight": 0.000853353461254054,
+      "dominating_original_pe_row": 8263,
+      "dominating_m1_z_q": [
+        28.136606513475733,
+        0.5676040740334264,
+        0.9269366384188072
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.2964426877470355,
+          0.22035573122529645,
+          0.18379446640316205,
+          0.408102766798419
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190521r",
+      "pe_rows": 24764,
+      "unique_states": 24764,
+      "ess_quantiles_representative": [
+        5375.619733081536,
+        15882.365212541185,
+        20124.5320349845
+      ],
+      "minimum_ess_all_checked": 3829.4048735852493,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.606125095122813e-05,
+      "worst_maximum_normalized_weight": 0.0006690595145500661,
+      "dominating_original_pe_row": 23708,
+      "dominating_m1_z_q": [
+        34.894578997761016,
+        0.29420526904473343,
+        0.9327338643726627
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.0,
+          -0.017786561264822136,
+          0.2015810276679842,
+          0.23616600790513834
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190708ap",
+      "pe_rows": 26480,
+      "unique_states": 26480,
+      "ess_quantiles_representative": [
+        5771.331418197014,
+        16312.291738965814,
+        20538.336161226423
+      ],
+      "minimum_ess_all_checked": 4025.076020250451,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.2952072199995864e-05,
+      "worst_maximum_normalized_weight": 0.002050490142926409,
+      "dominating_original_pe_row": 9993,
+      "dominating_m1_z_q": [
+        16.62959953911636,
+        0.07424757631591468,
+        0.9944604624181614
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.2519762845849803,
+          -0.21936758893280633,
+          0.5019762845849802,
+          0.06521739130434782
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "GW170814",
+      "pe_rows": 40000,
+      "unique_states": 40000,
+      "ess_quantiles_representative": [
+        8571.147280353829,
+        26767.011704882847,
+        32454.27143021705
+      ],
+      "minimum_ess_all_checked": 3021.664317886341,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.2627324246373196e-05,
+      "worst_maximum_normalized_weight": 0.0039856670302501705,
+      "dominating_original_pe_row": 11106,
+      "dominating_m1_z_q": [
+        29.210637483782293,
+        0.08911713416921148,
+        0.9999550838210612
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.25,
+          -0.24110671936758896,
+          0.4120553359683795,
+          0.005928853754940711
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191230an",
+      "pe_rows": 37238,
+      "unique_states": 37238,
+      "ess_quantiles_representative": [
+        8952.824959465594,
+        18003.860096610137,
+        28141.020618285773
+      ],
+      "minimum_ess_all_checked": 5149.830125633184,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.213635587185194e-05,
+      "worst_maximum_normalized_weight": 0.0011266941062000357,
+      "dominating_original_pe_row": 34495,
+      "dominating_m1_z_q": [
+        31.261379469791347,
+        1.0827256277512314,
+        0.9147161649920811
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.40711462450592883,
+          0.3023715415019763,
+          0.05434782608695652,
+          0.5069169960474309
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200225q",
+      "pe_rows": 38484,
+      "unique_states": 38484,
+      "ess_quantiles_representative": [
+        6814.034252996758,
+        23070.806316159295,
+        28904.21749811687
+      ],
+      "minimum_ess_all_checked": 3755.133809792613,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 5.125535079003164e-05,
+      "worst_maximum_normalized_weight": 0.004231940496982259,
+      "dominating_original_pe_row": 14421,
+      "dominating_m1_z_q": [
+        16.172027456509934,
+        0.17299588954696318,
+        0.9999156092812594
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.17292490118577078,
+          -0.1422924901185771,
+          0.44861660079051385,
+          0.18675889328063244
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190408an",
+      "pe_rows": 23455,
+      "unique_states": 23455,
+      "ess_quantiles_representative": [
+        5745.381134008254,
+        14971.204296238813,
+        18190.781320894723
+      ],
+      "minimum_ess_all_checked": 4996.326279130995,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 4.7910173908833074e-05,
+      "worst_maximum_normalized_weight": 0.0004998675108296118,
+      "dominating_original_pe_row": 1494,
+      "dominating_m1_z_q": [
+        19.54976521071987,
+        0.32896235427695547,
+        0.9002489597936209
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.05632411067193676,
+          -0.058300395256917006,
+          0.3003952569169961,
+          0.2865612648221344
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190413i",
+      "pe_rows": 40516,
+      "unique_states": 40516,
+      "ess_quantiles_representative": [
+        8591.017502788236,
+        17975.098468688047,
+        26751.195315235906
+      ],
+      "minimum_ess_all_checked": 5410.866371095846,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 4.786765914754926e-05,
+      "worst_maximum_normalized_weight": 0.0008070154018935946,
+      "dominating_original_pe_row": 14964,
+      "dominating_m1_z_q": [
+        21.269568769053652,
+        0.8238109301228659,
+        0.9110032689490672
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.26877470355731226,
+          0.19071146245059292,
+          0.21640316205533597,
+          0.5434782608695652
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200128d",
+      "pe_rows": 35134,
+      "unique_states": 35134,
+      "ess_quantiles_representative": [
+        10661.443382684285,
+        19097.58530300673,
+        27153.11248157433
+      ],
+      "minimum_ess_all_checked": 5835.503359408611,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 4.682296600243349e-05,
+      "worst_maximum_normalized_weight": 0.0009192210534775818,
+      "dominating_original_pe_row": 24818,
+      "dominating_m1_z_q": [
+        25.182684120534816,
+        1.1821351289773936,
+        0.9057094745443774
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3043478260869565,
+          0.21739130434782608,
+          0.18675889328063244,
+          0.42885375494071143
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190910s",
+      "pe_rows": 25326,
+      "unique_states": 25326,
+      "ess_quantiles_representative": [
+        8023.742351334956,
+        14915.038936029148,
+        20953.737651936077
+      ],
+      "minimum_ess_all_checked": 4961.945840471242,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 4.6772279923774365e-05,
+      "worst_maximum_normalized_weight": 0.0007186781086858617,
+      "dominating_original_pe_row": 17897,
+      "dominating_m1_z_q": [
+        33.72986079014666,
+        0.3852637664502152,
+        0.9218415360731489
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.12351778656126483,
+          0.08201581027667984,
+          0.17786561264822134,
+          0.23616600790513834
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190915ak",
+      "pe_rows": 25311,
+      "unique_states": 25311,
+      "ess_quantiles_representative": [
+        7311.093909064422,
+        14437.493502560552,
+        18993.71900398287
+      ],
+      "minimum_ess_all_checked": 4921.777412771163,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 4.4371030735261733e-05,
+      "worst_maximum_normalized_weight": 0.0008360470742398997,
+      "dominating_original_pe_row": 11577,
+      "dominating_m1_z_q": [
+        24.32246320382579,
+        0.3286074576080363,
+        0.9230784917694277
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.00691699604743083,
+          0.00691699604743083,
+          0.23715415019762848,
+          0.3053359683794466
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200224ca",
+      "pe_rows": 27066,
+      "unique_states": 27066,
+      "ess_quantiles_representative": [
+        9220.364549314807,
+        16403.29046428723,
+        22455.940859574257
+      ],
+      "minimum_ess_all_checked": 6312.526687515916,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 3.9409665013714684e-05,
+      "worst_maximum_normalized_weight": 0.0007016624280760014,
+      "dominating_original_pe_row": 19420,
+      "dominating_m1_z_q": [
+        30.539940270934657,
+        0.3982230685840547,
+        0.9203188616907978
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.08201581027667984,
+          0.023715415019762844,
+          0.21541501976284588,
+          0.19762845849802374
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200209ab",
+      "pe_rows": 48092,
+      "unique_states": 48092,
+      "ess_quantiles_representative": [
+        8391.380445708435,
+        25643.752113494877,
+        34902.54326260292
+      ],
+      "minimum_ess_all_checked": 8358.2465347383,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 3.919264207678905e-05,
+      "worst_maximum_normalized_weight": 0.0006600130286549862,
+      "dominating_original_pe_row": 38630,
+      "dominating_m1_z_q": [
+        24.20354540026268,
+        0.5791876126667814,
+        0.9097080393500407
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.2648221343873518,
+          0.16106719367588934,
+          0.20256916996047433,
+          0.3883399209486166
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190828j",
+      "pe_rows": 25658,
+      "unique_states": 25658,
+      "ess_quantiles_representative": [
+        9714.833765653564,
+        17619.87108473861,
+        21950.44996784604
+      ],
+      "minimum_ess_all_checked": 6548.436965338776,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 3.7891806737034184e-05,
+      "worst_maximum_normalized_weight": 0.0004226499417863132,
+      "dominating_original_pe_row": 15422,
+      "dominating_m1_z_q": [
+        25.858797955532193,
+        0.47531277616244655,
+        0.9167705007219565
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.08596837944664032,
+          0.03359683794466403,
+          0.21936758893280633,
+          0.20355731225296442
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S191222n",
+      "pe_rows": 43168,
+      "unique_states": 43168,
+      "ess_quantiles_representative": [
+        13863.721455971572,
+        22352.998890493494,
+        33570.031528057705
+      ],
+      "minimum_ess_all_checked": 7035.929892933167,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 3.6237074044439836e-05,
+      "worst_maximum_normalized_weight": 0.0007042825083554395,
+      "dominating_original_pe_row": 40983,
+      "dominating_m1_z_q": [
+        29.980631919845063,
+        0.825386407675253,
+        0.9208355779909446
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3092885375494071,
+          0.23715415019762848,
+          0.11462450592885376,
+          0.408102766798419
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200311bg",
+      "pe_rows": 36982,
+      "unique_states": 36982,
+      "ess_quantiles_representative": [
+        8586.70033711814,
+        23567.485582079724,
+        29273.02176774326
+      ],
+      "minimum_ess_all_checked": 8106.700066809496,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 3.182179637235839e-05,
+      "worst_maximum_normalized_weight": 0.0018506257094237741,
+      "dominating_original_pe_row": 25050,
+      "dominating_m1_z_q": [
+        30.733805088940738,
+        0.18582444382976407,
+        0.9999654018862537
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.10276679841897234,
+          -0.1057312252964427,
+          0.2707509881422925,
+          0.08498023715415019
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190421ar",
+      "pe_rows": 46470,
+      "unique_states": 46470,
+      "ess_quantiles_representative": [
+        16424.81573218067,
+        24371.870785961495,
+        35558.74409319474
+      ],
+      "minimum_ess_all_checked": 8124.653796120973,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 2.96541894839608e-05,
+      "worst_maximum_normalized_weight": 0.0005306166494484065,
+      "dominating_original_pe_row": 28596,
+      "dominating_m1_z_q": [
+        28.25527589723598,
+        0.5680199393959569,
+        0.8862591885003254
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.31521739130434784,
+          0.24110671936758896,
+          0.08498023715415019,
+          0.40217391304347827
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200208q",
+      "pe_rows": 48142,
+      "unique_states": 48142,
+      "ess_quantiles_representative": [
+        13653.164137527834,
+        25285.441472679144,
+        35116.16582770069
+      ],
+      "minimum_ess_all_checked": 7058.428694301046,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 2.944066291352284e-05,
+      "worst_maximum_normalized_weight": 0.0005792350824076972,
+      "dominating_original_pe_row": 11764,
+      "dominating_m1_z_q": [
+        26.32506950608925,
+        0.5700403370422111,
+        0.9203638074771249
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.1274703557312253,
+          0.0958498023715415,
+          0.14031620553359686,
+          0.3873517786561265
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200219ac",
+      "pe_rows": 51584,
+      "unique_states": 51584,
+      "ess_quantiles_representative": [
+        16708.68315474268,
+        28394.54041745299,
+        39850.71560978532
+      ],
+      "minimum_ess_all_checked": 9151.74057710766,
+      "worst_saved_draw": 76,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 2.858619755246319e-05,
+      "worst_maximum_normalized_weight": 0.0005422651586221398,
+      "dominating_original_pe_row": 9352,
+      "dominating_m1_z_q": [
+        25.087065708034,
+        0.7365935301890729,
+        0.9174293020370272
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          -0.3270750988142293,
+          0.2381422924901186,
+          0.14624505928853757,
+          0.46245059288537554
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.8091861028388299,
+        0.039068092981020125,
+        0.9532696497244799,
+        0.0037045425361189157
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.24205462368831818,
+          0.7579453763116818
+        ],
+        "z_shape_a": [
+          8.479280223264503,
+          3.8689949792765055
+        ],
+        "z_shape_b": [
+          0.21632443697506562,
+          1.5622761550743351
+        ],
+        "u_shape_a": [
+          2.790482263357065,
+          6.827612644301676
+        ],
+        "u_shape_b": [
+          1.450518448388712,
+          7.664346913595769
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.29209315200207364,
+            -0.07686518744469927
+          ],
+          [
+            0.46645704189404197,
+            0.7207258089138036
+          ],
+          [
+            0.4706507351844054,
+            -0.22141481218770867
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S190925ad",
+      "pe_rows": 73900,
+      "unique_states": 73900,
+      "ess_quantiles_representative": [
+        12638.886751362774,
+        43101.84225484552,
+        53255.31059295012
+      ],
+      "minimum_ess_all_checked": 6416.041966293059,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 2.8099998514635257e-05,
+      "worst_maximum_normalized_weight": 0.004233459706154497,
+      "dominating_original_pe_row": 62582,
+      "dominating_m1_z_q": [
+        20.15868763559992,
+        0.06082653647861364,
+        0.9996892206187674
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.1590909090909091,
+          -0.1383399209486166,
+          0.42885375494071143,
+          0.158102766798419
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    },
+    {
+      "event": "S200316bj",
+      "pe_rows": 268806,
+      "unique_states": 268806,
+      "ess_quantiles_representative": [
+        30539.613374139946,
+        118951.69164594737,
+        160038.2122673403
+      ],
+      "minimum_ess_all_checked": 11928.676042204046,
+      "worst_saved_draw": 38,
+      "low_ess_representative_count": 0,
+      "low_ess_all_checked_count": 0,
+      "mean_pair_difference_variance_representative": 1.555324914816355e-05,
+      "worst_maximum_normalized_weight": 0.002724815649786778,
+      "dominating_original_pe_row": 43896,
+      "dominating_m1_z_q": [
+        11.060773695864457,
+        0.12023867336505603,
+        0.99960450591598
+      ],
+      "feature_associations_all_checked": {
+        "spearman_with_log_minimum_ess": [
+          0.21936758893280633,
+          -0.18972332015810275,
+          0.47332015810276684,
+          0.1600790513833992
+        ],
+        "low_ess_points": 0,
+        "other_points": 23,
+        "low_ess_feature_median": null,
+        "other_feature_median": [
+          0.49498228398364774,
+          0.03521181172992091,
+          0.941878092532757,
+          0.28367088803619533
+        ]
+      },
+      "worst_population_features": [
+        0.21574599277479065,
+        0.3487493092006564,
+        0.4568642194206644,
+        0.28367088803619533
+      ],
+      "worst_component_region": {
+        "mixture_weights": [
+          0.2678710592720146,
+          0.7321289407279854
+        ],
+        "z_shape_a": [
+          2.4556049368223323,
+          2.090617448260155
+        ],
+        "z_shape_b": [
+          1.714476787557454,
+          5.49036729561655
+        ],
+        "u_shape_a": [
+          2.259878339035369,
+          0.8542435448912234
+        ],
+        "u_shape_b": [
+          0.7634701357560281,
+          0.6917603062766028
+        ],
+        "component_correlations_mz_mu_zu": [
+          [
+            -0.4676017729111801,
+            0.7584181885953886
+          ],
+          [
+            0.15541818425291468,
+            -0.5571379724491614
+          ],
+          [
+            -0.40572416765663566,
+            -0.7300162865431321
+          ]
+        ]
+      }
+    }
+  ],
+  "selection_held_fixed": true,
+  "posterior_certified": false,
+  "pe_dependence_calibrated": false,
+  "covariance_scope": "independent-row delta approximation; exact-duplicate cluster sensitivity",
+  "historical_results_superseded": false,
+  "seconds": 119.51835630000278,
+  "product_sha256": "5e690a2e44ea97fc8a45bf22ced52bb49a34d490171fe47a198683958b0b76d3"
+}

@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+matplotlib
+torch
+pyro-ppl
+astropy
+h5py
+requests
+tqdm
+scikit-learn
+seaborn
+corner
+dcor

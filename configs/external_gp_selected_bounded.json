@@ -1,0 +1,51 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "validated_pilot": "configs/external_gp_symmetric_pilot.json",
+  "experiment": "selected_copula_truth",
+  "output": "results/analysis/external_gp_selected_bounded",
+  "initial_amplitude_and_lengths": [
+    [
+      0.7,
+      0.12,
+      0.2,
+      0.4
+    ],
+    [
+      1.0,
+      0.3,
+      0.3,
+      0.3
+    ],
+    [
+      1.5,
+      0.6,
+      0.4,
+      0.2
+    ],
+    [
+      2.0,
+      1.0,
+      0.15,
+      0.5
+    ]
+  ],
+  "marginal_cdf_points": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "joint_partition": "eight half-box octants in ij meshgrid C order",
+  "diagnostic_adapter": {
+    "source": "scripts/run_external_gp_bounded_diagnostics.py",
+    "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "pyro_version": "1.9.1",
+    "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+  },
+  "amendment": {
+    "prior_attempt_summary": "results/analysis/external_gp_selected/bins_12/summary.json",
+    "prior_attempt_summary_sha256": "3fef662892a06c61fc977a76ba2cfa846d7d8a7a81106a9686e56290181f6430",
+    "reason": "Pyro's post-sampling cumulative minimum allocates quadratic storage in the number of lags. Replace it with an equivalent linear-storage calculation for finite diagnostic arrays. Retain every diagnostic, sampler setting, starting point, seed, target and prior.",
+    "authorization_scope": "One fresh high-resolution attempt under the unchanged two-hour and 2 GiB per-fit limits. Include the failed attempt's time and peak memory in the cost record and the twelve-hour study budget. No recovery or predictive scores have been examined."
+  },
+  "decision": "Obtain the declared high-resolution four-chain posterior with bounded-memory diagnostics. This refinement changes diagnostic storage only; accepted six-bin inference is retained."
+}

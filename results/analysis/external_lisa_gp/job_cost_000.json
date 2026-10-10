@@ -1,0 +1,18 @@
+{
+  "status": "stopped",
+  "error": "Inverse-SNR importance ESS remains 19044.4",
+  "stage": "all",
+  "process_elapsed_seconds": 31.274983499999507,
+  "all_lisa_gp_attempts_seconds": 31.274983499999507,
+  "total_study_charge_seconds": 36274.015212499995,
+  "remaining_study_seconds": 6925.984787500003,
+  "configuration_sha256": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1199337472
+  }
+}

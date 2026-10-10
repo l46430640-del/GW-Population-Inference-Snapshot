@@ -1,0 +1,17 @@
+{
+  "source": "results/analysis/selected_mixture",
+  "correction_source": "results/analysis/importance_correction",
+  "output": "results/analysis/importance_prediction",
+  "repeat_seeds": [
+    731001,
+    731002
+  ],
+  "fine_event_samples": 2048,
+  "fine_event_seed": 526901,
+  "fine_posterior_draws": 512,
+  "resampling_seed": 731100,
+  "baseline_draws": 512,
+  "pilot_draws": 32,
+  "protocol": "Use every retained correction draw and all four NUTS chains on the original 192-event test catalog. Retain unweighted, raw, and PSIS predictions. Check event resolution with the previous independent 2048-sample integrations and fixed systematic posterior resamples. Reuse the archived fine baseline predictions after provenance checks.",
+  "decision": "Report paired test-event score differences and standard errors, eventwise discrepancy from MCMC predictions, repeat variability, and changes with numerical resolution. Positive scores alone do not establish a predictive advantage; retain negative and inconclusive results. Do not tune the correction using these test events."
+}

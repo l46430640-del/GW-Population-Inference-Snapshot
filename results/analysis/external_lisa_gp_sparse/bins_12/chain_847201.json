@@ -1,0 +1,215 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "lisa_bimodal",
+    "training_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+    "accepted_copula_summary": "results/analysis/lisa_refinement/summary.json",
+    "previous_cost": "results/analysis/external_control_comparison/job_cost_000.json",
+    "output": "results/analysis/external_lisa_gp_sparse",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "verification_event_samples": 8192,
+    "verification_event_seed": 847602,
+    "selection_power": 12,
+    "selection_seed": 847611,
+    "verification_selection_power": 14,
+    "verification_selection_seed": 847612,
+    "selection_cell_block": 8,
+    "pilot_warmup": 100,
+    "pilot_retained": 100,
+    "pilot_maximum_seconds": 600,
+    "retained_per_chain": 800,
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1.0,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2.0,
+        1.0,
+        0.15,
+        0.5
+      ]
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_resident_gib": 2,
+    "maximum_seconds": 1255.3249974999999,
+    "verification_reserve_seconds": 120,
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "sampling_amendment": "Before LISA GP sampling and scientific scores, retain 2400 draws per chain at both resolutions. The prior two cases needed GP chain extensions; start with their validated longer duration to avoid duplicate work. Preserve four seeds, 500 warmup, target acceptance 0.9, maximum depth 10, original kernel priors, coordinate basis and initial hyperparameters. All thresholds remain unchanged.",
+    "decision": "Use the fixed LISA training event posterior under its uniform event prior, retaining the observed SNR in each event likelihood exactly once. Integrate Phi(rho(x)-8) separately over every GP bin, including low-detectability bins. Check independent 8192 event samples and independent finer within-cell Sobol selection at every retained draw. Require event, selection and combined log-likelihood changes each to have SD at most 0.2, both per chain and pooled, as well as existing derivative, jitter, mixing, zero-divergence and resource checks. Use no injected truth or test observations. Preparation, pilots and both production fits share 4200 seconds inside the remaining twelve-hour study allowance. Incomplete fits remain inconclusive.",
+    "sparse_amendment": {
+      "base_config": "configs/external_lisa_gp.json",
+      "parent_output": "results/analysis/external_lisa_gp",
+      "equivalence_summary": "results/analysis/external_lisa_sparse_check/summary.json",
+      "previous_cost": "results/analysis/external_lisa_sparse_check/job_cost_000.json",
+      "output": "results/analysis/external_lisa_gp_sparse",
+      "bins_per_axis": 12,
+      "retained_per_chain": 800,
+      "maximum_seconds": 1400,
+      "reason": "Before any LISA external scientific scores, use the checked mathematically equivalent sparse event likelihood to complete the high-resolution fit. The full population prior and selection grid remain intact. Restore the original external protocol's 800 retained draws per chain as the initial bounded attempt rather than the anticipatory 2400-draw extension. Retain 500 warmup, four original seeds and starts, target acceptance 0.9 and depth 10. Keep every mixing, effective-sample-size, zero-divergence and numerical criterion. The accepted six-bin ensemble remains unchanged. Preserve the interrupted dense high-resolution trajectory, exclude it from all new ensembles, and charge its full cost. The new four-chain fit and checks receive 1400 seconds within the remaining twelve-hour study allowance. An unresolved fit stays inconclusive; sample count alone never establishes acceptance."
+    },
+    "seed": 847201,
+    "warmup": 500,
+    "retained": 800,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10
+  },
+  "sampling_and_compilation_seconds": 269.3786872999999,
+  "compilation_seconds": 0.18752380000000812,
+  "potential_evaluations": 207415,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "divergences": [],
+  "acceptance_rate": 0.9975,
+  "step_size": 0.02576293006120655,
+  "peak_resident_bytes": 1053143040,
+  "retained_potential_evaluation_quantiles": [
+    127.0,
+    127.0,
+    127.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.108624468950438e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.382983113757291e-14
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 1060.2962311413473,
+      "cov_mass_ratio": 651.9112065298592,
+      "cov_mass_redshift": 889.1642201504918,
+      "cov_redshift_ratio": 854.1095627426746,
+      "length_x1": 241.5812687738472,
+      "length_x2": 227.97427908452244,
+      "length_x3": 305.06065665747104,
+      "log_posterior": 399.21358907442914,
+      "mass_above_0p8": 1018.6187773458598,
+      "mass_below_quarter": 820.3652129820292,
+      "mean_mass": 901.8600046860264,
+      "mean_ratio": 834.8650216443667,
+      "mean_redshift": 872.9920552189124,
+      "sigma": 178.5432750362636,
+      "variance_mass": 1131.1921915153011,
+      "variance_ratio": 857.3708493128626,
+      "variance_redshift": 738.6037610166948
+    },
+    "tail": {
+      "alpha": 758.8201856644832,
+      "cov_mass_ratio": 761.9138550406376,
+      "cov_mass_redshift": 804.2429357890625,
+      "cov_redshift_ratio": 719.3215075962858,
+      "length_x1": 172.21542272687378,
+      "length_x2": 325.25519500462906,
+      "length_x3": 541.2226152880772,
+      "log_posterior": 370.5079042047587,
+      "mass_above_0p8": 796.6712981294182,
+      "mass_below_quarter": 693.508328031807,
+      "mean_mass": 711.0822490398707,
+      "mean_ratio": 641.7757403944747,
+      "mean_redshift": 689.575866303836,
+      "sigma": 300.6542063905853,
+      "variance_mass": 763.079859009366,
+      "variance_ratio": 600.7913480269616,
+      "variance_redshift": 699.08544917272
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.005424826298839768,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1191563264
+  },
+  "seed": 847201,
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      3,
+      55,
+      76,
+      114,
+      228,
+      342,
+      456,
+      570,
+      605,
+      615,
+      621,
+      684,
+      750,
+      787,
+      797,
+      799
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 4.0664349469921035e-06,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.005424826298839768
+  },
+  "integral_verification": {
+    "standard_deviations": {
+      "event_log_likelihood_change": 0.04310261021686585,
+      "selection_log_likelihood_change": 5.976260271878555e-05,
+      "combined_log_likelihood_change": 0.04311259146859171
+    },
+    "passed": true
+  },
+  "event_quadrature_passed": true,
+  "ready_for_production_sampling": true,
+  "process_elapsed_seconds": 274.75326470000005,
+  "draw_product_sha256": "3b2ae545a702d6d2226f1b385161568fcfb30d239dbb2845420299d1055b38bf",
+  "target_product_sha256": "0dd5add82f22d2b53778d233cc10732c5de95d870c4420b128e1fac1b1ec8656"
+}

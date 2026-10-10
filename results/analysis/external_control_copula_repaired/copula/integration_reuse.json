@@ -1,0 +1,12 @@
+{
+  "reused_state_cloud_evaluations": 5216,
+  "fresh_state_cloud_evaluations": 1738,
+  "replaced_seed": 847203,
+  "reused_seeds": [
+    847201,
+    847202,
+    847204
+  ],
+  "parent_posterior_sha256": "279dff44575245ca093f23b388ee0a9122a918ede3d921e314b7ef60377f5164",
+  "rule": "Reuse deterministic integrals only for byte-identical nondivergent parent chains and identical clouds. No posterior state from the rejected chain is reused."
+}

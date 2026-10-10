@@ -1,0 +1,154 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_selected_extended",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847201,
+    "warmup": 500,
+    "retained": 2400,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 7174.076499100001,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Complete the fixed 2400-draw extension using the unchanged target, priors, starts, seeds, adaptation and diagnostics."
+  },
+  "sampling_and_compilation_seconds": 413.1519403000002,
+  "compilation_seconds": 0.20437459999993735,
+  "potential_evaluations": 189886,
+  "warmup_completed": 500,
+  "samples_completed": 2400,
+  "divergences": [],
+  "acceptance_rate": 0.9979166666666667,
+  "step_size": 0.08176439756556375,
+  "peak_resident_bytes": 1104941056,
+  "retained_potential_evaluation_quantiles": [
+    63.0,
+    63.0,
+    63.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.064215547965432e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.704947790898586e-14
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 2441.3250864310485,
+      "cov_mass_ratio": 2236.119918801128,
+      "cov_mass_redshift": 2944.182858972651,
+      "cov_redshift_ratio": 2705.013770674471,
+      "length_x1": 1083.0023506795085,
+      "length_x2": 1149.9119299595498,
+      "length_x3": 1657.5253432657541,
+      "log_posterior": 729.3639168210365,
+      "mass_above_0p8": 2318.9533548076856,
+      "mass_below_quarter": 2894.093377011903,
+      "mean_mass": 2568.6459077718528,
+      "mean_ratio": 2402.8309401706565,
+      "mean_redshift": 2547.764195389732,
+      "sigma": 908.364738499936,
+      "variance_mass": 2872.4000313686433,
+      "variance_ratio": 2577.93872064264,
+      "variance_redshift": 2108.010771310998
+    },
+    "tail": {
+      "alpha": 2197.9191161053354,
+      "cov_mass_ratio": 2145.685656093341,
+      "cov_mass_redshift": 2447.1569946246714,
+      "cov_redshift_ratio": 2528.584265512603,
+      "length_x1": 1404.8329450857318,
+      "length_x2": 1633.7710146529596,
+      "length_x3": 1544.4481160483197,
+      "log_posterior": 978.0313614977135,
+      "mass_above_0p8": 1950.4915121516344,
+      "mass_below_quarter": 2156.041830496644,
+      "mean_mass": 2089.519288089366,
+      "mean_ratio": 2031.7366723435446,
+      "mean_redshift": 2284.295456583184,
+      "sigma": 1009.3051924528836,
+      "variance_mass": 2291.281219081439,
+      "variance_ratio": 2217.3888852098626,
+      "variance_redshift": 2054.867098978226
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.0006174986361045937,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1485504512
+  },
+  "seed": 847201,
+  "initial_amplitude_and_lengths": [
+    0.7,
+    0.12,
+    0.2,
+    0.4
+  ],
+  "target_product_sha256": "e60ba61937a66098945bc9cebcd32805dde8494644747877ec1a87e1056c8a0c",
+  "draw_product_sha256": "d60ebbb7fff619299ae534e7fe28544febcbc29d15f0ad73eec0006c2ad88221",
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      342,
+      685,
+      768,
+      808,
+      1028,
+      1163,
+      1370,
+      1425,
+      1487,
+      1713,
+      1903,
+      1946,
+      1987,
+      2056,
+      2088,
+      2399
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 9.70315465309568e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.0006174986361045937
+  },
+  "event_quadrature_passed": true,
+  "process_elapsed_seconds": 454.5584472999999
+}

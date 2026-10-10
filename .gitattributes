@@ -1,0 +1,7 @@
+# Preserve the exact bytes of the saved scientific records across platforms.
+* -text
+*.npz -diff
+*.npy -diff
+*.pt -diff
+*.pdf -diff
+*.png -diff

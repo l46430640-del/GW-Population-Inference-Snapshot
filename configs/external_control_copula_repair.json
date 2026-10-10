@@ -1,0 +1,98 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "catalog_config": "configs/external_gp_control_catalog.json",
+  "gp_pilot_config": "configs/external_gp_control_gp_pilot.json",
+  "copula_pilot_config": "configs/external_gp_control_qmc_pilot.json",
+  "output": "results/analysis/external_control_copula_repaired",
+  "experiment": "selected_gp_truth",
+  "initial_amplitude_and_lengths": [
+    [
+      0.7,
+      0.12,
+      0.2,
+      0.4
+    ],
+    [
+      1.0,
+      0.3,
+      0.3,
+      0.3
+    ],
+    [
+      1.5,
+      0.6,
+      0.4,
+      0.2
+    ],
+    [
+      2.0,
+      1.0,
+      0.15,
+      0.5
+    ]
+  ],
+  "copula_initialization_seeds": [
+    847401,
+    847411,
+    847421,
+    847431
+  ],
+  "copula_initial_jitter": 0.15,
+  "swap_initial_labels": [
+    false,
+    true,
+    false,
+    true
+  ],
+  "marginal_cdf_points": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "feature_power": 14,
+  "feature_seed": 847501,
+  "fine_feature_power": 16,
+  "maximum_feature_change_in_posterior_sd": 0.05,
+  "verification_draws_per_chain": 128,
+  "verification_extreme_draws": 16,
+  "copula_fit_verification_reserve_seconds": 600,
+  "chain_verification_reserve_seconds": 120,
+  "batch_lengths": [
+    20,
+    40,
+    80
+  ],
+  "cdf_probabilities": [
+    0.05,
+    0.5,
+    0.95
+  ],
+  "minimum_corrected_precision_equivalent_draws": 400,
+  "diagnostic_adapter": {
+    "source": "scripts/run_external_gp_bounded_diagnostics.py",
+    "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "pyro_version": "1.9.1",
+    "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+  },
+  "resource_amendment": {
+    "maximum_seconds_per_fit": 5604,
+    "maximum_seconds_control_production": 5604,
+    "prior_study_budget_charge_seconds": 31940,
+    "reason": "The initial control job used 9739.79 seconds and GP extensions have at most 2400 seconds allocated. Charge both, rounded up, in addition to the inherited 19800-second allowance. The original copula fit and verification cost 8795.64 seconds; this repair may use only the remaining 5604 seconds of its 14400-second total cap. All control attempts together then remain below 18000 seconds. Reserve 600 seconds for checks; cached deterministic integrals for the three retained valid chains avoid redundant integration."
+  },
+  "sampling_repair": {
+    "source": "scripts/repair_external_control_copula.py",
+    "source_sha256": "ca547144881826fae3acacaea65d7c7e62ab28e6cc293e924a479bd9d8d34073",
+    "parent_output": "results/analysis/external_control_production",
+    "parent_summary_sha256": "8f8a48d6765c7116025a3bfb3a51f88a18d9a669f8fa13028bb0c18d8fc2707d",
+    "replace_seed": 847203,
+    "reuse_seeds": [
+      847201,
+      847202,
+      847204
+    ],
+    "target_acceptance": 0.97,
+    "reason": "All mixing and integration requirements pass, but chain 847203 records seven divergent transitions. Before scientific evaluation, replace that complete chain using its original start, seed, warmup and retained count with target acceptance increased from 0.9 to 0.97. Reuse the other three independently initialized, complete, nondivergent chains byte for byte. Keep the failed trajectory archived and excluded from the new ensemble. Recompute pooled diagnostics, raw correction weights, correlated precision and independent integration checks. No acceptance threshold is relaxed."
+  },
+  "decision": "Repair the single divergent copula trajectory without modifying the model, priors, data or numerical target. The final ensemble has four independent chain seeds and contains no draws from the rejected trajectory. Sampling changes are made solely from training-only numerical diagnostics; all scientific scores remain unexamined."
+}

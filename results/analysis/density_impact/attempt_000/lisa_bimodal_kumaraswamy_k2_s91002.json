@@ -1,0 +1,220 @@
+{
+  "label": "lisa_bimodal_kumaraswamy_k2_s91002",
+  "category": "vi",
+  "draws": 32,
+  "chain_shape": [
+    1,
+    192
+  ],
+  "historical_event_reconstruction_error": [
+    5.245208740234375e-06
+  ],
+  "historical_event_cache_max_abs_error": null,
+  "data_shape": [
+    135,
+    256,
+    4
+  ],
+  "data_dtype": "torch.float32",
+  "weight_diagnostics": {
+    "delta_mean": 1.1958065910810944e-05,
+    "delta_sd": 2.2944646524890498e-05,
+    "delta_min": -3.925496946521889e-05,
+    "delta_max": 7.140472524724828e-05,
+    "ratio_ess_fraction": 0.9999999994899955,
+    "combined_weight_ess": 31.999999983679857,
+    "maximum_combined_weight": 0.031251857755353336,
+    "pareto_k": 0.39402043780180557,
+    "pareto_k_finite": true,
+    "psis_reff": 1.0,
+    "interpretation": "Subset weight concentration only; neither MCMC ESS nor correction of VI error."
+  },
+  "density_only_weight_diagnostics": {
+    "delta_mean": 1.0528276916943469e-08,
+    "delta_sd": 4.10151835480891e-08,
+    "delta_min": -8.970386033979594e-08,
+    "delta_max": 1.8258810996485408e-07,
+    "ratio_ess_fraction": 0.9999999999999984,
+    "combined_weight_ess": 31.99999999999995,
+    "maximum_combined_weight": 0.03125000537687022,
+    "pareto_k": 0.5293769993241272,
+    "pareto_k_finite": true,
+    "psis_reff": 1.0,
+    "interpretation": "Subset weight concentration only; neither MCMC ESS nor correction of VI error."
+  },
+  "precision_delta_sd": 2.2944338605368583e-05,
+  "native_bounds_target_change": [
+    [
+      0,
+      0.0
+    ],
+    [
+      61,
+      0.0
+    ],
+    [
+      123,
+      0.0
+    ],
+    [
+      191,
+      0.0
+    ]
+  ],
+  "features": {
+    "mean_unit_mass": {
+      "old_mean": 0.6995768822950346,
+      "new_mean": 0.6995769382466832,
+      "old_sd": 0.07834370438555296,
+      "shift_in_old_sd": 7.141818106050195e-07,
+      "fixed_draw_mean_change": 3.469446951953614e-18,
+      "old_quantiles_05_50_95": [
+        0.583687170965535,
+        0.6926724606171889,
+        0.8489041690675995
+      ],
+      "new_quantiles_05_50_95": [
+        0.583687170965535,
+        0.6926724606171889,
+        0.8489041690675995
+      ]
+    },
+    "mean_unit_redshift": {
+      "old_mean": 0.5075568992297859,
+      "new_mean": 0.5075572254819282,
+      "old_sd": 0.054301586577420936,
+      "shift_in_old_sd": 6.0081511953028876e-06,
+      "fixed_draw_mean_change": 1.214306433183765e-17,
+      "old_quantiles_05_50_95": [
+        0.4288777030108766,
+        0.4992587453946806,
+        0.6294599885125168
+      ],
+      "new_quantiles_05_50_95": [
+        0.4288777030108766,
+        0.505643701745039,
+        0.6294599885125168
+      ]
+    },
+    "mean_unit_ratio": {
+      "old_mean": 0.627409554935935,
+      "new_mean": 0.627409350646586,
+      "old_sd": 0.07060607690710982,
+      "shift_in_old_sd": -2.893367794129452e-06,
+      "fixed_draw_mean_change": -1.3877787807814457e-17,
+      "old_quantiles_05_50_95": [
+        0.5230144891691891,
+        0.6177309783205674,
+        0.783843717219992
+      ],
+      "new_quantiles_05_50_95": [
+        0.5230144891691891,
+        0.6177309783205674,
+        0.783843717219992
+      ]
+    },
+    "mass_below_quarter_support": {
+      "old_mean": 0.13192298189437812,
+      "new_mean": 0.1319230658410702,
+      "old_sd": 0.04539349008970868,
+      "shift_in_old_sd": 1.84931125375034e-06,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.056411665921731496,
+        0.12253691811248406,
+        0.19969184873335635
+      ],
+      "new_quantiles_05_50_95": [
+        0.056411665921731496,
+        0.12835257098176697,
+        0.19969184873335635
+      ]
+    },
+    "mass_above_0p8_support": {
+      "old_mean": 0.5699905019260834,
+      "new_mean": 0.5699906929541344,
+      "old_sd": 0.13253346006874162,
+      "shift_in_old_sd": 1.4413571557335422e-06,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.32808832784439124,
+        0.5451324129767106,
+        0.8181285257588934
+      ],
+      "new_quantiles_05_50_95": [
+        0.32808832784439124,
+        0.5451324129767106,
+        0.8181285257588934
+      ]
+    },
+    "alpha": {
+      "old_mean": 0.454209743868884,
+      "new_mean": 0.45420945662037077,
+      "old_sd": 0.13771009803287398,
+      "shift_in_old_sd": -2.085892881905173e-06,
+      "fixed_draw_mean_change": -3.469446951953614e-18,
+      "old_quantiles_05_50_95": [
+        0.19667768678295516,
+        0.4610526231113399,
+        0.7169679529586153
+      ],
+      "new_quantiles_05_50_95": [
+        0.19667768678295516,
+        0.4844005788431913,
+        0.7169679529586153
+      ]
+    },
+    "conditional_rate_mean": {
+      "old_mean": 332.73638039151024,
+      "new_mean": 332.7364275325855,
+      "old_sd": 128.37234556560884,
+      "shift_in_old_sd": 3.6722142167616813e-07,
+      "fixed_draw_mean_change": 7.105427357601002e-15,
+      "old_quantiles_05_50_95": [
+        188.292934771929,
+        278.6949601142029,
+        686.4022157682789
+      ],
+      "new_quantiles_05_50_95": [
+        188.292934771929,
+        278.6949601142029,
+        686.4022157682789
+      ]
+    },
+    "domain_probability": {
+      "old_mean": 1.0,
+      "new_mean": 1.0000000000000002,
+      "old_sd": 5.1925927263190304e-17,
+      "shift_in_old_sd": null,
+      "fixed_draw_mean_change": 0.0,
+      "old_quantiles_05_50_95": [
+        0.9999999999999999,
+        1.0,
+        1.0
+      ],
+      "new_quantiles_05_50_95": [
+        0.9999999999999999,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "cells": {
+    "intrinsic": {
+      "fixed_draw_total_variation": 0.0,
+      "total_variation": 1.2286052467369627e-06,
+      "js_distance": 1.4989171216071e-06
+    },
+    "detected": {
+      "fixed_draw_total_variation": 3.1225672650016896e-17,
+      "total_variation": 9.178394694929536e-07,
+      "js_distance": 1.1077479226607338e-06
+    }
+  },
+  "lvk_detected_cells_available": true,
+  "posterior_certified": false,
+  "historical_results_superseded": false,
+  "screen_flagged": false,
+  "seconds": 5.880968399997073,
+  "product_sha256": "88109024da0926cc259e05f0718e04ce048587697a85120ca6aa1c517344e9f7"
+}

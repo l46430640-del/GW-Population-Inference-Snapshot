@@ -1,0 +1,22 @@
+{
+  "base_config": "configs/external_lisa_gp.json",
+  "parent_output": "results/analysis/external_lisa_gp",
+  "equivalence_summary": "results/analysis/external_lisa_sparse_check/summary.json",
+  "previous_cost": "results/analysis/external_lisa_gp_sparse/job_cost_000.json",
+  "output": "results/analysis/external_lisa_gp_completed",
+  "bins_per_axis": 12,
+  "retained_per_chain": 800,
+  "maximum_seconds": 450,
+  "completion": {
+    "parent": "results/analysis/external_lisa_gp_sparse/bins_12",
+    "reuse_seeds": [
+      847201,
+      847202,
+      847203
+    ],
+    "replace_seed": 847204,
+    "expected_parent_retained": 444,
+    "require_identical_prefix": true
+  },
+  "reason": "The first sparse attempt preserves three complete nondivergent 800-draw chains, while its fourth reaches the time allowance after 500 warmup and 444 retained states. Reuse the three complete chains byte for byte, charging their prior cost only once. Replay only the fourth seed with unchanged initialization, warmup, target, prior, sampler settings and 800-draw endpoint; require the original warmup and retained prefix to reproduce exactly. Preserve but do not double-count the partial prefix. All numerical and mixing criteria remain unchanged. Allow 450 seconds including imports and checks, inside the remaining twelve-hour budget, before any LISA external scientific score is examined."
+}

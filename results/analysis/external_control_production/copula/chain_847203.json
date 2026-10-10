@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "error": null,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "sampling_and_compilation_seconds": 1753.2929436000013,
+  "potential_evaluations": 34134,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.842170943040401e-14
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.105427357601002e-15
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.0658141036401503e-14
+    }
+  ],
+  "divergences": [
+    79,
+    86,
+    172,
+    245,
+    395,
+    507,
+    508
+  ],
+  "acceptance_rate": 0.96,
+  "step_size": 0.25606922131800214,
+  "verification": {
+    "status": "complete",
+    "draws_checked": 4,
+    "draws_requested": 4,
+    "maximum_directional_derivative_error": 9.644861354018985e-09,
+    "maximum_precision_log_target_difference": 4.527806993337435e-06,
+    "event_log_likelihood_difference_sd": 0.12087493901869208,
+    "event_sd_scope": "Retained pilot draws only; the first checked coordinate is initialization.",
+    "derivatives_passed": true,
+    "precision_passed": true
+  },
+  "seed": 847203,
+  "target_product_sha256": "d4888b4c2073b3cbbfc098d5e0ff24e8e3bcf83629323753cefd6462e695d002",
+  "draw_product_sha256": "67c292ddd85eae7dfe7250a616fbae91470eeb1d158f9653dec020b17d6f7d20",
+  "process_elapsed_seconds": 1793.6822274000006,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1388003328
+  }
+}

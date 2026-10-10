@@ -1,0 +1,49 @@
+{
+  "seed": 711093,
+  "efficiency": 0.5,
+  "observation_years": 1,
+  "prior": "p(R) proportional to 1/R, posterior proper for N>0",
+  "scope": "known efficiency; does not establish population-shape or joint-rate coverage",
+  "rows": [
+    {
+      "intrinsic_mean": 40.0,
+      "detected_mean": 20.0,
+      "catalogs": 10000,
+      "zero_count_catalogs": 0,
+      "intrinsic_mean_coverage_90": 0.9008,
+      "exact_poisson_coverage_90": 0.8995388390009081,
+      "coverage_mc_standard_error": 0.0029893035978301027,
+      "independent_predictive_count_coverage_90": 0.9095
+    },
+    {
+      "intrinsic_mean": 100.0,
+      "detected_mean": 50.0,
+      "catalogs": 10000,
+      "zero_count_catalogs": 0,
+      "intrinsic_mean_coverage_90": 0.892,
+      "exact_poisson_coverage_90": 0.8930386961137744,
+      "coverage_mc_standard_error": 0.003103804117530615,
+      "independent_predictive_count_coverage_90": 0.9117
+    },
+    {
+      "intrinsic_mean": 400.0,
+      "detected_mean": 200.0,
+      "catalogs": 10000,
+      "zero_count_catalogs": 0,
+      "intrinsic_mean_coverage_90": 0.9023,
+      "exact_poisson_coverage_90": 0.9027268798294761,
+      "coverage_mc_standard_error": 0.0029690858862619655,
+      "independent_predictive_count_coverage_90": 0.9074
+    },
+    {
+      "intrinsic_mean": 1000.0,
+      "detected_mean": 500.0,
+      "catalogs": 10000,
+      "zero_count_catalogs": 0,
+      "intrinsic_mean_coverage_90": 0.8957,
+      "exact_poisson_coverage_90": 0.8970890984462525,
+      "coverage_mc_standard_error": 0.0030564932520782697,
+      "independent_predictive_count_coverage_90": 0.9022
+    }
+  ]
+}

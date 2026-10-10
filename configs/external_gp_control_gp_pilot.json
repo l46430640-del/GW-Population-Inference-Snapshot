@@ -1,0 +1,30 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "experiment": "selected_gp_truth",
+  "training_catalog": "results/analysis/external_gp_control_catalog/train_catalog.npz",
+  "output": "results/analysis/external_gp_control_gp_pilot",
+  "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+  "bins_per_axis": [
+    6,
+    12
+  ],
+  "seed": 847201,
+  "warmup": 100,
+  "retained": 100,
+  "target_acceptance": 0.9,
+  "maximum_tree_depth": 10,
+  "full_mass": false,
+  "covariance_axis_jitter": 1e-08,
+  "verification_covariance_axis_jitter": 1e-10,
+  "quadrature_order": 32,
+  "verification_quadrature_order": 64,
+  "maximum_quadrature_log_weight_difference": 1e-09,
+  "jit_absolute_tolerance": 1e-07,
+  "derivative_check_evenly_spaced_draws": 8,
+  "derivative_check_step": 0.0001,
+  "maximum_directional_derivative_error": 0.0001,
+  "maximum_seconds": 600,
+  "maximum_resident_gib": 2,
+  "cpu_threads": 1,
+  "decision": "Training-only pilot on the first predeclared GP-family catalog. Preserve the previous GP target, prior, initial rule and numerical checks. No convergence or scientific comparison is inferred from this pilot."
+}

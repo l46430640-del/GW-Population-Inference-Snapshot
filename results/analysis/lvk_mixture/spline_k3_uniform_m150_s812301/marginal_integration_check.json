@@ -1,0 +1,41 @@
+{
+  "method": "three-dimensional transported Sobol population points conditioned on the covered joint mass domain",
+  "joint_domain": "m1 <= 100 Msun or m2 >= 10 Msun, inside the declared box with m2 >= 3 Msun",
+  "coarse_samples_per_component": 131072,
+  "fine_samples_per_component": 524288,
+  "marginal_total_variation_change_quantiles": [
+    [
+      0.0001317224470859918,
+      0.00015923727519319967,
+      0.00020540158845525208,
+      0.0002336446925523465
+    ],
+    [
+      0.0015163171467936832,
+      0.002081078999358258,
+      0.002446148551784523,
+      0.0024870109052142955
+    ],
+    [
+      0.003527125319238626,
+      0.004858242497193764,
+      0.005637096220285868,
+      0.006149124081931128
+    ]
+  ],
+  "base_probability_in_domain_quantiles": [
+    0.9751108967525148,
+    0.997697263265072,
+    0.9999951020493012
+  ],
+  "maximum_domain_probability_resolution_change": 5.500797558066761e-05,
+  "conditional_selection_fraction_quantiles": [
+    0.00010185986657257703,
+    0.0008569919358613081,
+    0.004489465661542117
+  ],
+  "compressed_event_points_outside_domain": 0,
+  "shape_likelihood_normalizer_cancels": true,
+  "maximum_probability_normalization_error": 2.5970625205928854e-08,
+  "minimum_bin_density": 0.0
+}

@@ -1,0 +1,84 @@
+{
+  "source_sha256": {
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "src/gwpopulation/smooth_mass.py": "f69fb9dca4af89f0f5ffb642a640c39f10f2494d2576b195341444adb02c6da4",
+    "src/gwpopulation/rate.py": "15a52eaba9c265a1fbbcde2916bfbaabc0b60a5454500722ee99ed50c52a5af1",
+    "src/gwpopulation/bounded_density.py": "8a12f8a3d9f609a33d928f17e25202132bb531dc285ab4cd33af33f2672456e0",
+    "src/gwpopulation/stable_marginals.py": "a5e60fc4b147e4c2d2aae03a1510afcf82b83d7721a745eb57e5cb7a6685c300",
+    "src/gwpopulation/stable_model.py": "5c2a01efd9b2be37da2751a2aa0f4f5ef6e247a9e1b309e7fef3c3ae4f834647",
+    "scripts/check_stable_population.py": "7fa04dde6cfd0353c6b5b1726b3055cb4e753caea0a83a298018def3992df075",
+    "tests/test_stable_population.py": "ce1b004c9dc889907a1bc872810d59e22dce61454d05cd300772ff8f95122f53"
+  },
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.16.3",
+    "torch": "2.5.1",
+    "pyro": "1.9.1"
+  },
+  "density_version": "log_tail_v1",
+  "threads": 1,
+  "production_inference_rerun": false,
+  "saved_posterior_impact_assessed": false,
+  "entrypoint": "gwpopulation.stable_model.CorrectedPopulationEstimator",
+  "scope": "Corrected marginal, copula, event, selection and transport paths for adopted families; tiny SVI smoke checks are not posterior evidence. Historical runners and frozen results are retained unchanged.",
+  "checks": {
+    "families": {
+      "kumaraswamy": {
+        "components": 3,
+        "log_tail_roundtrip_max_abs_error": 3.410605131648481e-13,
+        "event_log_likelihood": -2.725644716972485,
+        "event_gradient_finite": true,
+        "selection_fraction": 0.4499999964761786,
+        "selection_points": 64,
+        "svi_smoke_steps": 2,
+        "svi_smoke_losses": [
+          39.49877839445654,
+          6.302588018565032
+        ],
+        "numpy_log_density_max_abs_difference": 2.220446049250313e-16
+      },
+      "tnormal": {
+        "components": 3,
+        "log_tail_roundtrip_max_abs_error": 4.440892098500626e-16,
+        "event_log_likelihood": -2.6226627481659226,
+        "event_gradient_finite": true,
+        "selection_fraction": 0.44999842784754185,
+        "selection_points": 64,
+        "svi_smoke_steps": 2,
+        "svi_smoke_losses": [
+          10.833218831204544,
+          4.986168561683659
+        ]
+      },
+      "smooth": {
+        "components": 3,
+        "log_tail_roundtrip_max_abs_error": 3.410605131648481e-13,
+        "event_log_likelihood": -2.725683295248534,
+        "event_gradient_finite": true,
+        "selection_fraction": 0.4499999964761786,
+        "selection_points": 64,
+        "svi_smoke_steps": 2,
+        "svi_smoke_losses": [
+          17.471209111576655,
+          14.940418312135265
+        ],
+        "mass_normalization": 1.0
+      },
+      "two_resolution": {
+        "components": 3,
+        "log_tail_roundtrip_max_abs_error": 3.410605131648481e-13,
+        "event_log_likelihood": -2.5041909015319894,
+        "event_gradient_finite": true,
+        "selection_fraction": 0.4499999964761786,
+        "selection_points": 64,
+        "svi_smoke_steps": 2,
+        "svi_smoke_losses": [
+          17.392118614551492,
+          15.035813008252177
+        ],
+        "mass_normalization": 0.9999999999999997
+      }
+    },
+    "seconds": 1.3307882999979483
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "experiment": "selected_gp_truth",
+  "posterior_registry": "results/analysis/external_control_posteriors.json",
+  "catalog": "results/analysis/external_gp_control_catalog",
+  "output": "results/analysis/external_control_comparison",
+  "primary_cells_per_axis": 48,
+  "verification_cells_per_axis": 96,
+  "partition_precedent": "configs/external_selected_partition_refinement.json",
+  "population_transport_power": 14,
+  "verification_population_transport_power": 16,
+  "population_seed": 847301,
+  "verification_population_seed": 847302,
+  "test_qmc_power": 11,
+  "test_qmc_seed": 847101,
+  "verification_test_samples": 8192,
+  "verification_test_seed": 847102,
+  "verification_draws_per_chain": 128,
+  "batch_lengths": [
+    25,
+    50,
+    100
+  ],
+  "maximum_seconds": 3600,
+  "decision": "Fixed before scientific scores for this control. Use every retained draw in the accepted registry, the existing common 48/96 evaluation partitions, and exact subdivision of the archived GP truth. Report the finer independent copula transport and check it against the coarser transport. Predict the same 192 held-out measurements with 2048 scrambled Sobol event samples; check independent 8192 IID integration and the finer training target on the same 128 evenly spaced draws per chain. Preserve both GP resolutions and all functional intervals and scores. No model, prior, posterior or population is selected from these outcomes. The three-case comparison remains required."
+}

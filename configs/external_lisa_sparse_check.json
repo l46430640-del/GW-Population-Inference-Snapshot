@@ -1,0 +1,16 @@
+{
+  "source": "results/analysis/external_lisa_gp",
+  "previous_cost": "results/analysis/external_lisa_gp/job_cost_001.json",
+  "output": "results/analysis/external_lisa_sparse_check",
+  "bins_per_axis": [
+    6,
+    12
+  ],
+  "checked_draws": 24,
+  "timing_repetitions": 128,
+  "timing_points": 3,
+  "maximum_value_error": 1e-07,
+  "maximum_gradient_error": 1e-07,
+  "maximum_seconds": 180,
+  "decision": "Before scientific comparison, check exact sparse evaluation of the existing histogram event likelihood. Omit only entries whose archived log weight is negative infinity, padding rows with negative infinity. Retain the full GP field, its original prior and every selection bin. Compare dense and sparse values and gradients, including traced graphs, at dispersed archived training-only states. Time both implementations on identical states. This check creates no new posterior and changes no model, prior, observations or event integration samples. Preserve the accepted six-bin posterior and incomplete twelve-bin attempt."
+}

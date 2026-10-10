@@ -1,0 +1,203 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 6,
+  "dimension": 220,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "lisa_bimodal",
+    "training_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+    "accepted_copula_summary": "results/analysis/lisa_refinement/summary.json",
+    "previous_cost": "results/analysis/external_control_comparison/job_cost_000.json",
+    "output": "results/analysis/external_lisa_gp",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "verification_event_samples": 8192,
+    "verification_event_seed": 847602,
+    "selection_power": 12,
+    "selection_seed": 847611,
+    "verification_selection_power": 14,
+    "verification_selection_seed": 847612,
+    "selection_cell_block": 8,
+    "pilot_warmup": 100,
+    "pilot_retained": 100,
+    "pilot_maximum_seconds": 600,
+    "retained_per_chain": 2400,
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1.0,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2.0,
+        1.0,
+        0.15,
+        0.5
+      ]
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_resident_gib": 2,
+    "maximum_seconds": 600,
+    "verification_reserve_seconds": 120,
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "sampling_amendment": "Before LISA GP sampling and scientific scores, retain 2400 draws per chain at both resolutions. The prior two cases needed GP chain extensions; start with their validated longer duration to avoid duplicate work. Preserve four seeds, 500 warmup, target acceptance 0.9, maximum depth 10, original kernel priors, coordinate basis and initial hyperparameters. All thresholds remain unchanged.",
+    "decision": "Use the fixed LISA training event posterior under its uniform event prior, retaining the observed SNR in each event likelihood exactly once. Integrate Phi(rho(x)-8) separately over every GP bin, including low-detectability bins. Check independent 8192 event samples and independent finer within-cell Sobol selection at every retained draw. Require event, selection and combined log-likelihood changes each to have SD at most 0.2, both per chain and pooled, as well as existing derivative, jitter, mixing, zero-divergence and resource checks. Use no injected truth or test observations. Preparation, pilots and both production fits share 4200 seconds inside the remaining twelve-hour study allowance. Incomplete fits remain inconclusive.",
+    "seed": 847201,
+    "warmup": 100,
+    "retained": 100,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10
+  },
+  "sampling_and_compilation_seconds": 48.91848670000036,
+  "compilation_seconds": 0.2907344000050216,
+  "potential_evaluations": 30619,
+  "warmup_completed": 100,
+  "samples_completed": 100,
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "step_size": 0.04183610878228861,
+  "peak_resident_bytes": 1212379136,
+  "retained_potential_evaluation_quantiles": [
+    127.0,
+    127.0,
+    127.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.1102230246251565e-16
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.3306690738754696e-16
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.3306690738754696e-16
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 187.2897017205252,
+      "cov_mass_ratio": 120.17693108984425,
+      "cov_mass_redshift": 154.06823392603232,
+      "cov_redshift_ratio": 200.0,
+      "length_x1": 130.64981255732087,
+      "length_x2": 78.91121123201137,
+      "length_x3": 27.00208803283024,
+      "log_posterior": 18.759417894081828,
+      "mass_above_0p8": 200.0,
+      "mass_below_quarter": 161.8903886964038,
+      "mean_mass": 200.0,
+      "mean_ratio": 200.0,
+      "mean_redshift": 124.98747368305041,
+      "sigma": 27.373387886909637,
+      "variance_mass": 169.79436050308342,
+      "variance_ratio": 148.72042340089524,
+      "variance_redshift": 116.33434615440483
+    },
+    "tail": {
+      "alpha": 116.77741595670966,
+      "cov_mass_ratio": 61.516656913646344,
+      "cov_mass_redshift": 104.24644711088418,
+      "cov_redshift_ratio": 116.77741595670966,
+      "length_x1": 66.96378150539175,
+      "length_x2": 113.43784166559665,
+      "length_x3": 37.329351535836174,
+      "log_posterior": 44.581010370379424,
+      "mass_above_0p8": 116.77741595670966,
+      "mass_below_quarter": 90.89775366724378,
+      "mean_mass": 92.58218249729835,
+      "mean_ratio": 101.77046754026517,
+      "mean_redshift": 37.08412799321619,
+      "sigma": 65.776263691638,
+      "variance_mass": 116.77741595670966,
+      "variance_ratio": 116.77741595670966,
+      "variance_redshift": 101.77046754026489
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 2.5414777317745948e-05,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1212379136
+  },
+  "seed": 847201,
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      14,
+      18,
+      28,
+      32,
+      34,
+      36,
+      39,
+      42,
+      44,
+      56,
+      70,
+      84,
+      89,
+      97,
+      99
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 2.1070075462148452e-08,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 2.5414777317745948e-05
+  },
+  "integral_verification": {
+    "standard_deviations": {
+      "event_log_likelihood_change": 0.04742798384820866,
+      "selection_log_likelihood_change": 0.0010669934437959024,
+      "combined_log_likelihood_change": 0.04774689072801912
+    },
+    "passed": true
+  },
+  "event_quadrature_passed": true,
+  "ready_for_production_sampling": true,
+  "process_elapsed_seconds": 49.70598720000271,
+  "draw_product_sha256": "db8482eb4875539af9ef07be679da19fce6abdc0f8847ee7f8be90a84abc6160",
+  "target_product_sha256": "6ad136f94b172d3ce7fc76155d60271a22af51b88201ab2426842ebd1f598820"
+}

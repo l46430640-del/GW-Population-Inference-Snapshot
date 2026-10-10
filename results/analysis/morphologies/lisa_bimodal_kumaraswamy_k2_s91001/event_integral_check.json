@@ -1,0 +1,21 @@
+{
+  "coarse_samples": 256,
+  "fine_samples": 2048,
+  "posterior_draws": 96,
+  "event_log_integral_difference_quantiles": [
+    -0.01923260688781738,
+    0.00033783912658691406,
+    0.01953752040863037
+  ],
+  "summed_log_integral_difference_quantiles": [
+    -0.025257587432861328,
+    0.05474734306335449,
+    0.126093327999115
+  ],
+  "summed_log_integral_difference_std": 0.04716850817203522,
+  "minimum_fine_event_ess_quantiles": [
+    956.3651123046875,
+    1370.5711669921875,
+    1666.8144226074219
+  ]
+}

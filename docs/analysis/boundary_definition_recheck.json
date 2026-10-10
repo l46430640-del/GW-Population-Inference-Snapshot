@@ -1,0 +1,56 @@
+{
+  "source_sha256": {
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "scripts/recheck_boundary_definition.py": "718b81ee96216ccbf70593fccc4801cde90f435d1146e54a5d72044ed5956c51"
+  },
+  "inference_rerun": false,
+  "threads": 1,
+  "check": {
+    "shape_a": 0.02,
+    "shape_b": 1.0,
+    "coordinate_threshold": 1e-07,
+    "analytic_normalization": 1.0,
+    "analytic_clipped_normalization": 0.29005275912651,
+    "actual_evaluator_normalization": 0.2900527798712697,
+    "quadrature_absolute_error_estimate": 1.7225911410809172e-08,
+    "evaluator_minus_clipped_integral": 2.0744759687829628e-08,
+    "probes": [
+      {
+        "x": 1e-12,
+        "analytic_pdf": 11508798746.743132,
+        "cdf_derivative": 11508798746.74314,
+        "marginal_pdf": 13213868.960151883,
+        "full_density_evaluator": 144887.22285084162
+      },
+      {
+        "x": 1e-10,
+        "analytic_pdf": 126191468.89603859,
+        "cdf_derivative": 126191468.89603865,
+        "marginal_pdf": 13213868.960151883,
+        "full_density_evaluator": 144887.22285084162
+      },
+      {
+        "x": 1e-08,
+        "analytic_pdf": 1383661.9418378726,
+        "cdf_derivative": 1383661.9418378733,
+        "marginal_pdf": 1383661.9418378721,
+        "full_density_evaluator": 144887.22285084162
+      },
+      {
+        "x": 1e-07,
+        "analytic_pdf": 144887.19201499797,
+        "cdf_derivative": 144887.19201499806,
+        "marginal_pdf": 144887.192014998,
+        "full_density_evaluator": 144887.22285084162
+      },
+      {
+        "x": 0.2,
+        "analytic_pdf": 0.09683237857256298,
+        "cdf_derivative": 0.09683237857256306,
+        "marginal_pdf": 0.096832378572563,
+        "full_density_evaluator": 0.09683239016440812
+      }
+    ],
+    "scope": "Independent copula; other two marginals are uniform. This is a definition counterexample, not an estimate of report-result error."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "status": "complete",
+  "seed": 734001,
+  "method": "raw",
+  "warmup_completed": 300,
+  "samples_completed": 500,
+  "compilation_seconds": 1.2008205000001908,
+  "sampling_seconds": 1528.5453768999996,
+  "potential_evaluations": 36377,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.375077994860476e-14
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 5.684341886080802e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 4.263256414560601e-14
+    }
+  ],
+  "step_size": 0.12393506661670294,
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "configuration": {
+    "source_config": "configs/lisa_correction.json",
+    "output": "results/analysis/lisa_production",
+    "initial_products": [
+      "results/analysis/lisa_correction/repeat_732001.npz",
+      "results/analysis/lisa_correction/repeat_732002.npz"
+    ],
+    "initial_efficiency_quantiles": [
+      0.1,
+      0.35,
+      0.65,
+      0.9
+    ],
+    "swap_initial_labels": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "seeds": [
+      734001,
+      734002,
+      734003,
+      734004
+    ],
+    "warmup": 300,
+    "samples": 500,
+    "target_acceptance": 0.9,
+    "max_tree_depth": 6,
+    "full_mass": true,
+    "maximum_seconds_per_chain": 1800,
+    "jit_absolute_tolerance": 1e-08,
+    "feature_transport_power": 10,
+    "marginal_cdf_points": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "maximum_rhat": 1.01,
+    "minimum_bulk_ess": 400,
+    "minimum_tail_ess": 400,
+    "maximum_divergences": 0,
+    "refinement_draws_per_chain": 64,
+    "refinement_extremes_per_chain": 8,
+    "fine_selection_points": 32768,
+    "fine_selection_seed_offset": 104729,
+    "fine_feature_transport_power": 14,
+    "maximum_refined_log_target_sd": 0.3,
+    "minimum_refinement_weight_ess_fraction": 0.9,
+    "maximum_refined_mean_shift_in_sd": 0.1,
+    "maximum_feature_change_in_sd": 0.05,
+    "precision_log_density_tolerance": 0.001,
+    "decision": "Require all four declared chains, zero divergences, and the declared Rhat and bulk/tail ESS criteria for population functionals, ordered component coordinates, marginal CDF values, and log target. Require independent refined event/selection integration and functional quadrature checks before accepting the LISA posterior. Retain every chain and failed criterion. No truth or held-out score enters initialization, tuning, or acceptance."
+  },
+  "target_product_sha256": "d1ddce7ba280fc9b0a71332deb28a23f266cdc53de3678c679990ff23bab663b",
+  "draw_product_sha256": "a676143e3695becaf8091bc5abbce06b621a4a559950e9bf549e9e5222bd22d6",
+  "initial": {
+    "source": "results/analysis/lisa_correction/repeat_732002.npz",
+    "index": 3032,
+    "efficiency_quantile": 0.1,
+    "alpha": 0.2927478821636733,
+    "labels_swapped": false,
+    "saved_log_target": 189.22835438534892
+  },
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1195347968
+  }
+}

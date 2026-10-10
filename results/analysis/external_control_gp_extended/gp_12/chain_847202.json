@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_gp_truth",
+    "training_catalog": "results/analysis/external_gp_control_catalog/train_catalog.npz",
+    "output": "results/analysis/external_gp_control_gp_pilot",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847202,
+    "warmup": 500,
+    "retained": 2400,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 1073.1225668000043,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Training-only pilot on the first predeclared GP-family catalog. Preserve the previous GP target, prior, initial rule and numerical checks. No convergence or scientific comparison is inferred from this pilot."
+  },
+  "sampling_and_compilation_seconds": 227.45517100000143,
+  "compilation_seconds": 0.1019272000012279,
+  "potential_evaluations": 100123,
+  "warmup_completed": 500,
+  "samples_completed": 2400,
+  "divergences": [],
+  "acceptance_rate": 0.9995833333333334,
+  "step_size": 0.10434675945894277,
+  "peak_resident_bytes": 1488007168,
+  "retained_potential_evaluation_quantiles": [
+    31.0,
+    31.0,
+    95.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.9753977059954195e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.2881696537524476e-13
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 2560.4325808258614,
+      "cov_mass_ratio": 1419.7209938526335,
+      "cov_mass_redshift": 3476.998884005066,
+      "cov_redshift_ratio": 3257.224577659498,
+      "length_x1": 736.0824555678586,
+      "length_x2": 173.96479731774917,
+      "length_x3": 522.1613154973033,
+      "log_posterior": 847.9650233308927,
+      "mass_above_0p8": 2652.2128667513603,
+      "mass_below_quarter": 2313.786235215287,
+      "mean_mass": 2615.8005946024487,
+      "mean_ratio": 2440.9260585229995,
+      "mean_redshift": 2538.347685024344,
+      "sigma": 597.735477557647,
+      "variance_mass": 2423.2084222308617,
+      "variance_ratio": 2517.0527618932983,
+      "variance_redshift": 1897.5787203273323
+    },
+    "tail": {
+      "alpha": 2279.9358858700903,
+      "cov_mass_ratio": 1932.1654576445258,
+      "cov_mass_redshift": 1982.0034181767894,
+      "cov_redshift_ratio": 2371.3052078215255,
+      "length_x1": 804.0505654449165,
+      "length_x2": 334.0078711965244,
+      "length_x3": 998.9223928067813,
+      "log_posterior": 1399.4145859306832,
+      "mass_above_0p8": 2343.681952048541,
+      "mass_below_quarter": 1707.2827628022198,
+      "mean_mass": 1895.7298933146303,
+      "mean_ratio": 1889.0745222904886,
+      "mean_redshift": 2153.2797402108345,
+      "sigma": 763.9796624558461,
+      "variance_mass": 2261.984125975821,
+      "variance_ratio": 2180.4095208918234,
+      "variance_redshift": 2262.7326072815013
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.0002568102237306956,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1563287552
+  },
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      292,
+      342,
+      463,
+      500,
+      685,
+      774,
+      1028,
+      1036,
+      1079,
+      1138,
+      1370,
+      1503,
+      1713,
+      2056,
+      2158,
+      2399
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 4.5969396555989306e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.0002568102237306956
+  },
+  "event_quadrature_passed": true,
+  "seed": 847202,
+  "target_product_sha256": "fea39192407812101480e033161e656e17d6853569bec308256c81b2fad21863",
+  "draw_product_sha256": "adf9153eaaae5480dae99a10ac26c679962b2dbb761827ead78ee3f1ee36a2d7",
+  "process_elapsed_seconds": 243.958468300003
+}

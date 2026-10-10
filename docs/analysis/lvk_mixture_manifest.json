@@ -1,0 +1,10 @@
+{
+  "url": "https://zenodo.org/records/5636816/files/o1+o2+o3_mixture_real+semianalytic-LIGO-T2100377-v2.hdf5?download=1",
+  "doi": "10.5281/zenodo.5636816",
+  "file": "external_data/lvk/analysis_inputs/o1+o2+o3_mixture_real+semianalytic-LIGO-T2100377-v2.hdf5",
+  "bytes": 361745836,
+  "md5": "d9c14e817dac05c83c66e83fa8a211a0",
+  "sha256": "dca66030a1f1feabd0011fc2548ac1bcb5257e42a80ca2b541e11c1d05c63fa1",
+  "documentation": "https://zenodo.org/records/5636816/files/o1%2Bo2%2Bo3-sensitivity-estimates.md",
+  "reason": "The separate BBH campaign has m1 <= 100 Msun; a wider population requires mixture injections."
+}

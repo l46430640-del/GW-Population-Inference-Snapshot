@@ -1,0 +1,2229 @@
+{
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "catalog_config": "configs/external_gp_control_catalog.json",
+    "gp_pilot_config": "configs/external_gp_control_gp_pilot.json",
+    "copula_pilot_config": "configs/external_gp_control_qmc_pilot.json",
+    "output": "results/analysis/external_control_production",
+    "experiment": "selected_gp_truth",
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1.0,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2.0,
+        1.0,
+        0.15,
+        0.5
+      ]
+    ],
+    "copula_initialization_seeds": [
+      847401,
+      847411,
+      847421,
+      847431
+    ],
+    "copula_initial_jitter": 0.15,
+    "swap_initial_labels": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "feature_power": 14,
+    "feature_seed": 847501,
+    "fine_feature_power": 16,
+    "maximum_feature_change_in_posterior_sd": 0.05,
+    "verification_draws_per_chain": 128,
+    "verification_extreme_draws": 16,
+    "copula_fit_verification_reserve_seconds": 1800,
+    "chain_verification_reserve_seconds": 120,
+    "batch_lengths": [
+      20,
+      40,
+      80
+    ],
+    "cdf_probabilities": [
+      0.05,
+      0.5,
+      0.95
+    ],
+    "minimum_corrected_precision_equivalent_draws": 400,
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "resource_amendment": {
+      "maximum_seconds_per_fit": 14400,
+      "maximum_seconds_control_production": 18000,
+      "prior_study_budget_charge_seconds": 19800,
+      "reason": "The 512-point copula pilot projects about 10400 seconds for four chains at the unchanged 500 warmup and 800 retained settings. Before control production or scientific scores, increase the per-fit cap symmetrically for copula and both GP resolutions to four hours. The three control fits and their checks together have a five-hour cap. Keep the twelve-hour study cap, single CPU thread and 2 GiB memory limit. Charge 5.5 hours for inherited costs, exceeding the approximately 4.7 hours of recorded external calculations and reused selected/LISA posteriors; this leaves at least 1.5 hours for later work even if the whole new allocation is spent. Incomplete fits remain inconclusive."
+    },
+    "decision": "Four sequential chains per model with the original protocol's seeds, warmup, retained draws, acceptance and depth. Initialize from training observations only, using dispersed GP hyperparameters and independent event-clustering initializations for copula. Preserve all attempts. Copula uses the checked 512-point Sobol target, correction to the independent 2048-point Sobol likelihood, and checks against the archived 8192 IID cloud. Require original mixing thresholds, zero divergences, numerical accuracy and correlated correction precision before scientific use. No test measurements or truth enter this calculation."
+  },
+  "target_product_sha256": "d4888b4c2073b3cbbfc098d5e0ff24e8e3bcf83629323753cefd6462e695d002",
+  "chain_reports_sha256": {
+    "chain_847201.json": "d32d43285b2dcde918d1b1fd4488d769bd456067942baa2622834d9942c6d133",
+    "chain_847202.json": "20c5f64185ac12efd29b2d7b86db550769f04b2f9fa837f87417ce97f2e88cac",
+    "chain_847203.json": "bdd42f241790a5d58ad82e19fe5df56e04fba20a0ddee578595a874076d9fbb4",
+    "chain_847204.json": "f7101075d1a814d6fa43b644db08765f681c095617cb0974edef6d2f265b8356"
+  },
+  "decision": {
+    "complete": true,
+    "divergences_passed": false,
+    "mixing_passed": true,
+    "numerical_passed": true,
+    "correction_precision_passed": true,
+    "resources_passed": true,
+    "posterior_accepted": false
+  },
+  "comparison_results_available": false,
+  "mixing": {
+    "functionals": {
+      "alpha": {
+        "mcse_mean": 0.0007743044733342494,
+        "mcse_sd": 0.0005938080682053967,
+        "ess_bulk": 2758.833555931939,
+        "ess_tail": 2516.5757620068334,
+        "r_hat": 1.0001889777969046
+      },
+      "cdf_x1_0.25": {
+        "mcse_mean": 0.001425142686783545,
+        "mcse_sd": 0.001095609596856171,
+        "ess_bulk": 2334.204276745421,
+        "ess_tail": 2154.035182298914,
+        "r_hat": 1.001199056448639
+      },
+      "cdf_x1_0.5": {
+        "mcse_mean": 0.001273976634918995,
+        "mcse_sd": 0.000967280605630734,
+        "ess_bulk": 2702.241446501022,
+        "ess_tail": 2477.1290488035124,
+        "r_hat": 1.000350843112144
+      },
+      "cdf_x1_0.75": {
+        "mcse_mean": 0.0008075754114527036,
+        "mcse_sd": 0.0006392782261218374,
+        "ess_bulk": 2980.7965184552563,
+        "ess_tail": 2600.8814011611657,
+        "r_hat": 1.0007606737028263
+      },
+      "cdf_x2_0.25": {
+        "mcse_mean": 0.001094689048224609,
+        "mcse_sd": 0.0010306628027022288,
+        "ess_bulk": 2822.595008689272,
+        "ess_tail": 1834.679845875367,
+        "r_hat": 1.0009413597001342
+      },
+      "cdf_x2_0.5": {
+        "mcse_mean": 0.0010776926085444792,
+        "mcse_sd": 0.0008777258611503585,
+        "ess_bulk": 2662.3477987196916,
+        "ess_tail": 2194.876597912396,
+        "r_hat": 0.9999933503509358
+      },
+      "cdf_x2_0.75": {
+        "mcse_mean": 0.0008260163933424277,
+        "mcse_sd": 0.0008718775024496228,
+        "ess_bulk": 2491.9585393535667,
+        "ess_tail": 1878.202470042732,
+        "r_hat": 0.9997716603135967
+      },
+      "cdf_x3_0.25": {
+        "mcse_mean": 0.0007479528917652296,
+        "mcse_sd": 0.0006538841545235876,
+        "ess_bulk": 3205.111287652439,
+        "ess_tail": 2756.6550392043982,
+        "r_hat": 1.0017075403496825
+      },
+      "cdf_x3_0.5": {
+        "mcse_mean": 0.0009919059633171261,
+        "mcse_sd": 0.0008796994624518004,
+        "ess_bulk": 3378.1543650965823,
+        "ess_tail": 2636.4454443734867,
+        "r_hat": 1.0008601865670215
+      },
+      "cdf_x3_0.75": {
+        "mcse_mean": 0.0010566893202170102,
+        "mcse_sd": 0.0009127592024232351,
+        "ess_bulk": 2863.098260052356,
+        "ess_tail": 2374.5300603259466,
+        "r_hat": 1.002033984396752
+      },
+      "cov_mass_ratio": {
+        "mcse_mean": 0.0002895184463638229,
+        "mcse_sd": 0.00017765153298032602,
+        "ess_bulk": 1448.9662526792695,
+        "ess_tail": 1879.7357273023786,
+        "r_hat": 1.0048632145346352
+      },
+      "cov_mass_redshift": {
+        "mcse_mean": 0.00028278198692816654,
+        "mcse_sd": 0.00019523442041805323,
+        "ess_bulk": 1380.9583596116092,
+        "ess_tail": 1629.0667298016836,
+        "r_hat": 1.001630951278042
+      },
+      "cov_redshift_ratio": {
+        "mcse_mean": 0.0001680598546282604,
+        "mcse_sd": 0.00013648362940977114,
+        "ess_bulk": 2642.0093389825297,
+        "ess_tail": 2666.8334422911475,
+        "r_hat": 1.0013506081070476
+      },
+      "log_posterior": {
+        "mcse_mean": 0.16061179606539464,
+        "mcse_sd": 0.15092358489191082,
+        "ess_bulk": 597.6132854214848,
+        "ess_tail": 643.6966193016204,
+        "r_hat": 1.0065237242376508
+      },
+      "mass_above_0p8": {
+        "mcse_mean": 0.0006910895120506442,
+        "mcse_sd": 0.0005576369129929835,
+        "ess_bulk": 3075.8665250009785,
+        "ess_tail": 2541.8917651186657,
+        "r_hat": 1.0014460955268853
+      },
+      "mass_below_quarter": {
+        "mcse_mean": 0.001425142686783545,
+        "mcse_sd": 0.001095609596856171,
+        "ess_bulk": 2334.204276745421,
+        "ess_tail": 2154.035182298914,
+        "r_hat": 1.001199056448639
+      },
+      "mean_mass": {
+        "mcse_mean": 0.0009489474301968455,
+        "mcse_sd": 0.0007344872968880841,
+        "ess_bulk": 2570.921701062942,
+        "ess_tail": 2489.9507257314262,
+        "r_hat": 1.0004495966750304
+      },
+      "mean_ratio": {
+        "mcse_mean": 0.000725495195582784,
+        "mcse_sd": 0.0006393331926180631,
+        "ess_bulk": 3132.2797430782184,
+        "ess_tail": 2663.712872608606,
+        "r_hat": 1.0016593421873525
+      },
+      "mean_redshift": {
+        "mcse_mean": 0.0007139832884677042,
+        "mcse_sd": 0.0006158985720947931,
+        "ess_bulk": 2640.1531636702043,
+        "ess_tail": 2281.69735022283,
+        "r_hat": 1.000314677696566
+      },
+      "octant_000": {
+        "mcse_mean": 0.0014511994198411363,
+        "mcse_sd": 0.0011546593429844145,
+        "ess_bulk": 624.9148471185146,
+        "ess_tail": 843.6399844866775,
+        "r_hat": 1.0087465367891628
+      },
+      "octant_001": {
+        "mcse_mean": 0.0011216467516253557,
+        "mcse_sd": 0.0008793032965167982,
+        "ess_bulk": 2374.0432496557864,
+        "ess_tail": 2381.9937166862737,
+        "r_hat": 1.002002226619243
+      },
+      "octant_010": {
+        "mcse_mean": 0.000609193462909258,
+        "mcse_sd": 0.0008884939537202728,
+        "ess_bulk": 1463.2641780987656,
+        "ess_tail": 1542.3873636972737,
+        "r_hat": 1.0018537780012875
+      },
+      "octant_011": {
+        "mcse_mean": 0.0008141176471757655,
+        "mcse_sd": 0.0007382284018930387,
+        "ess_bulk": 2828.791868118363,
+        "ess_tail": 2402.863297563654,
+        "r_hat": 0.9996183260068778
+      },
+      "octant_100": {
+        "mcse_mean": 0.0010879468966649751,
+        "mcse_sd": 0.0006682135464671575,
+        "ess_bulk": 1666.5441727001212,
+        "ess_tail": 2633.265714430397,
+        "r_hat": 1.0023425955994405
+      },
+      "octant_101": {
+        "mcse_mean": 0.0005578360520637032,
+        "mcse_sd": 0.00039762077986186574,
+        "ess_bulk": 1362.6197222490323,
+        "ess_tail": 1631.6638289935102,
+        "r_hat": 1.0021987791050595
+      },
+      "octant_110": {
+        "mcse_mean": 0.00041351241560820334,
+        "mcse_sd": 0.00031937406906110377,
+        "ess_bulk": 2360.5938041490267,
+        "ess_tail": 2608.1939636069615,
+        "r_hat": 0.9995480526294009
+      },
+      "octant_111": {
+        "mcse_mean": 0.00034990087242963406,
+        "mcse_sd": 0.0002574892694362135,
+        "ess_bulk": 2516.8657811716985,
+        "ess_tail": 2701.373821722141,
+        "r_hat": 1.000776276990062
+      },
+      "variance_mass": {
+        "mcse_mean": 0.00021112285217188693,
+        "mcse_sd": 0.00014231933091510805,
+        "ess_bulk": 2314.5048016073206,
+        "ess_tail": 2773.364102527645,
+        "r_hat": 1.0020956856430137
+      },
+      "variance_ratio": {
+        "mcse_mean": 0.00017994516260065366,
+        "mcse_sd": 0.00012852152112210972,
+        "ess_bulk": 2285.24241993731,
+        "ess_tail": 2405.6049493744204,
+        "r_hat": 0.9997479852453526
+      },
+      "variance_redshift": {
+        "mcse_mean": 0.00019381621503044956,
+        "mcse_sd": 0.00017101665560571874,
+        "ess_bulk": 2376.8246539676315,
+        "ess_tail": 1967.0043145105942,
+        "r_hat": 0.9999772774734563
+      }
+    },
+    "maximum_rhat": 1.0087465367891628,
+    "minimum_bulk_ess": 597.6132854214848,
+    "minimum_tail_ess": 643.6966193016204
+  },
+  "correction": {
+    "pareto_k": 0.3368653278969079,
+    "diagnostic_relative_efficiency": 0.6891642213035336,
+    "weight_ess": 3163.633086359268,
+    "weight_ess_fraction": 0.9886353394872712,
+    "maximum_weight": 0.0006909412132144926,
+    "chain_weight": [
+      0.24974177938339165,
+      0.24770628020232094,
+      0.2508672584100268,
+      0.2516846820042606
+    ],
+    "weights_used": "raw",
+    "interpretation": "Weight concentration, not independent MCMC information."
+  },
+  "corrected_statistics": {
+    "functionals": {
+      "mean_mass": {
+        "mean": 0.5164737263554299,
+        "sd": 0.04785197884131103,
+        "mean_mcse": 0.0011015025062864152,
+        "mean_mcse_arviz": 0.0009740289492329274,
+        "mean_mcse_batches": [
+          0.0009944354102783117,
+          0.0009991693082391086,
+          0.0011015025062864152
+        ],
+        "mean_mcse_over_sd": 0.023018954136447927,
+        "mean_influence_rhat": 1.0005215469179978,
+        "quantiles": [
+          0.4345335659797848,
+          0.5181656173085397,
+          0.5911811355424935
+        ]
+      },
+      "mean_redshift": {
+        "mean": 0.38886795261383594,
+        "sd": 0.036580223883359415,
+        "mean_mcse": 0.0007612270370730589,
+        "mean_mcse_arviz": 0.0007179448250717029,
+        "mean_mcse_batches": [
+          0.0007608397864024253,
+          0.0007612270370730589,
+          0.0007219137724886412
+        ],
+        "mean_mcse_over_sd": 0.020809797105133247,
+        "mean_influence_rhat": 1.0003879143974854,
+        "quantiles": [
+          0.3321804598514463,
+          0.38732606423949245,
+          0.45117483299642086
+        ]
+      },
+      "mean_ratio": {
+        "mean": 0.49435948014374476,
+        "sd": 0.04052666920240703,
+        "mean_mcse": 0.0007619735468560086,
+        "mean_mcse_arviz": 0.0007348844654433104,
+        "mean_mcse_batches": [
+          0.0007392224116289772,
+          0.0007099435491689145,
+          0.0007619735468560086
+        ],
+        "mean_mcse_over_sd": 0.01880178070026915,
+        "mean_influence_rhat": 1.0017486882274902,
+        "quantiles": [
+          0.4308599945559605,
+          0.4925878424416569,
+          0.5641510034761711
+        ]
+      },
+      "variance_mass": {
+        "mean": 0.08527123069080081,
+        "sd": 0.010321416077120078,
+        "mean_mcse": 0.0002621629784569407,
+        "mean_mcse_arviz": 0.0002137356419577273,
+        "mean_mcse_batches": [
+          0.00021596463591220643,
+          0.00023222201914144082,
+          0.0002621629784569407
+        ],
+        "mean_mcse_over_sd": 0.025399904092432486,
+        "mean_influence_rhat": 1.0021141272195584,
+        "quantiles": [
+          0.06825265100646355,
+          0.08522248857694692,
+          0.10229147332850758
+        ]
+      },
+      "variance_redshift": {
+        "mean": 0.06363739098334824,
+        "sd": 0.009074086888170633,
+        "mean_mcse": 0.00019264913779853162,
+        "mean_mcse_arviz": 0.00018941578385662307,
+        "mean_mcse_batches": [
+          0.00019264913779853162,
+          0.00018254370297852383,
+          0.00016649952428820868
+        ],
+        "mean_mcse_over_sd": 0.021230691327154612,
+        "mean_influence_rhat": 0.9998759174114632,
+        "quantiles": [
+          0.05010838238765328,
+          0.06284445663225013,
+          0.0797405624035882
+        ]
+      },
+      "variance_ratio": {
+        "mean": 0.08352846992466731,
+        "sd": 0.008633784518819302,
+        "mean_mcse": 0.00018737989430584219,
+        "mean_mcse_arviz": 0.00018054390145294617,
+        "mean_mcse_batches": [
+          0.00018530106017584274,
+          0.000178617639751889,
+          0.00018737989430584219
+        ],
+        "mean_mcse_over_sd": 0.021703100638822404,
+        "mean_influence_rhat": 0.999879855284381,
+        "quantiles": [
+          0.06976379488249268,
+          0.08329071784596664,
+          0.09839044332535513
+        ]
+      },
+      "alpha": {
+        "mean": 0.3865908449560297,
+        "sd": 0.040702388709545824,
+        "mean_mcse": 0.0008910647951599186,
+        "mean_mcse_arviz": 0.000799637071509316,
+        "mean_mcse_batches": [
+          0.000823248462606624,
+          0.0008192808935190954,
+          0.0008910647951599186
+        ],
+        "mean_mcse_over_sd": 0.021892199043122486,
+        "mean_influence_rhat": 1.0002304304708922,
+        "quantiles": [
+          0.31880116792253405,
+          0.38741842443775437,
+          0.45242709293486677
+        ]
+      },
+      "mass_below_quarter": {
+        "mean": 0.2372534562108356,
+        "sd": 0.06831894234814961,
+        "mean_mcse": 0.0016904524085955702,
+        "mean_mcse_arviz": 0.0014539378147814413,
+        "mean_mcse_batches": [
+          0.0014671683019617029,
+          0.0015028140734854062,
+          0.0016904524085955702
+        ],
+        "mean_mcse_over_sd": 0.02474353891459731,
+        "mean_influence_rhat": 1.0012167690113454,
+        "quantiles": [
+          0.1335341582437321,
+          0.23349397030921495,
+          0.3594384798968399
+        ]
+      },
+      "mass_above_0p8": {
+        "mean": 0.2234779362582956,
+        "sd": 0.03843391092329719,
+        "mean_mcse": 0.0007385040682734774,
+        "mean_mcse_arviz": 0.0007043930304459652,
+        "mean_mcse_batches": [
+          0.0007231407893680216,
+          0.0007067689124106605,
+          0.0007385040682734774
+        ],
+        "mean_mcse_over_sd": 0.019214908150963737,
+        "mean_influence_rhat": 1.0015308403701393,
+        "quantiles": [
+          0.1622285220154874,
+          0.22250342603139064,
+          0.2894273145666834
+        ]
+      },
+      "cov_mass_redshift": {
+        "mean": -0.006025493151576441,
+        "sd": 0.01033724378923339,
+        "mean_mcse": 0.00032123065492332346,
+        "mean_mcse_arviz": 0.0002820762316369829,
+        "mean_mcse_batches": [
+          0.000264689314943313,
+          0.0002841782312720848,
+          0.00032123065492332346
+        ],
+        "mean_mcse_over_sd": 0.03107507779374389,
+        "mean_influence_rhat": 1.0018705622954966,
+        "quantiles": [
+          -0.023395549590999876,
+          -0.005707402864128658,
+          0.010325118532598931
+        ]
+      },
+      "cov_mass_ratio": {
+        "mean": -0.04344544946914256,
+        "sd": 0.010991524247919668,
+        "mean_mcse": 0.0003061162170345924,
+        "mean_mcse_arviz": 0.00029520724929537505,
+        "mean_mcse_batches": [
+          0.00028285891497704946,
+          0.00027714458161654627,
+          0.0003061162170345924
+        ],
+        "mean_mcse_over_sd": 0.027850206225267623,
+        "mean_influence_rhat": 1.0053475364325966,
+        "quantiles": [
+          -0.061383193574521544,
+          -0.043700422281717555,
+          -0.0253017020102404
+        ]
+      },
+      "cov_redshift_ratio": {
+        "mean": 0.017423557906159855,
+        "sd": 0.008676414280838214,
+        "mean_mcse": 0.0001772033381547251,
+        "mean_mcse_arviz": 0.00017252850885506122,
+        "mean_mcse_batches": [
+          0.00017620645656032276,
+          0.00017516843815714017,
+          0.0001772033381547251
+        ],
+        "mean_mcse_over_sd": 0.02042356812607221,
+        "mean_influence_rhat": 1.001169346430289,
+        "quantiles": [
+          0.003691237030907346,
+          0.017386806920409004,
+          0.03164566179631961
+        ]
+      },
+      "cdf_x1_0.25": {
+        "mean": 0.2372534562108356,
+        "sd": 0.06831894234814961,
+        "mean_mcse": 0.0016904524085955702,
+        "mean_mcse_arviz": 0.0014539378147814413,
+        "mean_mcse_batches": [
+          0.0014671683019617029,
+          0.0015028140734854062,
+          0.0016904524085955702
+        ],
+        "mean_mcse_over_sd": 0.02474353891459731,
+        "mean_influence_rhat": 1.0012167690113454,
+        "quantiles": [
+          0.1335341582437321,
+          0.23349397030921495,
+          0.3594384798968399
+        ]
+      },
+      "cdf_x1_0.5": {
+        "mean": 0.47477147195604613,
+        "sd": 0.06611036957342535,
+        "mean_mcse": 0.0014948599744718102,
+        "mean_mcse_arviz": 0.0013047854636003106,
+        "mean_mcse_batches": [
+          0.0013405615878077926,
+          0.0013428699238280536,
+          0.0014948599744718102
+        ],
+        "mean_mcse_over_sd": 0.022611580968573273,
+        "mean_influence_rhat": 1.0004625571137624,
+        "quantiles": [
+          0.36796795276552696,
+          0.473621351164568,
+          0.5842116834668197
+        ]
+      },
+      "cdf_x1_0.75": {
+        "mean": 0.7256142015016356,
+        "sd": 0.044203344462821384,
+        "mean_mcse": 0.0008764762363763107,
+        "mean_mcse_arviz": 0.0008195598061909018,
+        "mean_mcse_batches": [
+          0.0008437878032102058,
+          0.0008278783120301739,
+          0.0008764762363763107
+        ],
+        "mean_mcse_over_sd": 0.019828278765501528,
+        "mean_influence_rhat": 1.000813727641968,
+        "quantiles": [
+          0.6506121203000433,
+          0.7263685880117412,
+          0.7969326994115161
+        ]
+      },
+      "cdf_x2_0.25": {
+        "mean": 0.35941996323747444,
+        "sd": 0.05673664792496073,
+        "mean_mcse": 0.0012357721997719269,
+        "mean_mcse_arviz": 0.0011092531772507407,
+        "mean_mcse_batches": [
+          0.0011115624591600936,
+          0.0011862893823550186,
+          0.0012357721997719269
+        ],
+        "mean_mcse_over_sd": 0.02178084615443524,
+        "mean_influence_rhat": 1.000908289014335,
+        "quantiles": [
+          0.27049164990310676,
+          0.35853928622561176,
+          0.45452779307402735
+        ]
+      },
+      "cdf_x2_0.5": {
+        "mean": 0.6716211676369651,
+        "sd": 0.055055489655915016,
+        "mean_mcse": 0.0011382664675562773,
+        "mean_mcse_arviz": 0.001074513635773932,
+        "mean_mcse_batches": [
+          0.0011382664675562773,
+          0.0011177314823799327,
+          0.0010153594758626871
+        ],
+        "mean_mcse_over_sd": 0.020674894995398246,
+        "mean_influence_rhat": 1.00009116044272,
+        "quantiles": [
+          0.5756094368635424,
+          0.6738229952291039,
+          0.7578389631862551
+        ]
+      },
+      "cdf_x2_0.75": {
+        "mean": 0.8894915068037105,
+        "sd": 0.037778565647212256,
+        "mean_mcse": 0.0008604696913839449,
+        "mean_mcse_arviz": 0.0008130203569450077,
+        "mean_mcse_batches": [
+          0.0008604696913839449,
+          0.0007949748554778958,
+          0.0006593192278945235
+        ],
+        "mean_mcse_over_sd": 0.022776663873882157,
+        "mean_influence_rhat": 0.999776722417452,
+        "quantiles": [
+          0.8207788023037439,
+          0.8953238879763944,
+          0.9420104218576075
+        ]
+      },
+      "cdf_x3_0.25": {
+        "mean": 0.25948963276916037,
+        "sd": 0.042379991055389886,
+        "mean_mcse": 0.0008619934573087382,
+        "mean_mcse_arviz": 0.0007430041141761769,
+        "mean_mcse_batches": [
+          0.0007668512626722466,
+          0.0007896624394850616,
+          0.0008619934573087382
+        ],
+        "mean_mcse_over_sd": 0.020339632827721183,
+        "mean_influence_rhat": 1.0018940281448256,
+        "quantiles": [
+          0.19323886983772653,
+          0.25783232498034686,
+          0.33101152396290007
+        ]
+      },
+      "cdf_x3_0.5": {
+        "mean": 0.507216897491513,
+        "sd": 0.05753380148855207,
+        "mean_mcse": 0.0010526652765567267,
+        "mean_mcse_arviz": 0.0010033145830601821,
+        "mean_mcse_batches": [
+          0.0009853398566977071,
+          0.0009670963714925828,
+          0.0010526652765567267
+        ],
+        "mean_mcse_over_sd": 0.018296466586971198,
+        "mean_influence_rhat": 1.001006900083915,
+        "quantiles": [
+          0.40972126711414647,
+          0.5079792403574367,
+          0.6004271362198019
+        ]
+      },
+      "cdf_x3_0.75": {
+        "mean": 0.7539530534069138,
+        "sd": 0.05632678874934059,
+        "mean_mcse": 0.001084170189979526,
+        "mean_mcse_arviz": 0.001070421843288832,
+        "mean_mcse_batches": [
+          0.001084170189979526,
+          0.0009998029352499354,
+          0.0010574877748853395
+        ],
+        "mean_mcse_over_sd": 0.019247860814579423,
+        "mean_influence_rhat": 1.0023635307577081,
+        "quantiles": [
+          0.6557980786183703,
+          0.7577747781838663,
+          0.8399004134469842
+        ]
+      },
+      "octant_000": {
+        "mean": 0.09850753655260822,
+        "sd": 0.03198328115108857,
+        "mean_mcse": 0.0014488957381446944,
+        "mean_mcse_arviz": 0.0014488957381446944,
+        "mean_mcse_batches": [
+          0.0009920185943767413,
+          0.0011452790579912979,
+          0.0013494306777699105
+        ],
+        "mean_mcse_over_sd": 0.045301660304961563,
+        "mean_influence_rhat": 1.0089607216010605,
+        "quantiles": [
+          0.05543922977847871,
+          0.0935883782881938,
+          0.15622070520844505
+        ]
+      },
+      "octant_001": {
+        "mean": 0.20654636734091264,
+        "sd": 0.052757325286078384,
+        "mean_mcse": 0.0011338967774762686,
+        "mean_mcse_arviz": 0.0011338967774762686,
+        "mean_mcse_batches": [
+          0.0010925067272107146,
+          0.0010398484250926372,
+          0.0011148436848763912
+        ],
+        "mean_mcse_over_sd": 0.021492688860317972,
+        "mean_influence_rhat": 1.002346944834561,
+        "quantiles": [
+          0.13018835624322292,
+          0.2021578863367428,
+          0.29966375867434303
+        ]
+      },
+      "octant_010": {
+        "mean": 0.041345187068640626,
+        "sd": 0.021463954420158738,
+        "mean_mcse": 0.0006048862020238516,
+        "mean_mcse_arviz": 0.0006048862020238516,
+        "mean_mcse_batches": [
+          0.0006046731190568336,
+          0.0005784725605622729,
+          0.000589619494168188
+        ],
+        "mean_mcse_over_sd": 0.02818148930915304,
+        "mean_influence_rhat": 1.001866591309655,
+        "quantiles": [
+          0.016616603098748926,
+          0.036846204967123215,
+          0.0837754933107824
+        ]
+      },
+      "octant_011": {
+        "mean": 0.12837249894348152,
+        "sd": 0.042588045171238646,
+        "mean_mcse": 0.000825252643781211,
+        "mean_mcse_arviz": 0.000825252643781211,
+        "mean_mcse_batches": [
+          0.0008143802500934744,
+          0.0007950525576809539,
+          0.0007298891181709048
+        ],
+        "mean_mcse_over_sd": 0.01937756571035423,
+        "mean_influence_rhat": 0.9996728722567764,
+        "quantiles": [
+          0.06566623565168819,
+          0.12441017488404596,
+          0.20687037045524742
+        ]
+      },
+      "octant_100": {
+        "mean": 0.2816044469832533,
+        "sd": 0.04458206431688816,
+        "mean_mcse": 0.0013353560281627928,
+        "mean_mcse_arviz": 0.0010749257954235014,
+        "mean_mcse_batches": [
+          0.0009822587284364138,
+          0.0010837178277883677,
+          0.0013353560281627928
+        ],
+        "mean_mcse_over_sd": 0.029952763485134218,
+        "mean_influence_rhat": 1.0025282551975216,
+        "quantiles": [
+          0.21038602774366663,
+          0.2806014373950254,
+          0.3575631314804983
+        ]
+      },
+      "octant_101": {
+        "mean": 0.08496199466052508,
+        "sd": 0.019908944499247627,
+        "mean_mcse": 0.0006367110678906519,
+        "mean_mcse_arviz": 0.000569285455413984,
+        "mean_mcse_batches": [
+          0.0005140737471070526,
+          0.0005512248422347325,
+          0.0006367110678906519
+        ],
+        "mean_mcse_over_sd": 0.031981156405087856,
+        "mean_influence_rhat": 1.0025356241635215,
+        "quantiles": [
+          0.05510430264179288,
+          0.0833044204353633,
+          0.12122467102827965
+        ]
+      },
+      "octant_110": {
+        "mean": 0.08574280355282016,
+        "sd": 0.0201548724228849,
+        "mean_mcse": 0.0004732968076850092,
+        "mean_mcse_arviz": 0.0004201313026603296,
+        "mean_mcse_batches": [
+          0.00040776467722908604,
+          0.0004274878073319921,
+          0.0004732968076850092
+        ],
+        "mean_mcse_over_sd": 0.023482996952518695,
+        "mean_influence_rhat": 0.9996757625090928,
+        "quantiles": [
+          0.05553291475532464,
+          0.08419641756921042,
+          0.12081966206804376
+        ]
+      },
+      "octant_111": {
+        "mean": 0.07291916489775833,
+        "sd": 0.017641793655705857,
+        "mean_mcse": 0.000383916629366881,
+        "mean_mcse_arviz": 0.000351026514260435,
+        "mean_mcse_batches": [
+          0.00036772984390129906,
+          0.00035279418043172454,
+          0.000383916629366881
+        ],
+        "mean_mcse_over_sd": 0.0217617684947081,
+        "mean_influence_rhat": 1.0005403022209185,
+        "quantiles": [
+          0.04681564255723059,
+          0.07124265523350287,
+          0.104727979178886
+        ]
+      }
+    },
+    "cdf_checks": [
+      {
+        "name": "mean_mass",
+        "probability": 0.05,
+        "quantile": 0.4345335659797848,
+        "estimated_cdf": 0.05026953259815977,
+        "cdf_mcse": 0.004421996149728886,
+        "cdf_mcse_arviz": 0.004392345011102288,
+        "cdf_mcse_batches": [
+          0.004421996149728886,
+          0.004229236533562685,
+          0.004179354965605558
+        ],
+        "influence_rhat": 1.0012285143182924,
+        "mcse_equivalent_draws": 2429.16429720642
+      },
+      {
+        "name": "mean_mass",
+        "probability": 0.5,
+        "quantile": 0.5181656173085397,
+        "estimated_cdf": 0.5002120759157132,
+        "cdf_mcse": 0.011580356478751327,
+        "cdf_mcse_arviz": 0.00994737777330273,
+        "cdf_mcse_batches": [
+          0.01014054379017383,
+          0.010600342226657738,
+          0.011580356478751327
+        ],
+        "influence_rhat": 1.0004506641939435,
+        "mcse_equivalent_draws": 1864.2156591031476
+      },
+      {
+        "name": "mean_mass",
+        "probability": 0.95,
+        "quantile": 0.5911811355424935,
+        "estimated_cdf": 0.9501008479991793,
+        "cdf_mcse": 0.004703295962930952,
+        "cdf_mcse_arviz": 0.0042075313089639165,
+        "cdf_mcse_batches": [
+          0.004614533743965462,
+          0.004703295962930952,
+          0.0041947619067081695
+        ],
+        "influence_rhat": 1.0001690700884804,
+        "mcse_equivalent_draws": 2147.2815520842664
+      },
+      {
+        "name": "mean_redshift",
+        "probability": 0.05,
+        "quantile": 0.3321804598514463,
+        "estimated_cdf": 0.05015425771160088,
+        "cdf_mcse": 0.004876166612222525,
+        "cdf_mcse_arviz": 0.004553180343760187,
+        "cdf_mcse_batches": [
+          0.004415922076429645,
+          0.004740508219585015,
+          0.004876166612222525
+        ],
+        "influence_rhat": 0.9998792739204901,
+        "mcse_equivalent_draws": 1997.7288279252232
+      },
+      {
+        "name": "mean_redshift",
+        "probability": 0.5,
+        "quantile": 0.38732606423949245,
+        "estimated_cdf": 0.5000276973875184,
+        "cdf_mcse": 0.009346355349504175,
+        "cdf_mcse_arviz": 0.008928011275559821,
+        "cdf_mcse_batches": [
+          0.009346355349504175,
+          0.009090691383430242,
+          0.009104949101670907
+        ],
+        "influence_rhat": 1.0012786210871965,
+        "mcse_equivalent_draws": 2861.9064327215856
+      },
+      {
+        "name": "mean_redshift",
+        "probability": 0.95,
+        "quantile": 0.45117483299642086,
+        "estimated_cdf": 0.9501941348657724,
+        "cdf_mcse": 0.004561392507399051,
+        "cdf_mcse_arviz": 0.004401306350699663,
+        "cdf_mcse_batches": [
+          0.004561392507399051,
+          0.004416484671764853,
+          0.003816646282185534
+        ],
+        "influence_rhat": 1.0003333525510931,
+        "mcse_equivalent_draws": 2282.9621956951964
+      },
+      {
+        "name": "mean_ratio",
+        "probability": 0.05,
+        "quantile": 0.4308599945559605,
+        "estimated_cdf": 0.05022419435836199,
+        "cdf_mcse": 0.004611027115163763,
+        "cdf_mcse_arviz": 0.004105573822985686,
+        "cdf_mcse_batches": [
+          0.004050738089350006,
+          0.004103098366528662,
+          0.004611027115163763
+        ],
+        "influence_rhat": 1.0000239198887015,
+        "mcse_equivalent_draws": 2234.0776169907303
+      },
+      {
+        "name": "mean_ratio",
+        "probability": 0.5,
+        "quantile": 0.4925878424416569,
+        "estimated_cdf": 0.5000540423012249,
+        "cdf_mcse": 0.008921183722118722,
+        "cdf_mcse_arviz": 0.008912264878501356,
+        "cdf_mcse_batches": [
+          0.008783751897066415,
+          0.00849451308395713,
+          0.008921183722118722
+        ],
+        "influence_rhat": 1.0005416741007627,
+        "mcse_equivalent_draws": 3141.1960459287075
+      },
+      {
+        "name": "mean_ratio",
+        "probability": 0.95,
+        "quantile": 0.5641510034761711,
+        "estimated_cdf": 0.9501146388767361,
+        "cdf_mcse": 0.004363174841660613,
+        "cdf_mcse_arviz": 0.004363174841660613,
+        "cdf_mcse_batches": [
+          0.004220587151357132,
+          0.00428030316401157,
+          0.004298003974740916
+        ],
+        "influence_rhat": 1.000771818188258,
+        "mcse_equivalent_draws": 2495.1024161402706
+      },
+      {
+        "name": "variance_mass",
+        "probability": 0.05,
+        "quantile": 0.06825265100646355,
+        "estimated_cdf": 0.05015141221677834,
+        "cdf_mcse": 0.004704643234907271,
+        "cdf_mcse_arviz": 0.00414687423787827,
+        "cdf_mcse_batches": [
+          0.0042001238684342655,
+          0.004704643234907271,
+          0.004469149089036903
+        ],
+        "influence_rhat": 1.0000623545755014,
+        "mcse_equivalent_draws": 2146.0518911366785
+      },
+      {
+        "name": "variance_mass",
+        "probability": 0.5,
+        "quantile": 0.08522248857694692,
+        "estimated_cdf": 0.5001065530066929,
+        "cdf_mcse": 0.011654520079225772,
+        "cdf_mcse_arviz": 0.010319671827075608,
+        "cdf_mcse_batches": [
+          0.009947171185697577,
+          0.010309234613213484,
+          0.011654520079225772
+        ],
+        "influence_rhat": 1.0031266000050012,
+        "mcse_equivalent_draws": 1840.5652565126031
+      },
+      {
+        "name": "variance_mass",
+        "probability": 0.95,
+        "quantile": 0.10229147332850758,
+        "estimated_cdf": 0.9500208277270887,
+        "cdf_mcse": 0.004334429334786216,
+        "cdf_mcse_arviz": 0.004134364954506603,
+        "cdf_mcse_batches": [
+          0.004250988735848361,
+          0.004092587510525672,
+          0.004334429334786216
+        ],
+        "influence_rhat": 1.0003158953834308,
+        "mcse_equivalent_draws": 2528.3067011642406
+      },
+      {
+        "name": "variance_redshift",
+        "probability": 0.05,
+        "quantile": 0.05010838238765328,
+        "estimated_cdf": 0.05032445101169041,
+        "cdf_mcse": 0.004691952967261202,
+        "cdf_mcse_arviz": 0.004472992209605747,
+        "cdf_mcse_batches": [
+          0.0043523187645746345,
+          0.004430247504949457,
+          0.004691952967261202
+        ],
+        "influence_rhat": 1.0008896897748718,
+        "mcse_equivalent_draws": 2157.676390686177
+      },
+      {
+        "name": "variance_redshift",
+        "probability": 0.5,
+        "quantile": 0.06284445663225013,
+        "estimated_cdf": 0.5000976822116159,
+        "cdf_mcse": 0.00972078911240136,
+        "cdf_mcse_arviz": 0.009525129144752295,
+        "cdf_mcse_batches": [
+          0.00972078911240136,
+          0.008940772113098879,
+          0.008856653750538545
+        ],
+        "influence_rhat": 1.0000863679800498,
+        "mcse_equivalent_draws": 2645.677877069568
+      },
+      {
+        "name": "variance_redshift",
+        "probability": 0.95,
+        "quantile": 0.0797405624035882,
+        "estimated_cdf": 0.9502914984719045,
+        "cdf_mcse": 0.005379825283505067,
+        "cdf_mcse_arviz": 0.004892689063521518,
+        "cdf_mcse_batches": [
+          0.005379825283505067,
+          0.005239898957946504,
+          0.0043008086539925985
+        ],
+        "influence_rhat": 1.0001764751604125,
+        "mcse_equivalent_draws": 1641.183969709544
+      },
+      {
+        "name": "variance_ratio",
+        "probability": 0.05,
+        "quantile": 0.06976379488249268,
+        "estimated_cdf": 0.050207784044730114,
+        "cdf_mcse": 0.004745531776212714,
+        "cdf_mcse_arviz": 0.004439047061636895,
+        "cdf_mcse_batches": [
+          0.004745531776212714,
+          0.0047178261111085265,
+          0.004357821277618536
+        ],
+        "influence_rhat": 1.0002755748963912,
+        "mcse_equivalent_draws": 2109.229505993226
+      },
+      {
+        "name": "variance_ratio",
+        "probability": 0.5,
+        "quantile": 0.08329071784596664,
+        "estimated_cdf": 0.5002770093765657,
+        "cdf_mcse": 0.011039194430924245,
+        "cdf_mcse_arviz": 0.01041077235967769,
+        "cdf_mcse_batches": [
+          0.010713604427652554,
+          0.010216520495229888,
+          0.011039194430924245
+        ],
+        "influence_rhat": 1.000121674897121,
+        "mcse_equivalent_draws": 2051.470345813892
+      },
+      {
+        "name": "variance_ratio",
+        "probability": 0.95,
+        "quantile": 0.09839044332535513,
+        "estimated_cdf": 0.9500943846426568,
+        "cdf_mcse": 0.00445004232847542,
+        "cdf_mcse_arviz": 0.004121326952140906,
+        "cdf_mcse_batches": [
+          0.004148771772557316,
+          0.00445004232847542,
+          0.004009362708273075
+        ],
+        "influence_rhat": 1.0007281537449197,
+        "mcse_equivalent_draws": 2398.6414024129767
+      },
+      {
+        "name": "alpha",
+        "probability": 0.05,
+        "quantile": 0.31880116792253405,
+        "estimated_cdf": 0.05008042047428579,
+        "cdf_mcse": 0.004434403114514575,
+        "cdf_mcse_arviz": 0.004377335696868511,
+        "cdf_mcse_batches": [
+          0.004233361219303593,
+          0.004360104950720423,
+          0.004434403114514575
+        ],
+        "influence_rhat": 1.0009607303116428,
+        "mcse_equivalent_draws": 2415.590252195282
+      },
+      {
+        "name": "alpha",
+        "probability": 0.5,
+        "quantile": 0.38741842443775437,
+        "estimated_cdf": 0.500119300967647,
+        "cdf_mcse": 0.0117151183887081,
+        "cdf_mcse_arviz": 0.009514737463436446,
+        "cdf_mcse_batches": [
+          0.009963916022373228,
+          0.010539761265047505,
+          0.0117151183887081
+        ],
+        "influence_rhat": 1.001153035437827,
+        "mcse_equivalent_draws": 1821.5732715015467
+      },
+      {
+        "name": "alpha",
+        "probability": 0.95,
+        "quantile": 0.45242709293486677,
+        "estimated_cdf": 0.9502554330867474,
+        "cdf_mcse": 0.004555977036112835,
+        "cdf_mcse_arviz": 0.004139685758252224,
+        "cdf_mcse_batches": [
+          0.004370805851124161,
+          0.004555977036112835,
+          0.0044325071616948385
+        ],
+        "influence_rhat": 1.0004588341084872,
+        "mcse_equivalent_draws": 2288.392716508018
+      },
+      {
+        "name": "mass_below_quarter",
+        "probability": 0.05,
+        "quantile": 0.1335341582437321,
+        "estimated_cdf": 0.05015622557803607,
+        "cdf_mcse": 0.004924503291515443,
+        "cdf_mcse_arviz": 0.004339558184421137,
+        "cdf_mcse_batches": [
+          0.004585320434271659,
+          0.004924503291515443,
+          0.004532550034205295
+        ],
+        "influence_rhat": 1.0004092445952333,
+        "mcse_equivalent_draws": 1958.7037080488583
+      },
+      {
+        "name": "mass_below_quarter",
+        "probability": 0.5,
+        "quantile": 0.23349397030921495,
+        "estimated_cdf": 0.500164564232731,
+        "cdf_mcse": 0.01176054617287844,
+        "cdf_mcse_arviz": 0.010056067479962193,
+        "cdf_mcse_batches": [
+          0.010079634561326132,
+          0.01035475408436537,
+          0.01176054617287844
+        ],
+        "influence_rhat": 1.0013667667716124,
+        "mcse_equivalent_draws": 1807.5279685377398
+      },
+      {
+        "name": "mass_below_quarter",
+        "probability": 0.95,
+        "quantile": 0.3594384798968399,
+        "estimated_cdf": 0.9503063188083523,
+        "cdf_mcse": 0.004722767263295223,
+        "cdf_mcse_arviz": 0.004692941104782789,
+        "cdf_mcse_batches": [
+          0.004722767263295223,
+          0.004588336320424045,
+          0.0045891980004387845
+        ],
+        "influence_rhat": 1.001311189048149,
+        "mcse_equivalent_draws": 2129.6121762132066
+      },
+      {
+        "name": "mass_above_0p8",
+        "probability": 0.05,
+        "quantile": 0.1622285220154874,
+        "estimated_cdf": 0.05024837307239151,
+        "cdf_mcse": 0.0044206322089829185,
+        "cdf_mcse_arviz": 0.004375385079500568,
+        "cdf_mcse_batches": [
+          0.004050863331085486,
+          0.00434577342417154,
+          0.0044206322089829185
+        ],
+        "influence_rhat": 1.000476940324416,
+        "mcse_equivalent_draws": 2430.6635159332795
+      },
+      {
+        "name": "mass_above_0p8",
+        "probability": 0.5,
+        "quantile": 0.22250342603139064,
+        "estimated_cdf": 0.500285641047714,
+        "cdf_mcse": 0.009026229364702768,
+        "cdf_mcse_arviz": 0.008837365415639266,
+        "cdf_mcse_batches": [
+          0.00884875139811188,
+          0.009026229364702768,
+          0.008552125378637409
+        ],
+        "influence_rhat": 0.9999373312417082,
+        "mcse_equivalent_draws": 3068.508130737113
+      },
+      {
+        "name": "mass_above_0p8",
+        "probability": 0.95,
+        "quantile": 0.2894273145666834,
+        "estimated_cdf": 0.9500729428841755,
+        "cdf_mcse": 0.004472156359977309,
+        "cdf_mcse_arviz": 0.00437522748880162,
+        "cdf_mcse_batches": [
+          0.004312988999947851,
+          0.004472156359977309,
+          0.004078035173106077
+        ],
+        "influence_rhat": 1.000147707453181,
+        "mcse_equivalent_draws": 2374.9783273626213
+      },
+      {
+        "name": "cov_mass_redshift",
+        "probability": 0.05,
+        "quantile": -0.023395549590999876,
+        "estimated_cdf": 0.05015100646754074,
+        "cdf_mcse": 0.0050280179033156585,
+        "cdf_mcse_arviz": 0.0050280179033156585,
+        "cdf_mcse_batches": [
+          0.004882044276950992,
+          0.00497334385782417,
+          0.004172356538539314
+        ],
+        "influence_rhat": 1.0006274222049012,
+        "mcse_equivalent_draws": 1878.8840462033886
+      },
+      {
+        "name": "cov_mass_redshift",
+        "probability": 0.5,
+        "quantile": -0.005707402864128658,
+        "estimated_cdf": 0.5000027356130704,
+        "cdf_mcse": 0.013097076733425389,
+        "cdf_mcse_arviz": 0.01090560819824294,
+        "cdf_mcse_batches": [
+          0.010466862808786356,
+          0.011700839004054959,
+          0.013097076733425389
+        ],
+        "influence_rhat": 1.0027111465186682,
+        "mcse_equivalent_draws": 1457.4419463795632
+      },
+      {
+        "name": "cov_mass_redshift",
+        "probability": 0.95,
+        "quantile": 0.010325118532598931,
+        "estimated_cdf": 0.9501255399430679,
+        "cdf_mcse": 0.007210431928850727,
+        "cdf_mcse_arviz": 0.005506329821076374,
+        "cdf_mcse_batches": [
+          0.005181326280744171,
+          0.005763574393928921,
+          0.007210431928850727
+        ],
+        "influence_rhat": 1.0001502525243404,
+        "mcse_equivalent_draws": 913.6314633614564
+      },
+      {
+        "name": "cov_mass_ratio",
+        "probability": 0.05,
+        "quantile": -0.061383193574521544,
+        "estimated_cdf": 0.0503034111244578,
+        "cdf_mcse": 0.0047886512223932875,
+        "cdf_mcse_arviz": 0.0047886512223932875,
+        "cdf_mcse_batches": [
+          0.004739022208465119,
+          0.004489906378393717,
+          0.004676123162195499
+        ],
+        "influence_rhat": 1.0010084582043242,
+        "mcse_equivalent_draws": 2071.4153786552533
+      },
+      {
+        "name": "cov_mass_ratio",
+        "probability": 0.5,
+        "quantile": -0.043700422281717555,
+        "estimated_cdf": 0.5000631457833201,
+        "cdf_mcse": 0.010841612770922413,
+        "cdf_mcse_arviz": 0.010785737072217753,
+        "cdf_mcse_batches": [
+          0.010723716822102377,
+          0.010443060584205145,
+          0.010841612770922413
+        ],
+        "influence_rhat": 1.0030986087664615,
+        "mcse_equivalent_draws": 2126.9252426738917
+      },
+      {
+        "name": "cov_mass_ratio",
+        "probability": 0.95,
+        "quantile": -0.0253017020102404,
+        "estimated_cdf": 0.9500448380500857,
+        "cdf_mcse": 0.004930731792848678,
+        "cdf_mcse_arviz": 0.004930731792848678,
+        "cdf_mcse_batches": [
+          0.004876311801286631,
+          0.0045700677689148985,
+          0.004713481370819178
+        ],
+        "influence_rhat": 1.0007858993415055,
+        "mcse_equivalent_draws": 1953.758363713965
+      },
+      {
+        "name": "cov_redshift_ratio",
+        "probability": 0.05,
+        "quantile": 0.003691237030907346,
+        "estimated_cdf": 0.05021421199047379,
+        "cdf_mcse": 0.004383274626314271,
+        "cdf_mcse_arviz": 0.004224866343761357,
+        "cdf_mcse_batches": [
+          0.004383274626314271,
+          0.0040640185337990666,
+          0.003699146005578753
+        ],
+        "influence_rhat": 1.0011757170402271,
+        "mcse_equivalent_draws": 2472.271979916342
+      },
+      {
+        "name": "cov_redshift_ratio",
+        "probability": 0.5,
+        "quantile": 0.017386806920409004,
+        "estimated_cdf": 0.5000697110289577,
+        "cdf_mcse": 0.00887496167044178,
+        "cdf_mcse_arviz": 0.008830072511098942,
+        "cdf_mcse_batches": [
+          0.008782314865610222,
+          0.00881093549131594,
+          0.00887496167044178
+        ],
+        "influence_rhat": 0.9996856587191931,
+        "mcse_equivalent_draws": 3174.0008338119583
+      },
+      {
+        "name": "cov_redshift_ratio",
+        "probability": 0.95,
+        "quantile": 0.03164566179631961,
+        "estimated_cdf": 0.9500993300637885,
+        "cdf_mcse": 0.004293577067829625,
+        "cdf_mcse_arviz": 0.00420186080696842,
+        "cdf_mcse_batches": [
+          0.004110190917631723,
+          0.004293577067829625,
+          0.0038904685059542713
+        ],
+        "influence_rhat": 1.0006921414179275,
+        "mcse_equivalent_draws": 2576.6479482859095
+      },
+      {
+        "name": "cdf_x1_0.25",
+        "probability": 0.05,
+        "quantile": 0.1335341582437321,
+        "estimated_cdf": 0.05015622557803607,
+        "cdf_mcse": 0.004924503291515443,
+        "cdf_mcse_arviz": 0.004339558184421137,
+        "cdf_mcse_batches": [
+          0.004585320434271659,
+          0.004924503291515443,
+          0.004532550034205295
+        ],
+        "influence_rhat": 1.0004092445952333,
+        "mcse_equivalent_draws": 1958.7037080488583
+      },
+      {
+        "name": "cdf_x1_0.25",
+        "probability": 0.5,
+        "quantile": 0.23349397030921495,
+        "estimated_cdf": 0.500164564232731,
+        "cdf_mcse": 0.01176054617287844,
+        "cdf_mcse_arviz": 0.010056067479962193,
+        "cdf_mcse_batches": [
+          0.010079634561326132,
+          0.01035475408436537,
+          0.01176054617287844
+        ],
+        "influence_rhat": 1.0013667667716124,
+        "mcse_equivalent_draws": 1807.5279685377398
+      },
+      {
+        "name": "cdf_x1_0.25",
+        "probability": 0.95,
+        "quantile": 0.3594384798968399,
+        "estimated_cdf": 0.9503063188083523,
+        "cdf_mcse": 0.004722767263295223,
+        "cdf_mcse_arviz": 0.004692941104782789,
+        "cdf_mcse_batches": [
+          0.004722767263295223,
+          0.004588336320424045,
+          0.0045891980004387845
+        ],
+        "influence_rhat": 1.001311189048149,
+        "mcse_equivalent_draws": 2129.6121762132066
+      },
+      {
+        "name": "cdf_x1_0.5",
+        "probability": 0.05,
+        "quantile": 0.36796795276552696,
+        "estimated_cdf": 0.05017040654414259,
+        "cdf_mcse": 0.004464699583746119,
+        "cdf_mcse_arviz": 0.004080895756407063,
+        "cdf_mcse_batches": [
+          0.004292095761069443,
+          0.004464699583746119,
+          0.004023298785894567
+        ],
+        "influence_rhat": 1.000556201617231,
+        "mcse_equivalent_draws": 2382.918154281193
+      },
+      {
+        "name": "cdf_x1_0.5",
+        "probability": 0.5,
+        "quantile": 0.473621351164568,
+        "estimated_cdf": 0.5000410658371657,
+        "cdf_mcse": 0.011286487783397402,
+        "cdf_mcse_arviz": 0.009907181085536143,
+        "cdf_mcse_batches": [
+          0.010166488411522269,
+          0.010411159776518837,
+          0.011286487783397402
+        ],
+        "influence_rhat": 1.00009065709851,
+        "mcse_equivalent_draws": 1962.557442279213
+      },
+      {
+        "name": "cdf_x1_0.5",
+        "probability": 0.95,
+        "quantile": 0.5842116834668197,
+        "estimated_cdf": 0.9500978391573887,
+        "cdf_mcse": 0.0044475290747559605,
+        "cdf_mcse_arviz": 0.0044475290747559605,
+        "cdf_mcse_batches": [
+          0.004442818362692593,
+          0.004311824587351793,
+          0.004300385962368869
+        ],
+        "influence_rhat": 1.0012327858716172,
+        "mcse_equivalent_draws": 2401.353064379557
+      },
+      {
+        "name": "cdf_x1_0.75",
+        "probability": 0.05,
+        "quantile": 0.6506121203000433,
+        "estimated_cdf": 0.050440700092518914,
+        "cdf_mcse": 0.004544165915473836,
+        "cdf_mcse_arviz": 0.0042918021032809315,
+        "cdf_mcse_batches": [
+          0.004319251525997243,
+          0.004499320394266191,
+          0.004544165915473836
+        ],
+        "influence_rhat": 1.0003302236550586,
+        "mcse_equivalent_draws": 2300.3040810748103
+      },
+      {
+        "name": "cdf_x1_0.75",
+        "probability": 0.5,
+        "quantile": 0.7263685880117412,
+        "estimated_cdf": 0.5002600616587736,
+        "cdf_mcse": 0.009737857505671629,
+        "cdf_mcse_arviz": 0.008975223356923811,
+        "cdf_mcse_batches": [
+          0.00924182386432312,
+          0.009312816652802005,
+          0.009737857505671629
+        ],
+        "influence_rhat": 1.0001128919895146,
+        "mcse_equivalent_draws": 2636.411383957522
+      },
+      {
+        "name": "cdf_x1_0.75",
+        "probability": 0.95,
+        "quantile": 0.7969326994115161,
+        "estimated_cdf": 0.9502834160933091,
+        "cdf_mcse": 0.004440705079518761,
+        "cdf_mcse_arviz": 0.0043122467026257315,
+        "cdf_mcse_batches": [
+          0.003995348945989442,
+          0.004292706631156559,
+          0.004440705079518761
+        ],
+        "influence_rhat": 1.0002169710193414,
+        "mcse_equivalent_draws": 2408.7390142808395
+      },
+      {
+        "name": "cdf_x2_0.25",
+        "probability": 0.05,
+        "quantile": 0.27049164990310676,
+        "estimated_cdf": 0.05023747844750755,
+        "cdf_mcse": 0.004237926767038783,
+        "cdf_mcse_arviz": 0.004070382387247891,
+        "cdf_mcse_batches": [
+          0.003950082225611653,
+          0.004089170420934767,
+          0.004237926767038783
+        ],
+        "influence_rhat": 1.0008191950598744,
+        "mcse_equivalent_draws": 2644.7627184054263
+      },
+      {
+        "name": "cdf_x2_0.25",
+        "probability": 0.5,
+        "quantile": 0.35853928622561176,
+        "estimated_cdf": 0.500317772508498,
+        "cdf_mcse": 0.009169526249359359,
+        "cdf_mcse_arviz": 0.009169526249359359,
+        "cdf_mcse_batches": [
+          0.008822623133722271,
+          0.008722257990894983,
+          0.008887966911393663
+        ],
+        "influence_rhat": 1.0000896589605548,
+        "mcse_equivalent_draws": 2973.3512217746784
+      },
+      {
+        "name": "cdf_x2_0.25",
+        "probability": 0.95,
+        "quantile": 0.45452779307402735,
+        "estimated_cdf": 0.9501412410469969,
+        "cdf_mcse": 0.005814344216547488,
+        "cdf_mcse_arviz": 0.005051589347450089,
+        "cdf_mcse_batches": [
+          0.004867256373271495,
+          0.005101804942885104,
+          0.005814344216547488
+        ],
+        "influence_rhat": 1.0001952479047858,
+        "mcse_equivalent_draws": 1405.0511400385346
+      },
+      {
+        "name": "cdf_x2_0.5",
+        "probability": 0.05,
+        "quantile": 0.5756094368635424,
+        "estimated_cdf": 0.05019128490176241,
+        "cdf_mcse": 0.004745170682108295,
+        "cdf_mcse_arviz": 0.004665621255586115,
+        "cdf_mcse_batches": [
+          0.004745170682108295,
+          0.0045573196128284536,
+          0.0038018530462500346
+        ],
+        "influence_rhat": 1.0000767892676719,
+        "mcse_equivalent_draws": 2109.5505310393064
+      },
+      {
+        "name": "cdf_x2_0.5",
+        "probability": 0.5,
+        "quantile": 0.6738229952291039,
+        "estimated_cdf": 0.5001389697364188,
+        "cdf_mcse": 0.010051465038602728,
+        "cdf_mcse_arviz": 0.00899364417053159,
+        "cdf_mcse_batches": [
+          0.00997867873162459,
+          0.010051465038602728,
+          0.009971505724280107
+        ],
+        "influence_rhat": 1.001817530001473,
+        "mcse_equivalent_draws": 2474.464775050019
+      },
+      {
+        "name": "cdf_x2_0.5",
+        "probability": 0.95,
+        "quantile": 0.7578389631862551,
+        "estimated_cdf": 0.9500157430183174,
+        "cdf_mcse": 0.004200970768487636,
+        "cdf_mcse_arviz": 0.004200970768487636,
+        "cdf_mcse_batches": [
+          0.00392826247500525,
+          0.003762370672500754,
+          0.004170306634171002
+        ],
+        "influence_rhat": 1.0005168233111217,
+        "mcse_equivalent_draws": 2691.499419039786
+      },
+      {
+        "name": "cdf_x2_0.75",
+        "probability": 0.05,
+        "quantile": 0.8207788023037439,
+        "estimated_cdf": 0.05029169043591676,
+        "cdf_mcse": 0.005231620199776879,
+        "cdf_mcse_arviz": 0.0050099956337512595,
+        "cdf_mcse_batches": [
+          0.005231620199776879,
+          0.005068612523196948,
+          0.004490059258576846
+        ],
+        "influence_rhat": 1.000808673127553,
+        "mcse_equivalent_draws": 1735.4863160745713
+      },
+      {
+        "name": "cdf_x2_0.75",
+        "probability": 0.5,
+        "quantile": 0.8953238879763944,
+        "estimated_cdf": 0.5000192996348034,
+        "cdf_mcse": 0.010370091654080578,
+        "cdf_mcse_arviz": 0.00967047006848761,
+        "cdf_mcse_batches": [
+          0.010370091654080578,
+          0.009438088672132635,
+          0.010068762322241924
+        ],
+        "influence_rhat": 1.001505557075886,
+        "mcse_equivalent_draws": 2324.742305801366
+      },
+      {
+        "name": "cdf_x2_0.75",
+        "probability": 0.95,
+        "quantile": 0.9420104218576075,
+        "estimated_cdf": 0.9500267337428956,
+        "cdf_mcse": 0.004300892628002401,
+        "cdf_mcse_arviz": 0.004300892628002401,
+        "cdf_mcse_batches": [
+          0.0040546884925317,
+          0.004080800451003852,
+          0.003517185065262893
+        ],
+        "influence_rhat": 1.000673593452812,
+        "mcse_equivalent_draws": 2567.8899560735726
+      },
+      {
+        "name": "cdf_x3_0.25",
+        "probability": 0.05,
+        "quantile": 0.19323886983772653,
+        "estimated_cdf": 0.050282961789997194,
+        "cdf_mcse": 0.004659315088736233,
+        "cdf_mcse_arviz": 0.004111782847666241,
+        "cdf_mcse_batches": [
+          0.004182846212727676,
+          0.004093268392373326,
+          0.004659315088736233
+        ],
+        "influence_rhat": 1.000986024440912,
+        "mcse_equivalent_draws": 2188.0107324772325
+      },
+      {
+        "name": "cdf_x3_0.25",
+        "probability": 0.5,
+        "quantile": 0.25783232498034686,
+        "estimated_cdf": 0.5002173518850965,
+        "cdf_mcse": 0.010150734579916972,
+        "cdf_mcse_arviz": 0.008974880798974403,
+        "cdf_mcse_batches": [
+          0.009435143437747057,
+          0.00986622273056497,
+          0.010150734579916972
+        ],
+        "influence_rhat": 1.0018126238527973,
+        "mcse_equivalent_draws": 2426.3031641159773
+      },
+      {
+        "name": "cdf_x3_0.25",
+        "probability": 0.95,
+        "quantile": 0.33101152396290007,
+        "estimated_cdf": 0.9501029711802093,
+        "cdf_mcse": 0.0044904854064595125,
+        "cdf_mcse_arviz": 0.004111184107759418,
+        "cdf_mcse_batches": [
+          0.003755634951093606,
+          0.0039586945215283565,
+          0.0044904854064595125
+        ],
+        "influence_rhat": 1.000073697599268,
+        "mcse_equivalent_draws": 2355.6297524636916
+      },
+      {
+        "name": "cdf_x3_0.5",
+        "probability": 0.05,
+        "quantile": 0.40972126711414647,
+        "estimated_cdf": 0.0502005515772138,
+        "cdf_mcse": 0.004285302745796745,
+        "cdf_mcse_arviz": 0.004251969274276442,
+        "cdf_mcse_batches": [
+          0.0039217958945257205,
+          0.004090644276171572,
+          0.004285302745796745
+        ],
+        "influence_rhat": 1.0004416019221667,
+        "mcse_equivalent_draws": 2586.6078503713725
+      },
+      {
+        "name": "cdf_x3_0.5",
+        "probability": 0.5,
+        "quantile": 0.5079792403574367,
+        "estimated_cdf": 0.5002570139707528,
+        "cdf_mcse": 0.009048748714458987,
+        "cdf_mcse_arviz": 0.008916174924020307,
+        "cdf_mcse_batches": [
+          0.009048748714458987,
+          0.008729847019708102,
+          0.008803789355889094
+        ],
+        "influence_rhat": 1.0000584228262717,
+        "mcse_equivalent_draws": 3053.2541270181746
+      },
+      {
+        "name": "cdf_x3_0.5",
+        "probability": 0.95,
+        "quantile": 0.6004271362198019,
+        "estimated_cdf": 0.9501775108207613,
+        "cdf_mcse": 0.004748425481328766,
+        "cdf_mcse_arviz": 0.004237799297969403,
+        "cdf_mcse_batches": [
+          0.004305270287366854,
+          0.0043428484923765005,
+          0.004748425481328766
+        ],
+        "influence_rhat": 0.9998892518277734,
+        "mcse_equivalent_draws": 2106.6595473852003
+      },
+      {
+        "name": "cdf_x3_0.75",
+        "probability": 0.05,
+        "quantile": 0.6557980786183703,
+        "estimated_cdf": 0.0500519265292754,
+        "cdf_mcse": 0.004488539502578991,
+        "cdf_mcse_arviz": 0.004488539502578991,
+        "cdf_mcse_batches": [
+          0.004207485278486251,
+          0.004213618513840232,
+          0.004300686660738314
+        ],
+        "influence_rhat": 1.0013027068629254,
+        "mcse_equivalent_draws": 2357.6726542498973
+      },
+      {
+        "name": "cdf_x3_0.75",
+        "probability": 0.5,
+        "quantile": 0.7577747781838663,
+        "estimated_cdf": 0.5001805414625723,
+        "cdf_mcse": 0.00986328369366884,
+        "cdf_mcse_arviz": 0.009346258522129662,
+        "cdf_mcse_batches": [
+          0.00986328369366884,
+          0.009127965726818555,
+          0.009744308600622694
+        ],
+        "influence_rhat": 1.000562312883422,
+        "mcse_equivalent_draws": 2569.7860024068395
+      },
+      {
+        "name": "cdf_x3_0.75",
+        "probability": 0.95,
+        "quantile": 0.8399004134469842,
+        "estimated_cdf": 0.9500144710686114,
+        "cdf_mcse": 0.004425289913668227,
+        "cdf_mcse_arviz": 0.004425289913668227,
+        "cdf_mcse_batches": [
+          0.004366846803004283,
+          0.004235551736725152,
+          0.004195536725784352
+        ],
+        "influence_rhat": 0.9999952764072066,
+        "mcse_equivalent_draws": 2425.5495662870076
+      },
+      {
+        "name": "octant_000",
+        "probability": 0.05,
+        "quantile": 0.05543922977847871,
+        "estimated_cdf": 0.05013069222685614,
+        "cdf_mcse": 0.004470443488439665,
+        "cdf_mcse_arviz": 0.0044044344204123885,
+        "cdf_mcse_batches": [
+          0.004163218584893691,
+          0.004232016876789961,
+          0.004470443488439665
+        ],
+        "influence_rhat": 1.0009668089218775,
+        "mcse_equivalent_draws": 2376.7986443548684
+      },
+      {
+        "name": "octant_000",
+        "probability": 0.5,
+        "quantile": 0.0935883782881938,
+        "estimated_cdf": 0.5001059786380884,
+        "cdf_mcse": 0.014204941626391411,
+        "cdf_mcse_arviz": 0.014204941626391411,
+        "cdf_mcse_batches": [
+          0.011627511181023006,
+          0.012806293170184354,
+          0.014058546638738793
+        ],
+        "influence_rhat": 1.00477967631896,
+        "mcse_equivalent_draws": 1238.9708880061921
+      },
+      {
+        "name": "octant_000",
+        "probability": 0.95,
+        "quantile": 0.15622070520844505,
+        "estimated_cdf": 0.9500507660147204,
+        "cdf_mcse": 0.008855627368933406,
+        "cdf_mcse_arviz": 0.007557831015880156,
+        "cdf_mcse_batches": [
+          0.006286999830150616,
+          0.007282930674512718,
+          0.008855627368933406
+        ],
+        "influence_rhat": 1.0010836777543117,
+        "mcse_equivalent_draws": 605.6963296817594
+      },
+      {
+        "name": "octant_001",
+        "probability": 0.05,
+        "quantile": 0.13018835624322292,
+        "estimated_cdf": 0.05025874282570353,
+        "cdf_mcse": 0.0049015726072390575,
+        "cdf_mcse_arviz": 0.004539476744100026,
+        "cdf_mcse_batches": [
+          0.00465683482882699,
+          0.0049015726072390575,
+          0.004598960969432154
+        ],
+        "influence_rhat": 1.0005525179202992,
+        "mcse_equivalent_draws": 1977.073109020244
+      },
+      {
+        "name": "octant_001",
+        "probability": 0.5,
+        "quantile": 0.2021578863367428,
+        "estimated_cdf": 0.500142686423581,
+        "cdf_mcse": 0.01041713707359491,
+        "cdf_mcse_arviz": 0.009900005501318828,
+        "cdf_mcse_batches": [
+          0.009941197828357734,
+          0.010117450353509638,
+          0.01041713707359491
+        ],
+        "influence_rhat": 1.001410986769016,
+        "mcse_equivalent_draws": 2303.7919211230446
+      },
+      {
+        "name": "octant_001",
+        "probability": 0.95,
+        "quantile": 0.29966375867434303,
+        "estimated_cdf": 0.9501697029014612,
+        "cdf_mcse": 0.004478872107395925,
+        "cdf_mcse_arviz": 0.004397298851791588,
+        "cdf_mcse_batches": [
+          0.004244083715980763,
+          0.004200938072357698,
+          0.004478872107395925
+        ],
+        "influence_rhat": 1.0011120974979761,
+        "mcse_equivalent_draws": 2367.86144774083
+      },
+      {
+        "name": "octant_010",
+        "probability": 0.05,
+        "quantile": 0.016616603098748926,
+        "estimated_cdf": 0.05017111662696896,
+        "cdf_mcse": 0.004643433912434881,
+        "cdf_mcse_arviz": 0.004306461027818225,
+        "cdf_mcse_batches": [
+          0.004583800559661479,
+          0.004529115482291454,
+          0.004643433912434881
+        ],
+        "influence_rhat": 1.0004792882792184,
+        "mcse_equivalent_draws": 2203.0029156800115
+      },
+      {
+        "name": "octant_010",
+        "probability": 0.5,
+        "quantile": 0.036846204967123215,
+        "estimated_cdf": 0.5000956804068719,
+        "cdf_mcse": 0.013392183410614497,
+        "cdf_mcse_arviz": 0.011361108566389812,
+        "cdf_mcse_batches": [
+          0.011036862965615693,
+          0.011224173239110883,
+          0.013392183410614497
+        ],
+        "influence_rhat": 1.001264031710698,
+        "mcse_equivalent_draws": 1393.918017292061
+      },
+      {
+        "name": "octant_010",
+        "probability": 0.95,
+        "quantile": 0.0837754933107824,
+        "estimated_cdf": 0.9500452713295107,
+        "cdf_mcse": 0.00586502535501126,
+        "cdf_mcse_arviz": 0.005430973141089314,
+        "cdf_mcse_batches": [
+          0.005675108935370011,
+          0.00586502535501126,
+          0.0056286463574007
+        ],
+        "influence_rhat": 1.0007370198573822,
+        "mcse_equivalent_draws": 1380.8732662130444
+      },
+      {
+        "name": "octant_011",
+        "probability": 0.05,
+        "quantile": 0.06566623565168819,
+        "estimated_cdf": 0.050223866460571635,
+        "cdf_mcse": 0.004326787258772805,
+        "cdf_mcse_arviz": 0.00396660710413665,
+        "cdf_mcse_batches": [
+          0.003905824255923649,
+          0.004158594319255884,
+          0.004326787258772805
+        ],
+        "influence_rhat": 1.0003903108299788,
+        "mcse_equivalent_draws": 2537.2457008881343
+      },
+      {
+        "name": "octant_011",
+        "probability": 0.5,
+        "quantile": 0.12441017488404596,
+        "estimated_cdf": 0.5001594890997454,
+        "cdf_mcse": 0.009252810725897221,
+        "cdf_mcse_arviz": 0.00898227943668365,
+        "cdf_mcse_batches": [
+          0.009252810725897221,
+          0.008929345026331867,
+          0.008468863767892076
+        ],
+        "influence_rhat": 1.000662567110972,
+        "mcse_equivalent_draws": 2920.0658944231322
+      },
+      {
+        "name": "octant_011",
+        "probability": 0.95,
+        "quantile": 0.20687037045524742,
+        "estimated_cdf": 0.9501733032127172,
+        "cdf_mcse": 0.004503291299334108,
+        "cdf_mcse_arviz": 0.004503291299334108,
+        "cdf_mcse_batches": [
+          0.004447197177438901,
+          0.004018502798406575,
+          0.0037068068058660163
+        ],
+        "influence_rhat": 1.0002528652816975,
+        "mcse_equivalent_draws": 2342.251514545919
+      },
+      {
+        "name": "octant_100",
+        "probability": 0.05,
+        "quantile": 0.21038602774366663,
+        "estimated_cdf": 0.05025756756952292,
+        "cdf_mcse": 0.004592030305646556,
+        "cdf_mcse_arviz": 0.004239404606037547,
+        "cdf_mcse_batches": [
+          0.004333617362267458,
+          0.004549377165480317,
+          0.004592030305646556
+        ],
+        "influence_rhat": 1.0005045399865027,
+        "mcse_equivalent_draws": 2252.600200694839
+      },
+      {
+        "name": "octant_100",
+        "probability": 0.5,
+        "quantile": 0.2806014373950254,
+        "estimated_cdf": 0.5000310654735464,
+        "cdf_mcse": 0.013102103716998699,
+        "cdf_mcse_arviz": 0.0104702034109799,
+        "cdf_mcse_batches": [
+          0.010720807361812178,
+          0.011271794904119298,
+          0.013102103716998699
+        ],
+        "influence_rhat": 1.0011179653279836,
+        "mcse_equivalent_draws": 1456.3237853013504
+      },
+      {
+        "name": "octant_100",
+        "probability": 0.95,
+        "quantile": 0.3575631314804983,
+        "estimated_cdf": 0.9502468523796582,
+        "cdf_mcse": 0.004087396781994455,
+        "cdf_mcse_arviz": 0.004087396781994455,
+        "cdf_mcse_batches": [
+          0.0037300618044452845,
+          0.003968521808708038,
+          0.0038148261989891367
+        ],
+        "influence_rhat": 1.0002988729913278,
+        "mcse_equivalent_draws": 2843.1515666033965
+      },
+      {
+        "name": "octant_101",
+        "probability": 0.05,
+        "quantile": 0.05510430264179288,
+        "estimated_cdf": 0.050062322475228835,
+        "cdf_mcse": 0.004582304003442456,
+        "cdf_mcse_arviz": 0.004484093223743478,
+        "cdf_mcse_batches": [
+          0.0044777238544854055,
+          0.004403989612701692,
+          0.004582304003442456
+        ],
+        "influence_rhat": 0.9997930534705823,
+        "mcse_equivalent_draws": 2262.1729931464815
+      },
+      {
+        "name": "octant_101",
+        "probability": 0.5,
+        "quantile": 0.0833044204353633,
+        "estimated_cdf": 0.5002718807725073,
+        "cdf_mcse": 0.012705352808070676,
+        "cdf_mcse_arviz": 0.011704748704859203,
+        "cdf_mcse_batches": [
+          0.01104986908713176,
+          0.01130483761148527,
+          0.012705352808070676
+        ],
+        "influence_rhat": 1.001679827299628,
+        "mcse_equivalent_draws": 1548.697332039092
+      },
+      {
+        "name": "octant_101",
+        "probability": 0.95,
+        "quantile": 0.12122467102827965,
+        "estimated_cdf": 0.9500789897584303,
+        "cdf_mcse": 0.005809169640558088,
+        "cdf_mcse_arviz": 0.005606541292182393,
+        "cdf_mcse_batches": [
+          0.005278515229691589,
+          0.00538618140738431,
+          0.005809169640558088
+        ],
+        "influence_rhat": 1.0015657873320982,
+        "mcse_equivalent_draws": 1407.5553816076579
+      },
+      {
+        "name": "octant_110",
+        "probability": 0.05,
+        "quantile": 0.05553291475532464,
+        "estimated_cdf": 0.05017458979184234,
+        "cdf_mcse": 0.004886162995277056,
+        "cdf_mcse_arviz": 0.004246903119945348,
+        "cdf_mcse_batches": [
+          0.004353498467202412,
+          0.0042541949386597465,
+          0.004886162995277056
+        ],
+        "influence_rhat": 1.0011154186259348,
+        "mcse_equivalent_draws": 1989.563060761139
+      },
+      {
+        "name": "octant_110",
+        "probability": 0.5,
+        "quantile": 0.08419641756921042,
+        "estimated_cdf": 0.5002605043438566,
+        "cdf_mcse": 0.011188238782936117,
+        "cdf_mcse_arviz": 0.010020673646376186,
+        "cdf_mcse_batches": [
+          0.009928301047361232,
+          0.009828142677985792,
+          0.011188238782936117
+        ],
+        "influence_rhat": 1.0002333319378545,
+        "mcse_equivalent_draws": 1997.1769972805637
+      },
+      {
+        "name": "octant_110",
+        "probability": 0.95,
+        "quantile": 0.12081966206804376,
+        "estimated_cdf": 0.9501178434045521,
+        "cdf_mcse": 0.004381489265246434,
+        "cdf_mcse_arviz": 0.004330880999070732,
+        "cdf_mcse_batches": [
+          0.004254472166151975,
+          0.004381489265246434,
+          0.004246743940265036
+        ],
+        "influence_rhat": 0.9997463242030384,
+        "mcse_equivalent_draws": 2474.2871839523564
+      },
+      {
+        "name": "octant_111",
+        "probability": 0.05,
+        "quantile": 0.04681564255723059,
+        "estimated_cdf": 0.050278792906845574,
+        "cdf_mcse": 0.004237572397496486,
+        "cdf_mcse_arviz": 0.004237572397496486,
+        "cdf_mcse_batches": [
+          0.0040364757234823264,
+          0.0036279312611666756,
+          0.003767052357655897
+        ],
+        "influence_rhat": 1.0010168417079193,
+        "mcse_equivalent_draws": 2645.2050766492607
+      },
+      {
+        "name": "octant_111",
+        "probability": 0.5,
+        "quantile": 0.07124265523350287,
+        "estimated_cdf": 0.5002133778751524,
+        "cdf_mcse": 0.010639939838463128,
+        "cdf_mcse_arviz": 0.009922328475747153,
+        "cdf_mcse_batches": [
+          0.010320644650440478,
+          0.010639939838463128,
+          0.010554462828420146
+        ],
+        "influence_rhat": 1.0015420143514526,
+        "mcse_equivalent_draws": 2208.3182624430165
+      },
+      {
+        "name": "octant_111",
+        "probability": 0.95,
+        "quantile": 0.104727979178886,
+        "estimated_cdf": 0.9501207346141598,
+        "cdf_mcse": 0.004064964913956755,
+        "cdf_mcse_arviz": 0.003853091987801217,
+        "cdf_mcse_batches": [
+          0.003641018639785801,
+          0.0036511981227873944,
+          0.004064964913956755
+        ],
+        "influence_rhat": 1.0001575757180527,
+        "mcse_equivalent_draws": 2874.617113943107
+      }
+    ],
+    "maximum_influence_rhat": 1.0089607216010605,
+    "minimum_mean_precision_equivalent_draws": 487.27234253003127,
+    "minimum_cdf_precision_equivalent_draws": 605.6963296817594,
+    "interpretation": "Delta-method MCSE of self-normalized ratios; original chain order is retained."
+  },
+  "coarse_to_fine_log_likelihood_difference_sd_by_chain": [
+    0.11211831522512515,
+    0.1155071410935433,
+    0.09218758725994333,
+    0.09956988966525493
+  ],
+  "independent_event_log_likelihood_difference_sd": {
+    "chain_0": 0.09698861134848184,
+    "chain_1": 0.081934521574964,
+    "chain_2": 0.10649575554504231,
+    "chain_3": 0.05618609301051,
+    "efficiency_extremes": 0.09994318281231003,
+    "largest_weights": 0.18403160981184158
+  },
+  "feature_change_in_posterior_sd": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0002527990367494295,
+    0.000635557715722389,
+    0.0012865687009299895,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.030555827537385317,
+    0.01934840876027877,
+    0.03120375779141637,
+    0.015066585702856974,
+    0.017470851144658243,
+    0.037290294911109426,
+    0.03993941300405877,
+    0.04794447512448451
+  ],
+  "posterior_product_sha256": "279dff44575245ca093f23b388ee0a9122a918ede3d921e314b7ef60377f5164",
+  "verification_seconds": 693.2699740999997,
+  "recorded_process_elapsed_seconds": 8795.643342100002,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1388003328
+  },
+  "sampling_and_compilation_seconds": 7950.168764100001
+}

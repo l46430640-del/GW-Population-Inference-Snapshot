@@ -1,0 +1,152 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 6,
+  "dimension": 220,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_selected",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847203,
+    "warmup": 500,
+    "retained": 800,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 6878.6465147,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Run the declared four-chain posterior at both resolutions, with dispersed kernel starts and all production diagnostics, using training observations only. Recovery and predictive comparisons follow separately."
+  },
+  "sampling_and_compilation_seconds": 143.89233049999984,
+  "compilation_seconds": 0.14712719999988622,
+  "potential_evaluations": 90566,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "divergences": [],
+  "acceptance_rate": 0.99875,
+  "step_size": 0.06867432867282275,
+  "peak_resident_bytes": 1363234816,
+  "retained_potential_evaluation_quantiles": [
+    63.0,
+    63.0,
+    63.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.993605777301127e-15
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.220446049250313e-15
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 738.8761377190524,
+      "cov_mass_ratio": 777.8389587929526,
+      "cov_mass_redshift": 798.3103145677546,
+      "cov_redshift_ratio": 867.3677748670057,
+      "length_x1": 185.64545867024967,
+      "length_x2": 261.78104829452275,
+      "length_x3": 330.8136892293275,
+      "log_posterior": 306.35513191309,
+      "mass_above_0p8": 722.7098937688974,
+      "mass_below_quarter": 820.3707544939356,
+      "mean_mass": 761.8099795143073,
+      "mean_ratio": 867.0470573613386,
+      "mean_redshift": 983.7973444994959,
+      "sigma": 216.61935809338584,
+      "variance_mass": 821.7820845552196,
+      "variance_ratio": 834.5353341930246,
+      "variance_redshift": 705.8348928730201
+    },
+    "tail": {
+      "alpha": 769.864089755097,
+      "cov_mass_ratio": 697.876151533547,
+      "cov_mass_redshift": 705.4356252377461,
+      "cov_redshift_ratio": 754.6688489297408,
+      "length_x1": 277.1451550437522,
+      "length_x2": 477.0047183438284,
+      "length_x3": 428.51282168391253,
+      "log_posterior": 388.6903750108254,
+      "mass_above_0p8": 606.2048386548325,
+      "mass_below_quarter": 588.3584227492704,
+      "mean_mass": 642.3511100442499,
+      "mean_ratio": 656.4606695670527,
+      "mean_redshift": 692.4904272744036,
+      "sigma": 314.85155497728306,
+      "variance_mass": 614.7550058009368,
+      "variance_ratio": 640.2253461138367,
+      "variance_redshift": 734.8866035391343
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 3.446177559710334e-05,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1374511104
+  },
+  "seed": 847203,
+  "initial_amplitude_and_lengths": [
+    1.5,
+    0.6,
+    0.4,
+    0.2
+  ],
+  "target_product_sha256": "19848e2e16e9b62006bd6829daed5923572333233520d57731f23a4bd4b25871",
+  "draw_product_sha256": "4721dfc3c4b6e7a3b51f27d65d998ae08dbc44efa5b3193ad226724a3a811828",
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      39,
+      114,
+      228,
+      331,
+      342,
+      410,
+      456,
+      570,
+      590,
+      684,
+      704,
+      726,
+      750,
+      799
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 1.0801367000823348e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 3.446177559710334e-05
+  },
+  "event_quadrature_passed": true,
+  "process_elapsed_seconds": 147.35879360000035
+}

@@ -1,0 +1,29 @@
+{
+  "chain": 0,
+  "seconds": 674.4795559000013,
+  "configuration": {
+    "output": "results/analysis/selected_mixture",
+    "mode": "nuts",
+    "warmup": 500,
+    "samples": 800,
+    "chains": 4,
+    "chain_start": 0,
+    "steps": 5000,
+    "starts": 2,
+    "max_tree_depth": 8,
+    "particles": 4,
+    "jit": true
+  },
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "step_size": 0.3439964565852432,
+  "initial_jitter_standard_deviation": 0.15,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 789278720
+  }
+}

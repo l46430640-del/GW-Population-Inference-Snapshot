@@ -1,0 +1,7 @@
+{
+  "reference_core_sha256": "ba19d1313b63202b989f872d468c265829900e54ac463be8ddd123e89a40e5e4",
+  "current_core_sha256": "b5721572407ad9ae3c90369ae4084995aff158d41811887681dd5fc17f63beff",
+  "compared_posterior_points": 60,
+  "maximum_log_joint_difference": 0.0,
+  "scope": "same data, complete detection, one Kumaraswamy component; guide modifications only"
+}

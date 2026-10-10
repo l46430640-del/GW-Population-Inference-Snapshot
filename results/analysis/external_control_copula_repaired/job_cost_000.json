@@ -1,0 +1,15 @@
+{
+  "status": "complete",
+  "error": null,
+  "requested_models": "copula",
+  "process_elapsed_seconds": 2847.816531299999,
+  "configuration_sha256": "30c3ec833612ca73d156ec3ea9a1c908d0443ff82cbce9d55810bad74ed52b30",
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1291796480
+  }
+}

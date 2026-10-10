@@ -1,0 +1,4766 @@
+{
+  "source_sha256": {
+    "configs/external_lisa_gp.json": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+    "scripts/run_external_lisa_gp.py": "d989dc73be4685e142bea8ccbe24a8cd6bb3a33779f409cb516fcde6f4a2fc9d",
+    "results/analysis/lisa_refinement/summary.json": "4b86bffd2e280fb835c1e747c932aad23e172a50078393ff21e9fd81c74ba05c",
+    "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz": "62d52be1a6c7c96146519d2235e6d6df8323190870abb8007ab5d8d32eac65f5",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/external_control_comparison/job_cost_000.json": "bb758d75df833d47452e85ef6213aab4ef6ba029f234df727ab2f42184f64c6b",
+    "model_assets/lisa_analysis/phenom_d_grid.npz": "04d8cc32ff78edc6f622918c828e106d540e5fff2ea5aa2c27e353fe00fa4b2a",
+    "scripts/lisa_gp_inputs.py": "47f44b62aa903e995a9557ceb8603c7a40d2dfc3d13e52184541c2c74dc92f04",
+    "scripts/lisa_noisy_catalog.py": "f93b58ff375b05506410fe8ed5aba3eeb0c11d0e3407c6cf136f0e067255502e",
+    "scripts/build_lisa_analysis_assets.py": "6a3579329f486163964f982e6a0a21057aa62ca185476f724b7b99595e69d4da",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_control_production.py": "0b265d3aaa6d27af7fc115f42cf9197f0936a3b35cf36f811f3c9808cd80afb9",
+    "scripts/run_external_gp_bounded_diagnostics.py": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "configs/external_lisa_event_batches.json": "1ca8e259fcb25f8c49c771c670fe4834fbc900748bf2222f3e255a48472ac64d",
+    "scripts/run_external_lisa_gp_batched.py": "d613b9664779ca094360d8ae9f4625292d004b892a918c949a19ea72ce0ff562",
+    "results/analysis/external_lisa_gp/job_cost_000.json": "fe4196425111c9ef460d0c79936b6a107cd67c149207389276beb9ab8a7ffa65"
+  },
+  "draw_product_sha256": "c58b3e5fae6fb3727298510d06eb25d13ac1ddbeaf67ac72b4d4006f6dd36fc7",
+  "seconds": 78.63055980000354,
+  "event_diagnostics": [
+    {
+      "proposal_ess": 37260.86897046111,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9323.377052913353,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 9236.286727969558,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 9392.664601037537,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 9309.863917937468,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 45338.37474067585,
+      "proposal_points": 770048,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 11452.718386076356,
+          "proposal_points": 192512
+        },
+        {
+          "proposal_ess": 11390.91891320565,
+          "proposal_points": 192512
+        },
+        {
+          "proposal_ess": 11329.627851102136,
+          "proposal_points": 192512
+        },
+        {
+          "proposal_ess": 11169.061907182142,
+          "proposal_points": 192512
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39840.18298683486,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10011.133589650644,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9929.093416922795,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9960.5568825987,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9939.797566441783,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67505.24796220483,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16812.31622313759,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16907.421570617415,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16887.929158953724,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16897.9174656024,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 73755.9970235074,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 18488.44254677649,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18450.279119686915,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18408.11403264748,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18409.39985629483,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41127.80465121415,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10278.47333611006,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10210.741360533673,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10321.45200415584,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10317.912252593122,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40383.68823735609,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10072.309184694199,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10081.877511401057,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10120.5852480601,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10109.06841318495,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 49844.49717816373,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 12374.33455107046,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12540.067684556614,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12431.205730463336,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12500.188988217007,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 34631.717029727704,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8691.451047332734,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8678.468361671326,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8635.244135044526,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8626.90256652152,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 75577.4239002269,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 18887.436444133178,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18899.153193513495,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18877.488959707785,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18913.38326812411,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 51468.063836920395,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 12896.849526265067,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12830.360789913411,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12870.674166181952,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12870.354993399646,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 56872.76290845748,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 14167.044211182802,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14254.291927694592,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14208.879643339682,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14242.872081296768,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40227.583478468565,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10091.59074251775,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10027.58617668144,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10067.67281059547,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10040.975477705162,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40827.80467403214,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10229.92431036412,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10246.522141299305,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10131.307233920988,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10220.839052702293,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33597.48253357581,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8403.670845723924,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8442.675485651303,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8412.884695387853,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8338.935532083233,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 52499.505714840605,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13236.110777344958,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13064.047707006483,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13095.910069173377,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13104.750168342292,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 60294.525150646725,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 14976.343976751556,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 15114.11241034578,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 15144.069709621766,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 15061.077550439048,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 54551.07647291986,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13601.2505111812,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13656.335355759606,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13651.069435036838,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13642.559103167205,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 52232.8103816663,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13097.619219892027,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12977.4993910242,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13014.216051434412,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13144.815585132303,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 50187.009804418725,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 12563.186981116916,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12550.36196370722,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12503.701126249032,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12569.973396566085,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67419.9062694272,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16792.435051668752,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16922.847656595048,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16835.857967385044,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16869.30460806277,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 35833.341162474004,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8979.585218040085,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8916.150935847487,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8933.646677468754,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9004.513245589118,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36861.084421667445,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9183.888547872773,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9251.64179665766,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9198.412978198623,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9227.438259905623,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41706.533322566764,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10426.440935963263,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10395.444400154664,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10434.794386903986,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10450.005835436752,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 63710.15827009144,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15938.051137898487,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15960.932944500302,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15990.805031862032,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15821.408193644818,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 37119.17007089448,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9277.032413431796,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9256.643393488663,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9266.096784523235,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9319.646867528038,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 55768.86862385136,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13885.029607613804,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 14031.31369550336,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13897.521758486262,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13955.962126710254,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42458.79863911277,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10607.466640293722,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10629.149683501633,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10580.023142356536,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10642.369343238795,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 53328.34334334205,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13366.507561276132,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13341.570602220223,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13289.349492765268,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13331.148572445907,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 44370.636884144165,
+      "proposal_points": 376832,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16968.747335713324,
+          "proposal_points": 126976
+        },
+        {
+          "proposal_ess": 8201.655087292918,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16918.241191043013,
+          "proposal_points": 126976
+        },
+        {
+          "proposal_ess": 8289.636067871928,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67933.4693568292,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 17053.87545653033,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16956.572696470463,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16863.889199258123,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17060.662535528052,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41790.78948573541,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10472.138788825352,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10513.22503306819,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10394.84592034613,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10411.440195163805,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 62153.75818197597,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15432.23745506928,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15553.271885409185,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15582.119728238984,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15587.148783050618,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42487.29542266298,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10613.406539776537,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10604.498465037617,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10655.551296804953,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10613.986645038187,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 68859.27350616686,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 17247.649431142156,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17182.083882230923,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17179.890356480668,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17249.917122152052,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41819.759405000696,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10413.569991910786,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10479.224688043993,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10431.531597759109,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10495.865863815925,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41880.75607815644,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10440.334048202101,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10496.080698112788,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10493.624181252488,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10450.954131561966,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 62395.413048239236,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15599.906831471775,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15642.680720316912,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15601.582599202136,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15551.51036532879,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67332.9146609635,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16912.03291217071,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16787.019888163813,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16891.726965765673,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16743.314729839556,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42035.31569139238,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10528.668605073233,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10512.529408369615,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10508.237961406352,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10485.968276157018,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40935.617093170025,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10221.672468366585,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10236.921993690477,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10227.09515212289,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10249.972729125497,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 55753.46345501876,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13954.34542312726,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13995.70135933435,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13957.213000813226,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13847.084046041226,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41583.347874329695,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10337.283065925254,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10452.695597013404,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10390.237020182018,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10403.782235387976,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33510.5255764001,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8364.977858140634,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8398.781606042201,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8398.576597320023,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8348.416389281478,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 51778.38726337983,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13053.276773284051,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12885.050328646927,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12921.09523161327,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12920.23365809011,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36486.398359448394,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9087.508241312402,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9129.639314605274,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9086.188922815858,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9183.755528324325,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 54171.81149018685,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13596.479180156239,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13528.92102955402,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13610.104232300548,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13437.688237639422,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39205.80517139633,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9793.197836732847,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9800.298286998293,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9821.92798820714,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9790.443217742879,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39034.132581195336,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9735.8989542317,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9750.437678543072,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9772.803864812448,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9775.100342862317,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43644.88065958246,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10912.340764419325,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11069.414342574315,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10882.728301747726,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10784.228151681062,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33480.808840158184,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8328.01777846378,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8375.130306507323,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8400.911921062565,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8377.083325660655,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 64995.26952849758,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16250.330913281372,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16264.424614386027,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16157.020051823607,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16324.380389397284,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39608.34328404985,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9873.962269076335,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9919.7271800201,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9927.231142810577,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9887.61902764594,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 51770.34315198251,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 12985.865291298382,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12924.03960353012,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12929.550259537047,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 12931.082230294098,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41280.37431388892,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10481.847353683072,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10225.015193481084,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10252.969464722442,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10324.36376451075,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 63511.61239263696,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15853.521276233974,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15900.018330747793,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15970.721537475272,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15788.465587035995,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43888.427901089526,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10997.791598952444,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10949.433927143808,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10952.060408535688,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10989.312531591164,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 35872.128902610595,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8987.780813453779,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8951.441825532404,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8927.283852005025,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9006.042975378476,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 60423.57937797572,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15002.174987428503,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15185.660614260843,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15159.238275654227,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15077.881325494775,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43859.1955812854,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10962.142667373328,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10949.897482373804,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10988.329677818967,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10958.900240850993,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 37815.16796301252,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9428.443902848949,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9461.413090816828,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9495.678210306598,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9429.952078730012,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 64391.03784344581,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16143.145536421867,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16151.915403107205,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16041.068006225685,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16055.529510507478,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40464.81908799642,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10157.080340849672,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10088.230555819428,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10131.431193164788,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10088.418481453615,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 56150.25480923931,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13991.270268307659,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14058.340757891827,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14065.834615057118,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14035.050319322985,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41338.60129330606,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10350.26851508292,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10332.015974441008,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10346.417560278243,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10309.99582246045,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 38924.2482393895,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9768.338586456966,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9667.793186403946,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9749.425041779179,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9739.289260557483,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36546.45959181595,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9112.889025861627,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9160.863391292372,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9147.088711584292,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9125.769302042803,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33341.8735944995,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8370.353754046655,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8317.64516424638,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8330.035792462302,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8324.041697246112,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 35447.98836576401,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8841.427895157709,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8884.85227519616,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8891.983968898681,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8830.047600081676,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43194.82198686557,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10722.25648970678,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10838.107546826132,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10826.761537685643,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10808.466253679257,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40486.886260176725,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10143.173008863647,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10112.153061104524,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10103.135019424755,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10128.51834609968,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33807.01340507564,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8512.151300792355,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8362.62412764449,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8483.362722246087,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8450.371754918418,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36225.92291591597,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9036.638778581852,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9069.054625848237,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9010.253912430193,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9110.595190088276,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 38047.88940631393,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9482.305331202755,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9539.378220183542,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9496.512374200944,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9529.924018072565,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 59473.87631096409,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 14756.801359211095,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14842.370637018335,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14946.118002596299,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 14930.13532279381,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43602.7603391291,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10884.219758005569,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 10950.576392710645,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 10866.898383648666,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 10901.423117536879,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 55139.91421231994,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13791.232595100948,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13811.537133177311,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13754.002295763548,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13783.266070924303,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42662.25449407481,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10664.94941549671,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10691.736632678605,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10678.71232896568,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10627.075803352074,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41351.514356692554,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10335.650620495115,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10427.324167321149,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10307.66963989791,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10282.02956331127,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39234.27088333338,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9812.097608990169,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 9847.26147426776,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 9849.73402175034,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 9726.200674318157,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 66258.3973370917,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16407.820004303572,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16531.624329145154,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16529.795068051393,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 16793.92659126412,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42887.56233234497,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10767.800623227437,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10674.589247261225,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10729.599553343754,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10715.98704559491,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42723.51139615129,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10696.672336827996,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10676.730292690208,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10709.29466965822,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10641.06340238701,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 64230.21597856182,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16091.38472982794,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16009.911804598216,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16084.268788336109,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16044.917878134771,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 66964.83421823419,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16728.830509476174,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16776.53534394444,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16752.81529339078,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16706.81546271225,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 37024.99268794877,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9247.179511712526,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9272.74585766924,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9316.834467459781,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9189.154953298721,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 38798.388005591136,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9659.052100433899,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9684.47936596479,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9750.837392426583,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9704.484665757658,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33904.51781605657,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8470.327418284669,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8500.786303121064,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8607.732491878944,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8330.311631131492,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 44869.74881341579,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 11246.173619265312,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11224.202363192724,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11181.537693908214,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11218.027932674797,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42165.442583806536,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10557.953452246185,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10485.407764751748,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10573.838233609189,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10548.67261300391,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 45492.77737200763,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 11346.322741789078,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11499.10847136399,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11319.263388903075,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11329.947190564997,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67677.40777187322,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16869.214904698092,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16894.769812233215,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17013.377664085663,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16900.77024072271,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40683.64302270216,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10121.171895985291,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10182.566516215269,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10163.489271183682,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10216.885414221599,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41492.272548292356,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10383.231581434322,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10378.516116523031,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10374.714125128143,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10355.852414132263,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 34822.19407454205,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8693.030044960002,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8686.533167118872,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8740.77773080918,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8702.056175672113,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 55560.10974766464,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13900.373394048444,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13964.459324398033,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13829.891557993684,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 13866.09270127448,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 44000.031475559525,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10979.222456920896,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10981.018466611382,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 11007.071523719265,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 11032.893773141474,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 59168.636111908694,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 14799.192091703619,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 14837.66807557455,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 14796.901620898761,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 14735.238644592502,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 69088.3825842034,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 17163.63519174599,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17322.141020406976,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17391.412017358005,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17213.045486159208,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 35296.990260860875,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8861.843637311697,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8883.829518058154,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8704.410146309168,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8849.186198492987,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 37989.02083702703,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9555.814286193347,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9454.815696500767,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9511.178543633838,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9467.873228327631,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41879.4587451385,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10465.779579687864,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10480.734598141444,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10477.74677607572,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10455.237053884159,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40321.34488680697,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10144.386113148967,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10022.175158058571,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10069.880958520176,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10085.658243166734,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33362.033428430565,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8327.57930671712,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8309.638870574743,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8376.116712818628,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8348.993289021711,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43554.803543914575,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10887.579239272443,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10908.792182227133,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10885.7774228128,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10872.71610387903,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 62448.255294754425,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 15652.68015596968,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15592.178475360108,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15598.135210367509,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 15605.40748387269,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 46333.62463506253,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 11630.619676953767,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11511.493237237619,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11574.694895801202,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 11617.56471923498,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 50955.261266385176,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 12838.478259682004,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12803.685484085061,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12648.023890085493,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 12667.232213652736,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39285.46097645447,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9835.219818343885,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9784.541857848824,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9752.694086150464,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9914.522146204856,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 55763.61817443722,
+      "proposal_points": 507904,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13960.940919962932,
+          "proposal_points": 126976
+        },
+        {
+          "proposal_ess": 14129.285527122376,
+          "proposal_points": 126976
+        },
+        {
+          "proposal_ess": 13776.797627122784,
+          "proposal_points": 126976
+        },
+        {
+          "proposal_ess": 13901.202678670294,
+          "proposal_points": 126976
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39410.12590912825,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9836.256820036151,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9893.649432559545,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9868.580250125722,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9812.03049443325,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39648.867098429844,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9842.510871115654,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9892.30878791757,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9979.012288985756,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9936.073262471475,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 34589.18809842983,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8686.844166395784,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8678.902442097258,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8538.042922402221,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 8687.275716098135,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 69870.96221482306,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 17451.69655689313,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17456.049555289712,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17547.665502819273,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17416.090393160608,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 53866.414341245574,
+      "proposal_points": 245760,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 13578.997951625508,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 13383.694387280004,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 13441.28369932063,
+          "proposal_points": 61440
+        },
+        {
+          "proposal_ess": 13463.930431494291,
+          "proposal_points": 61440
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36133.05751259717,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9066.1899019558,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9009.072314767867,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9034.888241221071,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9023.1033270271,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41764.64446782088,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10410.174294190778,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10432.475672266248,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10448.61208025957,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10473.587593617582,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 70863.31134224765,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 17671.080217845367,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17692.47823735441,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17812.974846483583,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 17687.497358714085,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 38377.99486854878,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9582.889024376283,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9598.738980922953,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9612.12435194322,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9584.301618609397,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 72836.79067658237,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 18220.177306122412,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18256.01191623677,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18204.343728392996,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 18156.538410392357,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36713.80875141434,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9202.132401102874,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9137.556454056215,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9240.269464890644,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9134.717348818507,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 38682.66769412964,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9666.084285620373,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9704.236134266946,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9661.607544177412,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9650.906978966486,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 37421.53238078324,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9343.025136494034,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9417.209452085626,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9306.709171257107,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9355.265437614595,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 43139.43753938537,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10756.740939008878,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10795.956032976315,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10789.03506304488,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10797.807555423813,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 39064.53844310954,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9819.476703145594,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9756.680454870979,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9700.783359597846,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9788.387697603115,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 33662.86978116572,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 8415.40387449924,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8426.710941723404,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8462.370480003196,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 8359.040326873564,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 42128.65432632184,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10502.374488428255,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10535.422543168028,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10510.755135467567,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10580.451648254617,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 36399.19846011748,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9078.114773850015,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9120.366043502208,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9044.491792881909,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9157.01979375368,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41351.364708518544,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10300.585260678512,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10355.751657530192,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10331.736385320433,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10363.524387591906,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40235.91589996751,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 9908.194668902554,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10116.957659905356,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10086.450889007643,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10127.477731341458,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40261.05466405479,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10072.90514847171,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 9994.945550714116,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10085.397802415186,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10108.532073726077,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41250.43512974517,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10387.772046275099,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10273.078018635459,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10268.818267136874,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10321.657447748088,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 67338.67505787744,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 16788.73537343321,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16801.097312683385,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16948.893020014788,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 16800.979454582335,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 41489.65927860414,
+      "proposal_points": 49152,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10383.673773291062,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10352.973210960792,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10414.092471265601,
+          "proposal_points": 12288
+        },
+        {
+          "proposal_ess": 10339.24177024516,
+          "proposal_points": 12288
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    },
+    {
+      "proposal_ess": 40784.01846730699,
+      "proposal_points": 114688,
+      "batch_samples": [
+        2048,
+        2048,
+        2048,
+        2048
+      ],
+      "normalized_batch_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "batches": [
+        {
+          "proposal_ess": 10210.682322872342,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10156.819103240776,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10234.16521523755,
+          "proposal_points": 28672
+        },
+        {
+          "proposal_ess": 10182.68382178106,
+          "proposal_points": 28672
+        }
+      ],
+      "interpretation": "Weight ESS of independent separately normalized proposal pools; not an independent posterior sample count."
+    }
+  ],
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1212379136
+  }
+}

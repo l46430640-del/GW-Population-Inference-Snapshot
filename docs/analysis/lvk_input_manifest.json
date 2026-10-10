@@ -1,0 +1,24 @@
+{
+  "record": "https://doi.org/10.5281/zenodo.8087858",
+  "archive_checksum": "md5:b98fb015a07e06a00306847584650175",
+  "files": [
+    {
+      "name": "sampleDict_FAR_1_in_1_yr.pickle",
+      "zip_member": "sampleDict_FAR_1_in_1_yr.pickle",
+      "bytes": 383569403,
+      "sha256": "2f1d408655465fd1d2a07efc505546bac23c1d668c75002466e550162e8e5479"
+    },
+    {
+      "name": "injectionDict_FAR_1_in_1.pickle",
+      "zip_member": "injectionDict_FAR_1_in_1.pickle",
+      "bytes": 7319763,
+      "sha256": "bf214b0d223ac9dfaa2d46014b648b78a1564a5ee90d4cb6525290df4250a79c"
+    },
+    {
+      "name": "o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json",
+      "zip_member": "o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json",
+      "bytes": 16395549,
+      "sha256": "1c994baf68d78ac36de0cda5ecbcfc5eadfbedc637e5c9292f9b8af504ad3754"
+    }
+  ]
+}

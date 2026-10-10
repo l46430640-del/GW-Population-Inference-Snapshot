@@ -1,0 +1,28 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "experiment": "selected_copula_truth",
+  "output": "results/analysis/external_selected_comparison",
+  "copula_source": "results/analysis/selected_mixture",
+  "gp_sources": {
+    "6": "results/analysis/external_gp_selected/bins_6",
+    "12": "results/analysis/external_gp_selected_extended/bins_12"
+  },
+  "verification_draws_per_chain": 128,
+  "verification_extreme_draws": 16,
+  "kernel_check_draws_per_chain": 8,
+  "maximum_kernel_total_log_likelihood_difference": 0.0001,
+  "population_transport_power": 14,
+  "verification_population_transport_power": 16,
+  "truth_transport_power": 20,
+  "verification_truth_transport_power": 22,
+  "population_seed": 847301,
+  "verification_population_seed": 847302,
+  "truth_population_seed": 847303,
+  "verification_truth_population_seed": 847304,
+  "batch_lengths": [
+    25,
+    50,
+    100
+  ],
+  "decision": "Fixed before external scientific scores. Use all retained draws for primary summaries. Verify event integration on 128 evenly spaced draws per chain and train-only extremes; retain paired same-draw differences. Use independent probability-space Sobol clouds for cell recovery at both partitions, with all posterior draws at both transport resolutions. GP cell subdivision and selected-event quadrature are deterministic. No posterior, prior or model setting is selected by a score."
+}

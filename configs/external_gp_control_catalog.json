@@ -1,0 +1,14 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "experiment": "selected_gp_truth",
+  "output": "results/analysis/external_gp_control_catalog",
+  "proposal_batch_size": 512,
+  "sampling_order": "For each catalog, use its declared numpy default_rng seed. Draw intrinsic bins, then independent uniform positions within bins, then Bernoulli detection uniforms in batches of 512. Keep the first declared number of detections. Draw Gaussian measurement errors from the same generator after selection. The two catalog generators are independent of the truth generator.",
+  "covariance_jitter_convention": "Add the declared 1e-10 directly to the diagonal of the full sigma-squared covariance before its dense Cholesky decomposition.",
+  "training_event_seed": 847101,
+  "verification_training_event_seed": 847102,
+  "training_event_samples": 2048,
+  "verification_training_event_samples": 8192,
+  "test_event_samples": "Deferred until scientific evaluation; save measurements only now.",
+  "decision": "The first GP draw and first selected catalogs are retained. These procedural details are fixed before drawing the new population or inspecting any fit. Truth and held-out measurements are not inputs to pilot fitting."
+}

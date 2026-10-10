@@ -1,0 +1,39 @@
+{
+  "source_sha256": {
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/initialize_population_guide.py": "b9973c56a78eb5cd23210cf4d237a02b5960b3ad130f17b621d474f85bc0c7b9",
+    "configs/model_comparisons.json": "30e41002ffbdfc293f1d7afbdef8a7cffdeca3c9fb9f4727f16c66b3c0237929",
+    "results/analysis/selected_mixture/target.json": "0ea80f71dccb4872e26b903d80bb90c824b7728c3af27c2a3be8c059562c848f",
+    "results/analysis/selected_mixture/nuts_summary.json": "1035e81b4dd2e5a3c65c64db42e0da4ee95d098bd833b61c99f53ceb1f1c0294",
+    "results/analysis/selected_mixture/train_catalog.npz": "150ee4e82fb596f86bff3e2156b49a25ac63fca0321c31ffa5324534acd43e9e",
+    "results/analysis/selected_mixture/test_catalog.npz": "4a0680db5e5b77b730c3b10484cde39a6a82cd1b50be5bb12106185e9d5da718",
+    "results/analysis/selected_mixture/nuts_chain_0.npz": "c6c466f7c0964d693826b0aaec7f24f14d43f8aff871d2ac910090e685fde86c",
+    "results/analysis/selected_mixture/nuts_chain_0.json": "845287699d68ab3473597436fc3bb41bb453c168fe96707de720a204ec6d371b",
+    "results/analysis/selected_mixture/nuts_chain_1.npz": "1a8b2d223298811a9b326584d2d07d3f521b1cabbdb7933ad4b318e7af5b9d71",
+    "results/analysis/selected_mixture/nuts_chain_1.json": "50349edd7de8671b11bc032073e866a5173d278c2fa6126e1c31ff20aeeaaace",
+    "results/analysis/selected_mixture/nuts_chain_2.npz": "c8624565b50e04dac502ec1231a49b4344bb0a7f395b2e2f5fb6b44530f782dc",
+    "results/analysis/selected_mixture/nuts_chain_2.json": "0da3479d2afa97401cf57124aab1c31aaca5cba5432a4eb782115bfd1d95eb40",
+    "results/analysis/selected_mixture/nuts_chain_3.npz": "38dd5d5ff15d104a86821cd457ad8a73854a5d7838f62a2fccbba6ab771bf16c",
+    "results/analysis/selected_mixture/nuts_chain_3.json": "86c9b5d5d2315dca8ae53256c7af354e969149b0f0e07d3d922da5247e8a772c",
+    "configs/external_selected_evaluation.json": "511e1a459ce079e3ac8bccfc887658e762c918f565c773d548c05838e421d4db",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "scripts/check_external_copula_selected.py": "2d6f74bde80e00f4822316bd3fd4eb5740cad5b3950a4cc96c0efa45dd645c99",
+    "scripts/external_selected_evaluation.py": "4ab6f19f18428c2156a3cc67779348812eab5267be654696ffe6d4eb0004c479",
+    "scripts/compare_lisa_posterior.py": "27ef6aa47b90f5c713afd44582604dca426f3f046f316ba01320e62b75abe11a",
+    "scripts/check_selected_mixture_integrals.py": "d2704b176deda6745491bcacdc578f629a861163160fb9e5ab1ee0b189e04d14",
+    "scripts/refine_lisa_posterior.py": "f47e9b1aa2b4609972ad7292034d777e653d51b369979b36a75540820244be97",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d"
+  },
+  "product_sha256": "120908e20a5832fc0c5725a8b45be7c2fcc104edb366d92e39a94eb244e0e283",
+  "seconds": 0.7341584000005241,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1017507840
+  }
+}

@@ -1,0 +1,19 @@
+# Versions used for the analysis on Python 3.11.7, CPU calculations.
+numpy==1.26.4
+scipy==1.16.3
+torch==2.5.1
+pyro-ppl==1.9.1
+matplotlib==3.8.0
+astropy==7.1.0
+arviz==0.21.0
+PyMuPDF==1.27.2.3
+pytest==7.4.0
+requests==2.31.0
+tqdm==4.65.0
+pandas==2.1.4
+h5py==3.12.1
+psutil==5.9.0
+corner==2.2.2
+dcor==0.6
+seaborn==0.12.2
+scikit-learn==1.2.2

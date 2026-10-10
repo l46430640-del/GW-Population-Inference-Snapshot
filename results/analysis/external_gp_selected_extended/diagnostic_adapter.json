@@ -1,0 +1,10 @@
+{
+  "adapter": {
+    "source": "scripts/run_external_gp_bounded_diagnostics.py",
+    "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "pyro_version": "1.9.1",
+    "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+  },
+  "torch_version": "2.5.1",
+  "scope": "post-sampling cumulative-minimum diagnostic"
+}

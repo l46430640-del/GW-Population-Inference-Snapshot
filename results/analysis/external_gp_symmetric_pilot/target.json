@@ -1,0 +1,19 @@
+{
+  "source_sha256": {
+    "configs/external_gp_symmetric_pilot.json": "0239c0c7a07da3c2646c435b1de061433d7778990ffdc3cb7687c41de3b915dd",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/selected_mixture/train_catalog.npz": "150ee4e82fb596f86bff3e2156b49a25ac63fca0321c31ffa5324534acd43e9e",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "docs/analysis/external_benchmark_sources.json": "b590c3d25f06b8d82bb4cd299b18ca47bfc75dc889c86e63748b35e07e643942"
+  },
+  "input_fields": [
+    "observed",
+    "sigma"
+  ],
+  "experiment": "selected_copula_truth",
+  "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative"
+}

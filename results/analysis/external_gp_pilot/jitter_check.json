@@ -1,0 +1,80 @@
+{
+  "source_sha256": {
+    "configs/external_gp_pilot.json": "254a38bf67e53eff0302144e2021b8b4734a5bef872385f37ad018998e066668",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "scripts/check_external_gp_jitter.py": "d6e17ac3ed8079b7c9147e207e92e000dbcf8a40c605a8fa8a95c4c31e2313c0",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "results/analysis/external_gp_pilot/bins_6.npz": "a6015b50cbebef0e5ae4bc6eadbd0523f52afb4fce0fa2acf4233c8823f7f01d",
+    "results/analysis/external_gp_pilot/bins_6.json": "d4b4f20fa82edb9571b0da8974e2febe4f593a799c76009e5f2ee6f9b52951f4",
+    "results/analysis/external_gp_pilot/bins_12.npz": "74e6e56dbe130d6047d587b0eb25ea3945f7107d35ebb200dafb7e5b2ceaeeff",
+    "results/analysis/external_gp_pilot/bins_12.json": "f21a4270d21baecdeed50eca1040782971d845ea9869b29425af64b80ccb6d61"
+  },
+  "primary_jitter": 1e-08,
+  "verification_jitter": 1e-10,
+  "resolutions": [
+    {
+      "bins_per_axis": 6,
+      "draws": 100,
+      "length_scale_quantiles_05_50_95": [
+        [
+          0.13780300455730957,
+          0.21367747674022652,
+          0.26089716510885996
+        ],
+        [
+          0.25099876867307513,
+          0.3284796409742621,
+          0.3840383742813226
+        ],
+        [
+          0.48198545420840583,
+          0.5208909207284792,
+          0.5501607678542236
+        ]
+      ],
+      "maximum_covariance_element_change_over_sigma_squared": 2.9700000014898364e-08,
+      "maximum_covariance_element_change": 1.4697210369713926e-06,
+      "cholesky_log_likelihood_difference_sd": 0.00021063536649892445,
+      "symmetric_root_log_likelihood_difference_sd": 4.297438230394216e-05,
+      "maximum_field_change_cholesky_and_symmetric": [
+        0.0027341564794807205,
+        0.00011938777772702025
+      ],
+      "maximum_symmetric_root_covariance_residual": 5.329070518200751e-15,
+      "cholesky_coordinate_check_passed": true
+    },
+    {
+      "bins_per_axis": 12,
+      "draws": 100,
+      "length_scale_quantiles_05_50_95": [
+        [
+          0.07693433627299243,
+          0.26414603393173147,
+          0.2547946518588151
+        ],
+        [
+          0.14516365962964162,
+          0.3579312989673197,
+          0.39326032600413796
+        ],
+        [
+          0.24424217818710792,
+          0.5486928430019382,
+          0.5601281303644836
+        ]
+      ],
+      "maximum_covariance_element_change_over_sigma_squared": 2.9700000014898364e-08,
+      "maximum_covariance_element_change": 1.1332811278585749e-06,
+      "cholesky_log_likelihood_difference_sd": 0.534398774698279,
+      "symmetric_root_log_likelihood_difference_sd": 0.0008401109886446179,
+      "maximum_field_change_cholesky_and_symmetric": [
+        0.9812217069644573,
+        0.0014765999160877286
+      ],
+      "maximum_symmetric_root_covariance_residual": 9.769962616701378e-15,
+      "cholesky_coordinate_check_passed": false
+    }
+  ],
+  "eligible_for_scientific_comparisons": false,
+  "interpretation": "Changing Cholesky jitter changes the field at fixed whitened coordinates. A symmetric covariance square root is an alternative Gaussian prior parameterization. Its values here diagnose numerical continuity only: these coordinates are not posterior draws for that parameterization. Gradients and fresh sampling must be validated before using it."
+}

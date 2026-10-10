@@ -1,0 +1,90 @@
+{
+  "status": "memory_limit",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_selected",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847202,
+    "warmup": 500,
+    "retained": 800,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 6944.8717278,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Run the declared four-chain posterior at both resolutions, with dispersed kernel starts and all production diagnostics, using training observations only. Recovery and predictive comparisons follow separately."
+  },
+  "sampling_and_compilation_seconds": 0.11403669999981503,
+  "compilation_seconds": 0.11272710000048392,
+  "potential_evaluations": 1,
+  "warmup_completed": 0,
+  "samples_completed": 0,
+  "divergences": null,
+  "acceptance_rate": null,
+  "step_size": 1.0,
+  "peak_resident_bytes": 3614294016,
+  "retained_potential_evaluation_quantiles": null,
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.4313884239290928e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.8096635301390052e-13
+    }
+  ],
+  "single_chain_pilot_ess": null,
+  "covariance_jitter_log_target_difference_sd": null,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 3614294016
+  },
+  "seed": 847202,
+  "initial_amplitude_and_lengths": [
+    1.0,
+    0.3,
+    0.3,
+    0.3
+  ],
+  "target_product_sha256": "869e89756db2235ace39784e56408ec68060b8493c52ab233c41a58579c9226e",
+  "draw_product_sha256": "e71fb1554ea5fa854b4be767288f2bb6c8f1b4b63973da8842cf16cb42f13579",
+  "coordinate_verification": {
+    "derivatives_passed": false,
+    "jitter_difference_sd": null
+  },
+  "event_quadrature_passed": true,
+  "process_elapsed_seconds": 0.12068539999927452
+}

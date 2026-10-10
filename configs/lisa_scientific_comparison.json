@@ -1,0 +1,42 @@
+{
+  "source": "results/analysis/lisa_refinement",
+  "output": "results/analysis/lisa_scientific_comparison",
+  "baselines": [
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002"
+  ],
+  "primary_baseline": "vi_91001",
+  "baseline_draws": 1024,
+  "baseline_seed": 736000,
+  "test_events": 192,
+  "test_catalog_seed": 736101,
+  "event_seed": 736102,
+  "event_samples": 256,
+  "fine_event_seed": 736103,
+  "fine_event_samples": 2048,
+  "cells_per_axis": 12,
+  "marginal_bins": 96,
+  "transport_power": 14,
+  "transport_seed": 736201,
+  "fine_transport_power": 16,
+  "fine_transport_seed": 736202,
+  "fine_selection_points": 131072,
+  "fine_selection_seed": 1032469,
+  "truth_power": 17,
+  "truth_seed": 736203,
+  "fine_truth_power": 18,
+  "fine_truth_seed": 736204,
+  "verification_draws_per_chain": 64,
+  "verification_baseline_draws": 128,
+  "batch_lengths": [
+    25,
+    50
+  ],
+  "maximum_joint_distance_change": 0.005,
+  "maximum_hidden_mass_change": 0.005,
+  "maximum_prediction_rmse_change": 0.02,
+  "maximum_paired_score_change": 0.25,
+  "maximum_derived_rhat": 1.01,
+  "decision": "Compare the frozen accepted posterior with all three frozen variational fits. Seed 91001 remains the primary baseline selected previously by training ELBO. Use all 2000 weighted chain draws and 1024 independent draws per fitted flow. Independent detected test events assess prediction only; no model, fit, prior, weight, or setting is chosen from their scores or injected truth. Preserve improvements and deteriorations alike."
+}

@@ -1,0 +1,125 @@
+{
+  "injection_source": "o1+o2+o3_mixture_real+semianalytic-LIGO-T2100377-v2.hdf5",
+  "domain": "within the declared box: m1 <= 100 Msun or m2 >= 10 Msun",
+  "all_injections_outside_domain": 0,
+  "mass_intervals": [
+    {
+      "primary_mass_interval": [
+        90,
+        100
+      ],
+      "injections": 53666,
+      "smallest_secondary_mass": 4.78115177154541
+    },
+    {
+      "primary_mass_interval": [
+        100,
+        120
+      ],
+      "injections": 63480,
+      "smallest_secondary_mass": 10.000157499553204
+    },
+    {
+      "primary_mass_interval": [
+        120,
+        150
+      ],
+      "injections": 76733,
+      "smallest_secondary_mass": 10.005187865580496
+    },
+    {
+      "primary_mass_interval": [
+        150,
+        200
+      ],
+      "injections": 86424,
+      "smallest_secondary_mass": 10.000260449681944
+    },
+    {
+      "primary_mass_interval": [
+        200,
+        300
+      ],
+      "injections": 88622,
+      "smallest_secondary_mass": 10.002233550016618
+    }
+  ],
+  "full_PE_points_outside_domain": {
+    "GW150914": 0,
+    "GW151012": 0,
+    "GW151226": 0,
+    "GW170104": 0,
+    "GW170608": 0,
+    "GW170729": 0,
+    "GW170809": 0,
+    "GW170814": 0,
+    "GW170818": 0,
+    "GW170823": 0,
+    "S190408an": 0,
+    "S190412m": 0,
+    "S190413ac": 0,
+    "S190413i": 0,
+    "S190421ar": 0,
+    "S190503bf": 0,
+    "S190512at": 0,
+    "S190513bm": 0,
+    "S190517h": 0,
+    "S190519bj": 0,
+    "S190521g": 0,
+    "S190521r": 0,
+    "S190527w": 0,
+    "S190602aq": 0,
+    "S190620e": 0,
+    "S190630ag": 0,
+    "S190701ah": 0,
+    "S190706ai": 0,
+    "S190707q": 0,
+    "S190708ap": 0,
+    "S190719an": 0,
+    "S190720a": 0,
+    "S190725t": 0,
+    "S190727h": 0,
+    "S190728q": 0,
+    "S190731aa": 0,
+    "S190803e": 0,
+    "S190805bq": 0,
+    "S190828j": 0,
+    "S190828l": 0,
+    "S190910s": 0,
+    "S190915ak": 0,
+    "S190924h": 0,
+    "S190925ad": 0,
+    "S190929d": 1,
+    "S190930s": 0,
+    "S191103a": 0,
+    "S191105e": 0,
+    "S191109d": 0,
+    "S191127p": 150,
+    "S191129u": 0,
+    "S191204r": 0,
+    "S191215w": 0,
+    "S191216ap": 0,
+    "S191222n": 0,
+    "S191230an": 0,
+    "S200112r": 0,
+    "S200128d": 0,
+    "S200129m": 0,
+    "S200202ac": 0,
+    "S200208q": 0,
+    "S200209ab": 0,
+    "S200216br": 8,
+    "S200219ac": 0,
+    "S200224ca": 0,
+    "S200225q": 0,
+    "S200302c": 0,
+    "S200311bg": 0,
+    "S200316bj": 0
+  },
+  "compressed_PE_points_outside_domain": {
+    "importance_mixture_v2_low_1024_12000_150_372100.npz": 0,
+    "importance_mixture_v2_uniform_1024_12000_150_372100.npz": 0,
+    "importance_mixture_v2_uniform_1024_12000_300_372100.npz": 0
+  },
+  "normalization": "p_C = p_0 * 1_C / A; Z_i,C = Z_i,0,C/A and alpha_C = alpha_0,C/A; A cancels from product(Z_i,C)/alpha_C**N",
+  "reuse_scope": "Fits launched before the event-support callback have identical finite-sample shape likelihoods when their compressed PE count outside this domain is zero. Full-source PE checks apply the joint support mask and retain the original denominator."
+}

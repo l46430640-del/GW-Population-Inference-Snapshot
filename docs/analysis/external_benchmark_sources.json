@@ -1,0 +1,150 @@
+[
+  {
+    "name": "2304.08046v2.pdf",
+    "url": "https://arxiv.org/pdf/2304.08046v2",
+    "kind": "pdf",
+    "local_path": "external_data/literature/external_benchmark/2304.08046v2.pdf",
+    "bytes": 1677409,
+    "sha256": "eaa32c04994e084a2f0d35cd3cfe08145baad56d4868b1b153092bf94eb6f017"
+  },
+  {
+    "name": "2304.08046v1.tar.gz",
+    "url": "https://arxiv.org/src/2304.08046v1",
+    "kind": "src",
+    "local_path": "external_data/literature/external_benchmark/2304.08046v1.tar.gz",
+    "bytes": 3352876,
+    "sha256": "dfad8fa22207fdddab9623613952ae66214abd948f3ce118ec8b4141258c266e",
+    "text_sources": [
+      {
+        "path": "ack.tex",
+        "sha256": "48cacdc1abe2bc9f73eae5abdccb31714c01c6a7945ba95f591bb5672173628a"
+      },
+      {
+        "path": "authors.tex",
+        "sha256": "f1d53e2f86d45699695722850c4ff48093736ca6fb7bd6101ea39cf3758aa5bb"
+      },
+      {
+        "path": "main.bbl",
+        "sha256": "1a2c4c521ab43e03e4d0c1cf9022f10e5a2f1695eada73a4ec50157f26680e9f"
+      },
+      {
+        "path": "main.tex",
+        "sha256": "c0897479d2ac48a97a99acf38a639a3581de25f63e573a4c6627b3b13107633d"
+      },
+      {
+        "path": "reference.bib",
+        "sha256": "9a0672de6bb9b17185fa0ebd54a9e7918907bf8cc9ee95d3c131ba5cc028ea7f"
+      },
+      {
+        "path": "trash.tex",
+        "sha256": "c7944796126f0f0b96dec6322e755547edcb56d43f4b2f9a1f59f09b104388f2"
+      }
+    ]
+  },
+  {
+    "name": "2404.03166v1.pdf",
+    "url": "https://arxiv.org/pdf/2404.03166v1",
+    "kind": "pdf",
+    "local_path": "external_data/literature/external_benchmark/2404.03166v1.pdf",
+    "bytes": 2435061,
+    "sha256": "f2c6dda1af7d0fb8e02e8fbcc49644961b75543404476fda11d2d6b901b1fdb2"
+  },
+  {
+    "name": "2404.03166v1.tar.gz",
+    "url": "https://arxiv.org/src/2404.03166v1",
+    "kind": "src",
+    "local_path": "external_data/literature/external_benchmark/2404.03166v1.tar.gz",
+    "bytes": 6359587,
+    "sha256": "e091b2468aafdac1ad0bacac958d0e9a2ef5a2375dc11c9b169ade0b8b0773ca",
+    "text_sources": [
+      {
+        "path": "main.bbl",
+        "sha256": "aaea643aeb3a726167adde937f6db7b3fc2726cee0f92def72f1861cb314c5c9"
+      },
+      {
+        "path": "main.tex",
+        "sha256": "e2525dc9dda536928c4496e82b991c179103dff6a17a589608828f0cb6bec5b0"
+      },
+      {
+        "path": "sample631.bib",
+        "sha256": "01490e6b01c4bbb8b71a9448963be8a29d5da7ca1f9046bbc2d531c1fa31a0ed"
+      }
+    ]
+  },
+  {
+    "name": "gppop_spin_dev_ee5ffc421.tar.gz",
+    "url": "https://zenodo.org/records/14691458/files/gppop_spin_dev_ee5ffc421.tar.gz?download=1",
+    "kind": "code",
+    "md5": "526b9a2e7508a964c16c60b4de0c0a86",
+    "record": "https://zenodo.org/records/14691458",
+    "local_path": "external_data/literature/external_benchmark/gppop_spin_dev_ee5ffc421.tar.gz",
+    "bytes": 252591,
+    "sha256": "4d1c736919cdf869c11355d4e685208e92e38006b1af71f155cfc3e167204ddd",
+    "text_sources": [
+      {
+        "path": "gppop/tests/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "gppop/setup.py",
+        "sha256": "dbab3905c041dd526ee8a3d7496cb9e50acc0c17e88c82eacd627493e9cbff1b"
+      },
+      {
+        "path": "gppop/LICENSE",
+        "sha256": "63a583c0fe8e1226e64e4124cc36fbf262a8934e539eeac2828c83a7c4e16f48"
+      },
+      {
+        "path": "gppop/pyproject.toml",
+        "sha256": "971b43f72d5f80a3be2895f74805cc504a44fd7ecd4d57420825920a4ec7ac1b"
+      },
+      {
+        "path": "gppop/.ipynb_checkpoints/setup-checkpoint.py",
+        "sha256": "dbab3905c041dd526ee8a3d7496cb9e50acc0c17e88c82eacd627493e9cbff1b"
+      },
+      {
+        "path": "gppop/.ipynb_checkpoints/pyproject-checkpoint.toml",
+        "sha256": "971b43f72d5f80a3be2895f74805cc504a44fd7ecd4d57420825920a4ec7ac1b"
+      },
+      {
+        "path": "gppop/src/gppop/io.py",
+        "sha256": "3b3fe3bb00fa89997145323067a63eabb8dfe0580c3e748d89cd3d6c3fe5dd2e"
+      },
+      {
+        "path": "gppop/src/gppop/core.py",
+        "sha256": "605a22990a8ea4277f9f0f64753a0a540ff55f80a9bddc54e72976eda37a8de4"
+      },
+      {
+        "path": "gppop/src/gppop/.ipynb_checkpoints/core-checkpoint.py",
+        "sha256": "605a22990a8ea4277f9f0f64753a0a540ff55f80a9bddc54e72976eda37a8de4"
+      },
+      {
+        "path": "gppop/src/gppop/.ipynb_checkpoints/io-checkpoint.py",
+        "sha256": "88a6f106108381565f502073e46b4a2f01f07742a6b50accc9e94a359bd6dd05"
+      },
+      {
+        "path": "gppop/src/gppop/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "gppop/src/gppop.egg-info/requires.txt",
+        "sha256": "a7837e75819bd50fdebd1347160492ee52f4c554eb844813d33da256f35de715"
+      },
+      {
+        "path": "gppop/src/gppop.egg-info/dependency_links.txt",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      },
+      {
+        "path": "gppop/src/gppop.egg-info/SOURCES.txt",
+        "sha256": "e6c91c6662d998f38b3f23600075fc97038b4a7c7b49e6723df9b464ad76bcaf"
+      },
+      {
+        "path": "gppop/src/gppop.egg-info/top_level.txt",
+        "sha256": "b81c3014cbdc8e5c7cdd475e03da522673650bb897841964b8e5eb5b57032ace"
+      },
+      {
+        "path": "gppop/README.md",
+        "sha256": "cf955644dfafc1c8b5540a53aa690592cff1da26cf806c566543886e8eb9d9b0"
+      }
+    ]
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "source": "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k1_s91001",
+  "kind": "lisa",
+  "prior_draws": 512,
+  "posterior_draws": 192,
+  "points_per_component": 16384,
+  "seed": 20261009,
+  "summary": {
+    "prior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.12490262860172893,
+          0.7853357042873257,
+          0.9999558673125978
+        ],
+        "mean": 0.692215632163607,
+        "sd": 0.2962726097038023
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.0,
+          0.202789306640625,
+          0.8689636230468749
+        ],
+        "mean": 0.30019330978393555,
+        "sd": 0.29351168011205236
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.00018310546875,
+          0.28363037109375,
+          0.9137054443359375
+        ],
+        "mean": 0.3501371145248413,
+        "sd": 0.30488202193717057
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 0.0
+      }
+    },
+    "posterior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.8248208845688813,
+          0.9013979143478699,
+          0.9537102763573603
+        ],
+        "mean": 0.9003130053803979,
+        "sd": 0.037134381501609276
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.03983154296875,
+          0.089324951171875,
+          0.163507080078125
+        ],
+        "mean": 0.09049288431803386,
+        "sd": 0.03539932635208353
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.128228759765625,
+          0.19500732421875,
+          0.27605285644531247
+        ],
+        "mean": 0.1968409220377604,
+        "sd": 0.04502110123109183
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 0.0
+      }
+    }
+  },
+  "posterior_to_prior_90_interval_width": {
+    "alpha": 0.14729320010101246,
+    "weak_detection_fraction": 0.14232533310856849,
+    "mass_above_1e8": 0.16181771412727203,
+    "domain_probability": null
+  },
+  "coarse_to_fine_absolute_change_50_90_99_max": {
+    "prior": {
+      "alpha": [
+        0.00020569235121308503,
+        0.0007311934898598718,
+        0.0013031141983824161,
+        0.003473480520718164
+      ],
+      "weak_detection_fraction": [
+        0.0003662109375,
+        0.001220703125,
+        0.002197265625,
+        0.0030517578125
+      ],
+      "mass_above_1e8": [
+        6.103515625e-05,
+        0.00018310546875,
+        0.00018310546875,
+        0.00018310546875
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "posterior": {
+      "alpha": [
+        0.0002369982941985982,
+        0.00047734542372397394,
+        0.000719032059366399,
+        0.0007817737525165347
+      ],
+      "weak_detection_fraction": [
+        0.0003662109375,
+        0.0009765625,
+        0.0014367675781250012,
+        0.00213623046875
+      ],
+      "mass_above_1e8": [
+        6.103515625e-05,
+        0.00018310546875,
+        0.00018310546875,
+        0.00018310546875
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "selection_note": "LISA sensitivity averaged over transported population points",
+  "interpretation": "Intervals describe prior and conditional posterior distributions, not repeated-catalog coverage.",
+  "sha256": {
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k1_s91001/summary.json": "6857862eba5d2997707501f96a0f5dcce364822bf1b4cf52a7659b14689dc3bf",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k1_s91001/posterior.npz": "e67fe0d8213b099aca7af8cb63d95f5803617f6b6ff285192f5c9f46871624a6",
+    "src/gwpopulation/core.py": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+    "scripts/population_prior_diagnostics.py": "09887a531d149f62b326702c0afb7bc1707bdd426df1b170e451efa24c214c19"
+  },
+  "seconds": 4.286162199998216
+}

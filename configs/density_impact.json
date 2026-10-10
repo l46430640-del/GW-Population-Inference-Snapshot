@@ -1,0 +1,22 @@
+{
+  "output": "results/analysis/density_impact",
+  "maximum_seconds": 1200,
+  "maximum_resident_gib": 2,
+  "maximum_output_mib": 32,
+  "cpu_threads": 1,
+  "mcmc_draws_per_chain": 32,
+  "vi_draws": 32,
+  "population_transport_power": 12,
+  "population_transport_seed": 1061010,
+  "population_bins": 12,
+  "event_block": 8,
+  "native_bounds_checks_per_case": 4,
+  "screen_log_ratio_sd": 0.3,
+  "screen_weight_ess_fraction": 0.9,
+  "screen_maximum_feature_shift_sd": 0.1,
+  "screen_maximum_cell_total_variation": 0.01,
+  "scope": "Paired screening of all adopted LISA VI and LVK sensitivity fits, the controlled VI/independent fits and NUTS reference, and the three accepted external-comparison copula posteriors. Reuse saved draws, observations, event clouds and injection arrays. No fitting, new observations, new PE draws or GP refitting.",
+  "sampling_rule": "For each existing MCMC chain take 32 evenly spaced retained draws, preserving chain identities; take 32 evenly spaced saved draws per VI fit. Retain existing numerical-refinement weights. Do not select draws using truth, updated weights or predictive scores.",
+  "interpretation": "This is an impact screen, not posterior certification or a replacement scientific comparison. Ratios on VI draws measure target perturbation, not correction of VI error. Subset MCMC ratios require full-chain and integration checks before publication. GP targets and saved observations do not involve the repaired bounded density; compare updated copula predictions against the frozen GP predictions at the same events.",
+  "historical_mapping": "Use executable historical core.py and analysis adapters without editing their hashes. Separate the float32-to-float64 evaluation change, the density/transform repair at matched physical bounds and fixed selection nodes, and the small original-bound rounding change. Remove the known historical event-factor N*log(volume) constant before comparing targets."
+}

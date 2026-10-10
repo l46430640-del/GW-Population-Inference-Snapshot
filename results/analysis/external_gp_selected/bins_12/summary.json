@@ -1,0 +1,32 @@
+{
+  "decision": {
+    "complete": false,
+    "divergences_passed": false,
+    "mixing_passed": false,
+    "numerical_passed": false,
+    "resources_passed": false,
+    "posterior_accepted": false
+  },
+  "mixing": null,
+  "mixing_error": null,
+  "trace_summaries": {},
+  "pooled_jitter_log_target_difference_sd": null,
+  "sampling_and_compilation_seconds": 214.57574229999955,
+  "recorded_process_elapsed_seconds": 255.24783709999883,
+  "retained_full_tree_evaluation_count": 0,
+  "maximum_peak_working_set_bytes": 3614294016,
+  "target_product_sha256": "869e89756db2235ace39784e56408ec68060b8493c52ab233c41a58579c9226e",
+  "chain_reports_sha256": {
+    "chain_847201.json": "e7762c54ec6555b6ffabc24d25837b4c7d317f30cdb7b8db124d17d7e82ab752",
+    "chain_847202.json": "1d48eb224136d885392050b2e44667730f39e0fd85fd11f1012450f0eff60891"
+  },
+  "comparison_results_available": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 3614294016
+  }
+}

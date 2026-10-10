@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 6,
+  "dimension": 220,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_gp_truth",
+    "training_catalog": "results/analysis/external_gp_control_catalog/train_catalog.npz",
+    "output": "results/analysis/external_gp_control_gp_pilot",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847204,
+    "warmup": 500,
+    "retained": 2400,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 1762.948427700001,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Training-only pilot on the first predeclared GP-family catalog. Preserve the previous GP target, prior, initial rule and numerical checks. No convergence or scientific comparison is inferred from this pilot."
+  },
+  "sampling_and_compilation_seconds": 250.61111950000122,
+  "compilation_seconds": 0.09312230000068666,
+  "potential_evaluations": 177622,
+  "warmup_completed": 500,
+  "samples_completed": 2400,
+  "divergences": [],
+  "acceptance_rate": 0.9966666666666667,
+  "step_size": 0.09170437351329107,
+  "peak_resident_bytes": 1105440768,
+  "retained_potential_evaluation_quantiles": [
+    31.0,
+    63.0,
+    63.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.1102230246251565e-16
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.549516567451064e-15
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.6645352591003757e-15
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 2417.5715097630623,
+      "cov_mass_ratio": 1897.1681686208374,
+      "cov_mass_redshift": 2388.61898969263,
+      "cov_redshift_ratio": 2940.523571503148,
+      "length_x1": 1019.2558157266149,
+      "length_x2": 321.33740619114957,
+      "length_x3": 860.8356830886785,
+      "log_posterior": 546.4530426034215,
+      "mass_above_0p8": 2381.306699112621,
+      "mass_below_quarter": 2492.2271625132807,
+      "mean_mass": 2495.087303080164,
+      "mean_ratio": 2618.296850582937,
+      "mean_redshift": 1544.0050146853227,
+      "sigma": 623.0677661920218,
+      "variance_mass": 2523.1498270897655,
+      "variance_ratio": 2215.4352467125577,
+      "variance_redshift": 1745.7965593961555
+    },
+    "tail": {
+      "alpha": 2099.5276205089267,
+      "cov_mass_ratio": 2250.442830465436,
+      "cov_mass_redshift": 2147.162505544836,
+      "cov_redshift_ratio": 2447.1569946246836,
+      "length_x1": 527.6947240729721,
+      "length_x2": 401.0456566493323,
+      "length_x3": 409.1023105710295,
+      "log_posterior": 665.1760307966541,
+      "mass_above_0p8": 2330.9017096057933,
+      "mass_below_quarter": 2065.577489002524,
+      "mean_mass": 2028.792561946079,
+      "mean_ratio": 2406.8718082704795,
+      "mean_redshift": 2144.16652880769,
+      "sigma": 347.73506062324674,
+      "variance_mass": 2409.946282948834,
+      "variance_ratio": 2318.871064540704,
+      "variance_redshift": 2359.718100536114
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.00010678908608416428,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1117007872
+  },
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      125,
+      156,
+      342,
+      685,
+      797,
+      825,
+      970,
+      1028,
+      1370,
+      1385,
+      1401,
+      1474,
+      1713,
+      2056,
+      2062,
+      2399
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 2.4221190795259417e-06,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.00010678908608416428
+  },
+  "event_quadrature_passed": true,
+  "seed": 847204,
+  "target_product_sha256": "088d3866c9f443663b3a802c9ddd1515bc88c0a11b246a5c31c43dd737a18115",
+  "draw_product_sha256": "52f97ae2aeb455e9726ef20bcd28b2dedbadff1ef58679e46d51e3c9c68ff799",
+  "process_elapsed_seconds": 259.26252130000285
+}

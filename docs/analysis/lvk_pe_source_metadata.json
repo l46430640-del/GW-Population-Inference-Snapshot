@@ -1,0 +1,15 @@
+{
+  "upstream_repository": "https://github.com/tcallister/get-lvk-data",
+  "observed_main_commit": "21114a770ed64e6a935b577000ddcfcf0fd7c11b",
+  "url": "https://raw.githubusercontent.com/tcallister/get-lvk-data/21114a770ed64e6a935b577000ddcfcf0fd7c11b/preprocess_samples.ipynb",
+  "retrieved_date": "2026-10-10",
+  "local_path": "external_data/literature/input_metadata/lvk_preprocess_21114a7.ipynb",
+  "sha256": "5667d08e027430673a23e13fcb94ad2f7c34ddeed0f1e4eda0823d858a3e5ee7",
+  "observations": [
+    "The notebook randomly selects PE rows without replacement and writes the selected arrays without chain identifiers or original row indices.",
+    "The current default sample count is 6000, with selected overrides of 10000; the archived analysis input contains substantially different counts.",
+    "This pinned notebook documents an upstream preprocessing convention, not a proven exact generator of every row in the archived PE dictionary.",
+    "The archived input is identified independently by docs/analysis/lvk_input_manifest.json. Its physical sample and prior fields do not provide chain identities or effective independent counts."
+  ],
+  "pe_dependence_calibrated": false
+}

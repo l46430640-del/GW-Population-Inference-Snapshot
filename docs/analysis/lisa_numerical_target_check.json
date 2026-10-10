@@ -1,0 +1,28 @@
+{
+  "current_core_sha256": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+  "scope": "Same population, prior, event inputs and transported selection; only mathematically equivalent Kumaraswamy log density, CDF and inverse CDF arithmetic differ.",
+  "absolute_log_likelihood_tolerance": 0.01,
+  "results": {
+    "correlated": {
+      "directory": "results/analysis/morphologies/lisa_correlated_kumaraswamy_k2_s91000",
+      "posterior_points": 192,
+      "maximum_absolute_log_likelihood_difference": 0.007232666015625,
+      "log_likelihood_difference_std": 0.0008074567659602697,
+      "training_core_sha256": "11500ff089f91e89d466e3aace63d5376bad26385ba068a5907194313fc32c9b"
+    },
+    "bimodal": {
+      "directory": "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+      "posterior_points": 192,
+      "maximum_absolute_log_likelihood_difference": 3.0517578125e-05,
+      "log_likelihood_difference_std": 1.1706004231466908e-05,
+      "training_core_sha256": "f0d75a311e5014c4ab97bacf9f780a6adc764659395773382ae5df257fdaa81f"
+    },
+    "curved": {
+      "directory": "results/analysis/morphologies/lisa_curved_kumaraswamy_k2_s91000",
+      "posterior_points": 192,
+      "maximum_absolute_log_likelihood_difference": 6.103515625e-05,
+      "log_likelihood_difference_std": 2.05126209509794e-05,
+      "training_core_sha256": "f0d75a311e5014c4ab97bacf9f780a6adc764659395773382ae5df257fdaa81f"
+    }
+  }
+}

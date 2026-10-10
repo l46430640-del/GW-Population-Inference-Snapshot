@@ -1,0 +1,166 @@
+{
+  "configuration": {
+    "source": "results/analysis/external_lisa_gp",
+    "previous_cost": "results/analysis/external_lisa_gp/job_cost_001.json",
+    "output": "results/analysis/external_lisa_sparse_check",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "checked_draws": 24,
+    "timing_repetitions": 128,
+    "timing_points": 3,
+    "maximum_value_error": 1e-07,
+    "maximum_gradient_error": 1e-07,
+    "maximum_seconds": 180,
+    "decision": "Before scientific comparison, check exact sparse evaluation of the existing histogram event likelihood. Omit only entries whose archived log weight is negative infinity, padding rows with negative infinity. Retain the full GP field, its original prior and every selection bin. Compare dense and sparse values and gradients, including traced graphs, at dispersed archived training-only states. Time both implementations on identical states. This check creates no new posterior and changes no model, prior, observations or event integration samples. Preserve the accepted six-bin posterior and incomplete twelve-bin attempt."
+  },
+  "source_sha256": {
+    "configs/external_lisa_gp.json": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+    "scripts/run_external_lisa_gp.py": "d989dc73be4685e142bea8ccbe24a8cd6bb3a33779f409cb516fcde6f4a2fc9d",
+    "results/analysis/lisa_refinement/summary.json": "4b86bffd2e280fb835c1e747c932aad23e172a50078393ff21e9fd81c74ba05c",
+    "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz": "62d52be1a6c7c96146519d2235e6d6df8323190870abb8007ab5d8d32eac65f5",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "results/analysis/external_control_comparison/job_cost_000.json": "bb758d75df833d47452e85ef6213aab4ef6ba029f234df727ab2f42184f64c6b",
+    "model_assets/lisa_analysis/phenom_d_grid.npz": "04d8cc32ff78edc6f622918c828e106d540e5fff2ea5aa2c27e353fe00fa4b2a",
+    "scripts/lisa_gp_inputs.py": "47f44b62aa903e995a9557ceb8603c7a40d2dfc3d13e52184541c2c74dc92f04",
+    "scripts/lisa_noisy_catalog.py": "f93b58ff375b05506410fe8ed5aba3eeb0c11d0e3407c6cf136f0e067255502e",
+    "scripts/build_lisa_analysis_assets.py": "6a3579329f486163964f982e6a0a21057aa62ca185476f724b7b99595e69d4da",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/run_external_control_production.py": "0b265d3aaa6d27af7fc115f42cf9197f0936a3b35cf36f811f3c9808cd80afb9",
+    "scripts/run_external_gp_bounded_diagnostics.py": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "configs/external_lisa_event_batches.json": "1ca8e259fcb25f8c49c771c670fe4834fbc900748bf2222f3e255a48472ac64d",
+    "scripts/run_external_lisa_gp_batched.py": "d613b9664779ca094360d8ae9f4625292d004b892a918c949a19ea72ce0ff562",
+    "results/analysis/external_lisa_gp/job_cost_000.json": "fe4196425111c9ef460d0c79936b6a107cd67c149207389276beb9ab8a7ffa65",
+    "results/analysis/external_lisa_gp/verification_catalog.npz": "c58b3e5fae6fb3727298510d06eb25d13ac1ddbeaf67ac72b4d4006f6dd36fc7",
+    "results/analysis/external_lisa_gp/verification_catalog.json": "878fdd3334680eb4166ae68973410609c779794cd020d6cea86e64dcea735483",
+    "results/analysis/external_lisa_gp/inputs_6.npz": "ce3a5d99632d9e12903321c6b02cc3d270f327acfb39bf281a3100341f3183f1",
+    "results/analysis/external_lisa_gp/inputs_6.json": "7d03a092cf406ffbe26fd37d52599e58e5a2848e4ffbfd3067e49ce9a03924d7",
+    "results/analysis/external_lisa_gp/inputs_12.npz": "3554573d408d5eeb0ca3dc4ef4a76ffe05f1dc1263cdac78b5f2fc1daa6f1b0e",
+    "results/analysis/external_lisa_gp/inputs_12.json": "d1c977dba4cf23b86c62083e40a323181786d4a5f5cead95a0054bd8415c3ae4",
+    "configs/external_lisa_sparse_check.json": "bbccf32e590d476ee2d034ad1ba8537063137cfc3034b67be4e11b105d328d4e",
+    "scripts/check_sparse_lisa_gp.py": "a017d4f1ec5a2f6a21e04f10970ed4c640e335195690388d92f73761608b0119",
+    "scripts/sparse_lisa_gp.py": "23aecbe986e18165ac35a9faee02b2e2c04819dc2a7c553d593a0f283c47b2fc",
+    "results/analysis/external_lisa_gp/target.json": "6ad136f94b172d3ce7fc76155d60271a22af51b88201ab2426842ebd1f598820",
+    "results/analysis/external_lisa_gp/job_cost_001.json": "ee5de9baa7a3314e28ce78b5b322a319b60e380b8323afbed5ce993b9a793d4e",
+    "results/analysis/external_lisa_gp/bins_6/chain_847201.npz": "d31f4b5225db8f5b6d017164686507429bbfdf03e9da717e157bbbe767bcde8c",
+    "results/analysis/external_lisa_gp/bins_6/chain_847201.json": "e09a181f0f317e079ea4e9ee0823b3658d95e9977863f0229e2c5edb0dc97889",
+    "results/analysis/external_lisa_gp/bins_12/chain_847201.npz": "7449b7b2b69a6f16bf321b731be7619a549bd6d7b7120a29c080e63e8ebe3883",
+    "results/analysis/external_lisa_gp/bins_12/chain_847201.json": "34e55c7f5f9ee81c1afb800638be6734e07f19f0558a9867c2ce827f52e28a14"
+  },
+  "models": {
+    "6": {
+      "maximum_value_error": 1.8474111129762605e-13,
+      "maximum_gradient_error": 1.8616219676914625e-12,
+      "checked_states": 33,
+      "dense_trace_checks": [
+        {
+          "scale": 0.0,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 1.1102230246251565e-16
+        },
+        {
+          "scale": 0.03,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 3.3306690738754696e-16
+        },
+        {
+          "scale": 0.1,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 3.3306690738754696e-16
+        }
+      ],
+      "sparse_trace_checks": [
+        {
+          "scale": 0.0,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 1.1102230246251565e-16
+        },
+        {
+          "scale": 0.03,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 1.4432899320127035e-15
+        },
+        {
+          "scale": 0.1,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 4.440892098500626e-16
+        }
+      ],
+      "original_event_matrix_entries": 29160,
+      "sparse_padded_matrix_entries": 945,
+      "full_population_bins_retained": 216,
+      "median_gradient_speedup": 1.2653536184861507
+    },
+    "12": {
+      "maximum_value_error": 5.684341886080801e-13,
+      "maximum_gradient_error": 6.087219617256778e-11,
+      "checked_states": 33,
+      "dense_trace_checks": [
+        {
+          "scale": 0.0,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 0.0
+        },
+        {
+          "scale": 0.03,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 2.1316282072803006e-14
+        },
+        {
+          "scale": 0.1,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 6.150635556423367e-14
+        }
+      ],
+      "sparse_trace_checks": [
+        {
+          "scale": 0.0,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 0.0
+        },
+        {
+          "scale": 0.03,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 3.108624468950438e-14
+        },
+        {
+          "scale": 0.1,
+          "absolute_value_difference": 0.0,
+          "maximum_absolute_gradient_difference": 7.382983113757291e-14
+        }
+      ],
+      "original_event_matrix_entries": 233280,
+      "sparse_padded_matrix_entries": 1620,
+      "full_population_bins_retained": 1728,
+      "median_gradient_speedup": 3.0845364471882357
+    }
+  },
+  "equivalent": true,
+  "process_elapsed_seconds": 25.91187130000003,
+  "total_study_charge_seconds": 40359.19903429999,
+  "remaining_study_seconds": 2840.800965700005,
+  "product_sha256": {
+    "bins_12.npz": "f3d379e89c4cff0f6113701aed74a0fbd1ce8fe78edf51592e38fddd18295a4a",
+    "bins_6.npz": "ea0403ec8490e8c009c6274f06a5a89fe866f2f7c225ad20d6b883023f2f22f6"
+  },
+  "scientific_scores_examined": false,
+  "new_posterior_created": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1061289984
+  }
+}

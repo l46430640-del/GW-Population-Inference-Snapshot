@@ -1,0 +1,30 @@
+{
+  "draws": 32,
+  "full_injection_ess_quantiles": [
+    3369.351189110163,
+    5694.584508289054,
+    8116.948633471693
+  ],
+  "compressed_alpha_relative_difference_quantiles": [
+    -1.0942031499872052e-06,
+    -4.123947941470085e-07,
+    7.986465189180324e-08
+  ],
+  "full_minimum_event_ess_quantiles": [
+    6.944032058183675,
+    98.23902202663898,
+    364.1115378075637
+  ],
+  "event_log_integral_error_quantiles": [
+    -0.07687343055138474,
+    0.001576190550334644,
+    0.06072458139362349
+  ],
+  "total_log_likelihood_error_quantiles": [
+    -0.3123912201881285,
+    -0.022628821971845944,
+    0.4607653355739568
+  ],
+  "total_log_likelihood_error_std": 0.27691555876716906,
+  "reference_injection_ess": 1988.5161813335696
+}

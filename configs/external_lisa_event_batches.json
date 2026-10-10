@@ -1,0 +1,8 @@
+{
+  "base_config": "configs/external_lisa_gp.json",
+  "base_config_sha256": "d8f835d5e3e62ffe459ee44798c4fe9b1be030b72e513eb407d33f486a1b3791",
+  "failed_job": "results/analysis/external_lisa_gp/job_cost_000.json",
+  "batch_samples": 2048,
+  "total_samples": 8192,
+  "reason": "Before any GP fit, single-pool event preparation stops at its existing proposal-count limit with importance ESS 19044.4 below 32768. Generate four independent 2048-sample batches with the unchanged event sampler instead. Each batch must pass the original ESS requirement of at least four times its retained count. Equal-sized, separately normalized proposal pools have aggregate weight ESS m^2/sum(1/ESS_j), so the combined requirement remains at least 32768. Retain every requested sample and every batch diagnostic. The same random generator advances across batches and events. Preserve the original failed job and charge its cost inside the unchanged 4200-second allocation. No likelihood, prior, population or test-based selection changes."
+}

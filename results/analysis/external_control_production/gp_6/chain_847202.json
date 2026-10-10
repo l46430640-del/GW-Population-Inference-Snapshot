@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 6,
+  "dimension": 220,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_gp_truth",
+    "training_catalog": "results/analysis/external_gp_control_catalog/train_catalog.npz",
+    "output": "results/analysis/external_gp_control_gp_pilot",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847202,
+    "warmup": 500,
+    "retained": 800,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 14204.213331199999,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Training-only pilot on the first predeclared GP-family catalog. Preserve the previous GP target, prior, initial rule and numerical checks. No convergence or scientific comparison is inferred from this pilot."
+  },
+  "sampling_and_compilation_seconds": 81.47949019999942,
+  "compilation_seconds": 0.10224000000016531,
+  "potential_evaluations": 57397,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "divergences": [],
+  "acceptance_rate": 1.0,
+  "step_size": 0.10305962477217293,
+  "peak_resident_bytes": 1043116032,
+  "retained_potential_evaluation_quantiles": [
+    31.0,
+    31.0,
+    127.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.220446049250313e-16
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.220446049250313e-16
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 791.3709863894031,
+      "cov_mass_ratio": 848.0526869443772,
+      "cov_mass_redshift": 1000.2654805818805,
+      "cov_redshift_ratio": 922.2867344862642,
+      "length_x1": 404.04118101352293,
+      "length_x2": 113.11202945072078,
+      "length_x3": 343.49153988199555,
+      "log_posterior": 194.9495965920672,
+      "mass_above_0p8": 803.4822131701594,
+      "mass_below_quarter": 760.0209467784374,
+      "mean_mass": 762.4922381954806,
+      "mean_ratio": 842.095111499053,
+      "mean_redshift": 837.2387376616967,
+      "sigma": 288.46470917296944,
+      "variance_mass": 935.5299839123794,
+      "variance_ratio": 976.4461037455751,
+      "variance_redshift": 778.5787444585967
+    },
+    "tail": {
+      "alpha": 678.5003494740953,
+      "cov_mass_ratio": 763.6409290641838,
+      "cov_mass_redshift": 762.14755221293,
+      "cov_redshift_ratio": 807.6873467331151,
+      "length_x1": 495.15095516252927,
+      "length_x2": 399.5539874116261,
+      "length_x3": 381.99100796485624,
+      "log_posterior": 459.9143124024515,
+      "mass_above_0p8": 668.3620041515383,
+      "mass_below_quarter": 598.9740363987659,
+      "mean_mass": 678.5003494740956,
+      "mean_ratio": 793.978651161563,
+      "mean_redshift": 635.6283931351783,
+      "sigma": 479.5319126306275,
+      "variance_mass": 586.7323493189712,
+      "variance_ratio": 700.4965583443992,
+      "variance_redshift": 804.0296924740004
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 7.785836584307086e-05,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1054367744
+  },
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      58,
+      114,
+      181,
+      228,
+      337,
+      342,
+      456,
+      504,
+      570,
+      590,
+      668,
+      684,
+      760,
+      783,
+      799
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 3.695656038971151e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 7.785836584307086e-05
+  },
+  "event_quadrature_passed": true,
+  "seed": 847202,
+  "target_product_sha256": "2f2cde99b33812ad4ee478bd7b68d4cd5ee0051624ea9204cd5b9014dafbeaa0",
+  "draw_product_sha256": "f9d532777f95ee499baf4dfab89fa9f95be589e6958165ed89fd489819fd0408",
+  "process_elapsed_seconds": 84.27821869999934
+}

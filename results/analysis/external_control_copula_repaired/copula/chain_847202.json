@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "error": null,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "sampling_and_compilation_seconds": 0.0,
+  "potential_evaluations": 34585,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 7.105427357601002e-15
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.220446049250313e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.1316282072803006e-14
+    }
+  ],
+  "divergences": [],
+  "acceptance_rate": 0.9975,
+  "step_size": 0.27778456131857615,
+  "verification": {
+    "status": "complete",
+    "draws_checked": 4,
+    "draws_requested": 4,
+    "maximum_directional_derivative_error": 9.507488130111597e-09,
+    "maximum_precision_log_target_difference": 4.580945613952281e-06,
+    "event_log_likelihood_difference_sd": 0.07830490215836056,
+    "event_sd_scope": "Retained pilot draws only; the first checked coordinate is initialization.",
+    "derivatives_passed": true,
+    "precision_passed": true
+  },
+  "seed": 847202,
+  "target_product_sha256": "ff8d864f8bfe5e9553c2f9ac56881966ebaa4fd382e060370c921edfb6a9fd65",
+  "draw_product_sha256": "6450fff10eefaacdafd5ecd1f636597693763c34b90de13cc80b332590727c35",
+  "process_elapsed_seconds": 0.0,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1388003328
+  },
+  "parent_target_product_sha256": "d4888b4c2073b3cbbfc098d5e0ff24e8e3bcf83629323753cefd6462e695d002",
+  "reused_from": "results/analysis/external_control_production/copula/chain_847202.npz",
+  "parent_report_sha256": "20c5f64185ac12efd29b2d7b86db550769f04b2f9fa837f87417ce97f2e88cac",
+  "original_process_elapsed_seconds": 1801.3201865999981,
+  "original_sampling_and_compilation_seconds": 1766.9423618
+}

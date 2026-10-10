@@ -1,0 +1,63 @@
+{
+  "lisa_baseline_candidates": {
+    "correlated": [
+      "results/analysis/morphologies/lisa_correlated_kumaraswamy_k2_s91000"
+    ],
+    "bimodal": [
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000",
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002"
+    ],
+    "curved": [
+      "results/analysis/morphologies/lisa_curved_kumaraswamy_k2_s91000"
+    ]
+  },
+  "lisa_sensitivity": [
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k1_s91001",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k3_s91001",
+    "results/analysis/morphologies/lisa_bimodal_normal_k2_s91001"
+  ],
+  "lvk_baseline": "results/analysis/lvk_smooth/smooth_k3_uniform_m150_s812301_l0.35",
+  "lvk_sensitivity": [
+    {
+      "label": "Continuous, L=0.35",
+      "tex_label": "Continuous, $L=0.35$",
+      "directory": "results/analysis/lvk_smooth/smooth_k3_uniform_m150_s812301_l0.35"
+    },
+    {
+      "label": "Continuous, L=0.20",
+      "tex_label": "Continuous, $L=0.20$",
+      "directory": "results/analysis/lvk_smooth/smooth_k3_uniform_m150_s812301_l0.2"
+    },
+    {
+      "label": "Continuous, L=0.60",
+      "tex_label": "Continuous, $L=0.60$",
+      "directory": "results/analysis/lvk_smooth/smooth_k3_uniform_m150_s812301_l0.6"
+    },
+    {
+      "label": "Kumaraswamy, K=3",
+      "tex_label": "Kumaraswamy, $K=3$",
+      "directory": "results/analysis/lvk_mixture/kumaraswamy_k3_uniform_m150_s812301"
+    },
+    {
+      "label": "Kumaraswamy, K=2",
+      "tex_label": "Kumaraswamy, $K=2$",
+      "directory": "results/analysis/lvk_mixture/kumaraswamy_k2_uniform_m150_s812301"
+    },
+    {
+      "label": "Local basis",
+      "directory": "results/analysis/lvk_mixture/spline_k3_uniform_m150_s812301"
+    },
+    {
+      "label": "Local basis, low spin",
+      "directory": "results/analysis/lvk_mixture/spline_k3_low_m150_s812301"
+    },
+    {
+      "label": "Local basis, mmax=300",
+      "tex_label": "Local basis, $m_{\\max}=300M_\\odot$",
+      "directory": "results/analysis/lvk_mixture/spline_k3_uniform_m300_s812301"
+    }
+  ]
+}

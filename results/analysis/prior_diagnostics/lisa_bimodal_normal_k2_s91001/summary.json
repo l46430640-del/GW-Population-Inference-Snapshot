@@ -1,0 +1,155 @@
+{
+  "source": "results/analysis/morphologies/lisa_bimodal_normal_k2_s91001",
+  "kind": "lisa",
+  "prior_draws": 512,
+  "posterior_draws": 192,
+  "points_per_component": 16384,
+  "seed": 20261009,
+  "summary": {
+    "prior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.6362909582648658,
+          0.7771900415112817,
+          0.9237217557673656
+        ],
+        "mean": 0.7795502006615385,
+        "sd": 0.09245330781130971
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.06901102881242442,
+          0.2121221105423187,
+          0.34179714603759853
+        ],
+        "mean": 0.21009824084014334,
+        "sd": 0.0898466953688705
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.08286745938719794,
+          0.24518966790770116,
+          0.3760870379744405
+        ],
+        "mean": 0.23911278574666256,
+        "sd": 0.08805489623678345
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 6.009258394948638e-17
+      }
+    },
+    "posterior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.6429440175767368,
+          0.7569960700607259,
+          0.8957433276331866
+        ],
+        "mean": 0.7634330394659502,
+        "sd": 0.07609365069611908
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.09572898091160736,
+          0.2301528902791185,
+          0.34137981820951085
+        ],
+        "mean": 0.2230457010264897,
+        "sd": 0.07476815737616258
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.22399934417929784,
+          0.3501395358001798,
+          0.46260740176310566
+        ],
+        "mean": 0.34589887126503366,
+        "sd": 0.0713550258398434
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 5.608641168618728e-17
+      }
+    }
+  },
+  "posterior_to_prior_90_interval_width": {
+    "alpha": 0.8795136507745008,
+    "weak_detection_fraction": 0.9005254365460559,
+    "mass_above_1e8": 0.8137521332424056,
+    "domain_probability": 1.0
+  },
+  "coarse_to_fine_absolute_change_50_90_99_max": {
+    "prior": {
+      "alpha": [
+        0.00023724538107500193,
+        0.0005629466946336482,
+        0.0009846710337369478,
+        0.0012967059647985835
+      ],
+      "weak_detection_fraction": [
+        0.00041095613569517436,
+        0.0010361797968506399,
+        0.0016360191200024707,
+        0.0019050465433420316
+      ],
+      "mass_above_1e8": [
+        5.263662702796601e-05,
+        0.0001220703125,
+        0.00017990726301635393,
+        0.00018310546875
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "posterior": {
+      "alpha": [
+        0.00016711473433017598,
+        0.0003783573689249864,
+        0.0006288404750872024,
+        0.0006578863730352102
+      ],
+      "weak_detection_fraction": [
+        0.0003982676344118363,
+        0.000973757114137358,
+        0.0013968433104852651,
+        0.0015119983584344077
+      ],
+      "mass_above_1e8": [
+        3.7709332178698096e-05,
+        9.698889468573446e-05,
+        0.00012648697369861545,
+        0.00015370633988565086
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "selection_note": "LISA sensitivity averaged over transported population points",
+  "interpretation": "Intervals describe prior and conditional posterior distributions, not repeated-catalog coverage.",
+  "sha256": {
+    "results/analysis/morphologies/lisa_bimodal_normal_k2_s91001/summary.json": "32975ce6e7879dd275b1091517708a47ac386a3185131fad79040dbc9debd34c",
+    "results/analysis/morphologies/lisa_bimodal_normal_k2_s91001/posterior.npz": "fc5a45aa69d8aaede325bb8600ba745c3cba0d83e352d0a8ea2ed78f334fa699",
+    "src/gwpopulation/core.py": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+    "scripts/population_prior_diagnostics.py": "09887a531d149f62b326702c0afb7bc1707bdd426df1b170e451efa24c214c19"
+  },
+  "seconds": 8.642257499999687
+}

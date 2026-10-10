@@ -1,0 +1,131 @@
+{
+  "status": "time_limit",
+  "error": null,
+  "warmup_completed": 47,
+  "samples_completed": 0,
+  "sampling_and_compilation_seconds": 456.40709810000044,
+  "potential_evaluations": 2350,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.7763568394002505e-14
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.7763568394002505e-14
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 8.881784197001252e-15
+    }
+  ],
+  "divergences": null,
+  "acceptance_rate": null,
+  "step_size": 0.031636491141224375,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "catalog_config": "configs/external_gp_control_catalog.json",
+    "experiment": "selected_gp_truth",
+    "output": "results/analysis/external_gp_control_copula_pilot",
+    "seed": 847201,
+    "initialization_seed": 847401,
+    "initial_jitter": 0.15,
+    "warmup": 100,
+    "retained": 100,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": true,
+    "maximum_seconds": 600,
+    "verification_reserve_seconds": 120,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_draws": 6,
+    "derivative_check_step": 1e-05,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_precision_log_target_difference": 0.0001,
+    "feature_transport_power": 10,
+    "decision": "Use the unchanged two-component copula and priors, 2048 training event samples, and analytic selection. Initialize from event posterior means only. Sample in the established raw latent coordinates with float64 bounds, checking agreement with the frozen bounds precision and the finer 8192-point event cloud. This is a bounded cost and numerical pilot, not a posterior for recovery or prediction."
+  },
+  "initialization": {
+    "method": "clustering observed posterior means; marginal fitting for initialization only",
+    "seed": 847401,
+    "component_event_counts": [
+      51,
+      45
+    ],
+    "initial_latent_location": [
+      0.06258156895637512,
+      -0.06258156895637512,
+      1.8106164932250977,
+      0.41765865683555603,
+      0.4017235338687897,
+      1.7420951128005981,
+      0.30576419830322266,
+      2.1949565410614014,
+      0.5286893248558044,
+      0.01026159804314375,
+      0.4740069508552551,
+      0.5216276049613953,
+      1.1107820272445679,
+      0.6605192422866821,
+      0.14513100683689117,
+      -0.22924990952014923,
+      -0.10787766426801682,
+      0.20688678324222565,
+      0.10745371133089066,
+      -0.149587482213974
+    ],
+    "initial_latent_scale": 0.5
+  },
+  "coordinate_basis": "unchanged raw latent variables; float64 bounds",
+  "input_fields": [
+    "train_catalog:data",
+    "train_verification:data"
+  ],
+  "verification": {
+    "status": "complete",
+    "draws_checked": 1,
+    "draws_requested": 1,
+    "maximum_directional_derivative_error": 4.7408654779701465e-09,
+    "maximum_precision_log_target_difference": 4.401620117278071e-06,
+    "event_log_likelihood_difference_sd": null,
+    "event_sd_scope": "Retained pilot draws only; the first checked coordinate is initialization.",
+    "derivatives_passed": true,
+    "precision_passed": true
+  },
+  "source_sha256": {
+    "configs/external_gp_control_copula_pilot.json": "da0e895d9c95c99e12c698a3798bcd13a2365e8c3b06d93393d54cdfa41d0573",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "configs/external_gp_control_catalog.json": "bcb1187572a3da253d33891aba55b684e517918d2c072d9b6a569e7a64875459",
+    "results/analysis/external_gp_control_catalog/manifest.json": "887e0b82f543ebbd31ecd15c7f0d6fe79e85fa785a5f9481c65d5e9b22ea34b9",
+    "results/analysis/external_gp_control_catalog/train_catalog.npz": "1068a0ff4adc156751953147e80a744524849f48c4a728bd7c18e1d0c61a9cfd",
+    "results/analysis/external_gp_control_catalog/train_verification.npz": "55031fcbc4e1df735d6e2b4a09b082039fe77abf5f85f4feb17296237467d066",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "scripts/build_external_gp_control.py": "6dc91e4d26e01f6f1201e36058ff2b0b84090b36f0a780a1ec0bfe6e4e80a456",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/validate_population_morphologies.py": "d8355971e3a731a53f19c1aabd01c5c58f340b0d9204770b1bb395d5282575dc",
+    "scripts/initialize_population_guide.py": "b9973c56a78eb5cd23210cf4d237a02b5960b3ad130f17b621d474f85bc0c7b9",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/check_selected_mixture_integrals.py": "d2704b176deda6745491bcacdc578f629a861163160fb9e5ab1ee0b189e04d14",
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb"
+  },
+  "draw_product_sha256": "50b6b5a50c735bd27f86f278c11b651069e2de888fe3a185085288994f467009",
+  "process_elapsed_seconds": 483.9673899999998,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1386364928
+  },
+  "event_integration_passed": false,
+  "resources_passed": true,
+  "ready_for_production_sampling": false,
+  "eligible_for_scientific_comparisons": false
+}

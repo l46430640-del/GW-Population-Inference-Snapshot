@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 6,
+  "dimension": 220,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_gp_truth",
+    "training_catalog": "results/analysis/external_gp_control_catalog/train_catalog.npz",
+    "output": "results/analysis/external_gp_control_gp_pilot",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847201,
+    "warmup": 500,
+    "retained": 2400,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 2279.7977888999994,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Training-only pilot on the first predeclared GP-family catalog. Preserve the previous GP target, prior, initial rule and numerical checks. No convergence or scientific comparison is inferred from this pilot."
+  },
+  "sampling_and_compilation_seconds": 143.92767359999925,
+  "compilation_seconds": 0.28004689999943366,
+  "potential_evaluations": 98948,
+  "warmup_completed": 500,
+  "samples_completed": 2400,
+  "divergences": [],
+  "acceptance_rate": 0.9991666666666666,
+  "step_size": 0.1108466205995929,
+  "peak_resident_bytes": 1025724416,
+  "retained_potential_evaluation_quantiles": [
+    31.0,
+    31.0,
+    31.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.1102230246251565e-16
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 3.3306690738754696e-16
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 2772.8442971517693,
+      "cov_mass_ratio": 1846.4968251662126,
+      "cov_mass_redshift": 3765.265844440086,
+      "cov_redshift_ratio": 2937.3464651403597,
+      "length_x1": 742.2089877447863,
+      "length_x2": 249.22295793740508,
+      "length_x3": 574.580218046327,
+      "log_posterior": 590.7447625002576,
+      "mass_above_0p8": 2693.4964219144663,
+      "mass_below_quarter": 2477.5481726603316,
+      "mean_mass": 2765.385994991529,
+      "mean_ratio": 2772.4511263844015,
+      "mean_redshift": 2490.6960677840793,
+      "sigma": 675.5429483518984,
+      "variance_mass": 2467.603573413387,
+      "variance_ratio": 2788.160165752649,
+      "variance_redshift": 2075.11843908983
+    },
+    "tail": {
+      "alpha": 2099.471421112317,
+      "cov_mass_ratio": 1775.4548862021504,
+      "cov_mass_redshift": 1940.8594118972105,
+      "cov_redshift_ratio": 2329.5520184392994,
+      "length_x1": 726.691854999479,
+      "length_x2": 510.8644897468677,
+      "length_x3": 711.5996384522906,
+      "log_posterior": 891.6002162430998,
+      "mass_above_0p8": 2362.6975337286785,
+      "mass_below_quarter": 1462.125686297976,
+      "mean_mass": 2236.7810477255375,
+      "mean_ratio": 2181.664662988805,
+      "mean_redshift": 2362.6975337286785,
+      "sigma": 688.5928698327441,
+      "variance_mass": 2249.2559273304705,
+      "variance_ratio": 2239.51743507736,
+      "variance_redshift": 2043.236693929365
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 8.707912332870578e-05,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1077215232
+  },
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      221,
+      342,
+      469,
+      644,
+      685,
+      1028,
+      1092,
+      1370,
+      1502,
+      1504,
+      1612,
+      1713,
+      2056,
+      2121,
+      2339,
+      2399
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 3.10288153393401e-07,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 8.707912332870578e-05
+  },
+  "event_quadrature_passed": true,
+  "seed": 847201,
+  "target_product_sha256": "088d3866c9f443663b3a802c9ddd1515bc88c0a11b246a5c31c43dd737a18115",
+  "draw_product_sha256": "878d93e838fde6cfbf8738e9c7c3e2dcc385fe0da6a39d92a1ddba136157f0fc",
+  "process_elapsed_seconds": 153.03180440000142
+}

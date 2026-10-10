@@ -1,0 +1,57 @@
+{
+  "seconds": 357.310239800001,
+  "configuration": {
+    "output": "results/analysis/selected_mixture",
+    "mode": "independent",
+    "warmup": 500,
+    "samples": 800,
+    "chains": 4,
+    "chain_start": 0,
+    "steps": 5000,
+    "starts": 2,
+    "max_tree_depth": 8,
+    "particles": 4,
+    "jit": false
+  },
+  "initialization": {
+    "method": "clustering observed posterior means; marginal fitting for initialization only",
+    "seed": 671501,
+    "component_event_counts": [
+      63,
+      33
+    ],
+    "initial_latent_location": [
+      0.3233135938644409,
+      -0.3233135938644409,
+      2.0647475719451904,
+      1.1155701875686646,
+      0.6985281705856323,
+      1.7916524410247803,
+      1.4601120948791504,
+      0.6644078493118286,
+      1.1930608749389648,
+      2.1817831993103027,
+      1.2685356140136719,
+      0.4388014078140259,
+      0.7628685832023621,
+      1.821967363357544,
+      -0.14476370811462402,
+      0.1545824557542801,
+      0.2427336573600769,
+      0.40982624888420105,
+      0.04730230197310448,
+      0.21075832843780518
+    ],
+    "initial_latent_scale": 0.5
+  },
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 780038144
+  },
+  "last_1000_mean_negative_elbo": -136.695431868596,
+  "test_score_sum_up_to_shared_event_constants": 309.5954207630724
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "configs/external_benchmark.json",
+  "experiment": "selected_copula_truth",
+  "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+  "output": "results/analysis/external_gp_pilot",
+  "bins_per_axis": [
+    6,
+    12
+  ],
+  "seed": 847201,
+  "warmup": 100,
+  "retained": 100,
+  "target_acceptance": 0.9,
+  "maximum_tree_depth": 10,
+  "full_mass": false,
+  "covariance_axis_jitter": 1e-08,
+  "verification_covariance_axis_jitter": 1e-10,
+  "quadrature_order": 32,
+  "verification_quadrature_order": 64,
+  "maximum_quadrature_log_weight_difference": 1e-09,
+  "jit_absolute_tolerance": 1e-07,
+  "maximum_seconds": 600,
+  "maximum_resident_gib": 2,
+  "cpu_threads": 1,
+  "decision": "Training-only implementation and cost pilot; neither convergence nor external performance is claimed. Retain all attempts."
+}

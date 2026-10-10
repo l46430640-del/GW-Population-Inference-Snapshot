@@ -1,0 +1,74 @@
+{
+  "n_intrinsic_realized": 153,
+  "n_detected": 135,
+  "injected_intrinsic_mean": 160.0,
+  "alpha_true": 0.8929032836913585,
+  "truth_integral": 0.9999579563533221,
+  "quadrature_points": 32768,
+  "posterior_density_integral_quantiles": [
+    0.920223405957222,
+    1.0003228187561035,
+    1.2971347033977503
+  ],
+  "alpha_quantiles": [
+    0.5288725763559341,
+    0.8323158621788025,
+    0.9228348940610885
+  ],
+  "alpha_training_to_fine_absolute_difference_quantiles": [
+    0.00021222233772277832,
+    0.0005205810070037842,
+    0.0009654152393341065,
+    0.0010052919387817383
+  ],
+  "intrinsic_mean_quantiles": [
+    135.1347412109375,
+    165.45655059814453,
+    269.71190795898417
+  ],
+  "detected_mean_quantiles": [
+    117.10694580078125,
+    134.7911605834961,
+    155.22660751342772
+  ],
+  "independent_detected_count": 135,
+  "predictive_detected_count_quantiles": [
+    109.0,
+    135.0,
+    163.84999999999945
+  ],
+  "joint_js_distance_predictive_to_truth": 0.5060486492218302,
+  "joint_js_distance_draw_to_truth_quantiles": [
+    0.451134786361657,
+    0.48951612566548897,
+    0.6894958642703714
+  ],
+  "joint_js_distance_within_posterior_quantiles": [
+    0.19350571185350418,
+    0.32413482666015625,
+    0.6381053030490875
+  ],
+  "minimum_event_ess_quantiles": [
+    126.6104190826416,
+    165.50618743896484,
+    194.67973709106445
+  ],
+  "configuration": {
+    "output": "results/analysis/morphologies",
+    "morphology": "bimodal",
+    "family": "kumaraswamy",
+    "components": 2,
+    "steps": 6000,
+    "particles": 2,
+    "quadrature": 4096,
+    "posterior_samples": 256,
+    "catalog_seed": 823010,
+    "training_seed": 91000,
+    "resume": false,
+    "detector": "lisa",
+    "integration": "population_qmc"
+  },
+  "train_seconds": 858.3257819,
+  "negative_elbo_last_1000": -134.48528298467397,
+  "core_sha256": "f0d75a311e5014c4ab97bacf9f780a6adc764659395773382ae5df257fdaa81f"
+}

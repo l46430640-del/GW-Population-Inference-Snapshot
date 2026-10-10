@@ -1,0 +1,157 @@
+{
+  "configuration": {
+    "sources": [
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000",
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001",
+      "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002"
+    ],
+    "fine_catalog": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+    "output": "results/analysis/lisa_correction",
+    "proposal": "Equal mixture of all three completed same-target flows and both label permutations",
+    "draws_per_repeat": 4096,
+    "repeat_seeds": [
+      732001,
+      732002
+    ],
+    "pilot_draws": 32,
+    "pilot_seed": 732000,
+    "precision_draws_per_start": 32,
+    "precision_log_density_tolerance": 0.02,
+    "fine_selection_points": 32768,
+    "check_uniform_draws": 64,
+    "check_weighted_draws": 64,
+    "check_largest_weights": 16,
+    "check_seed": 732100,
+    "maximum_pareto_k": 0.7,
+    "minimum_effective_samples": 400,
+    "maximum_refined_log_target_sd": 0.3,
+    "decision": "Require both repeats to pass weight stability, float precision, and refined event/selection integration checks before accepting corrected summaries. Retain failed outcomes. Use the existing bimodal LISA catalog and all completed same-target starts without tuning to injected truth. No population prior or likelihood model is changed."
+  },
+  "seed": 732001,
+  "pilot": false,
+  "source_sha256": {
+    "configs/lisa_correction.json": "76b1b5769eeb3ad081a0e1bc193f718a5d38ac0a694d8282aed7dd9dc916b59e",
+    "scripts/diagnose_lisa_correction.py": "39ba46ac9a1a60867294912aacd1b9348789ed484edf0d839353191773f4fab1",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/predict_corrected_posterior.py": "99f3865aa84d2eec77f7fcbb305ec1da838bb1c827e7f9179eb0c36cfb7ef16d",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/benchmark_variational_posterior.py": "538af614f92baec54bbf1c6fe3083f74d984e4d14801e93cf1d9cc20d2c52190",
+    "scripts/validate_population_morphologies.py": "d8355971e3a731a53f19c1aabd01c5c58f340b0d9204770b1bb395d5282575dc",
+    "scripts/build_lisa_analysis_assets.py": "6a3579329f486163964f982e6a0a21057aa62ca185476f724b7b99595e69d4da",
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "model_assets/lisa_analysis/phenom_d_grid.npz": "04d8cc32ff78edc6f622918c828e106d540e5fff2ea5aa2c27e353fe00fa4b2a",
+    "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz": "62d52be1a6c7c96146519d2235e6d6df8323190870abb8007ab5d8d32eac65f5",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000/summary.json": "795aa33689963724896726252f308474af05ae8bfe033ad9b855d7dc5e5a0386",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000/flow.pt": "6212a17eabac00da09ca4d61d165916e66289d33f41beced52ddb8893425b915",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000/posterior.npz": "2e6b6ef11c74051c2dc0446f4f8a81c83bb9556f006f6fecc1473342ad799a7b",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91000/catalog.npz": "de2e9dbc60d02552f6aa8397af252d94d50e6ab840f1fb3288a38fce06eebec3",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001/summary.json": "cde20f42ffd2ce709438da75804d02ad01b18d4c3ebb6d13dfcd8159c3453c42",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001/flow.pt": "f8a69477b4331f1e477da8a984ca62c7e3696798d2bd14c347c87b30d0965777",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001/posterior.npz": "3826b303bd0cc6275f8703f4a5fa70ace4c53a6094b65b2d723387da93a4d7cd",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91001/catalog.npz": "de2e9dbc60d02552f6aa8397af252d94d50e6ab840f1fb3288a38fce06eebec3",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002/summary.json": "5b9ba467987a27fb52278b95a81ac5ef995a524728c760cd2f074688bd4fff5b",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002/flow.pt": "f098bf490f5d61c95df48fe54a78704e034da10d579b931214f461441def4191",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002/posterior.npz": "04ff53ab3f0d3bae573ce557e1ddf56d510d919fec990b9c304fad559d62ed38",
+    "results/analysis/morphologies/lisa_bimodal_kumaraswamy_k2_s91002/catalog.npz": "de2e9dbc60d02552f6aa8397af252d94d50e6ab840f1fb3288a38fce06eebec3"
+  },
+  "events": 135,
+  "event_samples": 256,
+  "target_evaluation_seconds": 123.65935870000021,
+  "seconds": 167.06034880000016,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1263808512
+  },
+  "weight_diagnostics": {
+    "pareto_k": 0.8922645242802545,
+    "pareto_k_limit": 0.7,
+    "draws": 4096,
+    "raw": {
+      "ess": 12.202347986221199,
+      "maximum_weight": 0.2637098638107184
+    },
+    "psis": {
+      "ess": 18.138901700953785,
+      "maximum_weight": 0.20320314993092045
+    }
+  },
+  "refinement": {
+    "uniform": {
+      "draws": 64,
+      "unique_draws": 64,
+      "total_change_sd": 0.12068089917607891,
+      "total_change_05_50_95": [
+        -0.26912549789187495,
+        -0.10288585354936686,
+        0.13381440504409664
+      ],
+      "maximum_absolute_total_change": 0.34676943514747904,
+      "event_change_sd": 0.08009112243293744,
+      "selection_change_sd": 0.08921137500916736
+    },
+    "psis": {
+      "draws": 64,
+      "unique_draws": 42,
+      "total_change_sd": 0.10356061293393105,
+      "total_change_05_50_95": [
+        -0.30566606892308956,
+        -0.03861776224218261,
+        0.04203995039073758
+      ],
+      "maximum_absolute_total_change": 0.3621843125210944,
+      "event_change_sd": 0.049720503202082135,
+      "selection_change_sd": 0.08187651660990561
+    },
+    "largest_raw_weights": {
+      "draws": 16,
+      "unique_draws": 16,
+      "total_change_sd": 0.12742322411991577,
+      "total_change_05_50_95": [
+        -0.32017873618951853,
+        -0.09771477157462982,
+        0.05956696229551284
+      ],
+      "maximum_absolute_total_change": 0.3621843125210944,
+      "event_change_sd": 0.05937244284506669,
+      "selection_change_sd": 0.09817641411466156
+    }
+  },
+  "decision": {
+    "stable_weights": false,
+    "precision_passed": true,
+    "integration_passed": true,
+    "eligible_for_corrected_summaries": false
+  },
+  "diagnostic_alpha_summaries": {
+    "unweighted": {
+      "mean": 0.5967931116161485,
+      "quantiles_05_50_95": [
+        0.26403007968801145,
+        0.5905475253807055,
+        0.901878468081493
+      ]
+    },
+    "raw": {
+      "mean": 0.5099960291056562,
+      "quantiles_05_50_95": [
+        0.26076199283869017,
+        0.5583706127287027,
+        0.7478678975809707
+      ]
+    },
+    "psis": {
+      "mean": 0.51128795728666,
+      "quantiles_05_50_95": [
+        0.25515063451371867,
+        0.5583706127287027,
+        0.7682029519506496
+      ]
+    }
+  },
+  "draw_product_sha256": "8637604a329abda54978782b4b382547f93bcb3084582be5dfcedcb87877fb84",
+  "scope": "Applicability diagnosis for one LISA catalog. Weighted functionals are diagnostic only unless both repeats pass. No MCMC reference or repeated-catalog coverage is implied."
+}

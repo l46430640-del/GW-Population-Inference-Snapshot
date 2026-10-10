@@ -1,0 +1,153 @@
+{
+  "status": "complete",
+  "error": null,
+  "bins_per_axis": 12,
+  "dimension": 1732,
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "experiment": "selected_copula_truth",
+    "training_catalog": "results/analysis/selected_mixture/train_catalog.npz",
+    "output": "results/analysis/external_gp_selected_bounded",
+    "coordinate_basis": "principal symmetric covariance square root with Sylvester derivative",
+    "bins_per_axis": [
+      6,
+      12
+    ],
+    "seed": 847204,
+    "warmup": 500,
+    "retained": 800,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": false,
+    "covariance_axis_jitter": 1e-08,
+    "verification_covariance_axis_jitter": 1e-10,
+    "quadrature_order": 32,
+    "verification_quadrature_order": 64,
+    "maximum_quadrature_log_weight_difference": 1e-09,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_evenly_spaced_draws": 8,
+    "derivative_check_step": 0.0001,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_seconds": 6610.6163807,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "decision": "Obtain the declared high-resolution four-chain posterior with bounded-memory diagnostics. This refinement changes diagnostic storage only; accepted six-bin inference is retained."
+  },
+  "sampling_and_compilation_seconds": 193.68684440000015,
+  "compilation_seconds": 0.0963277000000744,
+  "potential_evaluations": 92333,
+  "warmup_completed": 500,
+  "samples_completed": 800,
+  "divergences": [],
+  "acceptance_rate": 0.97625,
+  "step_size": 0.06725984874301005,
+  "peak_resident_bytes": 1241346048,
+  "retained_potential_evaluation_quantiles": [
+    63.0,
+    63.0,
+    63.0
+  ],
+  "retained_full_tree_evaluation_count": 0,
+  "jit_checks": [
+    {
+      "scale": 0.0,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 0.0
+    },
+    {
+      "scale": 0.03,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 1.7785772854495008e-13
+    },
+    {
+      "scale": 0.1,
+      "absolute_value_difference": 0.0,
+      "maximum_absolute_gradient_difference": 2.3447910280083306e-13
+    }
+  ],
+  "single_chain_pilot_ess": {
+    "bulk": {
+      "alpha": 640.6469378901362,
+      "cov_mass_ratio": 644.6929437403337,
+      "cov_mass_redshift": 864.4041879787824,
+      "cov_redshift_ratio": 890.4235388001341,
+      "length_x1": 63.531670767463055,
+      "length_x2": 79.46944003450794,
+      "length_x3": 98.30139615451289,
+      "log_posterior": 281.0628637313122,
+      "mass_above_0p8": 624.2066918879461,
+      "mass_below_quarter": 658.4383117602421,
+      "mean_mass": 642.7799970439186,
+      "mean_ratio": 732.1676003958032,
+      "mean_redshift": 735.7459323117641,
+      "sigma": 60.08204361082316,
+      "variance_mass": 757.6999864280541,
+      "variance_ratio": 548.1322099073741,
+      "variance_redshift": 776.1547771158899
+    },
+    "tail": {
+      "alpha": 586.6655175777021,
+      "cov_mass_ratio": 559.3530084231404,
+      "cov_mass_redshift": 734.3341138934734,
+      "cov_redshift_ratio": 757.1730007601066,
+      "length_x1": 20.287030981575743,
+      "length_x2": 20.836162325548706,
+      "length_x3": 158.19073464010836,
+      "log_posterior": 450.5521918661662,
+      "mass_above_0p8": 572.6755687364409,
+      "mass_below_quarter": 612.0570639668659,
+      "mean_mass": 634.9047662377785,
+      "mean_ratio": 626.8705435216199,
+      "mean_redshift": 518.3232064991868,
+      "sigma": 20.312540120368933,
+      "variance_mass": 584.741259441385,
+      "variance_ratio": 727.4816050678519,
+      "variance_redshift": 785.3434250954756
+    }
+  },
+  "covariance_jitter_log_target_difference_sd": 0.0012869251548295471,
+  "eligible_for_scientific_comparisons": false,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1255149568
+  },
+  "seed": 847204,
+  "initial_amplitude_and_lengths": [
+    2.0,
+    1.0,
+    0.15,
+    0.5
+  ],
+  "target_product_sha256": "723f16ed3692fd80b2d83fe009e6e48ecdf173b7e4be5b38bd8b4a5046f6b040",
+  "draw_product_sha256": "874f28aac9d3dc7c074ad4fd703c20bcc1962723a0468e7a50b993834486891d",
+  "coordinate_verification": {
+    "draws_checked": [
+      0,
+      114,
+      228,
+      233,
+      253,
+      277,
+      342,
+      427,
+      456,
+      570,
+      608,
+      684,
+      711,
+      712,
+      723,
+      799
+    ],
+    "direction_count": 5,
+    "maximum_directional_derivative_error": 1.085479829576741e-06,
+    "derivatives_passed": true,
+    "jitter_difference_sd": 0.0012869251548295471
+  },
+  "event_quadrature_passed": true,
+  "process_elapsed_seconds": 199.08242789999986
+}

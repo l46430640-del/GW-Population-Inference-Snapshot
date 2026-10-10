@@ -1,0 +1,11 @@
+{
+  "base_config": "configs/external_lisa_gp.json",
+  "parent_output": "results/analysis/external_lisa_gp",
+  "equivalence_summary": "results/analysis/external_lisa_sparse_check/summary.json",
+  "previous_cost": "results/analysis/external_lisa_sparse_check/job_cost_000.json",
+  "output": "results/analysis/external_lisa_gp_sparse",
+  "bins_per_axis": 12,
+  "retained_per_chain": 800,
+  "maximum_seconds": 1400,
+  "reason": "Before any LISA external scientific scores, use the checked mathematically equivalent sparse event likelihood to complete the high-resolution fit. The full population prior and selection grid remain intact. Restore the original external protocol's 800 retained draws per chain as the initial bounded attempt rather than the anticipatory 2400-draw extension. Retain 500 warmup, four original seeds and starts, target acceptance 0.9 and depth 10. Keep every mixing, effective-sample-size, zero-divergence and numerical criterion. The accepted six-bin ensemble remains unchanged. Preserve the interrupted dense high-resolution trajectory, exclude it from all new ensembles, and charge its full cost. The new four-chain fit and checks receive 1400 seconds within the remaining twelve-hour study allowance. An unresolved fit stays inconclusive; sample count alone never establishes acceptance."
+}

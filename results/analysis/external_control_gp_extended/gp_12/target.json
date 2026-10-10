@@ -1,0 +1,319 @@
+{
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "catalog_config": "configs/external_gp_control_catalog.json",
+    "gp_pilot_config": "configs/external_gp_control_gp_pilot.json",
+    "copula_pilot_config": "configs/external_gp_control_qmc_pilot.json",
+    "output": "results/analysis/external_control_gp_extended",
+    "experiment": "selected_gp_truth",
+    "initial_amplitude_and_lengths": [
+      [
+        0.7,
+        0.12,
+        0.2,
+        0.4
+      ],
+      [
+        1.0,
+        0.3,
+        0.3,
+        0.3
+      ],
+      [
+        1.5,
+        0.6,
+        0.4,
+        0.2
+      ],
+      [
+        2.0,
+        1.0,
+        0.15,
+        0.5
+      ]
+    ],
+    "copula_initialization_seeds": [
+      847401,
+      847411,
+      847421,
+      847431
+    ],
+    "copula_initial_jitter": 0.15,
+    "swap_initial_labels": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "marginal_cdf_points": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "feature_power": 14,
+    "feature_seed": 847501,
+    "fine_feature_power": 16,
+    "maximum_feature_change_in_posterior_sd": 0.05,
+    "verification_draws_per_chain": 128,
+    "verification_extreme_draws": 16,
+    "copula_fit_verification_reserve_seconds": 1800,
+    "chain_verification_reserve_seconds": 120,
+    "batch_lengths": [
+      20,
+      40,
+      80
+    ],
+    "cdf_probabilities": [
+      0.05,
+      0.5,
+      0.95
+    ],
+    "minimum_corrected_precision_equivalent_draws": 400,
+    "diagnostic_adapter": {
+      "source": "scripts/run_external_gp_bounded_diagnostics.py",
+      "sha256": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+      "pyro_version": "1.9.1",
+      "original_cummin_sha256": "2f544f327f837a0dfefc41481ae36225c43607e622351f14399c54491df6560b"
+    },
+    "resource_amendment": {
+      "maximum_seconds_per_fit": 14400,
+      "maximum_seconds_control_production": 2400,
+      "prior_study_budget_charge_seconds": 29540,
+      "reason": "Charge the original 19800-second conservative allowance plus the completed control job rounded up to 9740 seconds. Allocate at most 2400 seconds to both GP extensions together, within the original 18000-second control allocation. The original 800-draw attempts remain in the cost record."
+    },
+    "sampling_extension": {
+      "source": "scripts/extend_external_control_gp.py",
+      "source_sha256": "7953ffbec7b4d32781f7ce1318b1a68ba28f5ce07f47118e373c34a804d75a02",
+      "parent_output": "results/analysis/external_control_production",
+      "parent_summaries_sha256": {
+        "gp_6": "3724b12e0fe6dd93bfcc64588902e8847c9c0bdf55eb7898fdff18edbef65e5f",
+        "gp_12": "28e4bc7f866aeae54f272b4dc4bfb4ee47e7ab2304af27d5410b048e3ec7575f"
+      },
+      "original_retained_per_chain": 800,
+      "retained_per_chain": 2400,
+      "reason": "Both resolutions pass numerical and divergence checks but length_x2 has R-hat 1.01043 and 1.01084; the 12-bin bulk ESS is 361.11. Extend the same seeded trajectories under unchanged starts, warmup and sampler settings before scientific evaluation. Verify exact prefixes, count replay time, and do not pool duplicate prefixes with the longer chains."
+    },
+    "decision": "Extend both GP resolutions solely for the predeclared convergence requirements. Preserve the original target, priors, sampler settings, seeds and every unsuccessful attempt. The accepted ensemble, if any, consists only of the four longer chains. No recovery or predictive scores are examined."
+  },
+  "effective_protocol": {
+    "protocol_version": 1,
+    "status": "protocol_fixed_before_external_fits",
+    "output": "results/analysis/external_benchmark",
+    "source_manifest": "docs/analysis/external_benchmark_sources.json",
+    "comparison": "Bounded copula mixture versus a binned Gaussian process under a common selected-catalog likelihood",
+    "copula": {
+      "family": "kumaraswamy",
+      "components": 2,
+      "priors": "unchanged from the accepted baseline",
+      "primary_posterior": "independently checked MCMC; reuse frozen draws only after numerical-target checks",
+      "flow_role": "secondary timing and approximation comparison, including correction or fallback cost"
+    },
+    "binned_gp": {
+      "method_paper": "10.3847/1538-4357/acf452",
+      "implementation_paper": "10.3847/1538-4357/adf22a",
+      "reference_archive": "gppop_spin_dev_ee5ffc421.tar.gz",
+      "reference_function": "Rates.make_significant_model_3d",
+      "coordinates": "three unit-interval analysis coordinates",
+      "kernel": "sigma^2 * exp(-0.5 * sum_j ((x_j-y_j)/length_j)^2)",
+      "sigma_prior": {
+        "distribution": "HalfNormal",
+        "scale": 10.0
+      },
+      "length_prior": {
+        "distribution": "LogNormal",
+        "median": 0.3,
+        "log_standard_deviation": 1.0,
+        "independent_axes": 3
+      },
+      "mean": "one common mean; cancels from normalized shape",
+      "zero_detection_bins": "retain in the common intrinsic support",
+      "primary_bins_per_axis": 12,
+      "sensitivity_bins_per_axis": 6,
+      "covariance_evaluation": "Kronecker factorization with noncentered standard-normal coefficients",
+      "rate_prior_adaptation": "independent p(R) proportional to 1/R, analytically marginalized",
+      "label": "Binned GP with common likelihood and rate prior"
+    },
+    "experiments": [
+      {
+        "name": "selected_copula_truth",
+        "role": "compact correlated population in the copula family",
+        "train": "results/analysis/selected_mixture/train_catalog.npz",
+        "test": "results/analysis/selected_mixture/test_catalog.npz",
+        "definition": "configs/model_comparisons.json:selected_mixture_benchmark",
+        "posterior": "results/analysis/selected_mixture/nuts_chain_{0,1,2,3}.npz",
+        "train_count": 96,
+        "test_count": 192
+      },
+      {
+        "name": "selected_gp_truth",
+        "role": "positive control within the external density family",
+        "truth_grid_per_axis": 6,
+        "truth_sigma": 1.2,
+        "truth_length_scales": [
+          0.25,
+          0.25,
+          0.25
+        ],
+        "truth_seed": 847001,
+        "truth_draw": "numpy default_rng standard_normal; dense covariance Cholesky; ij meshgrid flattened in C order",
+        "truth_covariance_jitter": 1e-10,
+        "catalog_seed": 847002,
+        "test_seed": 847003,
+        "train_count": 96,
+        "test_count": 192,
+        "measurement_standard_deviations": [
+          0.04,
+          0.05,
+          0.04
+        ],
+        "detection_probability": "0.05 + 0.95*x1^2"
+      },
+      {
+        "name": "lisa_bimodal",
+        "role": "existing off-family population with strongly varying detectability",
+        "train": "results/analysis/morphologies/lisa_bimodal_catalog_s823011_n2048.npz",
+        "test": "results/analysis/lisa_scientific_comparison/test_observations.npz",
+        "definition": "configs/lisa_scientific_comparison.json",
+        "posterior": "results/analysis/lisa_refinement/posterior.npz",
+        "weights": "results/analysis/lisa_refinement/weights.npz",
+        "train_count": 135,
+        "test_count": 192
+      }
+    ],
+    "evaluation": {
+      "primary": [
+        "detected_joint_js_distance",
+        "paired_test_log_predictive_density"
+      ],
+      "secondary": [
+        "intrinsic_joint_js_distance",
+        "population_functionals",
+        "interval_scores_90",
+        "selection_fraction",
+        "wall_time",
+        "peak_resident_memory"
+      ],
+      "joint_cells_per_axis": 24,
+      "verification_joint_cells_per_axis": 48,
+      "credible_probabilities": [
+        0.05,
+        0.5,
+        0.95
+      ],
+      "training_event_samples": 2048,
+      "verification_training_event_samples": 8192,
+      "test_event_samples": 2048,
+      "verification_test_event_samples": 8192,
+      "evaluation_seed": 847101,
+      "verification_seed": 847102,
+      "maximum_joint_distance_numerical_change": 0.005,
+      "maximum_paired_score_numerical_change": 0.25,
+      "maximum_log_likelihood_difference_sd": 0.2,
+      "report_all_experiments_and_resolutions": true,
+      "no_selection_from_test_scores_or_truth": true,
+      "coverage_claim": "No frequentist coverage claim from three different single catalogs"
+    },
+    "sampling": {
+      "chains": 4,
+      "warmup": 500,
+      "retained_per_chain": 2400,
+      "target_acceptance": 0.9,
+      "maximum_tree_depth": 10,
+      "chain_seeds": [
+        847201,
+        847202,
+        847203,
+        847204
+      ],
+      "maximum_functional_rhat": 1.01,
+      "minimum_functional_bulk_ess": 400,
+      "minimum_functional_tail_ess": 400,
+      "maximum_divergences": 0,
+      "maximum_pareto_k_for_reuse": 0.7,
+      "minimum_reuse_weight_ess_fraction": 0.9
+    },
+    "resources": {
+      "cpu_threads": 1,
+      "pilot_warmup": 100,
+      "pilot_retained": 100,
+      "pilot_seconds_per_model": 600,
+      "maximum_seconds_per_fit": 14400,
+      "maximum_total_cpu_hours": 12,
+      "maximum_resident_gib": 2,
+      "stop_rule": "A resource-limited or unconverged run is inconclusive, not a scored loss; amend the protocol explicitly before additional computation"
+    }
+  },
+  "source_sha256": {
+    "configs/external_control_gp_extension.json": "eb13cf2927de5c439593a0bd49e89db8b25c07c73907e403515eac0767dabc98",
+    "scripts/run_external_control_production.py": "0b265d3aaa6d27af7fc115f42cf9197f0936a3b35cf36f811f3c9808cd80afb9",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "configs/external_gp_control_catalog.json": "bcb1187572a3da253d33891aba55b684e517918d2c072d9b6a569e7a64875459",
+    "configs/external_gp_control_gp_pilot.json": "387fac0ea97cd938abd5136041f35e959bd78913312edc37807ad2dd487322fa",
+    "configs/external_gp_control_qmc_pilot.json": "37bcc437c6d3cdc632ac7636b8b60d70e1f87cc92f6330f20f042dd59017d049",
+    "results/analysis/external_gp_control_catalog/manifest.json": "887e0b82f543ebbd31ecd15c7f0d6fe79e85fa785a5f9481c65d5e9b22ea34b9",
+    "results/analysis/external_gp_control_catalog/train_catalog.npz": "1068a0ff4adc156751953147e80a744524849f48c4a728bd7c18e1d0c61a9cfd",
+    "results/analysis/external_gp_control_catalog/train_verification.npz": "55031fcbc4e1df735d6e2b4a09b082039fe77abf5f85f4feb17296237467d066",
+    "scripts/run_external_gp_selected.py": "957a1fd39737fcefd0b79f4e625ada35dfca6f4eeacd3f3f6e7527d616259d21",
+    "scripts/run_external_gp_pilot.py": "a966df55e6ef273fa10de87123db85511f6bc080979bc0c49e43b0fadfffd27e",
+    "scripts/run_symmetric_gp_pilot.py": "d87b6b7b816c4d96d250e9dfab7b94232dd29000663eb95d9f77546e0a842d1b",
+    "scripts/binned_gp_benchmark.py": "eb70dc2876ba7d0466d177ff2247f4a364b600d1c88106a86066afda7e4081db",
+    "scripts/symmetric_gp_benchmark.py": "63b0d82800fb2ecb9ab4fb6644dd375208ba4d00aa1f21ce335f105e9ba4083d",
+    "scripts/run_external_gp_bounded_diagnostics.py": "fe1b76a73571057fd7e8bc024eaf9670fbe83c77f9d0b964fb1c4477076c41a3",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "scripts/pilot_external_gp_control_qmc.py": "7b7614f551cca9e7680c77624bdda004227c1d47e06cf5ae8b1ec620b988749b",
+    "scripts/external_selected_evaluation.py": "4ab6f19f18428c2156a3cc67779348812eab5267be654696ffe6d4eb0004c479",
+    "scripts/refine_lisa_posterior.py": "f47e9b1aa2b4609972ad7292034d777e653d51b369979b36a75540820244be97",
+    "scripts/initialize_population_guide.py": "b9973c56a78eb5cd23210cf4d237a02b5960b3ad130f17b621d474f85bc0c7b9",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/check_selected_mixture_integrals.py": "d2704b176deda6745491bcacdc578f629a861163160fb9e5ab1ee0b189e04d14",
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "scripts/extend_external_control_gp.py": "7953ffbec7b4d32781f7ce1318b1a68ba28f5ce07f47118e373c34a804d75a02",
+    "results/analysis/external_control_production/gp_12/target.json": "c5f40974645cdf438556eee20dd98d0a4f76a8d5adf507bd90590aad494c48a8",
+    "results/analysis/external_control_production/gp_12/summary.json": "28e4bc7f866aeae54f272b4dc4bfb4ee47e7ab2304af27d5410b048e3ec7575f",
+    "results/analysis/external_control_production/gp_12/chain_847201.json": "b4caac8e2385a8299606c4c3ad787be3f9eca33eb73394075970fb621ed868a5",
+    "results/analysis/external_control_production/gp_12/chain_847201.npz": "93853b7f54c90698ad523e970dbeac23c34957bc85994a346bba8e1dcf462572",
+    "results/analysis/external_control_production/gp_12/chain_847202.json": "d4cc4210530bc8d8a66a03d2cb52c1f7811055d923d0021ec2d3f35297249a5a",
+    "results/analysis/external_control_production/gp_12/chain_847202.npz": "08d77b03791febe50c0c6b3d72735659a89a2001b81ca5aa8d9675d5bc0ee192",
+    "results/analysis/external_control_production/gp_12/chain_847203.json": "2f12347d9db35d9537b2407c339568c9794ed47a7b390ebf192fa29e822bca00",
+    "results/analysis/external_control_production/gp_12/chain_847203.npz": "aea561856d7397060a2c18eb605a37a02666346a361947dc76b94a9378b72c9e",
+    "results/analysis/external_control_production/gp_12/chain_847204.json": "e8b866b2f217b3203073331bec196446c56d87ec07d465bcf071013fdbd28919",
+    "results/analysis/external_control_production/gp_12/chain_847204.npz": "d0bcbcc2d2ee138b3b78a1f6afd00efbf5f31bc8caf3e87c0d0d60c979be92d5",
+    "results/analysis/external_gp_control_gp_pilot/bins_12.json": "ed4ead4a1be46dc8716f0fab85270243a521689853873219ff1e7e175d2de27f"
+  },
+  "experiment": "selected_gp_truth",
+  "model": "gp_12",
+  "input_fields": [
+    "training observations and uncertainty only"
+  ],
+  "inputs_product_sha256": "dc50e76b42fafd7afb63789bc39d718e332f492ae73f442b98609589ec60d3ef",
+  "quadrature_maximum_log_weight_change": 1.7053025658242404e-13,
+  "initial_amplitude_and_lengths": [
+    [
+      0.7,
+      0.12,
+      0.2,
+      0.4
+    ],
+    [
+      1.0,
+      0.3,
+      0.3,
+      0.3
+    ],
+    [
+      1.5,
+      0.6,
+      0.4,
+      0.2
+    ],
+    [
+      2.0,
+      1.0,
+      0.15,
+      0.5
+    ]
+  ]
+}

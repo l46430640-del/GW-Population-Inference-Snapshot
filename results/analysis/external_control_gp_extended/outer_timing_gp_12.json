@@ -1,0 +1,10 @@
+{
+  "model": "gp_12",
+  "process_id": 33604,
+  "command": "python scripts/extend_external_control_gp.py --model gp_12",
+  "started_at": "2026-10-09T16:39:21.977601+08:00",
+  "observed_end_utc": "2026-10-09T09:02:54.2013265+00:00",
+  "elapsed_upper_bound_seconds": 1412.2289157,
+  "job_cost_file": "job_cost_001.json",
+  "measurement": "Windows Win32_Process.CreationDate for the matching live command, followed by the first observed process exit. This wall-time upper bound includes shared imports omitted by the wrapper's internal timer. Use this value instead of, not in addition to, the internal job time."
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "results/analysis/external_lisa_comparison_double",
+  "original_attempt": "results/analysis/external_lisa_comparison",
+  "output": "results/analysis/external_lisa_recovery_refinement",
+  "population_transport_power": 17,
+  "population_seed": 847706,
+  "maximum_seconds": 600,
+  "maximum_all_evaluation_seconds": 2100,
+  "maximum_total_study_seconds": 45000,
+  "reason": "The completed comparison passes prediction, posterior reuse, selection normalization and derived mixing, but its 2^14 versus 2^16 transport check changes detected JS at 96 cells by 0.005665, exceeding the unchanged 0.005 threshold. Preserve that failed comparison. Evaluate one independent 2^17 transport at every accepted copula draw and compare with the existing 2^16 result on both 48/96 partitions. Report the finer result and recompute its influence diagnostics and functional intervals. Check the truth-cell refinement separately at the new population. Reuse the GP and prediction products unchanged. No fitted model, prior, population, event, weight or predictive score changes. The added 600-second allowance fits within the original 2100 seconds for all evaluation attempts."
+}

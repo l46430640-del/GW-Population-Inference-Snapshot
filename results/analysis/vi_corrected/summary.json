@@ -1,0 +1,597 @@
+{
+  "configuration": {
+    "output": "results/analysis/vi_corrected",
+    "steps": 5000,
+    "particles": 4,
+    "warmup": 400,
+    "samples": 600,
+    "chains": 4,
+    "starts": 3,
+    "seed": 20261008,
+    "reuse_nuts": false,
+    "nuts_source": "results/analysis/vi_benchmark",
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "n_events": 80,
+    "samples_per_event": 128,
+    "selection": "complete detection",
+    "hyperparameters": 10,
+    "core_sha256": "b5721572407ad9ae3c90369ae4084995aff158d41811887681dd5fc17f63beff",
+    "mcmc_source_core_sha256": "92886a49246385baf6247e3aa609bb37e23069adeeca011cc371291f70345c34",
+    "mcmc_source": "results\\analysis\\vi_benchmark"
+  },
+  "names": [
+    "a_mass",
+    "a_redshift",
+    "a_ratio",
+    "b_mass",
+    "b_redshift",
+    "b_ratio",
+    "rho_mass_redshift",
+    "rho_mass_ratio",
+    "rho_redshift_ratio"
+  ],
+  "nuts": {
+    "rhat": [
+      1.0039528355989753,
+      1.0017438277459072,
+      1.0010008205510814,
+      1.0020212237656583,
+      1.0019634823726502,
+      1.0011428782245406,
+      1.0032909218532977,
+      1.0001870439925171,
+      1.0034318824826831
+    ],
+    "ess_bulk": [
+      1379.632614744645,
+      1514.2962194653269,
+      1747.8313210990777,
+      1502.846062520949,
+      1752.5399433851906,
+      1602.207414150244,
+      1996.9810289346512,
+      1973.1909161139322,
+      2207.428828348855
+    ],
+    "ess_tail": [
+      1728.1489312854835,
+      1455.8732445698165,
+      1888.2200845838418,
+      1607.4312963673028,
+      1487.0322022596997,
+      1703.8138612602472,
+      1703.504891431331,
+      1803.1322187435176,
+      1557.2514240683959
+    ],
+    "divergences_per_chain": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "seconds_per_chain": [
+      155.11827540000013,
+      118.33779709999999,
+      133.00127789999988,
+      117.9286717
+    ]
+  },
+  "vi": [
+    {
+      "start": 0,
+      "train_seconds": 314.21877719999975,
+      "draw_seconds_10000": 0.014635999999882188,
+      "last_500_mean_negative_elbo": -43.26087463724613,
+      "parameters": [
+        {
+          "name": "a_mass",
+          "nuts_quantiles": [
+            1.7250325441360475,
+            2.104504108428955,
+            2.496728122234344
+          ],
+          "vi_quantiles": [
+            1.739194643497467,
+            2.0925285816192627,
+            2.4884220242500303
+          ],
+          "sd_ratio": 0.9637665152549744,
+          "mean_offset_in_nuts_sd": -0.032246775925159454,
+          "wasserstein_in_nuts_sd": 0.05445238203729577,
+          "vi_probability_below_nuts_05": 0.044,
+          "vi_probability_above_nuts_95": 0.0469
+        },
+        {
+          "name": "a_redshift",
+          "nuts_quantiles": [
+            2.011804187297821,
+            2.5232080221176147,
+            3.1196994781494136
+          ],
+          "vi_quantiles": [
+            2.0194975614547728,
+            2.4946318864822388,
+            3.0615481972694396
+          ],
+          "sd_ratio": 0.9226524829864502,
+          "mean_offset_in_nuts_sd": -0.08162595331668854,
+          "wasserstein_in_nuts_sd": 0.1016636870359168,
+          "vi_probability_below_nuts_05": 0.0466,
+          "vi_probability_above_nuts_95": 0.0359
+        },
+        {
+          "name": "a_ratio",
+          "nuts_quantiles": [
+            1.2882811963558196,
+            1.6402733325958252,
+            2.059085619449615
+          ],
+          "vi_quantiles": [
+            1.3169726967811584,
+            1.6516405940055847,
+            2.0364102959632873
+          ],
+          "sd_ratio": 0.9308468699455261,
+          "mean_offset_in_nuts_sd": 0.042871009558439255,
+          "wasserstein_in_nuts_sd": 0.07101149613661858,
+          "vi_probability_below_nuts_05": 0.0375,
+          "vi_probability_above_nuts_95": 0.0412
+        },
+        {
+          "name": "b_mass",
+          "nuts_quantiles": [
+            2.708681511878967,
+            3.7812031507492065,
+            5.2200969457626325
+          ],
+          "vi_quantiles": [
+            2.740326261520386,
+            3.86702561378479,
+            5.334353017807006
+          ],
+          "sd_ratio": 1.0187629461288452,
+          "mean_offset_in_nuts_sd": 0.11395308375358582,
+          "wasserstein_in_nuts_sd": 0.11621944449208567,
+          "vi_probability_below_nuts_05": 0.044,
+          "vi_probability_above_nuts_95": 0.0638
+        },
+        {
+          "name": "b_redshift",
+          "nuts_quantiles": [
+            1.3440780580043792,
+            1.8265132308006287,
+            2.485278475284576
+          ],
+          "vi_quantiles": [
+            1.371966964006424,
+            1.83774995803833,
+            2.4469193935394284
+          ],
+          "sd_ratio": 0.955156147480011,
+          "mean_offset_in_nuts_sd": 0.004156363196671009,
+          "wasserstein_in_nuts_sd": 0.035686000163642644,
+          "vi_probability_below_nuts_05": 0.0385,
+          "vi_probability_above_nuts_95": 0.0403
+        },
+        {
+          "name": "b_ratio",
+          "nuts_quantiles": [
+            1.0882721602916718,
+            1.4319657683372498,
+            1.8690711736679064
+          ],
+          "vi_quantiles": [
+            1.085238939523697,
+            1.4211647510528564,
+            1.8624755263328552
+          ],
+          "sd_ratio": 0.9801262617111206,
+          "mean_offset_in_nuts_sd": -0.03761580213904381,
+          "wasserstein_in_nuts_sd": 0.039195578754463695,
+          "vi_probability_below_nuts_05": 0.0516,
+          "vi_probability_above_nuts_95": 0.0477
+        },
+        {
+          "name": "rho_mass_redshift",
+          "nuts_quantiles": [
+            0.3557754889130592,
+            0.5179916024208069,
+            0.6521646857261658
+          ],
+          "vi_quantiles": [
+            0.3774135336279869,
+            0.5241886079311371,
+            0.6429155141115188
+          ],
+          "sd_ratio": 0.8862560391426086,
+          "mean_offset_in_nuts_sd": 0.0632985457777977,
+          "wasserstein_in_nuts_sd": 0.09870814889125154,
+          "vi_probability_below_nuts_05": 0.0305,
+          "vi_probability_above_nuts_95": 0.0387
+        },
+        {
+          "name": "rho_mass_ratio",
+          "nuts_quantiles": [
+            -0.4700425460934639,
+            -0.31032712757587433,
+            -0.1330067150294781
+          ],
+          "vi_quantiles": [
+            -0.4783316642045975,
+            -0.314995139837265,
+            -0.14586545601487172
+          ],
+          "sd_ratio": 0.9954490661621094,
+          "mean_offset_in_nuts_sd": -0.07017642259597778,
+          "wasserstein_in_nuts_sd": 0.0706170538636741,
+          "vi_probability_below_nuts_05": 0.059,
+          "vi_probability_above_nuts_95": 0.04
+        },
+        {
+          "name": "rho_redshift_ratio",
+          "nuts_quantiles": [
+            -0.11784596778452397,
+            0.07292390614748001,
+            0.262949700653553
+          ],
+          "vi_quantiles": [
+            -0.11003946289420127,
+            0.07199952006340027,
+            0.2555506616830825
+          ],
+          "sd_ratio": 0.9540504217147827,
+          "mean_offset_in_nuts_sd": 0.011341685429215431,
+          "wasserstein_in_nuts_sd": 0.042345213860851626,
+          "vi_probability_below_nuts_05": 0.0434,
+          "vi_probability_above_nuts_95": 0.0438
+        }
+      ]
+    },
+    {
+      "start": 1,
+      "train_seconds": 236.22176260000015,
+      "draw_seconds_10000": 0.013976000000184285,
+      "last_500_mean_negative_elbo": -43.31227240680158,
+      "parameters": [
+        {
+          "name": "a_mass",
+          "nuts_quantiles": [
+            1.7250325441360475,
+            2.104504108428955,
+            2.496728122234344
+          ],
+          "vi_quantiles": [
+            1.7317717730998994,
+            2.1086257696151733,
+            2.520851159095764
+          ],
+          "sd_ratio": 1.0020619630813599,
+          "mean_offset_in_nuts_sd": 0.018535494804382324,
+          "wasserstein_in_nuts_sd": 0.02374138743737781,
+          "vi_probability_below_nuts_05": 0.0467,
+          "vi_probability_above_nuts_95": 0.0604
+        },
+        {
+          "name": "a_redshift",
+          "nuts_quantiles": [
+            2.011804187297821,
+            2.5232080221176147,
+            3.1196994781494136
+          ],
+          "vi_quantiles": [
+            1.9786386847496034,
+            2.510852336883545,
+            3.0960190534591674
+          ],
+          "sd_ratio": 0.9874345660209656,
+          "mean_offset_in_nuts_sd": -0.049543723464012146,
+          "wasserstein_in_nuts_sd": 0.055930790321374727,
+          "vi_probability_below_nuts_05": 0.0626,
+          "vi_probability_above_nuts_95": 0.0429
+        },
+        {
+          "name": "a_ratio",
+          "nuts_quantiles": [
+            1.2882811963558196,
+            1.6402733325958252,
+            2.059085619449615
+          ],
+          "vi_quantiles": [
+            1.2775562703609467,
+            1.641957938671112,
+            2.069553399085998
+          ],
+          "sd_ratio": 1.0174254179000854,
+          "mean_offset_in_nuts_sd": 0.012269542552530766,
+          "wasserstein_in_nuts_sd": 0.01960875635384472,
+          "vi_probability_below_nuts_05": 0.0555,
+          "vi_probability_above_nuts_95": 0.0533
+        },
+        {
+          "name": "b_mass",
+          "nuts_quantiles": [
+            2.708681511878967,
+            3.7812031507492065,
+            5.2200969457626325
+          ],
+          "vi_quantiles": [
+            2.774877095222473,
+            3.785135865211487,
+            5.183324456214904
+          ],
+          "sd_ratio": 0.9512328505516052,
+          "mean_offset_in_nuts_sd": 0.011613363400101662,
+          "wasserstein_in_nuts_sd": 0.03916925081938941,
+          "vi_probability_below_nuts_05": 0.0356,
+          "vi_probability_above_nuts_95": 0.0463
+        },
+        {
+          "name": "b_redshift",
+          "nuts_quantiles": [
+            1.3440780580043792,
+            1.8265132308006287,
+            2.485278475284576
+          ],
+          "vi_quantiles": [
+            1.3734519302845,
+            1.8697474598884583,
+            2.4832183003425596
+          ],
+          "sd_ratio": 0.9928269982337952,
+          "mean_offset_in_nuts_sd": 0.0884062871336937,
+          "wasserstein_in_nuts_sd": 0.09536481576028022,
+          "vi_probability_below_nuts_05": 0.0378,
+          "vi_probability_above_nuts_95": 0.0493
+        },
+        {
+          "name": "b_ratio",
+          "nuts_quantiles": [
+            1.0882721602916718,
+            1.4319657683372498,
+            1.8690711736679064
+          ],
+          "vi_quantiles": [
+            1.088498067855835,
+            1.4354534149169922,
+            1.8775538325309753
+          ],
+          "sd_ratio": 1.0019861459732056,
+          "mean_offset_in_nuts_sd": 0.024492183700203896,
+          "wasserstein_in_nuts_sd": 0.030119705253569492,
+          "vi_probability_below_nuts_05": 0.05,
+          "vi_probability_above_nuts_95": 0.0531
+        },
+        {
+          "name": "rho_mass_redshift",
+          "nuts_quantiles": [
+            0.3557754889130592,
+            0.5179916024208069,
+            0.6521646857261658
+          ],
+          "vi_quantiles": [
+            0.3563426434993744,
+            0.5173096060752869,
+            0.6456560522317887
+          ],
+          "sd_ratio": 0.9789441227912903,
+          "mean_offset_in_nuts_sd": -0.013381552882492542,
+          "wasserstein_in_nuts_sd": 0.023288437719446872,
+          "vi_probability_below_nuts_05": 0.0495,
+          "vi_probability_above_nuts_95": 0.0401
+        },
+        {
+          "name": "rho_mass_ratio",
+          "nuts_quantiles": [
+            -0.4700425460934639,
+            -0.31032712757587433,
+            -0.1330067150294781
+          ],
+          "vi_quantiles": [
+            -0.4670189768075943,
+            -0.30530932545661926,
+            -0.12832708209753046
+          ],
+          "sd_ratio": 1.0118697881698608,
+          "mean_offset_in_nuts_sd": 0.04256565868854523,
+          "wasserstein_in_nuts_sd": 0.0479122414579468,
+          "vi_probability_below_nuts_05": 0.0472,
+          "vi_probability_above_nuts_95": 0.0554
+        },
+        {
+          "name": "rho_redshift_ratio",
+          "nuts_quantiles": [
+            -0.11784596778452397,
+            0.07292390614748001,
+            0.262949700653553
+          ],
+          "vi_quantiles": [
+            -0.1150507066398859,
+            0.07343803346157074,
+            0.2517529234290123
+          ],
+          "sd_ratio": 0.9477413892745972,
+          "mean_offset_in_nuts_sd": 0.010614880360662937,
+          "wasserstein_in_nuts_sd": 0.0499811941014291,
+          "vi_probability_below_nuts_05": 0.0477,
+          "vi_probability_above_nuts_95": 0.0408
+        }
+      ]
+    },
+    {
+      "start": 2,
+      "train_seconds": 245.09711349999998,
+      "draw_seconds_10000": 0.013525899999876856,
+      "last_500_mean_negative_elbo": -43.317174375727774,
+      "parameters": [
+        {
+          "name": "a_mass",
+          "nuts_quantiles": [
+            1.7250325441360475,
+            2.104504108428955,
+            2.496728122234344
+          ],
+          "vi_quantiles": [
+            1.7517831921577454,
+            2.0896421670913696,
+            2.50438095331192
+          ],
+          "sd_ratio": 0.9630606174468994,
+          "mean_offset_in_nuts_sd": -0.015660500153899193,
+          "wasserstein_in_nuts_sd": 0.06166406602555615,
+          "vi_probability_below_nuts_05": 0.0343,
+          "vi_probability_above_nuts_95": 0.053
+        },
+        {
+          "name": "a_redshift",
+          "nuts_quantiles": [
+            2.011804187297821,
+            2.5232080221176147,
+            3.1196994781494136
+          ],
+          "vi_quantiles": [
+            2.058544135093689,
+            2.5641071796417236,
+            3.160865604877472
+          ],
+          "sd_ratio": 0.9753794074058533,
+          "mean_offset_in_nuts_sd": 0.11980868875980377,
+          "wasserstein_in_nuts_sd": 0.12047839230196651,
+          "vi_probability_below_nuts_05": 0.0358,
+          "vi_probability_above_nuts_95": 0.0613
+        },
+        {
+          "name": "a_ratio",
+          "nuts_quantiles": [
+            1.2882811963558196,
+            1.6402733325958252,
+            2.059085619449615
+          ],
+          "vi_quantiles": [
+            1.264929735660553,
+            1.6191092729568481,
+            2.0311017155647275
+          ],
+          "sd_ratio": 0.9816880226135254,
+          "mean_offset_in_nuts_sd": -0.0864061713218689,
+          "wasserstein_in_nuts_sd": 0.08958597799694745,
+          "vi_probability_below_nuts_05": 0.0631,
+          "vi_probability_above_nuts_95": 0.0387
+        },
+        {
+          "name": "b_mass",
+          "nuts_quantiles": [
+            2.708681511878967,
+            3.7812031507492065,
+            5.2200969457626325
+          ],
+          "vi_quantiles": [
+            2.7363047122955324,
+            3.7641372680664062,
+            5.201956820487976
+          ],
+          "sd_ratio": 0.9792971611022949,
+          "mean_offset_in_nuts_sd": -0.011446007527410984,
+          "wasserstein_in_nuts_sd": 0.022392460250957837,
+          "vi_probability_below_nuts_05": 0.044,
+          "vi_probability_above_nuts_95": 0.0481
+        },
+        {
+          "name": "b_redshift",
+          "nuts_quantiles": [
+            1.3440780580043792,
+            1.8265132308006287,
+            2.485278475284576
+          ],
+          "vi_quantiles": [
+            1.3536144316196441,
+            1.825377643108368,
+            2.4414092302322383
+          ],
+          "sd_ratio": 0.9664068818092346,
+          "mean_offset_in_nuts_sd": -0.02837536297738552,
+          "wasserstein_in_nuts_sd": 0.03204359236842228,
+          "vi_probability_below_nuts_05": 0.0467,
+          "vi_probability_above_nuts_95": 0.0409
+        },
+        {
+          "name": "b_ratio",
+          "nuts_quantiles": [
+            1.0882721602916718,
+            1.4319657683372498,
+            1.8690711736679064
+          ],
+          "vi_quantiles": [
+            1.0629284799098968,
+            1.408094346523285,
+            1.853627049922943
+          ],
+          "sd_ratio": 0.9881041646003723,
+          "mean_offset_in_nuts_sd": -0.09643551707267761,
+          "wasserstein_in_nuts_sd": 0.09669916132855107,
+          "vi_probability_below_nuts_05": 0.066,
+          "vi_probability_above_nuts_95": 0.0456
+        },
+        {
+          "name": "rho_mass_redshift",
+          "nuts_quantiles": [
+            0.3557754889130592,
+            0.5179916024208069,
+            0.6521646857261658
+          ],
+          "vi_quantiles": [
+            0.37627463787794113,
+            0.5302227437496185,
+            0.6575694084167479
+          ],
+          "sd_ratio": 0.9442924857139587,
+          "mean_offset_in_nuts_sd": 0.13045716285705566,
+          "wasserstein_in_nuts_sd": 0.131062779634685,
+          "vi_probability_below_nuts_05": 0.0327,
+          "vi_probability_above_nuts_95": 0.0569
+        },
+        {
+          "name": "rho_mass_ratio",
+          "nuts_quantiles": [
+            -0.4700425460934639,
+            -0.31032712757587433,
+            -0.1330067150294781
+          ],
+          "vi_quantiles": [
+            -0.4751785695552826,
+            -0.3155541867017746,
+            -0.13936866670846942
+          ],
+          "sd_ratio": 0.997575581073761,
+          "mean_offset_in_nuts_sd": -0.056280795484781265,
+          "wasserstein_in_nuts_sd": 0.05696207867837072,
+          "vi_probability_below_nuts_05": 0.0565,
+          "vi_probability_above_nuts_95": 0.0435
+        },
+        {
+          "name": "rho_redshift_ratio",
+          "nuts_quantiles": [
+            -0.11784596778452397,
+            0.07292390614748001,
+            0.262949700653553
+          ],
+          "vi_quantiles": [
+            -0.12593538016080857,
+            0.0610580462962389,
+            0.2545984715223312
+          ],
+          "sd_ratio": 0.9933003783226013,
+          "mean_offset_in_nuts_sd": -0.07158086448907852,
+          "wasserstein_in_nuts_sd": 0.07841822476888732,
+          "vi_probability_below_nuts_05": 0.0588,
+          "vi_probability_above_nuts_95": 0.0433
+        }
+      ]
+    }
+  ],
+  "peak_working_set_bytes": 738422784
+}

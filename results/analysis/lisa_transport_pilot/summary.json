@@ -1,0 +1,233 @@
+{
+  "configuration": {
+    "source_config": "configs/lisa_correction.json",
+    "output": "results/analysis/lisa_transport_pilot",
+    "flow_source_index": 1,
+    "initial_draws": [
+      "results/analysis/lisa_correction/repeat_732001.npz",
+      "results/analysis/lisa_correction/repeat_732002.npz"
+    ],
+    "initial_selection": "largest_raw_weight_then_labels_maximizing_selected_flow_density",
+    "methods": [
+      "raw",
+      "flow"
+    ],
+    "seeds": [
+      733001,
+      733002
+    ],
+    "warmup": 80,
+    "samples": 80,
+    "target_acceptance": 0.9,
+    "max_tree_depth": 5,
+    "full_mass": true,
+    "maximum_seconds_per_chain": 300,
+    "feature_transport_power": 10,
+    "jit_absolute_tolerance": 1e-08,
+    "precision_draws_per_start": 32,
+    "precision_log_density_tolerance": 0.001,
+    "pilot_only": true
+  },
+  "methods": {
+    "raw": {
+      "complete": true,
+      "sampling_seconds": 340.3735912000002,
+      "potential_evaluations": 9508,
+      "functionals": {
+        "alpha": {
+          "mcse_mean": 0.035565876778775325,
+          "mcse_sd": 0.01314881408447122,
+          "ess_bulk": 30.413176369541436,
+          "ess_tail": 76.80396407556518,
+          "r_hat": 1.0446345811525537
+        },
+        "cov_mass_ratio": {
+          "mcse_mean": 0.0018722606018455234,
+          "mcse_sd": 0.0015487143997986827,
+          "ess_bulk": 63.31272760888533,
+          "ess_tail": 64.00256309279865,
+          "r_hat": 1.0418188848565726
+        },
+        "cov_mass_redshift": {
+          "mcse_mean": 0.002692167587987035,
+          "mcse_sd": 0.0007706842943779764,
+          "ess_bulk": 40.737369819524645,
+          "ess_tail": 86.91214792322856,
+          "r_hat": 1.0216243722282197
+        },
+        "cov_redshift_ratio": {
+          "mcse_mean": 0.002754759006847903,
+          "mcse_sd": 0.0007774639563064132,
+          "ess_bulk": 34.07688772673997,
+          "ess_tail": 86.16295440597813,
+          "r_hat": 1.0281295034789975
+        },
+        "mass_above_0p8": {
+          "mcse_mean": 0.03349461230787207,
+          "mcse_sd": 0.012091866369044831,
+          "ess_bulk": 30.12739280278945,
+          "ess_tail": 76.80396407556522,
+          "r_hat": 1.0502807089884485
+        },
+        "mass_below_quarter": {
+          "mcse_mean": 0.009307320929166266,
+          "mcse_sd": 0.0042580181058468666,
+          "ess_bulk": 32.669224604021366,
+          "ess_tail": 97.75634476276134,
+          "r_hat": 1.0536968461085217
+        },
+        "mean_mass": {
+          "mcse_mean": 0.019493123701381426,
+          "mcse_sd": 0.007466084899111106,
+          "ess_bulk": 30.928450988898753,
+          "ess_tail": 103.52485890889646,
+          "r_hat": 1.0517968067628
+        },
+        "mean_ratio": {
+          "mcse_mean": 0.01641812863498627,
+          "mcse_sd": 0.007319369973209607,
+          "ess_bulk": 31.23849140410923,
+          "ess_tail": 76.80396407556522,
+          "r_hat": 1.029092861109265
+        },
+        "mean_redshift": {
+          "mcse_mean": 0.0066623722719514255,
+          "mcse_sd": 0.007799137030800218,
+          "ess_bulk": 115.53166343384483,
+          "ess_tail": 105.42021291152395,
+          "r_hat": 1.0265138148099324
+        },
+        "variance_mass": {
+          "mcse_mean": 0.0015391862217038752,
+          "mcse_sd": 0.001817476604457313,
+          "ess_bulk": 111.28761042767289,
+          "ess_tail": 76.80396407556518,
+          "r_hat": 1.0044765765270107
+        },
+        "variance_ratio": {
+          "mcse_mean": 0.002107773945784884,
+          "mcse_sd": 0.0014629914018586898,
+          "ess_bulk": 63.130306432984504,
+          "ess_tail": 94.82779215608203,
+          "r_hat": 1.0485001495042463
+        },
+        "variance_redshift": {
+          "mcse_mean": 0.0005488243146905049,
+          "mcse_sd": 0.00047238167677075507,
+          "ess_bulk": 126.49549106029782,
+          "ess_tail": 97.25294508425752,
+          "r_hat": 0.9990432709639986
+        }
+      },
+      "maximum_rhat": 1.0536968461085217,
+      "minimum_bulk_ess": 30.12739280278945,
+      "minimum_tail_ess": 64.00256309279865,
+      "minimum_bulk_ess_per_second": 0.0885127212618763,
+      "divergences": 0
+    },
+    "flow": {
+      "complete": true,
+      "sampling_seconds": 355.8784695000004,
+      "potential_evaluations": 9372,
+      "functionals": {
+        "alpha": {
+          "mcse_mean": 0.022242245777374613,
+          "mcse_sd": 0.01266006471360997,
+          "ess_bulk": 42.71825695134834,
+          "ess_tail": 45.64006216222483,
+          "r_hat": 1.0574502887839463
+        },
+        "cov_mass_ratio": {
+          "mcse_mean": 0.0058819795356891075,
+          "mcse_sd": 0.001233185715329708,
+          "ess_bulk": 6.1801645631244995,
+          "ess_tail": 88.36601307189547,
+          "r_hat": 1.2837734364665847
+        },
+        "cov_mass_redshift": {
+          "mcse_mean": 0.0035064214694024666,
+          "mcse_sd": 0.0011589429727735037,
+          "ess_bulk": 18.303118390990402,
+          "ess_tail": 19.544483844373346,
+          "r_hat": 1.0540570034016057
+        },
+        "cov_redshift_ratio": {
+          "mcse_mean": 0.00410988721780149,
+          "mcse_sd": 0.0012456817172653602,
+          "ess_bulk": 13.099282856761304,
+          "ess_tail": 31.83152938098787,
+          "r_hat": 1.1082120574596122
+        },
+        "mass_above_0p8": {
+          "mcse_mean": 0.02284339655215073,
+          "mcse_sd": 0.011221787002130348,
+          "ess_bulk": 37.328487981033234,
+          "ess_tail": 22.319592238218373,
+          "r_hat": 1.035534204350173
+        },
+        "mass_below_quarter": {
+          "mcse_mean": 0.005090860853076933,
+          "mcse_sd": 0.0028078214741098953,
+          "ess_bulk": 56.25949624620332,
+          "ess_tail": 85.80388138542669,
+          "r_hat": 1.0425245484530161
+        },
+        "mean_mass": {
+          "mcse_mean": 0.013549826986008272,
+          "mcse_sd": 0.006171040506054205,
+          "ess_bulk": 39.04121260940847,
+          "ess_tail": 22.555575637086207,
+          "r_hat": 1.0473415657170035
+        },
+        "mean_ratio": {
+          "mcse_mean": 0.013019928135561062,
+          "mcse_sd": 0.005697962727989566,
+          "ess_bulk": 32.23027952311857,
+          "ess_tail": 85.50088660421764,
+          "r_hat": 1.0781608823292081
+        },
+        "mean_redshift": {
+          "mcse_mean": 0.016144153377878587,
+          "mcse_sd": 0.009552038587071847,
+          "ess_bulk": 24.239462973568656,
+          "ess_tail": 49.519353138537845,
+          "r_hat": 1.099910038332962
+        },
+        "variance_mass": {
+          "mcse_mean": 0.001974877349338637,
+          "mcse_sd": 0.001744621595210248,
+          "ess_bulk": 61.63608341721182,
+          "ess_tail": 89.88764044943821,
+          "r_hat": 1.076977871509856
+        },
+        "variance_ratio": {
+          "mcse_mean": 0.0069614962945616695,
+          "mcse_sd": 0.001344935247201006,
+          "ess_bulk": 6.0735386474648605,
+          "ess_tail": 58.50649898208792,
+          "r_hat": 1.2828822109958098
+        },
+        "variance_redshift": {
+          "mcse_mean": 0.003964113765462709,
+          "mcse_sd": 0.000597210565876211,
+          "ess_bulk": 5.4343967386117065,
+          "ess_tail": 94.9645797434425,
+          "r_hat": 1.3138902369268826
+        }
+      },
+      "maximum_rhat": 1.3138902369268826,
+      "minimum_bulk_ess": 5.4343967386117065,
+      "minimum_tail_ess": 19.544483844373346,
+      "minimum_bulk_ess_per_second": 0.01527037234437612,
+      "divergences": 0
+    }
+  },
+  "eligible_for_scientific_summaries": false,
+  "interpretation": "Short cost and mixing pilot; no converged LISA posterior is asserted.",
+  "chain_products": {
+    "flow_733001.json": "90404c3136d2d3472a3eb0f5974c8793184ce731dbd1a09de40523563007acfd",
+    "flow_733002.json": "b1d876854e4867dd2f9cc3cdad80591d65cc5c1df33b41db810d80eff626d33c",
+    "raw_733001.json": "b8052bcd2c334a40162f370bd41a8d8ae82d98b85771792e352163f36c12aece",
+    "raw_733002.json": "5c8cb5d27779a83f62156ddd4640204f44304902f14f177bc5d5c989da657a6f"
+  }
+}

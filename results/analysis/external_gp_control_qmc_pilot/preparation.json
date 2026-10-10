@@ -1,0 +1,133 @@
+{
+  "configuration": {
+    "protocol": "configs/external_benchmark.json",
+    "catalog_config": "configs/external_gp_control_catalog.json",
+    "previous_pilot": "results/analysis/external_gp_control_copula_pilot/pilot.npz",
+    "experiment": "selected_gp_truth",
+    "output": "results/analysis/external_gp_control_qmc_pilot",
+    "primary_power": 9,
+    "verification_power": 11,
+    "primary_scramble_seed": 848101,
+    "verification_scramble_seed": 848102,
+    "preparation_maximum_seconds": 180,
+    "seed": 847201,
+    "warmup": 100,
+    "retained": 100,
+    "target_acceptance": 0.9,
+    "maximum_tree_depth": 10,
+    "full_mass": true,
+    "maximum_seconds": 600,
+    "verification_reserve_seconds": 120,
+    "maximum_resident_gib": 2,
+    "cpu_threads": 1,
+    "jit_absolute_tolerance": 1e-07,
+    "derivative_check_draws": 3,
+    "derivative_check_step": 1e-05,
+    "maximum_directional_derivative_error": 0.0001,
+    "maximum_precision_log_target_difference": 0.0001,
+    "maximum_kernel_log_likelihood_difference": 1e-07,
+    "feature_transport_power": 10,
+    "decision": "Before running this amendment, fix 512 scrambled Sobol points per training event and an independent 2048-point scramble. Invert the selected Gaussian event posterior without rejecting or deleting Sobol points. Retain the same observations, selection, priors, copula, initial coordinate and NUTS seed as the stopped IID pilot. Check saved warmup states before sampling and all retained pilot states against both the independent Sobol cloud and the archived 8192 IID cloud. This changes numerical event integration only. Any production use needs multi-chain diagnostics and checked correction to finer integration; no scientific comparison is permitted from this pilot."
+  },
+  "status": "complete",
+  "states_checked": 48,
+  "scope": "Original initialization and stopped warmup; not posterior draws. No recovery or test prediction.",
+  "input_fields": [
+    "train_catalog:observed,sigma,data",
+    "train_verification:data",
+    "previous_pilot:initial_coordinate,warmup_coordinate"
+  ],
+  "source_sha256": {
+    "configs/external_gp_control_copula_pilot.json": "da0e895d9c95c99e12c698a3798bcd13a2365e8c3b06d93393d54cdfa41d0573",
+    "configs/external_benchmark.json": "d7347c021ffa74e5ca9e39cd6aa26e8fc770dfba39e7fbd70b3e89998eb4fc42",
+    "configs/external_gp_control_catalog.json": "bcb1187572a3da253d33891aba55b684e517918d2c072d9b6a569e7a64875459",
+    "results/analysis/external_gp_control_catalog/manifest.json": "887e0b82f543ebbd31ecd15c7f0d6fe79e85fa785a5f9481c65d5e9b22ea34b9",
+    "results/analysis/external_gp_control_catalog/train_catalog.npz": "1068a0ff4adc156751953147e80a744524849f48c4a728bd7c18e1d0c61a9cfd",
+    "results/analysis/external_gp_control_catalog/train_verification.npz": "55031fcbc4e1df735d6e2b4a09b082039fe77abf5f85f4feb17296237467d066",
+    "scripts/pilot_external_gp_control_copula.py": "99b2692514dff87c338e9ec1c8e9e521ef80cc4c17fadffaf8db65999712d759",
+    "scripts/build_external_gp_control.py": "6dc91e4d26e01f6f1201e36058ff2b0b84090b36f0a780a1ec0bfe6e4e80a456",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/validate_population_morphologies.py": "d8355971e3a731a53f19c1aabd01c5c58f340b0d9204770b1bb395d5282575dc",
+    "scripts/initialize_population_guide.py": "b9973c56a78eb5cd23210cf4d237a02b5960b3ad130f17b621d474f85bc0c7b9",
+    "scripts/sample_lisa_transport.py": "66b7d7635af698cf2b4d935718e1eda1860bf140751aad079b9d4102239057d6",
+    "scripts/correct_selected_posterior.py": "5d601290f44616ebea88f4f1cabc31fdad1bbc1a64816ded68ae32e253e023f1",
+    "scripts/check_selected_mixture_integrals.py": "d2704b176deda6745491bcacdc578f629a861163160fb9e5ab1ee0b189e04d14",
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "configs/external_gp_control_qmc_pilot.json": "37bcc437c6d3cdc632ac7636b8b60d70e1f87cc92f6330f20f042dd59017d049",
+    "scripts/pilot_external_gp_control_qmc.py": "7b7614f551cca9e7680c77624bdda004227c1d47e06cf5ae8b1ec620b988749b",
+    "results/analysis/external_gp_control_copula_pilot/pilot.npz": "50b6b5a50c735bd27f86f278c11b651069e2de888fe3a185085288994f467009",
+    "results/analysis/external_gp_control_copula_pilot/pilot.json": "5056d10f124f07560f5498b7e9fdb31c8f76ab51fb40b1785dcd30a29ded01e8",
+    "scripts/selected_event_qmc.py": "4d09a4894388f26197fc513bfaf8b5e22bd9d90063626a8ac6bc7d5d45016d3c",
+    "scripts/external_selected_evaluation.py": "4ab6f19f18428c2156a3cc67779348812eab5267be654696ffe6d4eb0004c479",
+    "scripts/run_lisa_production.py": "ddd2d46916ba1cba27cc7be57875d058f445c9fbe5a78cab8ad47ef594aa9e4d"
+  },
+  "product_sha256": {
+    "primary_events.npz": "3bb8f848c951f3ed4b31cf7d9f6e8194b9452b23f6ff95e924165b0716695ee8",
+    "verification_events.npz": "12b66e1d59398cd84bea12786a3a5782a757eb4b4ab71842951cb0fc43e619aa",
+    "preparation.npz": "88bf5645b6baac4ac06158909f5047b93b2e12d3cea9a927af9d68b69f6275fd"
+  },
+  "draw_product_sha256": "88bf5645b6baac4ac06158909f5047b93b2e12d3cea9a927af9d68b69f6275fd",
+  "jit_checks": [
+    [
+      {
+        "scale": 0.0,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 1.4210854715202004e-14
+      },
+      {
+        "scale": 0.03,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 1.4210854715202004e-14
+      },
+      {
+        "scale": 0.1,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 1.0658141036401503e-14
+      }
+    ],
+    [
+      {
+        "scale": 0.0,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 1.7763568394002505e-14
+      },
+      {
+        "scale": 0.03,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 1.7763568394002505e-14
+      },
+      {
+        "scale": 0.1,
+        "absolute_value_difference": 0.0,
+        "maximum_absolute_gradient_difference": 8.881784197001252e-15
+      }
+    ]
+  ],
+  "maximum_numpy_core_event_log_likelihood_difference": 4.929390229335695e-14,
+  "warmup_log_likelihood_difference_sd": [
+    0.15268203945031927,
+    0.10516816635132994,
+    0.13096342193435226
+  ],
+  "warmup_maximum_absolute_log_likelihood_difference": [
+    0.8889485124751815,
+    0.6598707390749583,
+    0.3309681934648072
+  ],
+  "median_gradient_seconds": [
+    0.054940199999691686,
+    0.22408600000017032
+  ],
+  "median_paired_gradient_speed_ratio": 4.109113780603838,
+  "process_elapsed_seconds": 67.14943479999965,
+  "runtime": {
+    "python": "3.11.7",
+    "torch": "2.5.1",
+    "pyro": "1.9.1",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "threads": 1,
+    "peak_working_set_bytes": 1434832896
+  },
+  "ready_for_bounded_pilot": true,
+  "eligible_for_scientific_comparisons": false
+}

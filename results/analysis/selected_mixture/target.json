@@ -1,0 +1,94 @@
+{
+  "protocol": {
+    "dimensions": 3,
+    "components": 2,
+    "selected_training_events": 96,
+    "selected_test_events": 192,
+    "posterior_samples_per_event": 256,
+    "detection_probability": "0.05 + 0.95*x1^2",
+    "measurement_standard_deviations": [
+      0.04,
+      0.05,
+      0.04
+    ],
+    "component_weights": [
+      0.55,
+      0.45
+    ],
+    "kumaraswamy_a": [
+      [
+        2,
+        3,
+        2
+      ],
+      [
+        5,
+        2,
+        4
+      ]
+    ],
+    "kumaraswamy_b": [
+      [
+        8,
+        2,
+        5
+      ],
+      [
+        2,
+        5,
+        2
+      ]
+    ],
+    "correlations": [
+      [
+        [
+          1,
+          0.55,
+          -0.25
+        ],
+        [
+          0.55,
+          1,
+          0.1
+        ],
+        [
+          -0.25,
+          0.1,
+          1
+        ]
+      ],
+      [
+        [
+          1,
+          -0.4,
+          0.2
+        ],
+        [
+          -0.4,
+          1,
+          0.25
+        ],
+        [
+          0.2,
+          0.25,
+          1
+        ]
+      ]
+    ],
+    "catalog_seed": 481921,
+    "test_seed": 481922,
+    "mcmc_chains": 4,
+    "warmup_initial": 500,
+    "retained_initial": 800,
+    "vi_steps_initial": 5000,
+    "vi_starts": 2,
+    "ablation": "same marginal family and K, identity within-component copulas",
+    "validation_note": "The selected data include the Bernoulli selection indicator; its probability enters every event posterior. The shape likelihood conditions on the fixed detected count."
+  },
+  "source_sha256": {
+    "src/gwpopulation/core.py": "e732b91dcbea39c37f838b4f0f8495a12595eb0bf3198864dfe4fcfd198fd3cb",
+    "scripts/benchmark_selected_mixture.py": "78e9607a6b76954f080aa6a9b978a77066efd76d4f0defc918ca20848e640e1c",
+    "scripts/initialize_population_guide.py": "b9973c56a78eb5cd23210cf4d237a02b5960b3ad130f17b621d474f85bc0c7b9",
+    "configs/model_comparisons.json": "30e41002ffbdfc293f1d7afbdef8a7cffdeca3c9fb9f4727f16c66b3c0237929"
+  }
+}

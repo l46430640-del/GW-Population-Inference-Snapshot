@@ -1,0 +1,11 @@
+{
+  "source_config": "configs/external_selected_evaluation.json",
+  "output": "results/analysis/external_selected_comparison/recovery_refinement",
+  "truth_quadrature_order": 4,
+  "verification_truth_quadrature_order": 8,
+  "cell_block_size": 256,
+  "maximum_truth_normalization_error": 0.0001,
+  "posterior_transport": "Use the already declared 2^16 verification cloud for final recovery, and compare with the retained independent 2^14 cloud at both partitions.",
+  "reason": "The initial 48^3 check changes copula JS distances by about 0.0094 and GP distances by about 0.0055, exceeding 0.005. Most of this change is shared across models and comes from estimating truth cell probabilities by finite histograms. Integrate the known smooth truth density within each 48^3 cell using positive product Gauss-Legendre quadrature, and independently double its order. Retain the initial failed check. This declaration follows inspection of recovery distances and precedes the refined calculation; held-out copula predictive scores are not yet available.",
+  "scope": "Numerical recovery evaluation only. Retain the declared 24^3 primary and 48^3 verification partitions, all posterior draws, both GP resolutions, all priors and the original acceptance thresholds. No model setting is selected by recovery or predictive performance."
+}

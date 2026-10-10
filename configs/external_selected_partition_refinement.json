@@ -1,0 +1,13 @@
+{
+  "source_config": "configs/external_selected_evaluation.json",
+  "previous_summary": "results/analysis/external_selected_comparison/recovery_refinement/summary.json",
+  "output": "results/analysis/external_selected_comparison/partition_refinement",
+  "primary_cells_per_axis": 48,
+  "verification_cells_per_axis": 96,
+  "truth_quadrature_order": 2,
+  "verification_truth_quadrature_order": 4,
+  "cell_block_size": 256,
+  "maximum_truth_normalization_error": 0.0001,
+  "reason": "Deterministic truth integration removes histogram error, but the GP JS distances still change by 0.008--0.011 between 24 and 48 cells per axis. This exceeds the original 0.005 precision requirement. Use a common 48-cell partition with a 96-cell check for every model in this catalog, retaining the original 24-cell results. Use the same independent 2^14 and 2^16 posterior transport clouds, and positive within-cell quadrature of orders 2 and 4 on the finer partition. This is a numerical refinement after inspecting scores, not a new fit or a change of the scientific outcomes.",
+  "scope": "Selected-catalog joint recovery only. Preserve all posteriors, priors, fitted GP resolutions, likelihood and prediction, all original results, and the 0.005 acceptance threshold. No superiority claim is accepted until the common finer partition passes. Future cases must also pass this threshold on their reported recovery partitions."
+}

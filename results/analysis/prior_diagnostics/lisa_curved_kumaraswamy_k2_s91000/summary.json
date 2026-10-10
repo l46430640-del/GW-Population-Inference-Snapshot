@@ -1,0 +1,155 @@
+{
+  "source": "results/analysis/morphologies/lisa_curved_kumaraswamy_k2_s91000",
+  "kind": "lisa",
+  "prior_draws": 512,
+  "posterior_draws": 192,
+  "points_per_component": 16384,
+  "seed": 20261009,
+  "summary": {
+    "prior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.26081626934888574,
+          0.7119711031060647,
+          0.987676666039004
+        ],
+        "mean": 0.6787461840399329,
+        "sd": 0.2296285358249057
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.011212919017203574,
+          0.27663528486434075,
+          0.7297240301451242
+        ],
+        "mean": 0.31333103914926963,
+        "sd": 0.22743282119868635
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.025747586059104842,
+          0.32826393596078784,
+          0.8049635226510581
+        ],
+        "mean": 0.3525020541665196,
+        "sd": 0.24035583127169358
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 6.009258394948638e-17
+      }
+    },
+    "posterior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.8492315393710351,
+          0.9242357292985279,
+          0.9684678129752242
+        ],
+        "mean": 0.9201925927129856,
+        "sd": 0.03488008794795103
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.02770644740371705,
+          0.06816802562191601,
+          0.14014153529898982
+        ],
+        "mean": 0.07260327245460341,
+        "sd": 0.033187184018603565
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.029865404279262774,
+          0.07398109780502318,
+          0.15514974585990132
+        ],
+        "mean": 0.07967603641353861,
+        "sd": 0.03618986754420503
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 5.942113735624666e-17
+      }
+    }
+  },
+  "posterior_to_prior_90_interval_width": {
+    "alpha": 0.16404288106375262,
+    "weak_detection_fraction": 0.15648343658704436,
+    "mass_above_1e8": 0.16078257091172068,
+    "domain_probability": 1.0
+  },
+  "coarse_to_fine_absolute_change_50_90_99_max": {
+    "prior": {
+      "alpha": [
+        0.00020084174735351956,
+        0.0005976826946804681,
+        0.001190413371925668,
+        0.0020862315022296407
+      ],
+      "weak_detection_fraction": [
+        0.00034846344316964706,
+        0.001011582585506987,
+        0.001951427402845587,
+        0.0026018059437675767
+      ],
+      "mass_above_1e8": [
+        5.543453445755464e-05,
+        0.00013066038070939652,
+        0.0001784211219951223,
+        0.0001831054687500555
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "posterior": {
+      "alpha": [
+        8.189248591838894e-05,
+        0.00025846220194242214,
+        0.0004876615679757903,
+        0.0006134932622789968
+      ],
+      "weak_detection_fraction": [
+        0.0002698841638860139,
+        0.0007506606132759497,
+        0.0014823383908514458,
+        0.0017021479881166937
+      ],
+      "mass_above_1e8": [
+        5.217120500016631e-05,
+        0.00014535106895206124,
+        0.00016977694557282624,
+        0.00018310546875
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "selection_note": "LISA sensitivity averaged over transported population points",
+  "interpretation": "Intervals describe prior and conditional posterior distributions, not repeated-catalog coverage.",
+  "sha256": {
+    "results/analysis/morphologies/lisa_curved_kumaraswamy_k2_s91000/summary.json": "163d7a0ebca0811bb327eb7bcce8cdf6c87a48ed4bcb662e7b68db50580b84bf",
+    "results/analysis/morphologies/lisa_curved_kumaraswamy_k2_s91000/posterior.npz": "ff6849debf1b6d18a0db3ce757217023da9874e1eb87878dde22201a57d5c9ae",
+    "src/gwpopulation/core.py": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+    "scripts/population_prior_diagnostics.py": "09887a531d149f62b326702c0afb7bc1707bdd426df1b170e451efa24c214c19"
+  },
+  "seconds": 7.915237699999125
+}

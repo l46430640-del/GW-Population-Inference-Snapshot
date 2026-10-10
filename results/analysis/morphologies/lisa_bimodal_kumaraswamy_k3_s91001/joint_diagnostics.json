@@ -1,0 +1,66 @@
+{
+  "method": "joint cell probabilities from transported Sobol points",
+  "points_per_component": 524288,
+  "truth_sample_count": 1048576,
+  "bins_per_axis": [
+    12,
+    20,
+    28
+  ],
+  "distances": {
+    "12": {
+      "predictive_to_truth": 0.4394390579280046,
+      "draw_to_truth_quantiles": [
+        0.33363830678953993,
+        0.47995908327240433,
+        0.6171297747763216
+      ],
+      "within_posterior_quantiles": [
+        0.2965738897268113,
+        0.3821850861390276,
+        0.5477880337891365
+      ]
+    },
+    "20": {
+      "predictive_to_truth": 0.4466402834516333,
+      "draw_to_truth_quantiles": [
+        0.34200233393619245,
+        0.4859913722775211,
+        0.6225717393870571
+      ],
+      "within_posterior_quantiles": [
+        0.30549767894595775,
+        0.39935757927592763,
+        0.5689164117610822
+      ]
+    },
+    "28": {
+      "predictive_to_truth": 0.45085972085624504,
+      "draw_to_truth_quantiles": [
+        0.34716057923101545,
+        0.49080022415138014,
+        0.6255165662313891
+      ],
+      "within_posterior_quantiles": [
+        0.31218807968896706,
+        0.4070012514485444,
+        0.5770077678984533
+      ]
+    }
+  },
+  "coarse_to_fine_distance_quantiles": [
+    0.03614820454943372,
+    0.03879503434575084,
+    0.0410478075187953,
+    0.04205596252950148
+  ],
+  "coarse_to_fine_within_distance_change_quantiles": [
+    0.002937240108243505,
+    0.003816514741127597,
+    0.004281557096748833,
+    0.004627073538563453
+  ],
+  "coarse_predictive_to_truth": 0.44664424139997655,
+  "maximum_cell_normalization_error": 2.220446049250313e-16,
+  "core_sha256": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c"
+}

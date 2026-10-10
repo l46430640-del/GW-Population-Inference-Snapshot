@@ -1,0 +1,22 @@
+{
+  "decision": {
+    "complete": false,
+    "divergences_passed": false,
+    "mixing_passed": false,
+    "numerical_passed": false,
+    "resources_passed": false,
+    "posterior_accepted": false,
+    "pooled_integrals_passed": true
+  },
+  "pooled_integral_verification": {
+    "standard_deviations": {
+      "event_log_likelihood_change": 0.04080778201677184,
+      "selection_log_likelihood_change": 6.048172388589415e-05,
+      "combined_log_likelihood_change": 0.04081844101468083
+    },
+    "passed": true
+  },
+  "summary_sha256": "ed4148bd83072767a17ab9b16a199c3ebe7f0254ee811dc6fa66745c112d4291",
+  "target_product_sha256": "ab10c0e4ed3ecf120be9371496946611e94e211d473ba2de64af7b3702f203be",
+  "scientific_scores_examined": false
+}

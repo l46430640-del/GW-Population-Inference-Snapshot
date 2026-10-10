@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "seconds": 1418.4747573999994,
+  "previous_seconds": 0,
+  "total_charge_seconds": 1418.4747573999994,
+  "peak_resident_bytes": 1547026432,
+  "completed_cases": [
+    "smooth_k3_uniform_m150_s812301_l0.35",
+    "smooth_k3_uniform_m150_s812301_l0.2",
+    "smooth_k3_uniform_m150_s812301_l0.6",
+    "kumaraswamy_k3_uniform_m150_s812301",
+    "kumaraswamy_k2_uniform_m150_s812301",
+    "spline_k3_uniform_m150_s812301",
+    "spline_k3_low_m150_s812301",
+    "spline_k3_uniform_m300_s812301"
+  ]
+}

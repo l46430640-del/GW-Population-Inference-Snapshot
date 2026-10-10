@@ -1,0 +1,22 @@
+{
+  "definition": "p_det(theta|Lambda) = P_det(theta) p(theta|Lambda) / alpha(Lambda)",
+  "cells_per_axis": 12,
+  "samples_per_component": 131072,
+  "predictive_to_truth": 0.4324514569854907,
+  "within_posterior_quantiles": [
+    0.10108470917259187,
+    0.1656788938905538,
+    0.21732270592675856
+  ],
+  "intrinsic_probability_with_detection_below_0p1": [
+    0.07109364934050395,
+    0.1589282608261094,
+    0.4640944570719352
+  ],
+  "truth_probability_with_detection_below_0p1": 0.0957326889038086,
+  "alpha_quantiles": [
+    0.5288411525736104,
+    0.8322603447811283,
+    0.9228477255323685
+  ]
+}

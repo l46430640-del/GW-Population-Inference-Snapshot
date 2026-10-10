@@ -1,0 +1,155 @@
+{
+  "source": "results/analysis/morphologies/lisa_correlated_kumaraswamy_k2_s91000",
+  "kind": "lisa",
+  "prior_draws": 512,
+  "posterior_draws": 192,
+  "points_per_component": 16384,
+  "seed": 20261009,
+  "summary": {
+    "prior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.26081626934888574,
+          0.7119711031060647,
+          0.987676666039004
+        ],
+        "mean": 0.6787461840399329,
+        "sd": 0.2296285358249057
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.011212919017203574,
+          0.27663528486434075,
+          0.7297240301451242
+        ],
+        "mean": 0.31333103914926963,
+        "sd": 0.22743282119868635
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.025747586059104842,
+          0.32826393596078784,
+          0.8049635226510581
+        ],
+        "mean": 0.3525020541665196,
+        "sd": 0.24035583127169358
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 6.009258394948638e-17
+      }
+    },
+    "posterior": {
+      "alpha": {
+        "quantiles_05_50_95": [
+          0.6501035477476738,
+          0.8714243267536039,
+          0.9409247812220756
+        ],
+        "mean": 0.8426115528362313,
+        "sd": 0.09549092209423896
+      },
+      "weak_detection_fraction": {
+        "quantiles_05_50_95": [
+          0.054225936130895276,
+          0.1197624362045627,
+          0.34519846353859074
+        ],
+        "mean": 0.15000558116541907,
+        "sd": 0.09579676500279004
+      },
+      "mass_above_1e8": {
+        "quantiles_05_50_95": [
+          0.030112885920626456,
+          0.08520735178577338,
+          0.3208926039327039
+        ],
+        "mean": 0.11794581634510902,
+        "sd": 0.09577769859345142
+      },
+      "domain_probability": {
+        "quantiles_05_50_95": [
+          0.9999999999999999,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "sd": 6.206335383118183e-17
+      }
+    }
+  },
+  "posterior_to_prior_90_interval_width": {
+    "alpha": 0.40010603796644517,
+    "weak_detection_fraction": 0.4049659398459768,
+    "mass_above_1e8": 0.3731696239220376,
+    "domain_probability": 1.0
+  },
+  "coarse_to_fine_absolute_change_50_90_99_max": {
+    "prior": {
+      "alpha": [
+        0.00020084174735351956,
+        0.0005976826946804681,
+        0.001190413371925668,
+        0.0020862315022296407
+      ],
+      "weak_detection_fraction": [
+        0.00034846344316964706,
+        0.001011582585506987,
+        0.001951427402845587,
+        0.0026018059437675767
+      ],
+      "mass_above_1e8": [
+        5.543453445755464e-05,
+        0.00013066038070939652,
+        0.0001784211219951223,
+        0.0001831054687500555
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "posterior": {
+      "alpha": [
+        0.00014983699894144387,
+        0.00034767455718403005,
+        0.000535753014051588,
+        0.0006781712740639989
+      ],
+      "weak_detection_fraction": [
+        0.000368414381531422,
+        0.000907569055695602,
+        0.001460323991194153,
+        0.001545696977731409
+      ],
+      "mass_above_1e8": [
+        6.103515625e-05,
+        0.00016830834387069062,
+        0.00018066188441365053,
+        0.00018310546875
+      ],
+      "domain_probability": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "selection_note": "LISA sensitivity averaged over transported population points",
+  "interpretation": "Intervals describe prior and conditional posterior distributions, not repeated-catalog coverage.",
+  "sha256": {
+    "results/analysis/morphologies/lisa_correlated_kumaraswamy_k2_s91000/summary.json": "d35888e38a6939aec8bf108f4848db42da262d2f185dfc7ff42c72bf4deeb4ee",
+    "results/analysis/morphologies/lisa_correlated_kumaraswamy_k2_s91000/posterior.npz": "ecb48e5a5398aafaf980e5d440c3cea80d9b90d88d34a2b1537c1e11e216d514",
+    "src/gwpopulation/core.py": "ece3c71b4602037d067d534296c972b465f73f73c5d5a38b4d3da25e88bafd7c",
+    "scripts/population_prior_diagnostics.py": "09887a531d149f62b326702c0afb7bc1707bdd426df1b170e451efa24c214c19"
+  },
+  "seconds": 8.15607000000091
+}
